@@ -1,0 +1,2738 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CAS (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="CAS (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/CAS.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/uima/cas/ByteArrayFS.html" title="interface in org.apache.uima.cas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/uima/cas/CASException.html" title="class in org.apache.uima.cas"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/uima/cas/CAS.html" target="_top">Frames</a></li>
+<li><a href="CAS.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.uima.cas</div>
+<h2 title="Interface CAS" class="title">Interface CAS</h2>
+</div>
+<div class="contentContainer">
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Superinterfaces:</dt>
+<dd><a href="../../../../org/apache/uima/cas/AbstractCas.html" title="interface in org.apache.uima.cas">AbstractCas</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public interface <span class="strong">CAS</span>
+extends <a href="../../../../org/apache/uima/cas/AbstractCas.html" title="interface in org.apache.uima.cas">AbstractCas</a></pre>
+<div class="block">Object-oriented CAS (Common Analysis System) API.
+ 
+ <p>
+ A <code>CAS</code> object provides the starting point for working with the CAS. It provides
+ access to the type system, to indexes, iterators and filters (constraints). It also lets you
+ create new annotations and other data structures. You can create a <code>CAS</code> object
+ using static methods on the class <a href="../../../../org/apache/uima/util/CasCreationUtils.html" title="class in org.apache.uima.util"><code>CasCreationUtils</code></a>.
+ <p>
+ The <code>CAS</code> object is also the container that manages multiple Subjects of Analysis or
+ Sofas. A Sofa represents some form of an unstructured artifact that is processed in a UIMA
+ pipeline. The Java string called the "DocumentText" used in a UIMA text processing pipeline is an
+ example of a Sofa. A Sofa can be analyzed independently using the standard UIMA programming model
+ or analyzed together with other Sofas utilizing the Sofa programming model extensions.
+ <p>
+ A Sofa is implemented as a built-in CAS type uima.cas.Sofa. Use
+ <a href="../../../../org/apache/uima/cas/CAS.html#createSofa(org.apache.uima.cas.SofaID,%20java.lang.String)"><code>CAS.createSofa()</code></a> to instantiate a Sofa feature
+ structure. The <a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas"><code>SofaFS</code></a> class provides methods to set and get the features of a
+ SofaFS. Although Sofas are implemented as standard feature structures, generic CAS APIs must
+ never be used to create Sofas or set their features.
+ <p>
+ Use <a href="../../../../org/apache/uima/cas/CAS.html#getView(java.lang.String)"><code>getView(String)</code></a> or
+ <a href="../../../../org/apache/uima/cas/CAS.html#getView(org.apache.uima.cas.SofaFS)"><code>getView(SofaFS)</code></a> to obtain a view of a particular Sofa in the CAS.
+ This view will provide access to the Sofa data (for example the document text) as well as the
+ index repository, which contains metadata (annotations and other feature structures) about that
+ Sofa.
+ <p>
+ Use <a href="../../../../org/apache/uima/cas/CAS.html#getTypeSystem()"><code>getTypeSystem()</code></a> to access the type system. With a
+ <a href="../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas"><code>TypeSystem</code></a> object, you can access the <a href="../../../../org/apache/uima/cas/Type.html" title="interface in org.apache.uima.cas"><code>Type</code></a> and
+ <a href="../../../../org/apache/uima/cas/Feature.html" title="interface in org.apache.uima.cas"><code>Feature</code></a> objects for the CAS built-in types. Note that this interface also
+ provides constants for the names of the built-in types and features.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#DEFAULT_LANGUAGE_NAME">DEFAULT_LANGUAGE_NAME</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_BASE_NAME_BEGIN">FEATURE_BASE_NAME_BEGIN</a></strong></code>
+<div class="block">Base name of annotation begin feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_BASE_NAME_END">FEATURE_BASE_NAME_END</a></strong></code>
+<div class="block">Base name of annotation end feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_BASE_NAME_HEAD">FEATURE_BASE_NAME_HEAD</a></strong></code>
+<div class="block">Base name of list head feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_BASE_NAME_LANGUAGE">FEATURE_BASE_NAME_LANGUAGE</a></strong></code>
+<div class="block">Base name of document language feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_BASE_NAME_SOFA">FEATURE_BASE_NAME_SOFA</a></strong></code>
+<div class="block">Sofa ID feature that is the handle to a text Sofa.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_BASE_NAME_SOFAARRAY">FEATURE_BASE_NAME_SOFAARRAY</a></strong></code>
+<div class="block">Base name of Sofa array fs data feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_BASE_NAME_SOFAID">FEATURE_BASE_NAME_SOFAID</a></strong></code>
+<div class="block">Base name of Sofa ID feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_BASE_NAME_SOFAMIME">FEATURE_BASE_NAME_SOFAMIME</a></strong></code>
+<div class="block">Base name of Sofa mime type feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_BASE_NAME_SOFANUM">FEATURE_BASE_NAME_SOFANUM</a></strong></code>
+<div class="block">Base name of Sofa Number feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_BASE_NAME_SOFASTRING">FEATURE_BASE_NAME_SOFASTRING</a></strong></code>
+<div class="block">Base name of Sofa string data feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_BASE_NAME_SOFAURI">FEATURE_BASE_NAME_SOFAURI</a></strong></code>
+<div class="block">Base name of Sofa URI feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_BASE_NAME_TAIL">FEATURE_BASE_NAME_TAIL</a></strong></code>
+<div class="block">Base name of list tail feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_BEGIN">FEATURE_FULL_NAME_BEGIN</a></strong></code>
+<div class="block">Fully qualified name of annotation begin feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_END">FEATURE_FULL_NAME_END</a></strong></code>
+<div class="block">Fully qualified name of annotation end feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_FLOAT_LIST_HEAD">FEATURE_FULL_NAME_FLOAT_LIST_HEAD</a></strong></code>
+<div class="block">Qualified name of float list head feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_FLOAT_LIST_TAIL">FEATURE_FULL_NAME_FLOAT_LIST_TAIL</a></strong></code>
+<div class="block">Qualified name of float list tail feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_FS_LIST_HEAD">FEATURE_FULL_NAME_FS_LIST_HEAD</a></strong></code>
+<div class="block">Qualified name of fs list head feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_FS_LIST_TAIL">FEATURE_FULL_NAME_FS_LIST_TAIL</a></strong></code>
+<div class="block">Qualified name of fs list tail feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_INTEGER_LIST_HEAD">FEATURE_FULL_NAME_INTEGER_LIST_HEAD</a></strong></code>
+<div class="block">Qualified name of integer list head feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_INTEGER_LIST_TAIL">FEATURE_FULL_NAME_INTEGER_LIST_TAIL</a></strong></code>
+<div class="block">Qualified name of integer list tail feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_LANGUAGE">FEATURE_FULL_NAME_LANGUAGE</a></strong></code>
+<div class="block">Fully qualified name of document language feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_SOFA">FEATURE_FULL_NAME_SOFA</a></strong></code>
+<div class="block">Fully qualified name of annotation sofa feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_SOFAARRAY">FEATURE_FULL_NAME_SOFAARRAY</a></strong></code>
+<div class="block">Qualified name of Sofa array fs data feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_SOFAID">FEATURE_FULL_NAME_SOFAID</a></strong></code>
+<div class="block">Qualified name of Sofa id feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_SOFAMIME">FEATURE_FULL_NAME_SOFAMIME</a></strong></code>
+<div class="block">Qualified name of Sofa mime type feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_SOFANUM">FEATURE_FULL_NAME_SOFANUM</a></strong></code>
+<div class="block">Qualified name of Sofa number feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_SOFASTRING">FEATURE_FULL_NAME_SOFASTRING</a></strong></code>
+<div class="block">Qualified name of Sofa string data feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_SOFAURI">FEATURE_FULL_NAME_SOFAURI</a></strong></code>
+<div class="block">Qualified name of Sofa URI feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_STRING_LIST_HEAD">FEATURE_FULL_NAME_STRING_LIST_HEAD</a></strong></code>
+<div class="block">Qualified name of string list head feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#FEATURE_FULL_NAME_STRING_LIST_TAIL">FEATURE_FULL_NAME_STRING_LIST_TAIL</a></strong></code>
+<div class="block">Qualified name of string list tail feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#NAME_DEFAULT_SOFA">NAME_DEFAULT_SOFA</a></strong></code>
+<div class="block">Sofa name for the initial view's sofa.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#NAME_DEFAULT_TEXT_SOFA">NAME_DEFAULT_TEXT_SOFA</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, this is replaced by <a href="../../../../org/apache/uima/cas/CAS.html#NAME_DEFAULT_SOFA"><code>NAME_DEFAULT_SOFA</code></a>, and the value has
+             changed. In general, user code should not need to refer to this name.</i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#NAME_SPACE_UIMA_CAS">NAME_SPACE_UIMA_CAS</a></strong></code>
+<div class="block">UIMA CAS name space.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#NAME_SPACE_UIMA_TCAS">NAME_SPACE_UIMA_TCAS</a></strong></code>
+<div class="block">Name of Text CAS name space.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#SOFA_INDEX_NAME">SOFA_INDEX_NAME</a></strong></code>
+<div class="block">Sofa Index name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#STD_ANNOTATION_INDEX">STD_ANNOTATION_INDEX</a></strong></code>
+<div class="block">Name of the built-in index on annotations.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_ANNOTATION">TYPE_NAME_ANNOTATION</a></strong></code>
+<div class="block">Name of annotation type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_ANNOTATION_BASE">TYPE_NAME_ANNOTATION_BASE</a></strong></code>
+<div class="block">Name of annotation base type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_ARRAY_BASE">TYPE_NAME_ARRAY_BASE</a></strong></code>
+<div class="block">ArrayBase type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_BOOLEAN">TYPE_NAME_BOOLEAN</a></strong></code>
+<div class="block">Boolean type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_BOOLEAN_ARRAY">TYPE_NAME_BOOLEAN_ARRAY</a></strong></code>
+<div class="block">Boolean array type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_BYTE">TYPE_NAME_BYTE</a></strong></code>
+<div class="block">Byte type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_BYTE_ARRAY">TYPE_NAME_BYTE_ARRAY</a></strong></code>
+<div class="block">Byte array type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_DOCUMENT_ANNOTATION">TYPE_NAME_DOCUMENT_ANNOTATION</a></strong></code>
+<div class="block">Name of document annotation type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_DOUBLE">TYPE_NAME_DOUBLE</a></strong></code>
+<div class="block">Double type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_DOUBLE_ARRAY">TYPE_NAME_DOUBLE_ARRAY</a></strong></code>
+<div class="block">Double array type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_EMPTY_FLOAT_LIST">TYPE_NAME_EMPTY_FLOAT_LIST</a></strong></code>
+<div class="block">Empty float type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_EMPTY_FS_LIST">TYPE_NAME_EMPTY_FS_LIST</a></strong></code>
+<div class="block">Empty feature structure list type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_EMPTY_INTEGER_LIST">TYPE_NAME_EMPTY_INTEGER_LIST</a></strong></code>
+<div class="block">Empty integer list type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_EMPTY_STRING_LIST">TYPE_NAME_EMPTY_STRING_LIST</a></strong></code>
+<div class="block">Empty string list type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_FLOAT">TYPE_NAME_FLOAT</a></strong></code>
+<div class="block">Float type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_FLOAT_ARRAY">TYPE_NAME_FLOAT_ARRAY</a></strong></code>
+<div class="block">Float array type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_FLOAT_LIST">TYPE_NAME_FLOAT_LIST</a></strong></code>
+<div class="block">Float list type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_FS_ARRAY">TYPE_NAME_FS_ARRAY</a></strong></code>
+<div class="block">Feature structure array type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_FS_LIST">TYPE_NAME_FS_LIST</a></strong></code>
+<div class="block">Feature structure list type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_INTEGER">TYPE_NAME_INTEGER</a></strong></code>
+<div class="block">Integer type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_INTEGER_ARRAY">TYPE_NAME_INTEGER_ARRAY</a></strong></code>
+<div class="block">Integer array type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_INTEGER_LIST">TYPE_NAME_INTEGER_LIST</a></strong></code>
+<div class="block">Integer list type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_LIST_BASE">TYPE_NAME_LIST_BASE</a></strong></code>
+<div class="block">Abstract list base type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_LONG">TYPE_NAME_LONG</a></strong></code>
+<div class="block">Long type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_LONG_ARRAY">TYPE_NAME_LONG_ARRAY</a></strong></code>
+<div class="block">Long array type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_NON_EMPTY_FLOAT_LIST">TYPE_NAME_NON_EMPTY_FLOAT_LIST</a></strong></code>
+<div class="block">Non-empty float list type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_NON_EMPTY_FS_LIST">TYPE_NAME_NON_EMPTY_FS_LIST</a></strong></code>
+<div class="block">Non-empty feature structure list type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_NON_EMPTY_INTEGER_LIST">TYPE_NAME_NON_EMPTY_INTEGER_LIST</a></strong></code>
+<div class="block">Non-empty integer list type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_NON_EMPTY_STRING_LIST">TYPE_NAME_NON_EMPTY_STRING_LIST</a></strong></code>
+<div class="block">Non-empty string list type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_SHORT">TYPE_NAME_SHORT</a></strong></code>
+<div class="block">Short type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_SHORT_ARRAY">TYPE_NAME_SHORT_ARRAY</a></strong></code>
+<div class="block">Short array type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_SOFA">TYPE_NAME_SOFA</a></strong></code>
+<div class="block">Sofa type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_STRING">TYPE_NAME_STRING</a></strong></code>
+<div class="block">String type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_STRING_ARRAY">TYPE_NAME_STRING_ARRAY</a></strong></code>
+<div class="block">String array type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_STRING_LIST">TYPE_NAME_STRING_LIST</a></strong></code>
+<div class="block">String list type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#TYPE_NAME_TOP">TYPE_NAME_TOP</a></strong></code>
+<div class="block">Top type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#UIMA_CAS_PREFIX">UIMA_CAS_PREFIX</a></strong></code>
+<div class="block">UIMA CAS name space prefix to prepend to type names (adds an extra period to the name space
+ proper.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#addFsToIndexes(org.apache.uima.cas.FeatureStructure)">addFsToIndexes</a></strong>(<a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&nbsp;fs)</code>
+<div class="block">Add a feature structure to all appropriate indexes in the repository associated with this CAS
+ View.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&lt;T extends <a href="../../../../org/apache/uima/cas/text/AnnotationFS.html" title="interface in org.apache.uima.cas.text">AnnotationFS</a>&gt;&nbsp;<br><a href="../../../../org/apache/uima/cas/text/AnnotationFS.html" title="interface in org.apache.uima.cas.text">AnnotationFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createAnnotation(org.apache.uima.cas.Type,%20int,%20int)">createAnnotation</a></strong>(<a href="../../../../org/apache/uima/cas/Type.html" title="interface in org.apache.uima.cas">Type</a>&nbsp;type,
+                int&nbsp;begin,
+                int&nbsp;end)</code>
+<div class="block">Create a new annotation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/ArrayFS.html" title="interface in org.apache.uima.cas">ArrayFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createArrayFS(int)">createArrayFS</a></strong>(int&nbsp;length)</code>
+<div class="block">Create a new feature structure array.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/BooleanArrayFS.html" title="interface in org.apache.uima.cas">BooleanArrayFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createBooleanArrayFS(int)">createBooleanArrayFS</a></strong>(int&nbsp;length)</code>
+<div class="block">Create a new Boolean array.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/ByteArrayFS.html" title="interface in org.apache.uima.cas">ByteArrayFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createByteArrayFS(int)">createByteArrayFS</a></strong>(int&nbsp;length)</code>
+<div class="block">Create a new Byte array.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/DoubleArrayFS.html" title="interface in org.apache.uima.cas">DoubleArrayFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createDoubleArrayFS(int)">createDoubleArrayFS</a></strong>(int&nbsp;length)</code>
+<div class="block">Create a new Double array.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/FeaturePath.html" title="interface in org.apache.uima.cas">FeaturePath</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createFeaturePath()">createFeaturePath</a></strong>()</code>
+<div class="block">Create a feature path.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/FeatureValuePath.html" title="interface in org.apache.uima.cas">FeatureValuePath</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createFeatureValuePath(java.lang.String)">createFeatureValuePath</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;featureValuePath)</code>
+<div class="block">Create a feature-value path from a string.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>&lt;T extends <a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&gt;&nbsp;<br><a href="../../../../org/apache/uima/cas/FSIterator.html" title="interface in org.apache.uima.cas">FSIterator</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createFilteredIterator(org.apache.uima.cas.FSIterator,%20org.apache.uima.cas.FSMatchConstraint)">createFilteredIterator</a></strong>(<a href="../../../../org/apache/uima/cas/FSIterator.html" title="interface in org.apache.uima.cas">FSIterator</a>&lt;T&gt;&nbsp;it,
+                      <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;cons)</code>
+<div class="block">Create an iterator over structures satisfying a given constraint.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/FloatArrayFS.html" title="interface in org.apache.uima.cas">FloatArrayFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createFloatArrayFS(int)">createFloatArrayFS</a></strong>(int&nbsp;length)</code>
+<div class="block">Create a new int array.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>&lt;T extends <a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&gt;&nbsp;<br>T</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createFS(org.apache.uima.cas.Type)">createFS</a></strong>(<a href="../../../../org/apache/uima/cas/Type.html" title="interface in org.apache.uima.cas">Type</a>&nbsp;type)</code>
+<div class="block">Create a new FeatureStructure.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/IntArrayFS.html" title="interface in org.apache.uima.cas">IntArrayFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createIntArrayFS(int)">createIntArrayFS</a></strong>(int&nbsp;length)</code>
+<div class="block">Create a new int array.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/LongArrayFS.html" title="interface in org.apache.uima.cas">LongArrayFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createLongArrayFS(int)">createLongArrayFS</a></strong>(int&nbsp;length)</code>
+<div class="block">Create a new Long array.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/Marker.html" title="interface in org.apache.uima.cas">Marker</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createMarker()">createMarker</a></strong>()</code>
+<div class="block">Sets a mark and returns the marker object set with the current mark which can be used to query when certain FSs
+ were created.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/ShortArrayFS.html" title="interface in org.apache.uima.cas">ShortArrayFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createShortArrayFS(int)">createShortArrayFS</a></strong>(int&nbsp;length)</code>
+<div class="block">Create a new Short array.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas">SofaFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createSofa(org.apache.uima.cas.SofaID,%20java.lang.String)">createSofa</a></strong>(<a href="../../../../org/apache/uima/cas/SofaID.html" title="interface in org.apache.uima.cas">SofaID</a>&nbsp;sofaID,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mimeType)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, use <a href="../../../../org/apache/uima/cas/CAS.html#createView(java.lang.String)"><code>createView(String)</code></a> instead.</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/StringArrayFS.html" title="interface in org.apache.uima.cas">StringArrayFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createStringArrayFS(int)">createStringArrayFS</a></strong>(int&nbsp;length)</code>
+<div class="block">Create a new String array.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#createView(java.lang.String)">createView</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;localViewName)</code>
+<div class="block">Create a view and its underlying Sofa (subject of analysis).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>&lt;T extends <a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&gt;&nbsp;<br><a href="http://docs.oracle.com/javase/7/docs/api/java/util/ListIterator.html?is-external=true" title="class or interface in java.util">ListIterator</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#fs2listIterator(org.apache.uima.cas.FSIterator)">fs2listIterator</a></strong>(<a href="../../../../org/apache/uima/cas/FSIterator.html" title="interface in org.apache.uima.cas">FSIterator</a>&lt;T&gt;&nbsp;it)</code>
+<div class="block">Wrap a standard Java <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ListIterator.html?is-external=true" title="class or interface in java.util"><code>ListIterator</code></a> around an FSListIterator.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&lt;T extends <a href="../../../../org/apache/uima/cas/text/AnnotationFS.html" title="interface in org.apache.uima.cas.text">AnnotationFS</a>&gt;&nbsp;<br><a href="../../../../org/apache/uima/cas/text/AnnotationIndex.html" title="interface in org.apache.uima.cas.text">AnnotationIndex</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getAnnotationIndex()">getAnnotationIndex</a></strong>()</code>
+<div class="block">Get the standard annotation index.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>&lt;T extends <a href="../../../../org/apache/uima/cas/text/AnnotationFS.html" title="interface in org.apache.uima.cas.text">AnnotationFS</a>&gt;&nbsp;<br><a href="../../../../org/apache/uima/cas/text/AnnotationIndex.html" title="interface in org.apache.uima.cas.text">AnnotationIndex</a>&lt;T&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getAnnotationIndex(org.apache.uima.cas.Type)">getAnnotationIndex</a></strong>(<a href="../../../../org/apache/uima/cas/Type.html" title="interface in org.apache.uima.cas">Type</a>&nbsp;type)</code>
+<div class="block">Get the standard annotation index restricted to a specific annotation type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/Type.html" title="interface in org.apache.uima.cas">Type</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getAnnotationType()">getAnnotationType</a></strong>()</code>
+<div class="block">Get the type object for the annotation type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/Feature.html" title="interface in org.apache.uima.cas">Feature</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getBeginFeature()">getBeginFeature</a></strong>()</code>
+<div class="block">Get the feature object for the annotation begin feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/ConstraintFactory.html" title="class in org.apache.uima.cas">ConstraintFactory</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getConstraintFactory()">getConstraintFactory</a></strong>()</code>
+<div class="block">Get a constraint factory.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getCurrentView()">getCurrentView</a></strong>()</code>
+<div class="block">Get the Cas view that the current component should use.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&lt;T extends <a href="../../../../org/apache/uima/cas/text/AnnotationFS.html" title="interface in org.apache.uima.cas.text">AnnotationFS</a>&gt;&nbsp;<br>T</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getDocumentAnnotation()">getDocumentAnnotation</a></strong>()</code>
+<div class="block">Get the document annotation.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getDocumentLanguage()">getDocumentLanguage</a></strong>()</code>
+<div class="block">Gets the language code for this document from the language feature of the special instance of
+ the DocumentationAnnotation associated with this CAS.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getDocumentText()">getDocumentText</a></strong>()</code>
+<div class="block">Get the document text.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/Feature.html" title="interface in org.apache.uima.cas">Feature</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getEndFeature()">getEndFeature</a></strong>()</code>
+<div class="block">Get the feature object for the annotation end feature.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/FSIndexRepository.html" title="interface in org.apache.uima.cas">FSIndexRepository</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getIndexRepository()">getIndexRepository</a></strong>()</code>
+<div class="block">Get the index repository.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getJCas()">getJCas</a></strong>()</code>
+<div class="block">Get the JCas for this CAS.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getJCas(org.apache.uima.cas.SofaFS)">getJCas</a></strong>(<a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas">SofaFS</a>&nbsp;aSofa)</code>
+<div class="block">Create a JCas view for a Sofa.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getJCas(org.apache.uima.cas.SofaID)">getJCas</a></strong>(<a href="../../../../org/apache/uima/cas/SofaID.html" title="interface in org.apache.uima.cas">SofaID</a>&nbsp;aSofaID)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, use <a href="../../../../org/apache/uima/cas/CAS.html#getView(java.lang.String)"><code>getView(String)</code></a> followed by <a href="../../../../org/apache/uima/cas/CAS.html#getJCas()"><code>getJCas()</code></a>.</i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>org.apache.uima.cas.impl.LowLevelCAS</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getLowLevelCAS()">getLowLevelCAS</a></strong>()</code>
+<div class="block">Get an instance of the low-level CAS.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas">SofaFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getSofa()">getSofa</a></strong>()</code>
+<div class="block">Get the Sofa feature structure associated with this CAS view.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas">SofaFS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getSofa(org.apache.uima.cas.SofaID)">getSofa</a></strong>(<a href="../../../../org/apache/uima/cas/SofaID.html" title="interface in org.apache.uima.cas">SofaID</a>&nbsp;sofaID)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, use {#getView(String)}. From the view you can access the Sofa data, or
+             call <a href="../../../../org/apache/uima/cas/CAS.html#getSofa()"><code>getSofa()</code></a> if you truly need to access the SofaFS object.</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getSofaDataArray()">getSofaDataArray</a></strong>()</code>
+<div class="block">Get the Sofa data array.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getSofaDataStream()">getSofaDataStream</a></strong>()</code>
+<div class="block">Get the Sofa data as a byte stream.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getSofaDataString()">getSofaDataString</a></strong>()</code>
+<div class="block">Get the Sofa Data String (a.k.a.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getSofaDataURI()">getSofaDataURI</a></strong>()</code>
+<div class="block">Get the Sofa data array.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/FSIterator.html" title="interface in org.apache.uima.cas">FSIterator</a>&lt;<a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas">SofaFS</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getSofaIterator()">getSofaIterator</a></strong>()</code>
+<div class="block">Get iterator for all SofaFS in the CAS.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getSofaMimeType()">getSofaMimeType</a></strong>()</code>
+<div class="block">Get the mime type of the Sofa data being analyzed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getTypeSystem()">getTypeSystem</a></strong>()</code>
+<div class="block">Return the type system of this CAS instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getView(org.apache.uima.cas.SofaFS)">getView</a></strong>(<a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas">SofaFS</a>&nbsp;aSofa)</code>
+<div class="block">Get the view for a Sofa (subject of analysis).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getView(java.lang.String)">getView</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;localViewName)</code>
+<div class="block">Get the view for a Sofa (subject of analysis).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getViewIterator()">getViewIterator</a></strong>()</code>
+<div class="block">Get iterator over all views in this CAS.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getViewIterator(java.lang.String)">getViewIterator</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;localViewNamePrefix)</code>
+<div class="block">Get iterator over all views with the given name prefix.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#getViewName()">getViewName</a></strong>()</code>
+<div class="block">Get the view name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#protectIndexes()">protectIndexes</a></strong>()</code>
+<div class="block">Call this method to set up a region, 
+ ended by a <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true#close()" title="class or interface in java.lang"><code>AutoCloseable.close()</code></a> call on the returned object,
+ You can use this or the <a href="../../../../org/apache/uima/cas/CAS.html#protectIndexes(java.lang.Runnable)"><code>protectIndexes(Runnable)</code></a> method to protected
+ the indexes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#protectIndexes(java.lang.Runnable)">protectIndexes</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</code>
+<div class="block">Runs the code in the runnable inside a protection block, where any modifications to features
+ done while in this block will be done in a way to protect any indexes which otherwise 
+ might become corrupted by the update action; the protection is achieved by temporarily
+ removing the FS (if it is in the indexes), before the update happens.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#removeFsFromIndexes(org.apache.uima.cas.FeatureStructure)">removeFsFromIndexes</a></strong>(<a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&nbsp;fs)</code>
+<div class="block">Remove a feature structure from all indexes in the repository associated with this CAS View.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#reset()">reset</a></strong>()</code>
+<div class="block">Reset the CAS, emptying it of all content.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#setCurrentComponentInfo(org.apache.uima.cas.ComponentInfo)">setCurrentComponentInfo</a></strong>(<a href="../../../../org/apache/uima/cas/ComponentInfo.html" title="interface in org.apache.uima.cas">ComponentInfo</a>&nbsp;info)</code>
+<div class="block">Informs the CAS of relevant information about the component that is currently processing it.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#setDocumentLanguage(java.lang.String)">setDocumentLanguage</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;languageCode)</code>
+<div class="block">Sets the language for this document.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#setDocumentText(java.lang.String)">setDocumentText</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</code>
+<div class="block">Set the document text.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#setSofaDataArray(org.apache.uima.cas.FeatureStructure,%20java.lang.String)">setSofaDataArray</a></strong>(<a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&nbsp;array,
+                <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mime)</code>
+<div class="block">Set the Sofa data as an ArrayFS.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#setSofaDataString(java.lang.String,%20java.lang.String)">setSofaDataString</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mimetype)</code>
+<div class="block">Set the document text.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#setSofaDataURI(java.lang.String,%20java.lang.String)">setSofaDataURI</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uri,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mime)</code>
+<div class="block">Set the Sofa data as a URI.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CAS.html#size()">size</a></strong>()</code>
+<div class="block">Estimate the memory consumption of this CAS instance (in bytes).</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.uima.cas.AbstractCas">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;org.apache.uima.cas.<a href="../../../../org/apache/uima/cas/AbstractCas.html" title="interface in org.apache.uima.cas">AbstractCas</a></h3>
+<code><a href="../../../../org/apache/uima/cas/AbstractCas.html#release()">release</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="NAME_SPACE_UIMA_CAS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NAME_SPACE_UIMA_CAS</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> NAME_SPACE_UIMA_CAS</pre>
+<div class="block">UIMA CAS name space.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.NAME_SPACE_UIMA_CAS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="UIMA_CAS_PREFIX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UIMA_CAS_PREFIX</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> UIMA_CAS_PREFIX</pre>
+<div class="block">UIMA CAS name space prefix to prepend to type names (adds an extra period to the name space
+ proper.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.UIMA_CAS_PREFIX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_TOP">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_TOP</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_TOP</pre>
+<div class="block">Top type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_TOP">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_INTEGER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_INTEGER</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_INTEGER</pre>
+<div class="block">Integer type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_INTEGER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_FLOAT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_FLOAT</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_FLOAT</pre>
+<div class="block">Float type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_FLOAT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_STRING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_STRING</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_STRING</pre>
+<div class="block">String type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_STRING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_BOOLEAN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_BOOLEAN</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_BOOLEAN</pre>
+<div class="block">Boolean type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_BOOLEAN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_BYTE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_BYTE</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_BYTE</pre>
+<div class="block">Byte type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_BYTE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_SHORT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_SHORT</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_SHORT</pre>
+<div class="block">Short type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_SHORT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_LONG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_LONG</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_LONG</pre>
+<div class="block">Long type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_LONG">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_DOUBLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_DOUBLE</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_DOUBLE</pre>
+<div class="block">Double type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_DOUBLE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_ARRAY_BASE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_ARRAY_BASE</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_ARRAY_BASE</pre>
+<div class="block">ArrayBase type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_ARRAY_BASE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_FS_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_FS_ARRAY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_FS_ARRAY</pre>
+<div class="block">Feature structure array type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_FS_ARRAY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_INTEGER_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_INTEGER_ARRAY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_INTEGER_ARRAY</pre>
+<div class="block">Integer array type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_INTEGER_ARRAY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_FLOAT_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_FLOAT_ARRAY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_FLOAT_ARRAY</pre>
+<div class="block">Float array type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_FLOAT_ARRAY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_STRING_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_STRING_ARRAY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_STRING_ARRAY</pre>
+<div class="block">String array type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_STRING_ARRAY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_BOOLEAN_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_BOOLEAN_ARRAY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_BOOLEAN_ARRAY</pre>
+<div class="block">Boolean array type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_BOOLEAN_ARRAY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_BYTE_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_BYTE_ARRAY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_BYTE_ARRAY</pre>
+<div class="block">Byte array type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_BYTE_ARRAY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_SHORT_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_SHORT_ARRAY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_SHORT_ARRAY</pre>
+<div class="block">Short array type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_SHORT_ARRAY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_LONG_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_LONG_ARRAY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_LONG_ARRAY</pre>
+<div class="block">Long array type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_LONG_ARRAY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_DOUBLE_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_DOUBLE_ARRAY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_DOUBLE_ARRAY</pre>
+<div class="block">Double array type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_DOUBLE_ARRAY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_SOFA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_SOFA</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_SOFA</pre>
+<div class="block">Sofa type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_SOFA">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_ANNOTATION_BASE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_ANNOTATION_BASE</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_ANNOTATION_BASE</pre>
+<div class="block">Name of annotation base type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_ANNOTATION_BASE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_BASE_NAME_SOFANUM">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_BASE_NAME_SOFANUM</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_BASE_NAME_SOFANUM</pre>
+<div class="block">Base name of Sofa Number feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_BASE_NAME_SOFANUM">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_BASE_NAME_SOFAID">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_BASE_NAME_SOFAID</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_BASE_NAME_SOFAID</pre>
+<div class="block">Base name of Sofa ID feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_BASE_NAME_SOFAID">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_BASE_NAME_SOFAMIME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_BASE_NAME_SOFAMIME</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_BASE_NAME_SOFAMIME</pre>
+<div class="block">Base name of Sofa mime type feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_BASE_NAME_SOFAMIME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_BASE_NAME_SOFAURI">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_BASE_NAME_SOFAURI</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_BASE_NAME_SOFAURI</pre>
+<div class="block">Base name of Sofa URI feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_BASE_NAME_SOFAURI">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_BASE_NAME_SOFASTRING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_BASE_NAME_SOFASTRING</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_BASE_NAME_SOFASTRING</pre>
+<div class="block">Base name of Sofa string data feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_BASE_NAME_SOFASTRING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_BASE_NAME_SOFAARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_BASE_NAME_SOFAARRAY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_BASE_NAME_SOFAARRAY</pre>
+<div class="block">Base name of Sofa array fs data feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_BASE_NAME_SOFAARRAY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_SOFANUM">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_SOFANUM</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_SOFANUM</pre>
+<div class="block">Qualified name of Sofa number feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_SOFANUM">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_SOFAID">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_SOFAID</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_SOFAID</pre>
+<div class="block">Qualified name of Sofa id feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_SOFAID">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_SOFAMIME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_SOFAMIME</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_SOFAMIME</pre>
+<div class="block">Qualified name of Sofa mime type feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_SOFAMIME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_SOFAURI">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_SOFAURI</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_SOFAURI</pre>
+<div class="block">Qualified name of Sofa URI feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_SOFAURI">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_SOFASTRING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_SOFASTRING</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_SOFASTRING</pre>
+<div class="block">Qualified name of Sofa string data feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_SOFASTRING">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_SOFAARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_SOFAARRAY</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_SOFAARRAY</pre>
+<div class="block">Qualified name of Sofa array fs data feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_SOFAARRAY">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SOFA_INDEX_NAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SOFA_INDEX_NAME</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SOFA_INDEX_NAME</pre>
+<div class="block">Sofa Index name.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.SOFA_INDEX_NAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="NAME_DEFAULT_TEXT_SOFA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NAME_DEFAULT_TEXT_SOFA</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> NAME_DEFAULT_TEXT_SOFA</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>As of v2.0, this is replaced by <a href="../../../../org/apache/uima/cas/CAS.html#NAME_DEFAULT_SOFA"><code>NAME_DEFAULT_SOFA</code></a>, and the value has
+             changed. In general, user code should not need to refer to this name.</i></div>
+<div class="block">Sofa name for the default text sofa.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.NAME_DEFAULT_TEXT_SOFA">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="NAME_DEFAULT_SOFA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NAME_DEFAULT_SOFA</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> NAME_DEFAULT_SOFA</pre>
+<div class="block">Sofa name for the initial view's sofa.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.NAME_DEFAULT_SOFA">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_LIST_BASE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_LIST_BASE</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_LIST_BASE</pre>
+<div class="block">Abstract list base type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_LIST_BASE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_FS_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_FS_LIST</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_FS_LIST</pre>
+<div class="block">Feature structure list type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_FS_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_NON_EMPTY_FS_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_NON_EMPTY_FS_LIST</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_NON_EMPTY_FS_LIST</pre>
+<div class="block">Non-empty feature structure list type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_NON_EMPTY_FS_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_EMPTY_FS_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_EMPTY_FS_LIST</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_EMPTY_FS_LIST</pre>
+<div class="block">Empty feature structure list type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_EMPTY_FS_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_INTEGER_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_INTEGER_LIST</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_INTEGER_LIST</pre>
+<div class="block">Integer list type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_INTEGER_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_NON_EMPTY_INTEGER_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_NON_EMPTY_INTEGER_LIST</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_NON_EMPTY_INTEGER_LIST</pre>
+<div class="block">Non-empty integer list type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_NON_EMPTY_INTEGER_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_EMPTY_INTEGER_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_EMPTY_INTEGER_LIST</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_EMPTY_INTEGER_LIST</pre>
+<div class="block">Empty integer list type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_EMPTY_INTEGER_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_FLOAT_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_FLOAT_LIST</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_FLOAT_LIST</pre>
+<div class="block">Float list type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_FLOAT_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_NON_EMPTY_FLOAT_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_NON_EMPTY_FLOAT_LIST</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_NON_EMPTY_FLOAT_LIST</pre>
+<div class="block">Non-empty float list type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_NON_EMPTY_FLOAT_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_EMPTY_FLOAT_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_EMPTY_FLOAT_LIST</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_EMPTY_FLOAT_LIST</pre>
+<div class="block">Empty float type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_EMPTY_FLOAT_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_STRING_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_STRING_LIST</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_STRING_LIST</pre>
+<div class="block">String list type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_STRING_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_NON_EMPTY_STRING_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_NON_EMPTY_STRING_LIST</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_NON_EMPTY_STRING_LIST</pre>
+<div class="block">Non-empty string list type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_NON_EMPTY_STRING_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_EMPTY_STRING_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_EMPTY_STRING_LIST</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_EMPTY_STRING_LIST</pre>
+<div class="block">Empty string list type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_EMPTY_STRING_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_BASE_NAME_HEAD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_BASE_NAME_HEAD</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_BASE_NAME_HEAD</pre>
+<div class="block">Base name of list head feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_BASE_NAME_HEAD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_BASE_NAME_TAIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_BASE_NAME_TAIL</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_BASE_NAME_TAIL</pre>
+<div class="block">Base name of list tail feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_BASE_NAME_TAIL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_FS_LIST_HEAD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_FS_LIST_HEAD</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_FS_LIST_HEAD</pre>
+<div class="block">Qualified name of fs list head feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_FS_LIST_HEAD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_INTEGER_LIST_HEAD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_INTEGER_LIST_HEAD</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_INTEGER_LIST_HEAD</pre>
+<div class="block">Qualified name of integer list head feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_INTEGER_LIST_HEAD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_FLOAT_LIST_HEAD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_FLOAT_LIST_HEAD</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_FLOAT_LIST_HEAD</pre>
+<div class="block">Qualified name of float list head feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_FLOAT_LIST_HEAD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_STRING_LIST_HEAD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_STRING_LIST_HEAD</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_STRING_LIST_HEAD</pre>
+<div class="block">Qualified name of string list head feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_STRING_LIST_HEAD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_FS_LIST_TAIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_FS_LIST_TAIL</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_FS_LIST_TAIL</pre>
+<div class="block">Qualified name of fs list tail feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_FS_LIST_TAIL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_INTEGER_LIST_TAIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_INTEGER_LIST_TAIL</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_INTEGER_LIST_TAIL</pre>
+<div class="block">Qualified name of integer list tail feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_INTEGER_LIST_TAIL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_FLOAT_LIST_TAIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_FLOAT_LIST_TAIL</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_FLOAT_LIST_TAIL</pre>
+<div class="block">Qualified name of float list tail feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_FLOAT_LIST_TAIL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_STRING_LIST_TAIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_STRING_LIST_TAIL</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_STRING_LIST_TAIL</pre>
+<div class="block">Qualified name of string list tail feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_STRING_LIST_TAIL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="NAME_SPACE_UIMA_TCAS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NAME_SPACE_UIMA_TCAS</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> NAME_SPACE_UIMA_TCAS</pre>
+<div class="block">Name of Text CAS name space.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.NAME_SPACE_UIMA_TCAS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_ANNOTATION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_ANNOTATION</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_ANNOTATION</pre>
+<div class="block">Name of annotation type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_ANNOTATION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NAME_DOCUMENT_ANNOTATION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NAME_DOCUMENT_ANNOTATION</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NAME_DOCUMENT_ANNOTATION</pre>
+<div class="block">Name of document annotation type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.TYPE_NAME_DOCUMENT_ANNOTATION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_BASE_NAME_SOFA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_BASE_NAME_SOFA</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_BASE_NAME_SOFA</pre>
+<div class="block">Sofa ID feature that is the handle to a text Sofa.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_BASE_NAME_SOFA">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_BASE_NAME_BEGIN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_BASE_NAME_BEGIN</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_BASE_NAME_BEGIN</pre>
+<div class="block">Base name of annotation begin feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_BASE_NAME_BEGIN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_BASE_NAME_END">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_BASE_NAME_END</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_BASE_NAME_END</pre>
+<div class="block">Base name of annotation end feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_BASE_NAME_END">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_BASE_NAME_LANGUAGE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_BASE_NAME_LANGUAGE</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_BASE_NAME_LANGUAGE</pre>
+<div class="block">Base name of document language feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_BASE_NAME_LANGUAGE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_BEGIN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_BEGIN</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_BEGIN</pre>
+<div class="block">Fully qualified name of annotation begin feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_BEGIN">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_SOFA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_SOFA</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_SOFA</pre>
+<div class="block">Fully qualified name of annotation sofa feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_SOFA">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_END">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_END</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_END</pre>
+<div class="block">Fully qualified name of annotation end feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_END">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="FEATURE_FULL_NAME_LANGUAGE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FEATURE_FULL_NAME_LANGUAGE</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FEATURE_FULL_NAME_LANGUAGE</pre>
+<div class="block">Fully qualified name of document language feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.FEATURE_FULL_NAME_LANGUAGE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="STD_ANNOTATION_INDEX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STD_ANNOTATION_INDEX</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> STD_ANNOTATION_INDEX</pre>
+<div class="block">Name of the built-in index on annotations.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.STD_ANNOTATION_INDEX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEFAULT_LANGUAGE_NAME">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>DEFAULT_LANGUAGE_NAME</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DEFAULT_LANGUAGE_NAME</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CAS.DEFAULT_LANGUAGE_NAME">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="createFS(org.apache.uima.cas.Type)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFS</h4>
+<pre>&lt;T extends <a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&gt;&nbsp;T&nbsp;createFS(<a href="../../../../org/apache/uima/cas/Type.html" title="interface in org.apache.uima.cas">Type</a>&nbsp;type)
+                                    throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Create a new FeatureStructure.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - the Java cover class for the FS being created</dd><dt><span class="strong">Parameters:</span></dt><dd><code>type</code> - The type of the FS.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The new FS.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createArrayFS(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createArrayFS</h4>
+<pre><a href="../../../../org/apache/uima/cas/ArrayFS.html" title="interface in org.apache.uima.cas">ArrayFS</a>&nbsp;createArrayFS(int&nbsp;length)
+                      throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Create a new feature structure array.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>length</code> - The length of the array.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The new array.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createIntArrayFS(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createIntArrayFS</h4>
+<pre><a href="../../../../org/apache/uima/cas/IntArrayFS.html" title="interface in org.apache.uima.cas">IntArrayFS</a>&nbsp;createIntArrayFS(int&nbsp;length)
+                            throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Create a new int array.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>length</code> - The length of the array.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The new array.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createFloatArrayFS(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFloatArrayFS</h4>
+<pre><a href="../../../../org/apache/uima/cas/FloatArrayFS.html" title="interface in org.apache.uima.cas">FloatArrayFS</a>&nbsp;createFloatArrayFS(int&nbsp;length)
+                                throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Create a new int array.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>length</code> - The length of the array.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The new array.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createStringArrayFS(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createStringArrayFS</h4>
+<pre><a href="../../../../org/apache/uima/cas/StringArrayFS.html" title="interface in org.apache.uima.cas">StringArrayFS</a>&nbsp;createStringArrayFS(int&nbsp;length)
+                                  throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Create a new String array.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>length</code> - The length of the array.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The new array.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createByteArrayFS(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createByteArrayFS</h4>
+<pre><a href="../../../../org/apache/uima/cas/ByteArrayFS.html" title="interface in org.apache.uima.cas">ByteArrayFS</a>&nbsp;createByteArrayFS(int&nbsp;length)
+                              throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Create a new Byte array.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>length</code> - The length of the array.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The new array.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createBooleanArrayFS(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createBooleanArrayFS</h4>
+<pre><a href="../../../../org/apache/uima/cas/BooleanArrayFS.html" title="interface in org.apache.uima.cas">BooleanArrayFS</a>&nbsp;createBooleanArrayFS(int&nbsp;length)
+                                    throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Create a new Boolean array.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>length</code> - The length of the array.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The new array.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createShortArrayFS(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createShortArrayFS</h4>
+<pre><a href="../../../../org/apache/uima/cas/ShortArrayFS.html" title="interface in org.apache.uima.cas">ShortArrayFS</a>&nbsp;createShortArrayFS(int&nbsp;length)
+                                throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Create a new Short array.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>length</code> - The length of the array.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The new array.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createLongArrayFS(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createLongArrayFS</h4>
+<pre><a href="../../../../org/apache/uima/cas/LongArrayFS.html" title="interface in org.apache.uima.cas">LongArrayFS</a>&nbsp;createLongArrayFS(int&nbsp;length)
+                              throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Create a new Long array.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>length</code> - The length of the array.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The new array.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code></dd></dl>
+</li>
+</ul>
+<a name="createDoubleArrayFS(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createDoubleArrayFS</h4>
+<pre><a href="../../../../org/apache/uima/cas/DoubleArrayFS.html" title="interface in org.apache.uima.cas">DoubleArrayFS</a>&nbsp;createDoubleArrayFS(int&nbsp;length)
+                                  throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Create a new Double array.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>length</code> - The length of the array.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The new array.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getJCas()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getJCas</h4>
+<pre><a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;getJCas()
+             throws <a href="../../../../org/apache/uima/cas/CASException.html" title="class in org.apache.uima.cas">CASException</a></pre>
+<div class="block">Get the JCas for this CAS.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The JCas for this CAS.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASException.html" title="class in org.apache.uima.cas">CASException</a></code> - -</dd></dl>
+</li>
+</ul>
+<a name="getCurrentView()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCurrentView</h4>
+<pre><a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;getCurrentView()</pre>
+<div class="block">Get the Cas view that the current component should use.  This
+ should only be used by single-view components.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the Cas view specified for the current component by Sofa mapping. Defaults to _InitialView if there is no Sofa mapping.</dd></dl>
+</li>
+</ul>
+<a name="getSofa(org.apache.uima.cas.SofaID)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSofa</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+<a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas">SofaFS</a>&nbsp;getSofa(<a href="../../../../org/apache/uima/cas/SofaID.html" title="interface in org.apache.uima.cas">SofaID</a>&nbsp;sofaID)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>As of v2.0, use {#getView(String)}. From the view you can access the Sofa data, or
+             call <a href="../../../../org/apache/uima/cas/CAS.html#getSofa()"><code>getSofa()</code></a> if you truly need to access the SofaFS object.</i></div>
+<div class="block">Get sofaFS for given Subject of Analysis ID.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>sofaID</code> - -</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The sofaFS.</dd></dl>
+</li>
+</ul>
+<a name="getSofa()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSofa</h4>
+<pre><a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas">SofaFS</a>&nbsp;getSofa()</pre>
+<div class="block">Get the Sofa feature structure associated with this CAS view.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The SofaFS associated with this CAS view.</dd></dl>
+</li>
+</ul>
+<a name="createView(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createView</h4>
+<pre><a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;createView(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;localViewName)</pre>
+<div class="block">Create a view and its underlying Sofa (subject of analysis). The view provides access to the
+ Sofa data and the index repository that contains metadata (annotations and other feature
+ structures) pertaining to that Sofa.
+ <p>
+ This method creates the underlying Sofa feature structure, but does not set the Sofa data.
+ Setting ths Sofa data must be done by calling <a href="../../../../org/apache/uima/cas/CAS.html#setSofaDataArray(org.apache.uima.cas.FeatureStructure,%20java.lang.String)"><code>setSofaDataArray(FeatureStructure, String)</code></a>,
+ <a href="../../../../org/apache/uima/cas/CAS.html#setSofaDataString(java.lang.String,%20java.lang.String)"><code>setSofaDataString(String, String)</code></a> or <a href="../../../../org/apache/uima/cas/CAS.html#setSofaDataURI(java.lang.String,%20java.lang.String)"><code>setSofaDataURI(String, String)</code></a> on the
+ CAS view returned by this method.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>localViewName</code> - the local name, before any sofa name mapping is done, for this view (note: this is the
+          same as the associated Sofa name).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The view corresponding to this local name.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code> - if a View with this name already exists in this CAS</dd></dl>
+</li>
+</ul>
+<a name="getJCas(org.apache.uima.cas.SofaFS)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getJCas</h4>
+<pre><a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;getJCas(<a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas">SofaFS</a>&nbsp;aSofa)
+             throws <a href="../../../../org/apache/uima/cas/CASException.html" title="class in org.apache.uima.cas">CASException</a></pre>
+<div class="block">Create a JCas view for a Sofa. Note: as of UIMA v2.0, can be replaced with
+ getView(sofaFS).getJCas().</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aSofa</code> - a Sofa feature structure in this CAS.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The JCas view for the given Sofa.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASException.html" title="class in org.apache.uima.cas">CASException</a></code> - -</dd></dl>
+</li>
+</ul>
+<a name="getJCas(org.apache.uima.cas.SofaID)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getJCas</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+<a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;getJCas(<a href="../../../../org/apache/uima/cas/SofaID.html" title="interface in org.apache.uima.cas">SofaID</a>&nbsp;aSofaID)
+             throws <a href="../../../../org/apache/uima/cas/CASException.html" title="class in org.apache.uima.cas">CASException</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>As of v2.0, use <a href="../../../../org/apache/uima/cas/CAS.html#getView(java.lang.String)"><code>getView(String)</code></a> followed by <a href="../../../../org/apache/uima/cas/CAS.html#getJCas()"><code>getJCas()</code></a>.</i></div>
+<div class="block">Create a JCas view for a Sofa. Note: this is provided for convenience. It is equivalent to
+ <code>getView(aSofaID).getJCas()</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aSofaID</code> - the ID of a Sofa defined in this CAS</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The view for the Sofa with ID <code>aSofaID</code>.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASException.html" title="class in org.apache.uima.cas">CASException</a></code> - if no Sofa with the given ID exists in this CAS</dd></dl>
+</li>
+</ul>
+<a name="getView(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getView</h4>
+<pre><a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;getView(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;localViewName)</pre>
+<div class="block">Get the view for a Sofa (subject of analysis). The view provides access to the Sofa data and
+ the index repository that contains metadata (annotations and other feature structures)
+ pertaining to that Sofa.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>localViewName</code> - the local name, before any sofa name mapping is done, for this view (note: this is the
+          same as the associated Sofa name).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The view corresponding to this local name.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code> - if no View with this name exists in this CAS</dd></dl>
+</li>
+</ul>
+<a name="getView(org.apache.uima.cas.SofaFS)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getView</h4>
+<pre><a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;getView(<a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas">SofaFS</a>&nbsp;aSofa)</pre>
+<div class="block">Get the view for a Sofa (subject of analysis). The view provides access to the Sofa data and
+ the index repository that contains metadata (annotations and other feature structures)
+ pertaining to that Sofa.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aSofa</code> - a Sofa feature structure in the CAS</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The view for the given Sofa</dd></dl>
+</li>
+</ul>
+<a name="getLowLevelCAS()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLowLevelCAS</h4>
+<pre>org.apache.uima.cas.impl.LowLevelCAS&nbsp;getLowLevelCAS()</pre>
+<div class="block">Get an instance of the low-level CAS. Low-level and regular CAS can be used in parallel, all
+ data is always contained in both.
+ 
+ <p>
+ <b>Note</b>: This is for internal use.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A low-level CAS.</dd><dt><span class="strong">See Also:</span></dt><dd><code>LowLevelCAS</code></dd></dl>
+</li>
+</ul>
+<a name="getAnnotationType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAnnotationType</h4>
+<pre><a href="../../../../org/apache/uima/cas/Type.html" title="interface in org.apache.uima.cas">Type</a>&nbsp;getAnnotationType()</pre>
+<div class="block">Get the type object for the annotation type.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The annotation type.</dd></dl>
+</li>
+</ul>
+<a name="getBeginFeature()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBeginFeature</h4>
+<pre><a href="../../../../org/apache/uima/cas/Feature.html" title="interface in org.apache.uima.cas">Feature</a>&nbsp;getBeginFeature()</pre>
+<div class="block">Get the feature object for the annotation begin feature.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The annotation begin feature.</dd></dl>
+</li>
+</ul>
+<a name="getEndFeature()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEndFeature</h4>
+<pre><a href="../../../../org/apache/uima/cas/Feature.html" title="interface in org.apache.uima.cas">Feature</a>&nbsp;getEndFeature()</pre>
+<div class="block">Get the feature object for the annotation end feature.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The annotation end feature.</dd></dl>
+</li>
+</ul>
+<a name="getAnnotationIndex()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAnnotationIndex</h4>
+<pre>&lt;T extends <a href="../../../../org/apache/uima/cas/text/AnnotationFS.html" title="interface in org.apache.uima.cas.text">AnnotationFS</a>&gt;&nbsp;<a href="../../../../org/apache/uima/cas/text/AnnotationIndex.html" title="interface in org.apache.uima.cas.text">AnnotationIndex</a>&lt;T&gt;&nbsp;getAnnotationIndex()</pre>
+<div class="block">Get the standard annotation index.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - either Annotation (if JCas is in use) or AnnotationImpl</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The standard annotation index.</dd></dl>
+</li>
+</ul>
+<a name="getAnnotationIndex(org.apache.uima.cas.Type)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAnnotationIndex</h4>
+<pre>&lt;T extends <a href="../../../../org/apache/uima/cas/text/AnnotationFS.html" title="interface in org.apache.uima.cas.text">AnnotationFS</a>&gt;&nbsp;<a href="../../../../org/apache/uima/cas/text/AnnotationIndex.html" title="interface in org.apache.uima.cas.text">AnnotationIndex</a>&lt;T&gt;&nbsp;getAnnotationIndex(<a href="../../../../org/apache/uima/cas/Type.html" title="interface in org.apache.uima.cas">Type</a>&nbsp;type)
+                                                           throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Get the standard annotation index restricted to a specific annotation type.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - the topmost Java class corresponding to the type</dd><dt><span class="strong">Parameters:</span></dt><dd><code>type</code> - The annotation type the index is restricted to.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The standard annotation index, restricted to <code>type</code>.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code> - When <code>type</code> is not an annotation type.</dd></dl>
+</li>
+</ul>
+<a name="createAnnotation(org.apache.uima.cas.Type, int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createAnnotation</h4>
+<pre>&lt;T extends <a href="../../../../org/apache/uima/cas/text/AnnotationFS.html" title="interface in org.apache.uima.cas.text">AnnotationFS</a>&gt;&nbsp;<a href="../../../../org/apache/uima/cas/text/AnnotationFS.html" title="interface in org.apache.uima.cas.text">AnnotationFS</a>&nbsp;createAnnotation(<a href="../../../../org/apache/uima/cas/Type.html" title="interface in org.apache.uima.cas">Type</a>&nbsp;type,
+                                                     int&nbsp;begin,
+                                                     int&nbsp;end)</pre>
+<div class="block">Create a new annotation. Note that you still need to insert the annotation into the index
+ repository yourself.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - the Java class corresponding to the type</dd><dt><span class="strong">Parameters:</span></dt><dd><code>type</code> - The type of the annotation.</dd><dd><code>begin</code> - The start of the annotation.</dd><dd><code>end</code> - The end of the annotation.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>A new annotation object.</dd></dl>
+</li>
+</ul>
+<a name="getDocumentAnnotation()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDocumentAnnotation</h4>
+<pre>&lt;T extends <a href="../../../../org/apache/uima/cas/text/AnnotationFS.html" title="interface in org.apache.uima.cas.text">AnnotationFS</a>&gt;&nbsp;T&nbsp;getDocumentAnnotation()</pre>
+<div class="block">Get the document annotation. The document has a string-valued feature called "language" where
+ the document language is specified.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - the Java class for the document annotation.  Could be the JCas cover class or FeatureStructure</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The document annotation, or <code>null</code> if there is none.  The return value is the
+         JCas cover class or the plain Java cover class for FeatureStructures if JCas is not in use.</dd></dl>
+</li>
+</ul>
+<a name="setCurrentComponentInfo(org.apache.uima.cas.ComponentInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setCurrentComponentInfo</h4>
+<pre>void&nbsp;setCurrentComponentInfo(<a href="../../../../org/apache/uima/cas/ComponentInfo.html" title="interface in org.apache.uima.cas">ComponentInfo</a>&nbsp;info)</pre>
+<div class="block">Informs the CAS of relevant information about the component that is currently processing it.
+ This is called by the framework automatically; users do not need to call it.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>info</code> - information about the component that is currently processing this CAS.</dd></dl>
+</li>
+</ul>
+<a name="getTypeSystem()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTypeSystem</h4>
+<pre><a href="../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;getTypeSystem()
+                         throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Return the type system of this CAS instance.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The type system, or <code>null</code> if none is available.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code> - If the type system has not been committed.</dd></dl>
+</li>
+</ul>
+<a name="createSofa(org.apache.uima.cas.SofaID, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createSofa</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+<a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas">SofaFS</a>&nbsp;createSofa(<a href="../../../../org/apache/uima/cas/SofaID.html" title="interface in org.apache.uima.cas">SofaID</a>&nbsp;sofaID,
+                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mimeType)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>As of v2.0, use <a href="../../../../org/apache/uima/cas/CAS.html#createView(java.lang.String)"><code>createView(String)</code></a> instead.</i></div>
+<div class="block">Create a Subject of Analysis. The new sofaFS is automatically added to the SofaIndex.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>sofaID</code> - -</dd><dd><code>mimeType</code> - -</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The sofaFS.</dd></dl>
+</li>
+</ul>
+<a name="getSofaIterator()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSofaIterator</h4>
+<pre><a href="../../../../org/apache/uima/cas/FSIterator.html" title="interface in org.apache.uima.cas">FSIterator</a>&lt;<a href="../../../../org/apache/uima/cas/SofaFS.html" title="interface in org.apache.uima.cas">SofaFS</a>&gt;&nbsp;getSofaIterator()</pre>
+<div class="block">Get iterator for all SofaFS in the CAS.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an iterator over SofaFS.</dd></dl>
+</li>
+</ul>
+<a name="createFilteredIterator(org.apache.uima.cas.FSIterator, org.apache.uima.cas.FSMatchConstraint)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFilteredIterator</h4>
+<pre>&lt;T extends <a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&gt;&nbsp;<a href="../../../../org/apache/uima/cas/FSIterator.html" title="interface in org.apache.uima.cas">FSIterator</a>&lt;T&gt;&nbsp;createFilteredIterator(<a href="../../../../org/apache/uima/cas/FSIterator.html" title="interface in org.apache.uima.cas">FSIterator</a>&lt;T&gt;&nbsp;it,
+                                                                <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;cons)</pre>
+<div class="block">Create an iterator over structures satisfying a given constraint. Constraints are described in
+ the javadocs for <a href="../../../../org/apache/uima/cas/ConstraintFactory.html" title="class in org.apache.uima.cas"><code>ConstraintFactory</code></a> and related classes.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - - the type of the Feature Structure</dd><dt><span class="strong">Parameters:</span></dt><dd><code>it</code> - The input iterator.</dd><dd><code>cons</code> - The constraint specifying what structures should be returned.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>An iterator over FSs.</dd></dl>
+</li>
+</ul>
+<a name="getConstraintFactory()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getConstraintFactory</h4>
+<pre><a href="../../../../org/apache/uima/cas/ConstraintFactory.html" title="class in org.apache.uima.cas">ConstraintFactory</a>&nbsp;getConstraintFactory()</pre>
+<div class="block">Get a constraint factory. A constraint factory is a simple way of creating
+ <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas"><code>FSMatchConstraints</code></a>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A constraint factory to create new FS constraints.</dd></dl>
+</li>
+</ul>
+<a name="createFeaturePath()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFeaturePath</h4>
+<pre><a href="../../../../org/apache/uima/cas/FeaturePath.html" title="interface in org.apache.uima.cas">FeaturePath</a>&nbsp;createFeaturePath()</pre>
+<div class="block">Create a feature path. This is mainly useful for creating
+ <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas"><code>FSMatchConstraints</code></a>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A new, empty feature path.</dd></dl>
+</li>
+</ul>
+<a name="getIndexRepository()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIndexRepository</h4>
+<pre><a href="../../../../org/apache/uima/cas/FSIndexRepository.html" title="interface in org.apache.uima.cas">FSIndexRepository</a>&nbsp;getIndexRepository()</pre>
+<div class="block">Get the index repository.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The index repository, or <code>null</code> if none is available.</dd></dl>
+</li>
+</ul>
+<a name="fs2listIterator(org.apache.uima.cas.FSIterator)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fs2listIterator</h4>
+<pre>&lt;T extends <a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&gt;&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ListIterator.html?is-external=true" title="class or interface in java.util">ListIterator</a>&lt;T&gt;&nbsp;fs2listIterator(<a href="../../../../org/apache/uima/cas/FSIterator.html" title="interface in org.apache.uima.cas">FSIterator</a>&lt;T&gt;&nbsp;it)</pre>
+<div class="block">Wrap a standard Java <a href="http://docs.oracle.com/javase/7/docs/api/java/util/ListIterator.html?is-external=true" title="class or interface in java.util"><code>ListIterator</code></a> around an FSListIterator. Use
+ if you feel more comfortable with java style iterators.</div>
+<dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of FeatureStructure</dd><dt><span class="strong">Parameters:</span></dt><dd><code>it</code> - The <code>FSListIterator</code> to be wrapped.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>An equivalent <code>ListIterator</code>.</dd></dl>
+</li>
+</ul>
+<a name="reset()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reset</h4>
+<pre>void&nbsp;reset()
+           throws <a href="../../../../org/apache/uima/cas/admin/CASAdminException.html" title="class in org.apache.uima.cas.admin">CASAdminException</a></pre>
+<div class="block">Reset the CAS, emptying it of all content. Feature structures and iterators will no longer be
+ valid. Note: this method may only be called from an application. Calling it from an annotator
+ will trigger a runtime exception.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code> - When called out of sequence.</dd>
+<dd><code><a href="../../../../org/apache/uima/cas/admin/CASAdminException.html" title="class in org.apache.uima.cas.admin">CASAdminException</a></code></dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../org/apache/uima/cas/admin/CASMgr.html" title="interface in org.apache.uima.cas.admin"><code>CASMgr</code></a></dd></dl>
+</li>
+</ul>
+<a name="getViewName()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getViewName</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getViewName()</pre>
+<div class="block">Get the view name. The view name is the same as the name of the view's Sofa, retrieved by
+ getSofa().getSofaID(), except for the initial View before its Sofa has been created.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The name of the view</dd></dl>
+</li>
+</ul>
+<a name="size()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>size</h4>
+<pre>int&nbsp;size()</pre>
+<div class="block">Estimate the memory consumption of this CAS instance (in bytes).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The estimated memory used by this CAS instance.</dd></dl>
+</li>
+</ul>
+<a name="createFeatureValuePath(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFeatureValuePath</h4>
+<pre><a href="../../../../org/apache/uima/cas/FeatureValuePath.html" title="interface in org.apache.uima.cas">FeatureValuePath</a>&nbsp;createFeatureValuePath(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;featureValuePath)
+                                        throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Create a feature-value path from a string.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>featureValuePath</code> - String representation of the feature-value path.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>Feature-value path object.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code> - If the input string is not well-formed.</dd></dl>
+</li>
+</ul>
+<a name="setDocumentText(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDocumentText</h4>
+<pre>void&nbsp;setDocumentText(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)
+                     throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Set the document text. Once set, Sofa data is immutable, and cannot be set again until the CAS
+ has been reset.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - The text to be analyzed.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code> - If the Sofa data has already been set.</dd></dl>
+</li>
+</ul>
+<a name="setSofaDataString(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSofaDataString</h4>
+<pre>void&nbsp;setSofaDataString(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mimetype)
+                       throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Set the document text. Once set, Sofa data is immutable, and cannot be set again until the CAS
+ has been reset.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>text</code> - The text to be analyzed.</dd><dd><code>mimetype</code> - The mime type of the data</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code> - If the Sofa data has already been set.</dd></dl>
+</li>
+</ul>
+<a name="getDocumentText()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDocumentText</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDocumentText()</pre>
+<div class="block">Get the document text.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The text being analyzed, or <code>null</code> if not set.</dd></dl>
+</li>
+</ul>
+<a name="getSofaDataString()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSofaDataString</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getSofaDataString()</pre>
+<div class="block">Get the Sofa Data String (a.k.a. the document text).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The Sofa data string, or <code>null</code> if not set.</dd></dl>
+</li>
+</ul>
+<a name="setDocumentLanguage(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDocumentLanguage</h4>
+<pre>void&nbsp;setDocumentLanguage(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;languageCode)
+                         throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Sets the language for this document. This value sets the language feature of the special
+ instance of DocumentAnnotation associated with this CAS.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>languageCode</code> - -</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code> - passthru</dd></dl>
+</li>
+</ul>
+<a name="getDocumentLanguage()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDocumentLanguage</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDocumentLanguage()</pre>
+<div class="block">Gets the language code for this document from the language feature of the special instance of
+ the DocumentationAnnotation associated with this CAS.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>language identifier</dd></dl>
+</li>
+</ul>
+<a name="setSofaDataArray(org.apache.uima.cas.FeatureStructure, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSofaDataArray</h4>
+<pre>void&nbsp;setSofaDataArray(<a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&nbsp;array,
+                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mime)
+                      throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Set the Sofa data as an ArrayFS. Once set, Sofa data is immutable, and cannot be set again
+ until the CAS has been reset.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>array</code> - The ArrayFS to be analyzed.</dd><dd><code>mime</code> - The mime type of the data</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code> - If the Sofa data has already been set.</dd></dl>
+</li>
+</ul>
+<a name="getSofaDataArray()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSofaDataArray</h4>
+<pre><a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&nbsp;getSofaDataArray()</pre>
+<div class="block">Get the Sofa data array.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The Sofa Data being analyzed, or <code>null</code> if not set.</dd></dl>
+</li>
+</ul>
+<a name="setSofaDataURI(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSofaDataURI</h4>
+<pre>void&nbsp;setSofaDataURI(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uri,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;mime)
+                    throws <a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></pre>
+<div class="block">Set the Sofa data as a URI. Once set, Sofa data is immutable, and cannot be set again until the
+ CAS has been reset.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>uri</code> - The URI of the data to be analyzed.</dd><dd><code>mime</code> - The mime type of the data</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></code> - If the Sofa data has already been set.</dd></dl>
+</li>
+</ul>
+<a name="getSofaDataURI()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSofaDataURI</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getSofaDataURI()</pre>
+<div class="block">Get the Sofa data array.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The Sofa URI being analyzed, or <code>null</code> if not set.</dd></dl>
+</li>
+</ul>
+<a name="getSofaDataStream()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSofaDataStream</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;getSofaDataStream()</pre>
+<div class="block">Get the Sofa data as a byte stream.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A stream handle to the Sofa Data, or <code>null</code> if not set.</dd></dl>
+</li>
+</ul>
+<a name="getSofaMimeType()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSofaMimeType</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getSofaMimeType()</pre>
+<div class="block">Get the mime type of the Sofa data being analyzed.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the mime type of the Sofa</dd></dl>
+</li>
+</ul>
+<a name="addFsToIndexes(org.apache.uima.cas.FeatureStructure)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addFsToIndexes</h4>
+<pre>void&nbsp;addFsToIndexes(<a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&nbsp;fs)</pre>
+<div class="block">Add a feature structure to all appropriate indexes in the repository associated with this CAS
+ View. If no indexes exist for the type of FS that you are adding, then a bag (unsorted) index
+ will be automatically created.
+ 
+ <p>
+ <b>Important</b>: after you have called <code>addFsToIndexes(...)</code> on a FS, do not
+ change the values of any features used for indexing. If you do, the index will become corrupted
+ and may be unusable. If you need to change an index feature value, first call
+ <a href="../../../../org/apache/uima/cas/CAS.html#removeFsFromIndexes(org.apache.uima.cas.FeatureStructure)"><code>removeFsFromIndexes(...)</code></a> on the FS, change the
+ feature values, then call <code>addFsToIndexes(...)</code> again.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>fs</code> - The Feature Structure to be added.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - If the <code>fs</code> parameter is <code>null</code>.</dd></dl>
+</li>
+</ul>
+<a name="removeFsFromIndexes(org.apache.uima.cas.FeatureStructure)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeFsFromIndexes</h4>
+<pre>void&nbsp;removeFsFromIndexes(<a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&nbsp;fs)</pre>
+<div class="block">Remove a feature structure from all indexes in the repository associated with this CAS View.
+ The remove operation removes the exact fs from the indexes, unlike operations such as 
+ moveTo which use the fs argument as a template.  
+ 
+ It is not an error if the FS is not present in the indexes.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>fs</code> - The Feature Structure to be removed.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - If the <code>fs</code> parameter is <code>null</code>.</dd></dl>
+</li>
+</ul>
+<a name="getViewIterator()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getViewIterator</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&gt;&nbsp;getViewIterator()</pre>
+<div class="block">Get iterator over all views in this CAS.  Each view provides access to Sofa data
+ and the index repository that contains metadata (annotations and other feature
+ structures) pertaining to that Sofa.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an iterator which returns all views.  Each object returned by
+   the iterator is of type CAS.</dd></dl>
+</li>
+</ul>
+<a name="getViewIterator(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getViewIterator</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&gt;&nbsp;getViewIterator(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;localViewNamePrefix)</pre>
+<div class="block">Get iterator over all views with the given name prefix.  Each view provides access to Sofa data
+ and the index repository that contains metadata (annotations and other feature
+ structures) pertaining to that Sofa.
+ <p>
+ When passed the prefix <i>namePrefix</i>, the iterator will return all views who
+ name is either exactly equal to <i>namePrefix</i> or is of the form
+ <i>namePrefix</i><code>.</code><i>suffix</i>, where <i>suffix</i> can be any String.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>localViewNamePrefix</code> - the local name prefix, before any sofa name mapping
+   is done, for this view (note: this is the same as the associated Sofa name prefix).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an iterator which returns all views with the given name prefix.
+   Each object returned by the iterator is of type CAS.</dd></dl>
+</li>
+</ul>
+<a name="createMarker()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createMarker</h4>
+<pre><a href="../../../../org/apache/uima/cas/Marker.html" title="interface in org.apache.uima.cas">Marker</a>&nbsp;createMarker()</pre>
+<div class="block">Sets a mark and returns the marker object set with the current mark which can be used to query when certain FSs
+ were created.  This can then be used to identify FSs as added before or after the mark was set and
+ to identify FSs modified after the mark is set.
+ 
+ Note: this method may only be called from an application. Calling it from an annotator
+ will trigger a runtime exception.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>a marker object.</dd></dl>
+</li>
+</ul>
+<a name="protectIndexes()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>protectIndexes</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true" title="class or interface in java.lang">AutoCloseable</a>&nbsp;protectIndexes()</pre>
+<div class="block">Call this method to set up a region, 
+ ended by a <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html?is-external=true#close()" title="class or interface in java.lang"><code>AutoCloseable.close()</code></a> call on the returned object,
+ You can use this or the <a href="../../../../org/apache/uima/cas/CAS.html#protectIndexes(java.lang.Runnable)"><code>protectIndexes(Runnable)</code></a> method to protected
+ the indexes.
+ <p>
+ This approach allows arbitrary code between  the protectIndexes and the associated close method.
+ <p>
+ The close method is best done in a finally block, or using the try-with-resources statement in 
+ Java 8.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an object used to record things that need adding back</dd></dl>
+</li>
+</ul>
+<a name="protectIndexes(java.lang.Runnable)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>protectIndexes</h4>
+<pre>void&nbsp;protectIndexes(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;runnable)</pre>
+<div class="block">Runs the code in the runnable inside a protection block, where any modifications to features
+ done while in this block will be done in a way to protect any indexes which otherwise 
+ might become corrupted by the update action; the protection is achieved by temporarily
+ removing the FS (if it is in the indexes), before the update happens.
+ At the end of the block, affected indexes have any removed-under-the-covers FSs added back.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>runnable</code> - code to execute while protecting the indexes.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/CAS.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/uima/cas/ByteArrayFS.html" title="interface in org.apache.uima.cas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/uima/cas/CASException.html" title="class in org.apache.uima.cas"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/uima/cas/CAS.html" target="_top">Frames</a></li>
+<li><a href="CAS.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

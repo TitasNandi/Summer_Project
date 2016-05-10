@@ -1,0 +1,569 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CasCopier (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="CasCopier (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/CasCopier.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/uima/util/AnalysisEngineUtils.html" title="class in org.apache.uima.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/uima/util/CasCreationUtils.html" title="class in org.apache.uima.util"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/uima/util/CasCopier.html" target="_top">Frames</a></li>
+<li><a href="CasCopier.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.uima.util</div>
+<h2 title="Class CasCopier" class="title">Class CasCopier</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.uima.util.CasCopier</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">CasCopier</span>
+extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">Utility class for doing deep copies of FeatureStructures from one CAS to another. To handle cases
+ where the source CAS has multiple references to the same FS, you can create one instance of
+ CasCopier and use it to copy multiple FeatureStructures. The CasCopier will remember previously
+ copied FeatureStructures, so if you later copy another FS that has a reference to a previously
+ copied FS, it will not duplicate the multiply-referenced FS.
+ 
+ This class makes use of CASImpl methods, but is only passed CAS objects, which may be 
+ CAS Wrappers.  To make this more feasible, the implementors of CAS Wrappers need to implement
+ the method  getLowLevelCas() which should return a reference to the underlying CAS which can be 
+ successfully cast to a CASImpl.
+ 
+ The source and target CASs must be separate CASs (that is, not two views of the same CAS), with
+ one exception:
+ 
+   If the CopyCasView API is being used, and the target View name is different from the source view name,</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/uima/util/CasCopier.html#CasCopier(org.apache.uima.cas.CAS,%20org.apache.uima.cas.CAS)">CasCopier</a></strong>(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCas,
+         <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aDestCas)</code>
+<div class="block">Creates a new CasCopier that can be used to copy FeatureStructures from one CAS to another.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/uima/util/CasCopier.html#CasCopier(org.apache.uima.cas.CAS,%20org.apache.uima.cas.CAS,%20boolean)">CasCopier</a></strong>(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCas,
+         <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aDestCas,
+         boolean&nbsp;lenient)</code>
+<div class="block">Creates a new CasCopier that can be used to copy FeatureStructures from one CAS to another.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/CasCopier.html#alreadyCopied(org.apache.uima.cas.FeatureStructure)">alreadyCopied</a></strong>(<a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&nbsp;aFS)</code>
+<div class="block">Note: if lenient is in effect, this method will return false for
+ FSs which are not copied because the target doesn't have that type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/CasCopier.html#alreadyCopied(int)">alreadyCopied</a></strong>(int&nbsp;aFS)</code>
+<div class="block">Note: if lenient is in effect, this method will return false for
+ FSs which are not copied because the target doesn't have that type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/CasCopier.html#copyCas(org.apache.uima.cas.CAS,%20org.apache.uima.cas.CAS,%20boolean)">copyCas</a></strong>(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCas,
+       <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aDestCas,
+       boolean&nbsp;aCopySofa)</code>
+<div class="block">Does a complete deep copy of one CAS into another CAS.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/CasCopier.html#copyCas(org.apache.uima.cas.CAS,%20org.apache.uima.cas.CAS,%20boolean,%20boolean)">copyCas</a></strong>(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCas,
+       <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aDestCas,
+       boolean&nbsp;aCopySofa,
+       boolean&nbsp;lenient)</code>
+<div class="block">Does a complete deep copy of one CAS into another CAS.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/CasCopier.html#copyCasView(org.apache.uima.cas.CAS,%20boolean)">copyCasView</a></strong>(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCasView,
+           boolean&nbsp;aCopySofa)</code>
+<div class="block">Does a deep copy of the contents of one CAS View into another CAS's same-named-view
+ If the destination view already exists in the destination CAS,
+ then it will be the target of the copy.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/CasCopier.html#copyCasView(org.apache.uima.cas.CAS,%20org.apache.uima.cas.CAS,%20boolean)">copyCasView</a></strong>(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCasView,
+           <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aTgtCasView,
+           boolean&nbsp;aCopySofa)</code>
+<div class="block">Does a deep copy of the contents of one CAS View into another CAS view,
+ with a possibly different name.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/CasCopier.html#copyCasView(org.apache.uima.cas.CAS,%20java.lang.String,%20boolean)">copyCasView</a></strong>(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCasView,
+           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aTgtCasViewName,
+           boolean&nbsp;aCopySofa)</code>
+<div class="block">Does a deep copy of the contents of one CAS View into another CAS view,
+ with a possibly different name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/CasCopier.html#copyCasView(java.lang.String,%20boolean)">copyCasView</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aSrcCasViewName,
+           boolean&nbsp;aCopySofa)</code>
+<div class="block">Does a deep copy of the contents of one CAS View into another CAS's same-named-view
+ If the destination view already exists in the destination CAS,
+ then it will be the target of the copy.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/CasCopier.html#copyCasView(java.lang.String,%20org.apache.uima.cas.CAS,%20boolean)">copyCasView</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aSrcCasViewName,
+           <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aTgtCasView,
+           boolean&nbsp;aCopySofa)</code>
+<div class="block">Does a deep copy of the contents of one CAS View into another CAS view,
+ with a possibly different name.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/CasCopier.html#copyFs(org.apache.uima.cas.FeatureStructure)">copyFs</a></strong>(<a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&nbsp;aFS)</code>
+<div class="block">Copy 1 feature structure from the originalSrcCas to a new Cas.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="CasCopier(org.apache.uima.cas.CAS, org.apache.uima.cas.CAS)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CasCopier</h4>
+<pre>public&nbsp;CasCopier(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCas,
+         <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aDestCas)</pre>
+<div class="block">Creates a new CasCopier that can be used to copy FeatureStructures from one CAS to another.
+ Note that if you are merging data from multiple CASes, you must create a new CasCopier
+ for each source CAS.
+ 
+ Note: If the feature structure and/or feature is not defined in the type system of
+       the destination CAS, the copy will fail (in other words, the lenient setting is false,
+       by default).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aSrcCas</code> - the CAS to copy from.</dd><dd><code>aDestCas</code> - the CAS to copy into.</dd></dl>
+</li>
+</ul>
+<a name="CasCopier(org.apache.uima.cas.CAS, org.apache.uima.cas.CAS, boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>CasCopier</h4>
+<pre>public&nbsp;CasCopier(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCas,
+         <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aDestCas,
+         boolean&nbsp;lenient)</pre>
+<div class="block">Creates a new CasCopier that can be used to copy FeatureStructures from one CAS to another.
+ Note that if you are merging data from multiple CASes, you must create a new CasCopier
+ for each source CAS. This version of the constructor supports a "lenient copy" option. When set,
+ the CAS copy function will ignore (not attempt to copy) FSs and features not defined in the type system
+ of the destination CAS, rather than throwing an exception.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aSrcCas</code> - the CAS to copy from.</dd><dd><code>aDestCas</code> - the CAS to copy into.</dd><dd><code>lenient</code> - ignore FSs and features not defined in the type system of the destination CAS</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="copyCas(org.apache.uima.cas.CAS, org.apache.uima.cas.CAS, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyCas</h4>
+<pre>public static&nbsp;void&nbsp;copyCas(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCas,
+           <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aDestCas,
+           boolean&nbsp;aCopySofa)</pre>
+<div class="block">Does a complete deep copy of one CAS into another CAS.  The contents of each view
+ in the source CAS will be copied to the same-named view in the destination CAS.  If
+ the view does not already exist it will be created.  All FeatureStructures that are
+ indexed in a view in the source CAS will become indexed in the same-named view in the
+ destination CAS.
+ 
+ Note: If the feature structure and/or feature is not defined in the type system of
+       the destination CAS, the copy will fail (in other words, the lenient setting is false,
+       by default).</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aSrcCas</code> - the CAS to copy from</dd><dd><code>aDestCas</code> - the CAS to copy to</dd><dd><code>aCopySofa</code> - if true, the sofa data and mimeType of each view will be copied. If false they will not.</dd></dl>
+</li>
+</ul>
+<a name="copyCas(org.apache.uima.cas.CAS, org.apache.uima.cas.CAS, boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyCas</h4>
+<pre>public static&nbsp;void&nbsp;copyCas(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCas,
+           <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aDestCas,
+           boolean&nbsp;aCopySofa,
+           boolean&nbsp;lenient)</pre>
+<div class="block">Does a complete deep copy of one CAS into another CAS.  The contents of each view
+ in the source CAS will be copied to the same-named view in the destination CAS.  If
+ the view does not already exist it will be created.  All FeatureStructures that are
+ indexed in a view in the source CAS will become indexed in the same-named view in the
+ destination CAS. This version of the method supports a "lenient copy" option. When set,
+ the CAS copy function will ignore (not attempt to copy) FSs and features not defined in the type system
+ of the destination CAS, rather than throwing an exception.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aSrcCas</code> - the CAS to copy from</dd><dd><code>aDestCas</code> - the CAS to copy to; must be a completely different CAS than the source (that is, not an alternative "view" of the source)</dd><dd><code>aCopySofa</code> - if true, the sofa data and mimeType of each view will be copied. If false they will not.</dd><dd><code>lenient</code> - ignore FSs and features not defined in the type system of the destination CAS</dd></dl>
+</li>
+</ul>
+<a name="copyCasView(org.apache.uima.cas.CAS, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyCasView</h4>
+<pre>public&nbsp;void&nbsp;copyCasView(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCasView,
+               boolean&nbsp;aCopySofa)</pre>
+<div class="block">Does a deep copy of the contents of one CAS View into another CAS's same-named-view
+ If the destination view already exists in the destination CAS,
+ then it will be the target of the copy.  Otherwise, a new view will be created with
+ that name and will become the target of the copy.  All FeatureStructures 
+ (except for those dropped because the target type system doesn't have the needed type) that are indexed 
+ in the source CAS view will become indexed in the target view.
+ Cross-view references may result in creating additional views in the destination CAS;
+ for these views, any Sofa data in the source is *not* copied.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aSrcCasView</code> - the CAS to copy from.  This must be a view in the src Cas set by the constructor</dd><dd><code>aCopySofa</code> - if true, the sofa data and mimeType will be copied. If false they will not.</dd></dl>
+</li>
+</ul>
+<a name="copyCasView(java.lang.String, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyCasView</h4>
+<pre>public&nbsp;void&nbsp;copyCasView(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aSrcCasViewName,
+               boolean&nbsp;aCopySofa)</pre>
+<div class="block">Does a deep copy of the contents of one CAS View into another CAS's same-named-view
+ If the destination view already exists in the destination CAS,
+ then it will be the target of the copy.  Otherwise, a new view will be created with
+ that name and will become the target of the copy.  All FeatureStructures 
+ (except for those dropped because the target type system doesn't have the needed type) that are indexed 
+ in the source CAS view will become indexed in the target view.
+ Cross-view references may result in creating additional views in the destination CAS;
+ for these views, any Sofa data in the source is *not* copied.  Any views created because
+ of cross-view references will have the same view name as in the source.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aSrcCasViewName</code> - the name of the view in the source CAS to copy from</dd><dd><code>aCopySofa</code> - if true, the sofa data and mimeType will be copied. If false they will not.</dd></dl>
+</li>
+</ul>
+<a name="copyCasView(org.apache.uima.cas.CAS, java.lang.String, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyCasView</h4>
+<pre>public&nbsp;void&nbsp;copyCasView(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCasView,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aTgtCasViewName,
+               boolean&nbsp;aCopySofa)</pre>
+<div class="block">Does a deep copy of the contents of one CAS View into another CAS view,
+ with a possibly different name.
+ If the destination view already exists in the destination CAS,
+ then it will be the target of the copy.  Otherwise, a new view will be created with
+ that name and will become the target of the copy.  
+ All FeatureStructures 
+ (except for those dropped because the target type system doesn't have the needed type) that are indexed 
+ in the source CAS view will become indexed in the target view.
+ Cross-view references may result in creating additional views in the destination CAS;
+ for these views, any Sofa data in the source is *not* copied.  Any views created because
+ of cross-view references will have the same view name as in the source.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aSrcCasView</code> - The view in the source to copy from</dd><dd><code>aTgtCasViewName</code> - The name of the view in the destination CAS to copy into</dd><dd><code>aCopySofa</code> - if true, the sofa data and mimeType will be copied. If false they will not.</dd></dl>
+</li>
+</ul>
+<a name="copyCasView(java.lang.String, org.apache.uima.cas.CAS, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyCasView</h4>
+<pre>public&nbsp;void&nbsp;copyCasView(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aSrcCasViewName,
+               <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aTgtCasView,
+               boolean&nbsp;aCopySofa)</pre>
+<div class="block">Does a deep copy of the contents of one CAS View into another CAS view,
+ with a possibly different name.
+ All FeatureStructures 
+ (except for those dropped because the target type system doesn't have the needed type) that are indexed 
+ in the source CAS view will become indexed in the target view.
+ Cross-view references may result in creating additional views in the destination CAS;
+ for these views, any Sofa data in the source is *not* copied.  Any views created because
+ of cross-view references will have the same view name as in the source.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aSrcCasViewName</code> - The name of the view in the Source CAS to copy from</dd><dd><code>aTgtCasView</code> - The view in the destination CAS to copy into</dd><dd><code>aCopySofa</code> - if true, the sofa data and mimeType will be copied. If false they will not.</dd></dl>
+</li>
+</ul>
+<a name="copyCasView(org.apache.uima.cas.CAS, org.apache.uima.cas.CAS, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyCasView</h4>
+<pre>public&nbsp;void&nbsp;copyCasView(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aSrcCasView,
+               <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aTgtCasView,
+               boolean&nbsp;aCopySofa)</pre>
+<div class="block">Does a deep copy of the contents of one CAS View into another CAS view,
+ with a possibly different name.
+ All FeatureStructures 
+ (except for those dropped because the target type system doesn't have the needed type) that are indexed 
+ in the source CAS view will become indexed in the target view.
+ Cross-view references may result in creating additional views in the destination CAS;
+ for these views, any Sofa data in the source is *not* copied.  Any views created because
+ of cross-view references will have the same view name as in the source.
+ 
+ If the source and target views are both views of the same CAS, then Feature Structures
+ in the view are effectively "cloned", with the following change:
+   Subtypes of AnnotationBase in the source whose sofaRef is for the source View are
+   cloned with their sofaRefs changed to the new targetView.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aSrcCasView</code> - the CAS view to copy from. This must be a view of the srcCas set in the constructor</dd><dd><code>aTgtCasView</code> - the CAS view to copy to. This must be a view of the tgtCas set in the constructor</dd><dd><code>aCopySofa</code> - if true, the sofa data and mimeType will be copied. If false they will not.  
+          If true and the sofa data is already set in the target, will throw CASRuntimeException</dd></dl>
+</li>
+</ul>
+<a name="copyFs(org.apache.uima.cas.FeatureStructure)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyFs</h4>
+<pre>public&nbsp;<a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&nbsp;copyFs(<a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&nbsp;aFS)</pre>
+<div class="block">Copy 1 feature structure from the originalSrcCas to a new Cas.  No indexing of the new FS is done.
+ If the FS has been copied previously (using this CasCopier instance) the 
+ same identical copy will be returned rather than making another copy.
+ 
+ View handling: ignores the view of the targetCas</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aFS</code> - the Feature Structure to copy</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a deep copy of the Feature Structure - any referred to FSs will also be copied.</dd></dl>
+</li>
+</ul>
+<a name="alreadyCopied(org.apache.uima.cas.FeatureStructure)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>alreadyCopied</h4>
+<pre>public&nbsp;boolean&nbsp;alreadyCopied(<a href="../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a>&nbsp;aFS)</pre>
+<div class="block">Note: if lenient is in effect, this method will return false for
+ FSs which are not copied because the target doesn't have that type.
+ It also returns false for sofa FSs and the documentAnnotation FS.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aFS</code> - a feature structure</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the given FS has already been copied using this CasCopier.</dd></dl>
+</li>
+</ul>
+<a name="alreadyCopied(int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>alreadyCopied</h4>
+<pre>public&nbsp;boolean&nbsp;alreadyCopied(int&nbsp;aFS)</pre>
+<div class="block">Note: if lenient is in effect, this method will return false for
+ FSs which are not copied because the target doesn't have that type.
+ It also returns false for sofa FSs and the documentAnnotation FS.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aFS</code> - a feature structure</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if the given FS has already been copied using this CasCopier.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/CasCopier.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/uima/util/AnalysisEngineUtils.html" title="class in org.apache.uima.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/uima/util/CasCreationUtils.html" title="class in org.apache.uima.util"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/uima/util/CasCopier.html" target="_top">Frames</a></li>
+<li><a href="CasCopier.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

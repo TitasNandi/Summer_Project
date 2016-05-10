@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/mnt/Titas/1_QA_MODEL/Tools/Crawler/lib/mysql-connector-java-5.1.20-bin.jar"/>
+	<classpathentry kind="lib" path="/mnt/Titas/1_QA_MODEL/Tools/Crawler/lib/jsoup-1.6.2.jar"/>
+	<classpathentry kind="lib" path="/mnt/Titas/1_QA_MODEL/Tools/Crawler/lib/Elsevier.jar"/>
+	<classpathentry kind="lib" path="/mnt/Titas/1_QA_MODEL/Tools/Crawler/lib/pdfbox-app-1.8.11.jar"/>
+	<classpathentry kind="lib" path="/mnt/Titas/1_QA_MODEL/Tools/Crawler/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/mnt/Titas/1_QA_MODEL/Tools/Crawler/lib/jaxen-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/mnt/Titas/1_QA_MODEL/Tools/Crawler/lib/pdfbox-app-2.0.0.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

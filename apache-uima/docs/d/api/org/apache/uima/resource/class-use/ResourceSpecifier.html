@@ -1,0 +1,893 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Uses of Interface org.apache.uima.resource.ResourceSpecifier (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Uses of Interface org.apache.uima.resource.ResourceSpecifier (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../../../../../overview-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/resource/class-use/ResourceSpecifier.html" target="_top">Frames</a></li>
+<li><a href="ResourceSpecifier.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<div class="header">
+<h2 title="Uses of Interface org.apache.uima.resource.ResourceSpecifier" class="title">Uses of Interface<br>org.apache.uima.resource.ResourceSpecifier</h2>
+</div>
+<div class="classUseContainer">
+<ul class="blockList">
+<li class="blockList">
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing packages, and an explanation">
+<caption><span>Packages that use <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Package</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.uima">org.apache.uima</a></td>
+<td class="colLast">
+<div class="block">The main package for the Unstructured Information Management Middleware 
+Architecture.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.uima.analysis_engine">org.apache.uima.analysis_engine</a></td>
+<td class="colLast">
+<div class="block">The Analysis Engine interface, along with supporting 
+interfaces and exception classes.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.uima.analysis_engine.asb">org.apache.uima.analysis_engine.asb</a></td>
+<td class="colLast">
+<div class="block">Contains the Analysis Structure Broker (ASB) interface, along with supporting 
+interfaces and exception classes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.uima.analysis_engine.metadata">org.apache.uima.analysis_engine.metadata</a></td>
+<td class="colLast">
+<div class="block">Interfaces for objects that represent metadata for an
+Analysis Engine.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.uima.collection">org.apache.uima.collection</a></td>
+<td class="colLast">
+<div class="block">Classes and interfaces for collection processing.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.uima.collection.base_cpm">org.apache.uima.collection.base_cpm</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.uima.flow">org.apache.uima.flow</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.uima.resource">org.apache.uima.resource</a></td>
+<td class="colLast">
+<div class="block">Interfaces for <code>Resources</code> and <code>ResourceSpecifiers</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.uima.util">org.apache.uima.util</a></td>
+<td class="colLast">
+<div class="block">Utility classes and interfaces used by UIMA components.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.uima">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/package-summary.html">org.apache.uima</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/package-summary.html">org.apache.uima</a> with parameters of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html" title="interface in org.apache.uima.analysis_engine">AnalysisEngine</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceAnalysisEngine(org.apache.uima.resource.ResourceSpecifier)">produceAnalysisEngine</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier)</code>
+<div class="block">Produces an <a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html" title="interface in org.apache.uima.analysis_engine"><code>AnalysisEngine</code></a> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html" title="interface in org.apache.uima.analysis_engine">AnalysisEngine</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceAnalysisEngine(org.apache.uima.resource.ResourceSpecifier,%20int,%20int)">produceAnalysisEngine</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+                     int&nbsp;aMaxSimultaneousRequests,
+                     int&nbsp;aTimeoutPeriod)</code>
+<div class="block">Produces an <a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html" title="interface in org.apache.uima.analysis_engine"><code>AnalysisEngine</code></a> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html" title="interface in org.apache.uima.analysis_engine">AnalysisEngine</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceAnalysisEngine(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">produceAnalysisEngine</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces an <a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html" title="interface in org.apache.uima.analysis_engine"><code>AnalysisEngine</code></a> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html" title="interface in org.apache.uima.analysis_engine">AnalysisEngine</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceAnalysisEngine(org.apache.uima.resource.ResourceSpecifier,%20org.apache.uima.resource.ResourceManager,%20java.util.Map)">produceAnalysisEngine</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+                     <a href="../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces an <a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html" title="interface in org.apache.uima.analysis_engine"><code>AnalysisEngine</code></a> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/collection/CasConsumer.html" title="interface in org.apache.uima.collection">CasConsumer</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceCasConsumer(org.apache.uima.resource.ResourceSpecifier)">produceCasConsumer</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier)</code>
+<div class="block">Produces a <a href="../../../../../org/apache/uima/collection/CasConsumer.html" title="interface in org.apache.uima.collection"><code>CasConsumer</code></a> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/collection/CasConsumer.html" title="interface in org.apache.uima.collection">CasConsumer</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceCasConsumer(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">produceCasConsumer</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces a <a href="../../../../../org/apache/uima/collection/CasConsumer.html" title="interface in org.apache.uima.collection"><code>CasConsumer</code></a> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/collection/CasConsumer.html" title="interface in org.apache.uima.collection">CasConsumer</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceCasConsumer(org.apache.uima.resource.ResourceSpecifier,%20org.apache.uima.resource.ResourceManager,%20java.util.Map)">produceCasConsumer</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+                  <a href="../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces an <a href="../../../../../org/apache/uima/collection/CasConsumer.html" title="interface in org.apache.uima.collection"><code>CasConsumer</code></a> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/collection/CasInitializer.html" title="interface in org.apache.uima.collection">CasInitializer</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceCasInitializer(org.apache.uima.resource.ResourceSpecifier)">produceCasInitializer</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, CAS Initializers are deprecated. A component that performs an operation
+             like HTML detagging should instead be implemented as a "multi-Sofa" annotator. See
+             org.apache.uima.examples.XmlDetagger for an example.</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/collection/CasInitializer.html" title="interface in org.apache.uima.collection">CasInitializer</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceCasInitializer(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">produceCasInitializer</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces a <a href="../../../../../org/apache/uima/collection/CasInitializer.html" title="interface in org.apache.uima.collection"><code>CasInitializer</code></a> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/collection/CasInitializer.html" title="interface in org.apache.uima.collection">CasInitializer</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceCasInitializer(org.apache.uima.resource.ResourceSpecifier,%20org.apache.uima.resource.ResourceManager,%20java.util.Map)">produceCasInitializer</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+                     <a href="../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager,
+                     <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces an <a href="../../../../../org/apache/uima/collection/CasInitializer.html" title="interface in org.apache.uima.collection"><code>CasInitializer</code></a> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/collection/CollectionReader.html" title="interface in org.apache.uima.collection">CollectionReader</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceCollectionReader(org.apache.uima.resource.ResourceSpecifier)">produceCollectionReader</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier)</code>
+<div class="block">Produces a <a href="../../../../../org/apache/uima/collection/CollectionReader.html" title="interface in org.apache.uima.collection"><code>CollectionReader</code></a> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/collection/CollectionReader.html" title="interface in org.apache.uima.collection">CollectionReader</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceCollectionReader(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">produceCollectionReader</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+                       <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces a <a href="../../../../../org/apache/uima/collection/CollectionReader.html" title="interface in org.apache.uima.collection"><code>CollectionReader</code></a> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/collection/CollectionReader.html" title="interface in org.apache.uima.collection">CollectionReader</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceCollectionReader(org.apache.uima.resource.ResourceSpecifier,%20org.apache.uima.resource.ResourceManager,%20java.util.Map)">produceCollectionReader</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+                       <a href="../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager,
+                       <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces an <a href="../../../../../org/apache/uima/collection/CollectionReader.html" title="interface in org.apache.uima.collection"><code>CollectionReader</code></a> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a></code></td>
+<td class="colLast"><span class="strong">ResourceFactory.</span><code><strong><a href="../../../../../org/apache/uima/ResourceFactory.html#produceResource(java.lang.Class,%20org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">produceResource</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a>&gt;&nbsp;aResourceClass,
+               <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces an appropriate <code>Resource</code> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceResource(java.lang.Class,%20org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">produceResource</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a>&gt;&nbsp;aResourceClass,
+               <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces an appropriate <code>Resource</code> instance of a specified class from a
+ <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceResource(java.lang.Class,%20org.apache.uima.resource.ResourceSpecifier,%20org.apache.uima.resource.ResourceManager,%20java.util.Map)">produceResource</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a>&gt;&nbsp;aResourceClass,
+               <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+               <a href="../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces an appropriate <code>Resource</code> instance of a specified class from a
+ <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceResource(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">produceResource</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces an appropriate <code>Resource</code> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/analysis_engine/TextAnalysisEngine.html" title="interface in org.apache.uima.analysis_engine">TextAnalysisEngine</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceTAE(org.apache.uima.resource.ResourceSpecifier)">produceTAE</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, <a href="../../../../../org/apache/uima/UIMAFramework.html#produceAnalysisEngine(org.apache.uima.resource.ResourceSpecifier)"><code>UIMAFramework.produceAnalysisEngine(ResourceSpecifier)</code></a> should be used
+             instead.</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/analysis_engine/TextAnalysisEngine.html" title="interface in org.apache.uima.analysis_engine">TextAnalysisEngine</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceTAE(org.apache.uima.resource.ResourceSpecifier,%20int,%20int)">produceTAE</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          int&nbsp;aMaxSimultaneousRequests,
+          int&nbsp;aTimeoutPeriod)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, <a href="../../../../../org/apache/uima/UIMAFramework.html#produceAnalysisEngine(org.apache.uima.resource.ResourceSpecifier,%20int,%20int)"><code>UIMAFramework.produceAnalysisEngine(ResourceSpecifier,int,int)</code></a> should be
+             used instead.</i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/analysis_engine/TextAnalysisEngine.html" title="interface in org.apache.uima.analysis_engine">TextAnalysisEngine</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceTAE(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">produceTAE</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, <a href="../../../../../org/apache/uima/UIMAFramework.html#produceAnalysisEngine(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)"><code>UIMAFramework.produceAnalysisEngine(ResourceSpecifier,Map)</code></a> should be used
+             instead.</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/analysis_engine/TextAnalysisEngine.html" title="interface in org.apache.uima.analysis_engine">TextAnalysisEngine</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#produceTAE(org.apache.uima.resource.ResourceSpecifier,%20org.apache.uima.resource.ResourceManager,%20java.util.Map)">produceTAE</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          <a href="../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, <a href="../../../../../org/apache/uima/UIMAFramework.html#produceAnalysisEngine(org.apache.uima.resource.ResourceSpecifier,%20org.apache.uima.resource.ResourceManager,%20java.util.Map)"><code>UIMAFramework.produceAnalysisEngine(ResourceSpecifier,ResourceManager,Map)</code></a>
+             should be used instead.</i></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../org/apache/uima/package-summary.html">org.apache.uima</a> with type arguments of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">CompositeResourceFactory.</span><code><strong><a href="../../../../../org/apache/uima/CompositeResourceFactory.html#registerFactory(java.lang.Class,%20org.apache.uima.ResourceFactory)">registerFactory</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&gt;&nbsp;aResourceSpecifierInterface,
+               <a href="../../../../../org/apache/uima/ResourceFactory.html" title="interface in org.apache.uima">ResourceFactory</a>&nbsp;aFactory)</code>
+<div class="block">Registers a ResourceFactory with this composite factory.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.analysis_engine">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/analysis_engine/package-summary.html">org.apache.uima.analysis_engine</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/analysis_engine/package-summary.html">org.apache.uima.analysis_engine</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html" title="interface in org.apache.uima.analysis_engine">AnalysisEngineDescription</a></strong></code>
+<div class="block">An <code>AnalysisEngineDescription</code> contains all of the information needed to instantiate
+ and use an <a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html" title="interface in org.apache.uima.analysis_engine"><code>AnalysisEngine</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/analysis_engine/TaeDescription.html" title="interface in org.apache.uima.analysis_engine">TaeDescription</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, <a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html" title="interface in org.apache.uima.analysis_engine"><code>AnalysisEngineDescription</code></a> should be used instead. This interface
+             no longer defines any additional methods beyond those in AnalysisEngineDescription.</i></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/analysis_engine/package-summary.html">org.apache.uima.analysis_engine</a> that return <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></code></td>
+<td class="colLast"><span class="strong">AnalysisEngineDescription.</span><code><strong><a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html#getComponentSpecifier(java.lang.String)">getComponentSpecifier</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>
+<div class="block">Gets the ResourceSpecifier of one a component of this aggregate, based on its key.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/analysis_engine/package-summary.html">org.apache.uima.analysis_engine</a> that return types with arguments of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&gt;</code></td>
+<td class="colLast"><span class="strong">AnalysisEngineDescription.</span><code><strong><a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html#getAllComponentSpecifiers(org.apache.uima.resource.ResourceManager)">getAllComponentSpecifiers</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager)</code>
+<div class="block">For an aggregate AnalysisEngine only, gets the ResourceSpecifiers of all components in this
+ aggregate.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&gt;</code></td>
+<td class="colLast"><span class="strong">AnalysisEngineDescription.</span><code><strong><a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html#getDelegateAnalysisEngineSpecifiers()">getDelegateAnalysisEngineSpecifiers</a></strong>()</code>
+<div class="block">For an aggregate AnalysisEngine only, retrieves a collection of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource"><code>ResourceSpecifier</code></a>s
+ that indicate which delegate AnalysisEngines comprise the aggregate.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&gt;</code></td>
+<td class="colLast"><span class="strong">AnalysisEngineDescription.</span><code><strong><a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html#getDelegateAnalysisEngineSpecifiers(org.apache.uima.resource.ResourceManager)">getDelegateAnalysisEngineSpecifiers</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager)</code>
+<div class="block">For an aggregate AnalysisEngine only, retrieves a collection of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource"><code>ResourceSpecifier</code></a>s
+ that indicate which delegate AnalysisEngines comprise the aggregate.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/analysis_engine/package-summary.html">org.apache.uima.analysis_engine</a> with parameters of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">AnalysisEngine.</span><code><strong><a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">initialize</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Initializes this <code>Resource</code> from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.analysis_engine.asb">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/analysis_engine/asb/package-summary.html">org.apache.uima.analysis_engine.asb</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../org/apache/uima/analysis_engine/asb/package-summary.html">org.apache.uima.analysis_engine.asb</a> with type arguments of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">ASB.</span><code><strong><a href="../../../../../org/apache/uima/analysis_engine/asb/ASB.html#setup(java.util.Map,%20org.apache.uima.UimaContextAdmin,%20org.apache.uima.analysis_engine.metadata.FlowControllerDeclaration,%20org.apache.uima.analysis_engine.metadata.AnalysisEngineMetaData)">setup</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&gt;&nbsp;aComponentSpecifiers,
+     <a href="../../../../../org/apache/uima/UimaContextAdmin.html" title="interface in org.apache.uima">UimaContextAdmin</a>&nbsp;aParentContext,
+     <a href="../../../../../org/apache/uima/analysis_engine/metadata/FlowControllerDeclaration.html" title="interface in org.apache.uima.analysis_engine.metadata">FlowControllerDeclaration</a>&nbsp;aFlowControllerDeclaration,
+     <a href="../../../../../org/apache/uima/analysis_engine/metadata/AnalysisEngineMetaData.html" title="interface in org.apache.uima.analysis_engine.metadata">AnalysisEngineMetaData</a>&nbsp;aAggregateMetadata)</code>
+<div class="block">Called by the Aggregate Analysis Engine to provide this ASB with information it needs to
+ operate.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.analysis_engine.metadata">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/analysis_engine/metadata/package-summary.html">org.apache.uima.analysis_engine.metadata</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/analysis_engine/metadata/package-summary.html">org.apache.uima.analysis_engine.metadata</a> that return <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></code></td>
+<td class="colLast"><span class="strong">FlowControllerDeclaration.</span><code><strong><a href="../../../../../org/apache/uima/analysis_engine/metadata/FlowControllerDeclaration.html#getSpecifier()">getSpecifier</a></strong>()</code>
+<div class="block">Retrieves the <code>ResourceSpecifier</code> used to determine which FlowController is used
+ by the AnalysisEngine.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/analysis_engine/metadata/package-summary.html">org.apache.uima.analysis_engine.metadata</a> with parameters of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">FlowControllerDeclaration.</span><code><strong><a href="../../../../../org/apache/uima/analysis_engine/metadata/FlowControllerDeclaration.html#setSpecifier(org.apache.uima.resource.ResourceSpecifier)">setSpecifier</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier)</code>
+<div class="block">Sets the <code>ResourceSpecifier</code> used to determine which FlowController is used by the
+ AnalysisEngine.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.collection">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/collection/package-summary.html">org.apache.uima.collection</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/collection/package-summary.html">org.apache.uima.collection</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/collection/CasConsumerDescription.html" title="interface in org.apache.uima.collection">CasConsumerDescription</a></strong></code>
+<div class="block">An <code>CasConsumerDescription</code> contains all of the information needed to instantiate
+ and use an <a href="../../../../../org/apache/uima/collection/CasConsumer.html" title="interface in org.apache.uima.collection"><code>CasConsumer</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/collection/CasInitializerDescription.html" title="interface in org.apache.uima.collection">CasInitializerDescription</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, CAS Initializers are deprecated. A component that performs an operation
+             like HTML detagging should instead be implemented as a "multi-Sofa" annotator. See
+             org.apache.uima.examples.XmlDetagger for an example.</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/collection/CollectionReaderDescription.html" title="interface in org.apache.uima.collection">CollectionReaderDescription</a></strong></code>
+<div class="block">An <code>CollectionReaderDescription</code> contains all of the information needed to
+ instantiate and use an <a href="../../../../../org/apache/uima/collection/CollectionReader.html" title="interface in org.apache.uima.collection"><code>CollectionReader</code></a>.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/collection/package-summary.html">org.apache.uima.collection</a> with parameters of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">CasConsumer_ImplBase.</span><code><strong><a href="../../../../../org/apache/uima/collection/CasConsumer_ImplBase.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">initialize</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Called by the framework to initialize this CAS Consumer.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">CasInitializer_ImplBase.</span><code><strong><a href="../../../../../org/apache/uima/collection/CasInitializer_ImplBase.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">initialize</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block">Called by the framework to initialize this CAS Initializer.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">CollectionReader_ImplBase.</span><code><strong><a href="../../../../../org/apache/uima/collection/CollectionReader_ImplBase.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">initialize</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Called by the framework to initialize this Collection Reader.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.collection.base_cpm">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/collection/base_cpm/package-summary.html">org.apache.uima.collection.base_cpm</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/collection/base_cpm/package-summary.html">org.apache.uima.collection.base_cpm</a> with parameters of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">CasDataCollectionReader_ImplBase.</span><code><strong><a href="../../../../../org/apache/uima/collection/base_cpm/CasDataCollectionReader_ImplBase.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">initialize</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Called by the framework to initialize this Collection Reader.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">CasDataConsumer_ImplBase.</span><code><strong><a href="../../../../../org/apache/uima/collection/base_cpm/CasDataConsumer_ImplBase.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">initialize</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Called by the framework to initialize this CAS Consumer.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">CasDataInitializer_ImplBase.</span><code><strong><a href="../../../../../org/apache/uima/collection/base_cpm/CasDataInitializer_ImplBase.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">initialize</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block">Called by the framework to initialize this CAS Initializer.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.flow">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/flow/package-summary.html">org.apache.uima.flow</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/flow/package-summary.html">org.apache.uima.flow</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/flow/FlowControllerDescription.html" title="interface in org.apache.uima.flow">FlowControllerDescription</a></strong></code>
+<div class="block">A <code>FlowControllerDescription</code> contains all of the information needed to instantiate
+ and use a <a href="../../../../../org/apache/uima/flow/FlowController.html" title="interface in org.apache.uima.flow"><code>FlowController</code></a>.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.resource">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/resource/package-summary.html">org.apache.uima.resource</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/resource/package-summary.html">org.apache.uima.resource</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/ConfigurableDataResourceSpecifier.html" title="interface in org.apache.uima.resource">ConfigurableDataResourceSpecifier</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that locates a resource file using its URL.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/CustomResourceSpecifier.html" title="interface in org.apache.uima.resource">CustomResourceSpecifier</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that specifically names the
+ Java class that should be created.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/FileLanguageResourceSpecifier.html" title="interface in org.apache.uima.resource">FileLanguageResourceSpecifier</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that locates a resource file using its URL, where the
+ URL depends on an ISO language identifier.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/FileResourceSpecifier.html" title="interface in org.apache.uima.resource">FileResourceSpecifier</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that locates a resource file using its URL.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/JMSMessagingSpecifier.html" title="interface in org.apache.uima.resource">JMSMessagingSpecifier</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/MailMessagingSpecifier.html" title="interface in org.apache.uima.resource">MailMessagingSpecifier</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/MessagingSpecifier.html" title="interface in org.apache.uima.resource">MessagingSpecifier</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/MQMessagingSpecifier.html" title="interface in org.apache.uima.resource">MQMessagingSpecifier</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/PearSpecifier.html" title="interface in org.apache.uima.resource">PearSpecifier</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that locate an installed pear <code>Resource</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/ResourceCreationSpecifier.html" title="interface in org.apache.uima.resource">ResourceCreationSpecifier</a></strong></code>
+<div class="block">A <code>ResourceCreationSpecifier</code> is the supertype of
+ <a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html" title="interface in org.apache.uima.analysis_engine"><code>AnalysisEngineDescription</code></a>,
+ <a href="../../../../../org/apache/uima/collection/CasConsumerDescription.html" title="interface in org.apache.uima.collection"><code>CasConsumerDescription</code></a>,
+ <a href="../../../../../org/apache/uima/collection/CollectionReaderDescription.html" title="interface in org.apache.uima.collection"><code>CollectionReaderDescription</code></a>, and
+ <a href="../../../../../org/apache/uima/collection/CasInitializerDescription.html" title="interface in org.apache.uima.collection"><code>CasInitializerDescription</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/ResourceServiceSpecifier.html" title="interface in org.apache.uima.resource">ResourceServiceSpecifier</a></strong></code>
+<div class="block">A <code>ResourceServiceSpecifier</code> is a type of <code>ResourceSpecifier</code> that
+ contains information that can be used to locate an existing resource available as a service.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/ResourceSpecifierList.html" title="interface in org.apache.uima.resource">ResourceSpecifierList</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that is an aggregate of other
+ <code>ResourceSpecifier</code>s.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/resource/URISpecifier.html" title="interface in org.apache.uima.resource">URISpecifier</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that locates an existing <code>Resource</code>
+ service by its URI.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/resource/package-summary.html">org.apache.uima.resource</a> that return <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></code></td>
+<td class="colLast"><span class="strong">ExternalResourceDescription.</span><code><strong><a href="../../../../../org/apache/uima/resource/ExternalResourceDescription.html#getResourceSpecifier()">getResourceSpecifier</a></strong>()</code>
+<div class="block">Retrieves the <code>ResourceSpecifier</code> that describes how to create the resource.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/resource/package-summary.html">org.apache.uima.resource</a> that return types with arguments of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&gt;</code></td>
+<td class="colLast"><span class="strong">ResourceSpecifierList.</span><code><strong><a href="../../../../../org/apache/uima/resource/ResourceSpecifierList.html#getResourceSpecifiers()">getResourceSpecifiers</a></strong>()</code>
+<div class="block">Retrieves the constituent <code>ResourceSpecifiers</code> that comprise this aggregate
+ <code>ResourceSpecifierList</code>.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/resource/package-summary.html">org.apache.uima.resource</a> with parameters of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">Resource.</span><code><strong><a href="../../../../../org/apache/uima/resource/Resource.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">initialize</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Initializes this <code>Resource</code> from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="strong">Resource_ImplBase.</span><code><strong><a href="../../../../../org/apache/uima/resource/Resource_ImplBase.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">initialize</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">ExternalResourceDescription.</span><code><strong><a href="../../../../../org/apache/uima/resource/ExternalResourceDescription.html#setResourceSpecifier(org.apache.uima.resource.ResourceSpecifier)">setResourceSpecifier</a></strong>(<a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier)</code>
+<div class="block">Sets the <code>ResourceSpecifier</code> that describes how to create the resource.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.util">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a> in <a href="../../../../../org/apache/uima/util/package-summary.html">org.apache.uima.util</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../../org/apache/uima/util/package-summary.html">org.apache.uima.util</a> with type parameters of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&gt;,<a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a>&gt;&gt;&gt;</code></td>
+<td class="colLast"><span class="strong">SimpleResourceFactory.</span><code><strong><a href="../../../../../org/apache/uima/util/SimpleResourceFactory.html#mClassMap">mClassMap</a></strong></code>
+<div class="block">Map from ResourceSpecifier Class to List of Resource Classes.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/util/package-summary.html">org.apache.uima.util</a> that return <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></code></td>
+<td class="colLast"><span class="strong">XMLParser.</span><code><strong><a href="../../../../../org/apache/uima/util/XMLParser.html#parseResourceSpecifier(org.apache.uima.util.XMLInputSource)">parseResourceSpecifier</a></strong>(<a href="../../../../../org/apache/uima/util/XMLInputSource.html" title="class in org.apache.uima.util">XMLInputSource</a>&nbsp;aInput)</code>
+<div class="block">Parses a ResourceSpecifier from an XML input stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></code></td>
+<td class="colLast"><span class="strong">XMLParser.</span><code><strong><a href="../../../../../org/apache/uima/util/XMLParser.html#parseResourceSpecifier(org.apache.uima.util.XMLInputSource,%20org.apache.uima.util.XMLParser.ParsingOptions)">parseResourceSpecifier</a></strong>(<a href="../../../../../org/apache/uima/util/XMLInputSource.html" title="class in org.apache.uima.util">XMLInputSource</a>&nbsp;aInput,
+                      <a href="../../../../../org/apache/uima/util/XMLParser.ParsingOptions.html" title="class in org.apache.uima.util">XMLParser.ParsingOptions</a>&nbsp;aOptions)</code>
+<div class="block">Parses a ResourceSpecifier from an XML input stream.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/util/package-summary.html">org.apache.uima.util</a> with parameters of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a></code></td>
+<td class="colLast"><span class="strong">SimpleResourceFactory.</span><code><strong><a href="../../../../../org/apache/uima/util/SimpleResourceFactory.html#produceResource(java.lang.Class,%20org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">produceResource</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a>&gt;&nbsp;aResourceClass,
+               <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Produces an appropriate <code>Resource</code> instance from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../org/apache/uima/util/package-summary.html">org.apache.uima.util</a> with type arguments of type <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">SimpleResourceFactory.</span><code><strong><a href="../../../../../org/apache/uima/util/SimpleResourceFactory.html#addMapping(java.lang.Class,%20java.lang.Class)">addMapping</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&gt;&nbsp;aSpecifierInterface,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a>&gt;&nbsp;aResourceClass)</code>
+<div class="block">Configures this <code>SimpleResourceFactory</code> by adding a new mapping between a
+ <code>ResourceSpecifier</code> class and a <code>Resource</code> class.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../../../../../overview-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/resource/class-use/ResourceSpecifier.html" target="_top">Frames</a></li>
+<li><a href="ResourceSpecifier.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

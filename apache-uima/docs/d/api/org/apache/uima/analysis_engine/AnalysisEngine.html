@@ -1,0 +1,1176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AnalysisEngine (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="AnalysisEngine (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AnalysisEngine.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html" title="interface in org.apache.uima.analysis_engine"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/uima/analysis_engine/AnalysisEngine.html" target="_top">Frames</a></li>
+<li><a href="AnalysisEngine.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.uima.analysis_engine</div>
+<h2 title="Interface AnalysisEngine" class="title">Interface AnalysisEngine</h2>
+</div>
+<div class="contentContainer">
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Superinterfaces:</dt>
+<dd><a href="../../../../org/apache/uima/collection/base_cpm/CasObjectProcessor.html" title="interface in org.apache.uima.collection.base_cpm">CasObjectProcessor</a>, <a href="../../../../org/apache/uima/collection/base_cpm/CasProcessor.html" title="interface in org.apache.uima.collection.base_cpm">CasProcessor</a>, <a href="../../../../org/apache/uima/resource/ConfigurableResource.html" title="interface in org.apache.uima.resource">ConfigurableResource</a>, <a href="../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a></dd>
+</dl>
+<dl>
+<dt>All Known Subinterfaces:</dt>
+<dd><a href="../../../../org/apache/uima/analysis_engine/TextAnalysisEngine.html" title="interface in org.apache.uima.analysis_engine">TextAnalysisEngine</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public interface <span class="strong">AnalysisEngine</span>
+extends <a href="../../../../org/apache/uima/resource/ConfigurableResource.html" title="interface in org.apache.uima.resource">ConfigurableResource</a>, <a href="../../../../org/apache/uima/collection/base_cpm/CasObjectProcessor.html" title="interface in org.apache.uima.collection.base_cpm">CasObjectProcessor</a></pre>
+<div class="block">An Analysis Engine is a component responsible for analyzing unstructured information, discovering
+ and representing semantic content. Unstructured information includes, but is not restricted to,
+ text documents.
+ <p>
+ An AnalysisEngine operates on an "analysis structure" (implemented by
+ <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a>). The <code>CAS</code> contains the artifact to be processed
+ as well as semantic information already inferred from that artifact. The AnalysisEngine analyzes
+ this information and adds new information to the <code>CAS</code>.
+ <p>
+ To create an instance of an Analysis Engine, an application should call
+ <a href="../../../../org/apache/uima/UIMAFramework.html#produceAnalysisEngine(org.apache.uima.resource.ResourceSpecifier)"><code>UIMAFramework.produceAnalysisEngine(ResourceSpecifier)</code></a>.
+ <p>
+ A typical application interacts with the Analysis Engine interface as follows:
+ <ol>
+ <li>Call <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#newCAS()"><code>newCAS()</code></a> to create a new Common Analysis System appropriate for this
+ AnalysisEngine.</li>
+ <li>Use the <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a> interface to populate the <code>CAS</code> with the artifact to be
+ analyzed any information known about this document (e.g. the language of a text document). </li>
+ <li>Optionally, create a <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> that
+ identifies the results you would like this AnalysisEngine to generate (e.g. people, places, and
+ dates), and call the {#link <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#setResultSpecification(org.apache.uima.analysis_engine.ResultSpecification)"><code>setResultSpecification(ResultSpecification)</code></a> method.</li>
+ <li>Call <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS)"><code>process(CAS)</code></a> - the AnalysisEngine will perform its analysis.</li>
+ <li>Retrieve the results from the <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a>.</li>
+ <li>Call <a href="../../../../org/apache/uima/cas/CAS.html#reset()"><code>CAS.reset()</code></a> to clear out the <code>CAS</code> and prepare for processing a
+ new artifact.</li>
+ <li>Repeat steps 2 through 6 for each artifact to be processed.</li>
+ </ol>
+ <p>
+ <b>Important:</b> It is highly recommended that you reuse <code>CAS</code> objects rather than
+ calling <code>newCAS()</code> prior to each analysis. This is because <code>CAS</code>
+ objects may be expensive to create and may consume a significant amount of memory.
+ <p>
+ Instead of using the <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a> interface, applications may wish to use the Java-object-based
+ <a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas"><code>JCas</code></a> interface. In that case, the call to <code>newCAS</code> from step 1 above would
+ be replaced by <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#newJCas()"><code>newJCas()</code></a>, and the <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.jcas.JCas)"><code>process(JCas)</code></a> method would be used.
+ <p>
+ Analysis Engine implementations may or may not be capable of simultaneously processing multiple
+ documents in a multithreaded environment. See the documentation associated with the
+ implementation or factory method (e.g. (<a href="../../../../org/apache/uima/UIMAFramework.html#produceAnalysisEngine(org.apache.uima.resource.ResourceSpecifier)"><code>UIMAFramework.produceAnalysisEngine(ResourceSpecifier)</code></a>)
+ that you are using.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#PARAM_CONFIG_PARAM_SETTINGS">PARAM_CONFIG_PARAM_SETTINGS</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../../../org/apache/uima/resource/Resource.html#PARAM_CONFIG_PARAM_SETTINGS"><code>Resource.PARAM_CONFIG_PARAM_SETTINGS</code></a></i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#PARAM_MBEAN_NAME_PREFIX">PARAM_MBEAN_NAME_PREFIX</a></strong></code>
+<div class="block">Key for the initialization parameter whose value is a String representing the prefix
+ that will be added to all of the JMX MBean names that are generated by this AE (and 
+ its components, if it is an aggregate).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#PARAM_MBEAN_SERVER">PARAM_MBEAN_SERVER</a></strong></code>
+<div class="block">Key for the initialization parameter whose value is a JMX MBeanServer instance, with which this
+ AnalysisEngine will register an MBean that allows monitoring of the AE's performance through
+ JMX.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#PARAM_NUM_SIMULTANEOUS_REQUESTS">PARAM_NUM_SIMULTANEOUS_REQUESTS</a></strong></code>
+<div class="block">Key for the initialization parameter whose value is the number of simultaneous calls to
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS)"><code>process(CAS)</code></a> that will be supported.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#PARAM_RESOURCE_MANAGER">PARAM_RESOURCE_MANAGER</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../../../org/apache/uima/resource/Resource.html#PARAM_RESOURCE_MANAGER"><code>Resource.PARAM_RESOURCE_MANAGER</code></a></i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#PARAM_TIMEOUT_PERIOD">PARAM_TIMEOUT_PERIOD</a></strong></code>
+<div class="block">Key for the initialization parameter whose value is the maximum number of milliseconds to wait
+ for a pooled object (see <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#PARAM_NUM_SIMULTANEOUS_REQUESTS"><code>PARAM_NUM_SIMULTANEOUS_REQUESTS</code></a>) to become available to
+ serve a <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS)"><code>process(CAS)</code></a> request.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_org.apache.uima.resource.Resource">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;org.apache.uima.resource.<a href="../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a></h3>
+<code><a href="../../../../org/apache/uima/resource/Resource.html#PARAM_AGGREGATE_SOFA_MAPPINGS">PARAM_AGGREGATE_SOFA_MAPPINGS</a>, <a href="../../../../org/apache/uima/resource/Resource.html#PARAM_CONFIG_MANAGER">PARAM_CONFIG_MANAGER</a>, <a href="../../../../org/apache/uima/resource/Resource.html#PARAM_EXTERNAL_OVERRIDE_SETTINGS">PARAM_EXTERNAL_OVERRIDE_SETTINGS</a>, <a href="../../../../org/apache/uima/resource/Resource.html#PARAM_PERFORMANCE_TUNING_SETTINGS">PARAM_PERFORMANCE_TUNING_SETTINGS</a>, <a href="../../../../org/apache/uima/resource/Resource.html#PARAM_UIMA_CONTEXT">PARAM_UIMA_CONTEXT</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#batchProcessComplete()">batchProcessComplete</a></strong>()</code>
+<div class="block">Notifies this AnalysisEngine that processing of a batch has completed.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#collectionProcessComplete()">collectionProcessComplete</a></strong>()</code>
+<div class="block">Notifies this AnalysisEngine that processing of an entire collection has completed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#createResultSpecification()">createResultSpecification</a></strong>()</code>
+<div class="block">A factory method used to create an instance of <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> for use with this
+ AnalysisEngine.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#createResultSpecification(org.apache.uima.cas.TypeSystem)">createResultSpecification</a></strong>(<a href="../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;aTypeSystem)</code>
+<div class="block">A factory method used to create an instance of <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> for use with this
+ AnalysisEngine.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/analysis_engine/metadata/AnalysisEngineMetaData.html" title="interface in org.apache.uima.analysis_engine.metadata">AnalysisEngineMetaData</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#getAnalysisEngineMetaData()">getAnalysisEngineMetaData</a></strong>()</code>
+<div class="block">Gets the metadata that describes this <code>AnalysisEngine</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#getFeatureNamesForType(java.lang.String)">getFeatureNamesForType</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aTypeName)</code>
+<div class="block">Gets the names of the features that are defined on one of the CAS types that this AE inputs or
+ outputs.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#getLogger()">getLogger</a></strong>()</code>
+<div class="block">Gets the Logger that this Analysis Engine is currently using.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineManagement.html" title="interface in org.apache.uima.analysis_engine">AnalysisEngineManagement</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#getManagementInterface()">getManagementInterface</a></strong>()</code>
+<div class="block">Gets an object that can be used to do monitoring or management of this AnalysisEngine.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util">Properties</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#getPerformanceTuningSettings()">getPerformanceTuningSettings</a></strong>()</code>
+<div class="block">Gets the performance tuning settings in effect for this Analysis Engine.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#getResourceManager()">getResourceManager</a></strong>()</code>
+<div class="block">Gets the <a href="../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource"><code>ResourceManager</code></a> used by this AnalysisEngine.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">initialize</a></strong>(<a href="../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)</code>
+<div class="block">Initializes this <code>Resource</code> from a <code>ResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#newCAS()">newCAS</a></strong>()</code>
+<div class="block">Creates a new Common Analysis System appropriate for this Analysis Engine.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#newJCas()">newJCas</a></strong>()</code>
+<div class="block">Similar to <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#newCAS()"><code>newCAS()</code></a> but wraps the new CAS objects with the Java-object-based
+ <a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas"><code>JCas</code></a> interface.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.analysis_engine.AnalysisProcessData,%20org.apache.uima.analysis_engine.ResultSpecification)">process</a></strong>(<a href="../../../../org/apache/uima/analysis_engine/AnalysisProcessData.html" title="interface in org.apache.uima.analysis_engine">AnalysisProcessData</a>&nbsp;aProcessData,
+       <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;aResultSpec)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>This is no longer used by the framework and was never intended for users to call.
+             Use {#link #process(CAS)} instead.</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS)">process</a></strong>(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS)</code>
+<div class="block">Invokes this AnalysisEngine's analysis logic.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS,%20org.apache.uima.analysis_engine.ResultSpecification)">process</a></strong>(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS,
+       <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;aResultSpec)</code>
+<div class="block">Invokes this AnalysisEngine's analysis logic.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS,%20org.apache.uima.analysis_engine.ResultSpecification,%20org.apache.uima.util.ProcessTrace)">process</a></strong>(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS,
+       <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;aResultSpec,
+       <a href="../../../../org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a>&nbsp;aTrace)</code>
+<div class="block">Invokes this AnalysisEngine's analysis logic.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.jcas.JCas)">process</a></strong>(<a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;aJCas)</code>
+<div class="block">Similar to <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS)"><code>process(CAS)</code></a> but uses the Java-object-based <a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas"><code>JCas</code></a> interface instead
+ of the general <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a> interface.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.jcas.JCas,%20org.apache.uima.analysis_engine.ResultSpecification)">process</a></strong>(<a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;aJCas,
+       <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;aResultSpec)</code>
+<div class="block">Similar to <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS,%20org.apache.uima.analysis_engine.ResultSpecification)"><code>process(CAS,ResultSpecification)</code></a> but uses the Java-object-based
+ <a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas"><code>JCas</code></a> interface instead of the general <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a> interface.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.jcas.JCas,%20org.apache.uima.analysis_engine.ResultSpecification,%20org.apache.uima.util.ProcessTrace)">process</a></strong>(<a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;aJCas,
+       <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;aResultSpec,
+       <a href="../../../../org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a>&nbsp;aTrace)</code>
+<div class="block">Similar to <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS,%20org.apache.uima.analysis_engine.ResultSpecification,%20org.apache.uima.util.ProcessTrace)"><code>process(CAS, ResultSpecification, ProcessTrace)</code></a> but uses the
+ Java-object-based <a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas"><code>JCas</code></a> interface instead of the general <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a> interface.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/analysis_engine/CasIterator.html" title="interface in org.apache.uima.analysis_engine">CasIterator</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#processAndOutputNewCASes(org.apache.uima.cas.CAS)">processAndOutputNewCASes</a></strong>(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS)</code>
+<div class="block">Processes a CAS, possibly producing multiple CASes as a result.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/apache/uima/analysis_engine/JCasIterator.html" title="interface in org.apache.uima.analysis_engine">JCasIterator</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#processAndOutputNewCASes(org.apache.uima.jcas.JCas)">processAndOutputNewCASes</a></strong>(<a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;aJCAS)</code>
+<div class="block">Processes a JCAS, possibly producing multiple JCASes as a result.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#reconfigure()">reconfigure</a></strong>()</code>
+<div class="block">Reconfigures this Resource using the most current parameter settings.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#setLogger(org.apache.uima.util.Logger)">setLogger</a></strong>(<a href="../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a>&nbsp;aLogger)</code>
+<div class="block">Sets the Logger that this Analysis Engine will use.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#setResultSpecification(org.apache.uima.analysis_engine.ResultSpecification)">setResultSpecification</a></strong>(<a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;aResultSpec)</code>
+<div class="block">Sets the list of output types and features that the application wants this AnalysisEngine to
+ produce.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.uima.resource.ConfigurableResource">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;org.apache.uima.resource.<a href="../../../../org/apache/uima/resource/ConfigurableResource.html" title="interface in org.apache.uima.resource">ConfigurableResource</a></h3>
+<code><a href="../../../../org/apache/uima/resource/ConfigurableResource.html#getConfigParameterValue(java.lang.String)">getConfigParameterValue</a>, <a href="../../../../org/apache/uima/resource/ConfigurableResource.html#getConfigParameterValue(java.lang.String,%20java.lang.String)">getConfigParameterValue</a>, <a href="../../../../org/apache/uima/resource/ConfigurableResource.html#setConfigParameterValue(java.lang.String,%20java.lang.Object)">setConfigParameterValue</a>, <a href="../../../../org/apache/uima/resource/ConfigurableResource.html#setConfigParameterValue(java.lang.String,%20java.lang.String,%20java.lang.Object)">setConfigParameterValue</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.uima.resource.Resource">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;org.apache.uima.resource.<a href="../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a></h3>
+<code><a href="../../../../org/apache/uima/resource/Resource.html#destroy()">destroy</a>, <a href="../../../../org/apache/uima/resource/Resource.html#getMetaData()">getMetaData</a>, <a href="../../../../org/apache/uima/resource/Resource.html#getUimaContext()">getUimaContext</a>, <a href="../../../../org/apache/uima/resource/Resource.html#getUimaContextAdmin()">getUimaContextAdmin</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.uima.collection.base_cpm.CasObjectProcessor">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;org.apache.uima.collection.base_cpm.<a href="../../../../org/apache/uima/collection/base_cpm/CasObjectProcessor.html" title="interface in org.apache.uima.collection.base_cpm">CasObjectProcessor</a></h3>
+<code><a href="../../../../org/apache/uima/collection/base_cpm/CasObjectProcessor.html#processCas(org.apache.uima.cas.CAS)">processCas</a>, <a href="../../../../org/apache/uima/collection/base_cpm/CasObjectProcessor.html#processCas(org.apache.uima.cas.CAS[])">processCas</a>, <a href="../../../../org/apache/uima/collection/base_cpm/CasObjectProcessor.html#typeSystemInit(org.apache.uima.cas.TypeSystem)">typeSystemInit</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.uima.collection.base_cpm.CasProcessor">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;org.apache.uima.collection.base_cpm.<a href="../../../../org/apache/uima/collection/base_cpm/CasProcessor.html" title="interface in org.apache.uima.collection.base_cpm">CasProcessor</a></h3>
+<code><a href="../../../../org/apache/uima/collection/base_cpm/CasProcessor.html#batchProcessComplete(org.apache.uima.util.ProcessTrace)">batchProcessComplete</a>, <a href="../../../../org/apache/uima/collection/base_cpm/CasProcessor.html#collectionProcessComplete(org.apache.uima.util.ProcessTrace)">collectionProcessComplete</a>, <a href="../../../../org/apache/uima/collection/base_cpm/CasProcessor.html#getProcessingResourceMetaData()">getProcessingResourceMetaData</a>, <a href="../../../../org/apache/uima/collection/base_cpm/CasProcessor.html#isReadOnly()">isReadOnly</a>, <a href="../../../../org/apache/uima/collection/base_cpm/CasProcessor.html#isStateless()">isStateless</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="PARAM_RESOURCE_MANAGER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PARAM_RESOURCE_MANAGER</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PARAM_RESOURCE_MANAGER</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use <a href="../../../../org/apache/uima/resource/Resource.html#PARAM_RESOURCE_MANAGER"><code>Resource.PARAM_RESOURCE_MANAGER</code></a></i></div>
+<div class="block">Key for the initialization parameter whose value is a reference to the <a href="../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource"><code>ResourceManager</code></a>
+ that this AnalysisEngine should use. This value is used as a key in the
+ <code>aAdditionalParams</code> Map that is passed to the
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)"><code>initialize(ResourceSpecifier,Map)</code></a> method.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.analysis_engine.AnalysisEngine.PARAM_RESOURCE_MANAGER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PARAM_CONFIG_PARAM_SETTINGS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PARAM_CONFIG_PARAM_SETTINGS</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PARAM_CONFIG_PARAM_SETTINGS</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use <a href="../../../../org/apache/uima/resource/Resource.html#PARAM_CONFIG_PARAM_SETTINGS"><code>Resource.PARAM_CONFIG_PARAM_SETTINGS</code></a></i></div>
+<div class="block">Key for the initialization parameter whose value is a <a href="../../../../org/apache/uima/resource/metadata/ConfigurationParameterSettings.html" title="interface in org.apache.uima.resource.metadata"><code>ConfigurationParameterSettings</code></a>
+ object that holds configuration settings that will be used to configure this AnalysisEngine,
+ overriding any conflicting settings specified in this AnalysisEngine's Descriptor. This value
+ is used as a key in the <code>aAdditionalParams</code> Map that is passed to the
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)"><code>initialize(ResourceSpecifier,Map)</code></a> method.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.analysis_engine.AnalysisEngine.PARAM_CONFIG_PARAM_SETTINGS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PARAM_NUM_SIMULTANEOUS_REQUESTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PARAM_NUM_SIMULTANEOUS_REQUESTS</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PARAM_NUM_SIMULTANEOUS_REQUESTS</pre>
+<div class="block">Key for the initialization parameter whose value is the number of simultaneous calls to
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS)"><code>process(CAS)</code></a> that will be supported. Analysis Engine implementations may use this to
+ create a pool of objects (e.g. Annotators), each of which can process only one request at a
+ time. Applications should be careful about setting this number higher than is necessary, since
+ large pools of objects may increase initialization time and consume resources. Not all analysis
+ engine implementations pay attention to this parameter.
+ <p>
+ This value is used as a key in the <code>aAdditionalParams</code> Map that is passed to the
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)"><code>initialize(ResourceSpecifier,Map)</code></a> method.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.analysis_engine.AnalysisEngine.PARAM_NUM_SIMULTANEOUS_REQUESTS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PARAM_TIMEOUT_PERIOD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PARAM_TIMEOUT_PERIOD</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PARAM_TIMEOUT_PERIOD</pre>
+<div class="block">Key for the initialization parameter whose value is the maximum number of milliseconds to wait
+ for a pooled object (see <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#PARAM_NUM_SIMULTANEOUS_REQUESTS"><code>PARAM_NUM_SIMULTANEOUS_REQUESTS</code></a>) to become available to
+ serve a <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS)"><code>process(CAS)</code></a> request. If the processing has not begun within this time, an
+ exception will be thrown. A value of zero will cause the AnalysisEngine to wait forever. Not
+ all analysis* engine implementations pay attention to this parameter.
+ <p>
+ This value is used as a key in the <code>aAdditionalParams</code> Map that is passed to the
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)"><code>initialize(ResourceSpecifier,Map)</code></a> method.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.analysis_engine.AnalysisEngine.PARAM_TIMEOUT_PERIOD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PARAM_MBEAN_SERVER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PARAM_MBEAN_SERVER</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PARAM_MBEAN_SERVER</pre>
+<div class="block">Key for the initialization parameter whose value is a JMX MBeanServer instance, with which this
+ AnalysisEngine will register an MBean that allows monitoring of the AE's performance through
+ JMX. If this is null, the platform MBean Server (Java 1.5 only) will be used.
+ 
+ <p>
+ This value is used as a key in the <code>aAdditionalParams</code> Map that is passed to the
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)"><code>initialize(ResourceSpecifier,Map)</code></a> method.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.analysis_engine.AnalysisEngine.PARAM_MBEAN_SERVER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PARAM_MBEAN_NAME_PREFIX">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PARAM_MBEAN_NAME_PREFIX</h4>
+<pre>static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PARAM_MBEAN_NAME_PREFIX</pre>
+<div class="block">Key for the initialization parameter whose value is a String representing the prefix
+ that will be added to all of the JMX MBean names that are generated by this AE (and 
+ its components, if it is an aggregate).  This allows an application that has its own
+ MBeans to control how the UIMA MBeans are organized relative to the application's own
+ MBeans.
+ <p>
+ The string must be a valid JMX MBean name (although a name with only a domain and no keys
+ is permitted).  See 
+ <a href="http://java.sun.com/j2se/1.5.0/docs/api/javax/management/ObjectName.html">
+ http://java.sun.com/j2se/1.5.0/docs/api/javax/management/ObjectName.html</a> for details.
+ <p>
+ Examples of valid prefixes are:
+ <ul>
+   <li>foo.bar:</li>
+   <li>foo.bar:category=Stuff</li>
+   <li>foo.bar:category=Stuff,type=UIMA</li> 
+ </ul>  
+ <p>
+ UIMA will append additional key,value pairs to this prefix.  In particular, UIMA uses 
+ the key "name" (as the very last component of the MBean name), as well as the keys 
+ "p0","p1","p2",etc (to represent the chain of aggregates containing an AE). So the 
+ application may not use any of these keys in its prefix.
+ <p>
+ This value is used as a key in the <code>aAdditionalParams</code> Map that is passed to the
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)"><code>initialize(ResourceSpecifier,Map)</code></a> method.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.analysis_engine.AnalysisEngine.PARAM_MBEAN_NAME_PREFIX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="initialize(org.apache.uima.resource.ResourceSpecifier, java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initialize</h4>
+<pre>boolean&nbsp;initialize(<a href="../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a>&nbsp;aSpecifier,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;aAdditionalParams)
+                   throws <a href="../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></pre>
+<div class="block">Initializes this <code>Resource</code> from a <code>ResourceSpecifier</code>. Applications
+ do not need to call this method. It is called automatically by the <code>ResourceFactory</code>
+ and cannot be called a second time.
+ <p>
+ The <code>AnalysisEngine</code> interface defines several optional parameter that can be
+ passed in the <code>aAdditionalParams</code> Map - see the <code>PARAM</code> constants on
+ this interface.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/uima/resource/Resource.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)">initialize</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>aSpecifier</code> - specifies how to create a resource or locate an existing resource service.</dd><dd><code>aAdditionalParams</code> - a Map containing additional parameters. May be <code>null</code> if there are no
+          parameters. Each class that implements this interface can decide what additional
+          parameters it supports.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if and only if initialization completed successfully. Reutrns false if the given
+         <code>ResourceSpecifier</code> is not of an appropriate type for this Resource. If
+         the <code>ResourceSpecifier</code> is of an appropriate type but is invalid or if
+         some other failure occurs, an exception should be thrown.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></code> - if a failure occurs during initialization.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../org/apache/uima/resource/Resource.html#initialize(org.apache.uima.resource.ResourceSpecifier,%20java.util.Map)"><code>Resource.initialize(ResourceSpecifier,Map)</code></a></dd></dl>
+</li>
+</ul>
+<a name="getAnalysisEngineMetaData()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAnalysisEngineMetaData</h4>
+<pre><a href="../../../../org/apache/uima/analysis_engine/metadata/AnalysisEngineMetaData.html" title="interface in org.apache.uima.analysis_engine.metadata">AnalysisEngineMetaData</a>&nbsp;getAnalysisEngineMetaData()</pre>
+<div class="block">Gets the metadata that describes this <code>AnalysisEngine</code>. This is just a
+ convenience method that calls <a href="../../../../org/apache/uima/resource/Resource.html#getMetaData()"><code>Resource.getMetaData()</code></a> and casts the result to a
+ <a href="../../../../org/apache/uima/analysis_engine/metadata/AnalysisEngineMetaData.html" title="interface in org.apache.uima.analysis_engine.metadata"><code>AnalysisEngineMetaData</code></a>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an object containing all metadata for this AnalysisEngine</dd></dl>
+</li>
+</ul>
+<a name="newCAS()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>newCAS</h4>
+<pre><a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;newCAS()
+           throws <a href="../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></pre>
+<div class="block">Creates a new Common Analysis System appropriate for this Analysis Engine. An application can
+ pre-populate this CAS, then pass it to the <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS)"><code>process(CAS)</code></a> method. Then, when the process
+ method returns, the CAS will contain the results of the analysis.
+ <p>
+ <b>Important:</b> CAS creation is expensive, so if at all possible an application should reuse
+ CASes. When a CAS instance is no longer being used, call its <a href="../../../../org/apache/uima/cas/CAS.html#reset()"><code>CAS.reset()</code></a> method, which
+ will remove all prior analysis information, and then reuse that same CAS instance for another
+ call to <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS)"><code>process(CAS)</code></a>.
+ <p>
+ Note that the CAS allows multiple subjects of analysis (e.g. documents) and defines a separate
+ "view" for each of them. If your application wants to work with a single subject of analysis,
+ call the method <a href="../../../../org/apache/uima/cas/CAS.html#getCurrentView()"><code>CAS.getCurrentView()</code></a> and operate on the returned view.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>a new <code>CAS</code> appropriate for this AnalysisEngine.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></code> - if a CAS could not be created because this AnalysisEngine's CAS metadata (type
+           system, type priorities, or FS indexes) are invalid. Ideally this would be checked at
+           AnalysisEngine initialization time, and it will likely be moved in the future.</dd></dl>
+</li>
+</ul>
+<a name="newJCas()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>newJCas</h4>
+<pre><a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;newJCas()
+             throws <a href="../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></pre>
+<div class="block">Similar to <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#newCAS()"><code>newCAS()</code></a> but wraps the new CAS objects with the Java-object-based
+ <a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas"><code>JCas</code></a> interface.
+ <p>
+ Note: the JCas that is returned is equivalent to what you would get if you called
+ <code>newCAS().getCurrentView().getJCas()</code>. That is, this method returns a view of the
+ default Sofa, NOT a Base CAS.
+ <p>
+ <b>Important:</b> CAS creation is expensive, so if at all possible an application should reuse
+ CASes. When a JCas instance is no longer being used, call its <a href="../../../../org/apache/uima/jcas/JCas.html#reset()"><code>JCas.reset()</code></a> method,
+ which will remove all prior analysis information, and then reuse that same JCas instance for
+ another call to <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.jcas.JCas)"><code>process(JCas)</code></a>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>a new <code>CAS</code> appropriate for this AnalysisEngine.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></code> - if a CAS could not be created because this AnalysisEngine's CAS metadata (type
+           system, type priorities, or FS indexes) are invalid. Ideally this would be checked at
+           AnalysisEngine initialization time, and it will likely be moved in the future.</dd></dl>
+</li>
+</ul>
+<a name="process(org.apache.uima.cas.CAS, org.apache.uima.analysis_engine.ResultSpecification)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>process</h4>
+<pre><a href="../../../../org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a>&nbsp;process(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS,
+                   <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;aResultSpec)
+                     throws <a href="../../../../org/apache/uima/analysis_engine/ResultNotSupportedException.html" title="class in org.apache.uima.analysis_engine">ResultNotSupportedException</a>,
+                            <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></pre>
+<div class="block">Invokes this AnalysisEngine's analysis logic. Prior to calling this method, the caller must
+ ensure that the CAS has been populated with the artifact to be analyzed as well as any inputs
+ required by this AnalysisEngine (as defined by this AnalysisEngine's
+ <a href="../../../../org/apache/uima/resource/metadata/Capability.html" title="interface in org.apache.uima.resource.metadata"><code>Capability</code></a> specification.)
+ <p>
+ This version of the <code>process</code> method takes a <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> as an
+ argument. The <code>ResultSpecification</code> is alist of output types and features that the
+ application wants this AnalysisEngine to produce. If you are going to use the same
+ <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> for multiple calls to <code>process</code>, it is not
+ recommended to use this method. Instead call
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#setResultSpecification(org.apache.uima.analysis_engine.ResultSpecification)"><code>setResultSpecification(ResultSpecification)</code></a> once and then call <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS)"><code>process(CAS)</code></a>
+ for each CAS that you want to process.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aCAS</code> - the CAS containing the inputs to the processing. Analysis results will also be written
+          to this CAS.</dd><dd><code>aResultSpec</code> - a list of outputs that this AnalysisEngine should produce.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an object containing information about which AnalysisEngine components have executed
+         and information, such as timing, about that execution.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/ResultNotSupportedException.html" title="class in org.apache.uima.analysis_engine">ResultNotSupportedException</a></code> - if this AnalysisEngine is not capable of producing the results requested in
+           <code>aResultSpec</code>.</dd>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></code> - if a failure occurs during processing.</dd></dl>
+</li>
+</ul>
+<a name="process(org.apache.uima.cas.CAS)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>process</h4>
+<pre><a href="../../../../org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a>&nbsp;process(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS)
+                     throws <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></pre>
+<div class="block">Invokes this AnalysisEngine's analysis logic. Prior to calling this method, the caller must
+ ensure that the CAS has been populated with the artifact to be analyzed as well as any inputs
+ required by this AnalysisEngine (as defined by this AnalysisEngine's
+ <a href="../../../../org/apache/uima/resource/metadata/Capability.html" title="interface in org.apache.uima.resource.metadata"><code>Capability</code></a> specification.)
+ <p>
+ This version of <code>process</code> does not take a <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> parameter.
+ You may specify a <code>ResultSpecification</code> by calling
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#setResultSpecification(org.apache.uima.analysis_engine.ResultSpecification)"><code>setResultSpecification(ResultSpecification)</code></a> prior to calling this method.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aCAS</code> - the CAS containing the inputs to the processing. Analysis results will also be written
+          to this CAS.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an object containing information about which AnalysisEngine components have executed
+         and information, such as timing, about that execution.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></code> - if a failure occurs during processing.</dd></dl>
+</li>
+</ul>
+<a name="process(org.apache.uima.cas.CAS, org.apache.uima.analysis_engine.ResultSpecification, org.apache.uima.util.ProcessTrace)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>process</h4>
+<pre>void&nbsp;process(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS,
+           <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;aResultSpec,
+           <a href="../../../../org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a>&nbsp;aTrace)
+             throws <a href="../../../../org/apache/uima/analysis_engine/ResultNotSupportedException.html" title="class in org.apache.uima.analysis_engine">ResultNotSupportedException</a>,
+                    <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></pre>
+<div class="block">Invokes this AnalysisEngine's analysis logic. Prior to calling this method, the caller must
+ ensure that the CAS has been populated with the artifact to be analyzed as well as any inputs
+ required by this AnalysisEngine (as defined by this AnalysisEngine's
+ <a href="../../../../org/apache/uima/resource/metadata/Capability.html" title="interface in org.apache.uima.resource.metadata"><code>Capability</code></a> specification.)
+ <p>
+ This version of the <code>process</code> method takes a <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> as an
+ argument. The <code>ResultSpecification</code> is a list of output types and features that the
+ application wants this AnalysisEngine to produce. If you are going to use the same
+ <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> for multiple calls to <code>process</code>, it is not
+ recommended to use this method. Instead call
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#setResultSpecification(org.apache.uima.analysis_engine.ResultSpecification)"><code>setResultSpecification(ResultSpecification)</code></a> once and then call <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS)"><code>process(CAS)</code></a>
+ for each CAS that you want to process.
+ <p>
+ This version of this method also takes a <code>ProcessTrace</code> object as a parameter.
+ This allows trace events to be written to an existing <code>ProcessTrace</code> rather than a
+ new one.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aCAS</code> - the CAS containing the inputs to the processing. Analysis results will also be written
+          to this CAS.</dd><dd><code>aResultSpec</code> - a list of outputs that this AnalysisEngine should produce.</dd><dd><code>aTrace</code> - the object to which trace events will be recorded</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/ResultNotSupportedException.html" title="class in org.apache.uima.analysis_engine">ResultNotSupportedException</a></code> - if this AnalysisEngine is not capable of producing the results requested in
+           <code>aResultSpec</code>.</dd>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></code> - if a failure occurs during processing.</dd></dl>
+</li>
+</ul>
+<a name="process(org.apache.uima.analysis_engine.AnalysisProcessData, org.apache.uima.analysis_engine.ResultSpecification)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>process</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+void&nbsp;process(<a href="../../../../org/apache/uima/analysis_engine/AnalysisProcessData.html" title="interface in org.apache.uima.analysis_engine">AnalysisProcessData</a>&nbsp;aProcessData,
+                      <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;aResultSpec)
+             throws <a href="../../../../org/apache/uima/analysis_engine/ResultNotSupportedException.html" title="class in org.apache.uima.analysis_engine">ResultNotSupportedException</a>,
+                    <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>This is no longer used by the framework and was never intended for users to call.
+             Use {#link #process(CAS)} instead.</i></div>
+<div class="block">Invokes this AnalysisEngine's analysis logic. Prior to calling this method, the caller must
+ ensure that the CAS has been populated with the artifact to be analyzed as well as any inputs
+ required by this AnalysisEngine (as defined by this AnalysisEngine's
+ <a href="../../../../org/apache/uima/resource/metadata/Capability.html" title="interface in org.apache.uima.resource.metadata"><code>Capability</code></a> specification.)
+ <p>
+ This version of this method is not normally used directly by applications. It is used to call
+ Analysis Engines that are components within an aggregate Analysis Engine, so that they can
+ share all information in the <a href="../../../../org/apache/uima/analysis_engine/AnalysisProcessData.html" title="interface in org.apache.uima.analysis_engine"><code>AnalysisProcessData</code></a> object, which includes the CAS and the
+ ProcessTrace.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aResultSpec</code> - a list of outputs that this AnalysisEngine should produce. A <code>null</code>
+          result specification is equivalent to a request for all possible results.</dd><dd><code>aProcessData</code> - the data that will be modified during processing. This includes the CAS and the
+          ProcessTrace.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/ResultNotSupportedException.html" title="class in org.apache.uima.analysis_engine">ResultNotSupportedException</a></code> - if this AnalysisEngine is not capable of producing the results requested in
+           <code>aResultSpec</code>.</dd>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></code> - if a failure occurs during processing.</dd></dl>
+</li>
+</ul>
+<a name="process(org.apache.uima.jcas.JCas)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>process</h4>
+<pre><a href="../../../../org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a>&nbsp;process(<a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;aJCas)
+                     throws <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></pre>
+<div class="block">Similar to <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS)"><code>process(CAS)</code></a> but uses the Java-object-based <a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas"><code>JCas</code></a> interface instead
+ of the general <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a> interface.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aJCas</code> - the JCas containing the inputs to the processing. Analysis results will also be
+          written to this JCas.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an object containing information about which AnalysisEngine components have executed
+         and information, such as timing, about that execution.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></code> - if a failure occurs during processing.</dd></dl>
+</li>
+</ul>
+<a name="process(org.apache.uima.jcas.JCas, org.apache.uima.analysis_engine.ResultSpecification)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>process</h4>
+<pre><a href="../../../../org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a>&nbsp;process(<a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;aJCas,
+                   <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;aResultSpec)
+                     throws <a href="../../../../org/apache/uima/analysis_engine/ResultNotSupportedException.html" title="class in org.apache.uima.analysis_engine">ResultNotSupportedException</a>,
+                            <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></pre>
+<div class="block">Similar to <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS,%20org.apache.uima.analysis_engine.ResultSpecification)"><code>process(CAS,ResultSpecification)</code></a> but uses the Java-object-based
+ <a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas"><code>JCas</code></a> interface instead of the general <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a> interface.
+ <p>
+ This version of the <code>process</code> method takes a <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> as an
+ argument. The <code>ResultSpecification</code> is a list of output types and features that the
+ application wants this AnalysisEngine to produce. If you are going to use the same
+ <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> for multiple calls to <code>process</code>, it is not
+ recommended to use this method. Instead call
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#setResultSpecification(org.apache.uima.analysis_engine.ResultSpecification)"><code>setResultSpecification(ResultSpecification)</code></a> once and then call <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.jcas.JCas)"><code>process(JCas)</code></a>
+ for each CAS that you want to process.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aJCas</code> - the JCas containing the inputs to the processing. Analysis results will also be
+          written to this JCas.</dd><dd><code>aResultSpec</code> - a list of outputs that this AnalysisEngine should produce.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an object containing information about which AnalysisEngine components have executed
+         and information, such as timing, about that execution.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/ResultNotSupportedException.html" title="class in org.apache.uima.analysis_engine">ResultNotSupportedException</a></code> - if this AnalysisEngine is not capable of producing the results requested in
+           <code>aResultSpec</code>.</dd>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></code> - if a failure occurs during processing.</dd></dl>
+</li>
+</ul>
+<a name="process(org.apache.uima.jcas.JCas, org.apache.uima.analysis_engine.ResultSpecification, org.apache.uima.util.ProcessTrace)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>process</h4>
+<pre>void&nbsp;process(<a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;aJCas,
+           <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;aResultSpec,
+           <a href="../../../../org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a>&nbsp;aTrace)
+             throws <a href="../../../../org/apache/uima/analysis_engine/ResultNotSupportedException.html" title="class in org.apache.uima.analysis_engine">ResultNotSupportedException</a>,
+                    <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></pre>
+<div class="block">Similar to <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.cas.CAS,%20org.apache.uima.analysis_engine.ResultSpecification,%20org.apache.uima.util.ProcessTrace)"><code>process(CAS, ResultSpecification, ProcessTrace)</code></a> but uses the
+ Java-object-based <a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas"><code>JCas</code></a> interface instead of the general <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a> interface.
+ <p>
+ This version of the <code>process</code> method takes a <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> as an
+ argument. The <code>ResultSpecification</code> is a list of output types and features that the
+ application wants this AnalysisEngine to produce. If you are going to use the same
+ <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> for multiple calls to <code>process</code>, it is not
+ recommended to use this method. Instead call
+ <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#setResultSpecification(org.apache.uima.analysis_engine.ResultSpecification)"><code>setResultSpecification(ResultSpecification)</code></a> once and then call <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#process(org.apache.uima.jcas.JCas)"><code>process(JCas)</code></a>
+ for each CAS that you want to process.
+ <p>
+ This version of this method also takes a <code>ProcessTrace</code> object as a parameter.
+ This allows trace events to be written to an existing <code>ProcessTrace</code> rather than a
+ new one.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aJCas</code> - the JCas containing the inputs to the processing. Analysis results will also be
+          written to this JCas.</dd><dd><code>aResultSpec</code> - a list of outputs that this AnalysisEngine should produce.</dd><dd><code>aTrace</code> - the object to which trace events will be recorded</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/ResultNotSupportedException.html" title="class in org.apache.uima.analysis_engine">ResultNotSupportedException</a></code> - if this AnalysisEngine is not capable of producing the results requested in
+           <code>aResultSpec</code>.</dd>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></code> - if a failure occurs during processing.</dd></dl>
+</li>
+</ul>
+<a name="processAndOutputNewCASes(org.apache.uima.cas.CAS)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processAndOutputNewCASes</h4>
+<pre><a href="../../../../org/apache/uima/analysis_engine/CasIterator.html" title="interface in org.apache.uima.analysis_engine">CasIterator</a>&nbsp;processAndOutputNewCASes(<a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS)
+                                     throws <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></pre>
+<div class="block">Processes a CAS, possibly producing multiple CASes as a result. The application uses the
+ <a href="../../../../org/apache/uima/analysis_engine/CasIterator.html" title="interface in org.apache.uima.analysis_engine"><code>CasIterator</code></a> interface to step through the output CASes.
+ <p>
+ If this Analysis Engine does not produce output CASes, then the <code>CasIterator</code> will
+ return no elements. You can check if an AnalysisEngine is capable of producing output CASes by
+ checking the
+ <a href="../../../../org/apache/uima/resource/metadata/OperationalProperties.html#getOutputsNewCASes()"><code>OperationalProperties.getOutputsNewCASes()</code></a>
+ operational property (<code>getAnalysisEngineMetaData().getOperationalProperties().getOutputsNewCASes()</code>).
+ <p>
+ Once this method is called, the AnalysisEngine "owns" <code>aCAS</code> until such time as
+ the <a href="../../../../org/apache/uima/analysis_engine/CasIterator.html#hasNext()"><code>CasIterator.hasNext()</code></a> method returns false. That is, the caller should not attempt
+ to modify or access the input CAS until it has read all of the elements from the CasIterator.
+ If the caller wants to abort the processing before having read all of the output CASes, it may
+ call <a href="../../../../org/apache/uima/analysis_engine/CasIterator.html#release()"><code>CasIterator.release()</code></a>, which will stop further processing from occurring, and
+ ownership of <code>aCAS</code> will revert to the caller.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aCAS</code> - the CAS to be processed</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an object for iterating through any output CASes</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></code> - if a failure occurs during processing</dd></dl>
+</li>
+</ul>
+<a name="processAndOutputNewCASes(org.apache.uima.jcas.JCas)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>processAndOutputNewCASes</h4>
+<pre><a href="../../../../org/apache/uima/analysis_engine/JCasIterator.html" title="interface in org.apache.uima.analysis_engine">JCasIterator</a>&nbsp;processAndOutputNewCASes(<a href="../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;aJCAS)
+                                      throws <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></pre>
+<div class="block">Processes a JCAS, possibly producing multiple JCASes as a result. The application uses the
+ <a href="../../../../org/apache/uima/analysis_engine/JCasIterator.html" title="interface in org.apache.uima.analysis_engine"><code>JCasIterator</code></a> interface to step through the output JCASes.
+ <p>
+ If this Analysis Engine does not produce output CASes, then the <code>CasIterator</code> will
+ return no elements. You can check if an AnalysisEngine is capable of producing output CASes by
+ checking the
+ <a href="../../../../org/apache/uima/resource/metadata/OperationalProperties.html#getOutputsNewCASes()"><code>OperationalProperties.getOutputsNewCASes()</code></a>
+ operational property (<code>getAnalysisEngineMetaData().getOperationalProperties().getOutputsNewCASes()</code>).
+ <p>
+ Once this method is called, the AnalysisEngine "owns" <code>aJCAS</code> until such time as
+ the <a href="../../../../org/apache/uima/analysis_engine/JCasIterator.html#hasNext()"><code>JCasIterator.hasNext()</code></a> method returns false. That is, the caller should not attempt
+ to modify or access the input JCAS until it has read all of the elements from the JCasIterator.
+ outputCASes, it may call <a href="../../../../org/apache/uima/analysis_engine/JCasIterator.html#release()"><code>JCasIterator.release()</code></a>, which will stop further processing
+ from occurring, and ownership of <code>aJCAS</code> will revert to the caller.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aJCAS</code> - the JCAS to be processed</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an object for iterating through any output JCASes</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></code> - if a failure occurs during processing</dd></dl>
+</li>
+</ul>
+<a name="batchProcessComplete()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>batchProcessComplete</h4>
+<pre>void&nbsp;batchProcessComplete()
+                          throws <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></pre>
+<div class="block">Notifies this AnalysisEngine that processing of a batch has completed. It is up to the caller
+ to determine the size of a batch. Components (particularly CAS Consumers) inside this Analysis
+ Engine may respond to this event, for example by writing data to the disk.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></code> - if an exception occurs during processing</dd></dl>
+</li>
+</ul>
+<a name="collectionProcessComplete()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>collectionProcessComplete</h4>
+<pre>void&nbsp;collectionProcessComplete()
+                               throws <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></pre>
+<div class="block">Notifies this AnalysisEngine that processing of an entire collection has completed. It is up to
+ the caller to determine when this has occurred. Components (particularly CAS Consumers) inside
+ this Analysis Engine may respond to this event, for example by writing data to the disk.
+ <p>
+ If this AnalysisEngine is an aggregate, this method will call the collectionProcessComplete method of 
+ all components of that aggregate.  If the aggregate descriptor declares a <code>fixedFlow</code> or 
+ <code>capabilityLanguageFlow</code>, then the components' collectionProcessComplete methods will be called
+ in the order specified by that flow element.  Once all components in the flow have been called, any components
+ not declared in the flow will be called, in arbitrary order.  If there is no <code>fixedFlow</code> or 
+ <code>capabilityLanguageFlow</code>, then all components in the aggregate will be called in arbitrary order.</div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineProcessException.html" title="class in org.apache.uima.analysis_engine">AnalysisEngineProcessException</a></code> - if an exception occurs during processing</dd></dl>
+</li>
+</ul>
+<a name="createResultSpecification()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createResultSpecification</h4>
+<pre><a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;createResultSpecification()</pre>
+<div class="block"><p>A factory method used to create an instance of <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> for use with this
+ AnalysisEngine. Applications use this method to construct <code>ResultSpecification</code>s
+ to pass to this AnalysisEngine's <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#setResultSpecification(org.apache.uima.analysis_engine.ResultSpecification)"><code>setResultSpecification(ResultSpecification)</code></a> method.
+ 
+ <p>
+ See also <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#createResultSpecification(org.apache.uima.cas.TypeSystem)"><code>createResultSpecification(TypeSystem)</code></a> which should be used if the
+ type system associated with this result specification is known at this point in time.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>a new instance of <code>ResultSpecification</code></dd></dl>
+</li>
+</ul>
+<a name="createResultSpecification(org.apache.uima.cas.TypeSystem)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createResultSpecification</h4>
+<pre><a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;createResultSpecification(<a href="../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;aTypeSystem)</pre>
+<div class="block">A factory method used to create an instance of <a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine"><code>ResultSpecification</code></a> for use with this
+ AnalysisEngine. Applications use this method to construct <code>ResultSpecification</code>s
+ to pass to this AnalysisEngine's <a href="../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#setResultSpecification(org.apache.uima.analysis_engine.ResultSpecification)"><code>setResultSpecification(ResultSpecification)</code></a> method.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aTypeSystem</code> - the type system</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a new instance of <code>ResultSpecification</code></dd></dl>
+</li>
+</ul>
+<a name="getResourceManager()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getResourceManager</h4>
+<pre><a href="../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;getResourceManager()</pre>
+<div class="block">Gets the <a href="../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource"><code>ResourceManager</code></a> used by this AnalysisEngine.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/uima/resource/Resource.html#getResourceManager()">getResourceManager</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>this AnalysisEngine's ResourceManager</dd></dl>
+</li>
+</ul>
+<a name="reconfigure()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>reconfigure</h4>
+<pre>void&nbsp;reconfigure()
+                 throws <a href="../../../../org/apache/uima/resource/ResourceConfigurationException.html" title="class in org.apache.uima.resource">ResourceConfigurationException</a></pre>
+<div class="block">Reconfigures this Resource using the most current parameter settings. Calls to
+ <a href="../../../../org/apache/uima/resource/ConfigurableResource.html#setConfigParameterValue(java.lang.String,%20java.lang.String,%20java.lang.Object)"><code>ConfigurableResource.setConfigParameterValue(String,String,Object)</code></a> do not take effect until this method is
+ called.
+ <p>
+ If this is an aggregate Analysis Engine, configuration parameter settings will be "pushed down"
+ to delegate Analysis Engines that also declare those parameters. All annotators will be
+ informed of the change by a call to their
+ <a href="../../../../org/apache/uima/analysis_engine/annotator/BaseAnnotator.html#reconfigure()"><code>BaseAnnotator.reconfigure()</code></a> methods.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/uima/resource/ConfigurableResource.html#reconfigure()">reconfigure</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/uima/resource/ConfigurableResource.html" title="interface in org.apache.uima.resource">ConfigurableResource</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../../org/apache/uima/resource/ResourceConfigurationException.html" title="class in org.apache.uima.resource">ResourceConfigurationException</a></code> - if the configuration is not valid</dd></dl>
+</li>
+</ul>
+<a name="getLogger()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLogger</h4>
+<pre><a href="../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a>&nbsp;getLogger()</pre>
+<div class="block">Gets the Logger that this Analysis Engine is currently using.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/uima/resource/Resource.html#getLogger()">getLogger</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>this AnalysisEngine's logger</dd></dl>
+</li>
+</ul>
+<a name="setLogger(org.apache.uima.util.Logger)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLogger</h4>
+<pre>void&nbsp;setLogger(<a href="../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a>&nbsp;aLogger)</pre>
+<div class="block">Sets the Logger that this Analysis Engine will use. If this method is not called, the default
+ logger (<a href="../../../../org/apache/uima/UIMAFramework.html#getLogger()"><code>UIMAFramework.getLogger()</code></a>) will be used.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../org/apache/uima/resource/Resource.html#setLogger(org.apache.uima.util.Logger)">setLogger</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource">Resource</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>aLogger</code> - the logger for this Analysis Engine to use</dd></dl>
+</li>
+</ul>
+<a name="getFeatureNamesForType(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFeatureNamesForType</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getFeatureNamesForType(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aTypeName)</pre>
+<div class="block">Gets the names of the features that are defined on one of the CAS types that this AE inputs or
+ outputs. When a AE's capabilities are declared with <code>allAnnotatorFeatures == true</code>,
+ this method can be used to determine all of the feature names.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aTypeName</code> - type for which to get features</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an array of feature names. If <code>aTypeName</code> is not defined,
+         <code>null</code> will be returned.</dd></dl>
+</li>
+</ul>
+<a name="getPerformanceTuningSettings()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPerformanceTuningSettings</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util">Properties</a>&nbsp;getPerformanceTuningSettings()</pre>
+<div class="block">Gets the performance tuning settings in effect for this Analysis Engine.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>performance tuning settings</dd></dl>
+</li>
+</ul>
+<a name="setResultSpecification(org.apache.uima.analysis_engine.ResultSpecification)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setResultSpecification</h4>
+<pre>void&nbsp;setResultSpecification(<a href="../../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;aResultSpec)</pre>
+<div class="block">Sets the list of output types and features that the application wants this AnalysisEngine to
+ produce. This is only a guideline. Annotators may use this information to avoid doing
+ unnecessary work, but they are not required to do so.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aResultSpec</code> - specifies the list of output types and features that the application is interested in.</dd></dl>
+</li>
+</ul>
+<a name="getManagementInterface()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getManagementInterface</h4>
+<pre><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineManagement.html" title="interface in org.apache.uima.analysis_engine">AnalysisEngineManagement</a>&nbsp;getManagementInterface()</pre>
+<div class="block">Gets an object that can be used to do monitoring or management of this AnalysisEngine.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an object exposing a management interface to this AE</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AnalysisEngine.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html" title="interface in org.apache.uima.analysis_engine"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/uima/analysis_engine/AnalysisEngine.html" target="_top">Frames</a></li>
+<li><a href="AnalysisEngine.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

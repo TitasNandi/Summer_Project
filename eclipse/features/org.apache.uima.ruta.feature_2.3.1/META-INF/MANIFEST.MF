@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: pkluegl
+Build-Jdk: 1.7.0_75
+Implementation-Title: Apache UIMA Ruta Eclipse: ruta-eclipse-feature
+Implementation-Version: 2.3.1
+Implementation-Vendor-Id: org.apache.uima
+Implementation-Vendor: The Apache Software Foundation
+Build-Date: 150817_1201
+Implementation-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Implementation-Url: http://uima.apache.org
+Project-Title: Apache UIMA
+

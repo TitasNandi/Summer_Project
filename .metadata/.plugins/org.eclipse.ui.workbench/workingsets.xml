@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1457243571279_1" label="dkpro-similarity" name="dkpro-similarity">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-algorithms-api-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-example-gpl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-algorithms-sspace-gpl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-algorithms-core-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-algorithms-style-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-algorithms-structure-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-algorithms-lexsub-gpl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-algorithms-ml-gpl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-uima-io-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-algorithms-sound-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-algorithms-lexical-gpl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-algorithms-wikipedia-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-master" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-algorithms-lexical-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-gpl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-ml-io-gpl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-uima-core-gpl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-algorithms-vsm-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-uima-core-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-uima-data-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-experiments-sts-2013-baseline-gpl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-uima-vsm-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-uima-api-asl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/dkpro-similarity-ml-core-gpl" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1449172739887_0" label="Window Working Set" name="Aggregate for window 1449172739886"/>
+</workingSetManager>

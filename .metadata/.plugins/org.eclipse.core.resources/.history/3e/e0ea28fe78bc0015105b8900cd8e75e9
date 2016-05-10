@@ -1,0 +1,223 @@
+import java.util.*;
+import java.io.*;
+public class assign_1 
+{
+	static int count = 0;
+	static double band_source;
+	static List<event> glob = new LinkedList<>();
+	public static void main(String args[])
+	{
+		/* Enter details in a file in the following format line by line:
+		 * Source type (1 for fixed, 2 for Bursty)
+		 * Switching type (1 for TDM switch, 2 for packet switch)
+		 * Number of sources
+		 * if Source is fixed enter packet_sending_rate(in packets/sec), else enter burst_interval(in sec)<space> burst_size (in packets/burst)
+		 * Packet size (in Mb)
+		 * Link Bandwidth from source to switch (in Mbps)
+		 * Link Bandwidth from switch to sink (in Mbps)
+		 * Simulation Time in seconds
+		 * Source queue size
+		 * Switch queue size
+		 */
+		ArrayList<String> a = new ArrayList<>();
+		int source_type;
+		int switch_type;
+		int num_sources;
+		int psr = 0;
+		double burst_interval;
+		int burst_size;
+		double packet_size;
+		double band_switch;
+		double sim_time;
+		int sou_queue;
+		int swi_queue;
+		FileReader fr = null;
+		try
+		{
+			fr = new FileReader("Input.txt");
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+		BufferedReader br = null;
+		String currentLine;
+		try
+		{
+			br = new BufferedReader(fr);
+			while((currentLine = br.readLine())!= null)
+			{
+				a.add(currentLine);
+			}
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		int i = -1;
+		source_type = Integer.parseInt(a.get(++i));
+		switch_type = Integer.parseInt(a.get(++i));
+		num_sources = Integer.parseInt(a.get(++i));
+		source[] sou_arr = new source[num_sources];
+		
+		if(source_type == 1)
+		{
+			psr = Integer.parseInt(a.get(++i));
+			double rand = myRandom();
+			for(int j=0;j<num_sources;j++)
+			{
+				sou_arr[j] = new fixed(count, psr, rand);
+				count++;
+			}
+		}
+		else
+		{
+			burst_interval = Double.parseDouble(a.get(++i).split(" ")[0]);
+			burst_size = Integer.parseInt(a.get(i).split(" ")[1]);
+			double rand = myRandom();
+			for(int j=0;j<num_sources;j++)
+			{
+				sou_arr[j] = new bursty(count, burst_interval, burst_size, rand);
+				count++;
+			}
+		}
+		packet_size = Double.parseDouble(a.get(++i));
+		band_source = Double.parseDouble(a.get(++i));
+		band_switch = Double.parseDouble(a.get(++i));
+		sim_time = Double.parseDouble(a.get(++i));
+		sou_queue = Integer.parseInt(a.get(++i));
+		swi_queue = Integer.parseInt(a.get(++i));
+		double packet_time = 1/psr;
+		double tr_time = packet_size/band_source;
+		
+		if(switch_type == 1)
+		{
+			router link = new packet_switch(band_switch);
+		}
+		
+		if(source_type == 1 && switch_type == 1)
+		{
+			if(packet_time > tr_time)
+			{
+				for(i=0;i<num_sources;i++)
+				{
+					double time = 0.0;
+					int count_2 = 0;
+					while(time <= sim_time)
+					{
+						double gen_time = sou_arr[i].rand + (count_2 * packet_time);
+						System.out.println("Source" + i + "produced packet at "+ gen_time);
+						packet p = new packet(i, count_2, gen_time);
+						time = gen_time;
+						sou_arr[i].q.add(p);
+						double reach_time = sou_arr[i].rand + ((count_2+1) * tr_time);
+						event eve = new event(count_2, i, reach_time);
+						glob.add(eve);
+						count_2++;
+					}
+				}
+				Collections.sort(glob);
+				for(int k=0; k<glob.size();k++)
+				{
+					System.out.println("Packet "+glob.get(k).p_id + " from source "+glob.get(k).s_id+" received at switch at"+ glob.get(k).timestamp);
+				}
+				
+			}
+		}
+	}
+	static double myRandom() {
+	    Random generator = new Random();
+		double number = generator.nextDouble();
+		return number;
+	}
+}
+
+class event implements Comparable<event>
+{
+	int p_id;
+	int s_id;
+	double timestamp;
+	public event(int p_id, int s_id, double timestamp)
+	{
+		this.p_id = p_id;
+		this.s_id = s_id;
+		this.timestamp = timestamp;
+	}
+	public int compareTo(event other) {
+        if(timestamp > other.timestamp)
+        {
+        	return -1;
+        }
+        else if(timestamp < other.timestamp)
+        {
+        	return 1;
+        }
+        else
+        {
+        	return 0;
+        }
+    }
+	
+}
+class source
+{
+	int s_id;
+	double rand;
+	Queue<packet> q = new LinkedList<packet>();
+	public source(int count, double rand)
+	{
+		s_id = count;
+		this.rand = rand;
+	}
+}
+
+class packet
+{
+	int s_id;
+	int p_id;
+	double gen_time;
+	public packet(int s_id, int p_id, double gen_time)
+	{
+		this.s_id = s_id;
+		this.p_id = p_id;
+		this.gen_time = gen_time;
+	}
+}
+
+class router
+{
+	double bandwidth;
+	
+}
+
+class fixed extends source
+{
+	int sending_rate;
+	public fixed(int s_id, int sending_rate, double rand)
+	{
+		super(s_id, rand);
+		this.sending_rate = sending_rate;
+	}
+}
+
+class bursty extends source
+{
+	int burst_size;
+	double burst_interval; 
+	public bursty(int s_id, double burst_interval, int burst_size, double rand)
+	{
+		super(s_id, rand);
+		this.burst_interval = burst_interval;
+		this.burst_size = burst_size;
+	}
+}
+
+class packet_switch extends router
+{
+	double bandwidth;
+	Queue<packet> Q = new LinkedList<packet>();
+	public packet_switch(double bandwidth)
+	{
+		this.bandwidth = super.bandwidth;
+	}
+}

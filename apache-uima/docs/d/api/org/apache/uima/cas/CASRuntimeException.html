@@ -1,0 +1,1152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CASRuntimeException (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="CASRuntimeException (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/CASRuntimeException.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/uima/cas/CasOwner.html" title="interface in org.apache.uima.cas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/uima/cas/CommonArrayFS.html" title="interface in org.apache.uima.cas"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/uima/cas/CASRuntimeException.html" target="_top">Frames</a></li>
+<li><a href="CASRuntimeException.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#methods_inherited_from_class_org.apache.uima.InternationalizedRuntimeException">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Method</li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.uima.cas</div>
+<h2 title="Class CASRuntimeException" class="title">Class CASRuntimeException</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">java.lang.Throwable</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">java.lang.Exception</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">java.lang.RuntimeException</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../org/apache/uima/InternationalizedRuntimeException.html" title="class in org.apache.uima">org.apache.uima.InternationalizedRuntimeException</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../org/apache/uima/UIMARuntimeException.html" title="class in org.apache.uima">org.apache.uima.UIMARuntimeException</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.uima.cas.CASRuntimeException</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">CASRuntimeException</span>
+extends <a href="../../../../org/apache/uima/UIMARuntimeException.html" title="class in org.apache.uima">UIMARuntimeException</a></pre>
+<div class="block">Runtime exception class for package org.apache.uima.cas.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../serialized-form.html#org.apache.uima.cas.CASRuntimeException">Serialized Form</a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#ANNOTATION_IN_WRONG_INDEX">ANNOTATION_IN_WRONG_INDEX</a></strong></code>
+<div class="block">Error - the Annotation "{0}" is over view "{1}" and cannot be added to indexes associated with
+ the different view "{2}".</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#BLOB_DESERIALIZATION">BLOB_DESERIALIZATION</a></strong></code>
+<div class="block">Error trying to read BLOB data from an input stream and deserialize Stringo a CAS.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#BLOB_SERIALIZATION">BLOB_SERIALIZATION</a></strong></code>
+<div class="block">Error trying to do binary serialization of CAS data and write the BLOB to an output stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#CANNOT_CLONE_SOFA">CANNOT_CLONE_SOFA</a></strong></code>
+<div class="block">SofaFS may not be cloned.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#CAS_MISMATCH">CAS_MISMATCH</a></strong></code>
+<div class="block">Mismatched CAS "{0}".</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#CHILD_INDEX_OOB">CHILD_INDEX_OOB</a></strong></code>
+<div class="block">Error accessing child node in tree, index out of range.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#DELTA_CAS_PREEXISTING_FS_DISALLOWED">DELTA_CAS_PREEXISTING_FS_DISALLOWED</a></strong></code>
+<div class="block">Received pre-existing FS "{0}".</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#DEREF_FS_OTHER_CAS">DEREF_FS_OTHER_CAS</a></strong></code>
+<div class="block">Dereferencing a FeatureStructure of a CAS in a different CAS's context.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#DESERIALIZING_BINARY_INVALID_HEADER">DESERIALIZING_BINARY_INVALID_HEADER</a></strong></code>
+<div class="block">Deserializing Binary Header invalid</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#DESERIALIZING_COMPRESSED_BINARY_UNSUPPORTED">DESERIALIZING_COMPRESSED_BINARY_UNSUPPORTED</a></strong></code>
+<div class="block">Deserializing compressed binary other than form 4 not supported by this method</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#DISALLOW_CREATE_ANNOTATION_IN_BASE_CAS">DISALLOW_CREATE_ANNOTATION_IN_BASE_CAS</a></strong></code>
+<div class="block">The type "{0}", a subtype of AnnotationBase, can''t be created in the Base CAS.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#ILLEGAL_ARRAY_SIZE">ILLEGAL_ARRAY_SIZE</a></strong></code>
+<div class="block">Array size must be &gt;= 0.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#ILLEGAL_FEAT_SET">ILLEGAL_FEAT_SET</a></strong></code>
+<div class="block">While FS was in the index, illegal attempt to modify Feature "{0}" which is used as a key in one or more indexes; FS = "{1}"</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#ILLEGAL_STRING_VALUE">ILLEGAL_STRING_VALUE</a></strong></code>
+<div class="block">Error setting string value: string "{0}" is not valid for a value of type "{1}".</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#INAPPROP_FEAT">INAPPROP_FEAT</a></strong></code>
+<div class="block">Feature "{0}" is not defined for type "{1}".</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#INAPPROP_RANGE">INAPPROP_RANGE</a></strong></code>
+<div class="block">Trying to access value of feature "{0}" as "{1}", but range of feature is "{2}".</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#INAPPROP_TYPE">INAPPROP_TYPE</a></strong></code>
+<div class="block">Expected value of type "{0}", but found "{1}".</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#INVALID_BASE_CAS_METHOD">INVALID_BASE_CAS_METHOD</a></strong></code>
+<div class="block">Can''t call method "{0}" on the base CAS.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#INVALID_FEATURE_PATH">INVALID_FEATURE_PATH</a></strong></code>
+<div class="block">The feature path "{0}" is not valid.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#INVALID_MARKER">INVALID_MARKER</a></strong></code>
+<div class="block">Invalid Marker.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#JCAS_CAS_MISMATCH">JCAS_CAS_MISMATCH</a></strong></code>
+<div class="block">CAS type system doesn''t match JCas Type definition for type "{0}".</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#JCAS_GET_NTH_NEGATIVE_INDEX">JCAS_GET_NTH_NEGATIVE_INDEX</a></strong></code>
+<div class="block">JCas getNthElement method called with index "{0}" which is negative.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#JCAS_GET_NTH_ON_EMPTY_LIST">JCAS_GET_NTH_ON_EMPTY_LIST</a></strong></code>
+<div class="block">JCas getNthElement method called via invalid object - an empty list: {0}.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#JCAS_GET_NTH_PAST_END">JCAS_GET_NTH_PAST_END</a></strong></code>
+<div class="block">JCas getNthElement method called with index "{0}" larger than the length of the list.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#JCAS_MAKING_ABSTRACT_INSTANCE">JCAS_MAKING_ABSTRACT_INSTANCE</a></strong></code>
+<div class="block">A CAS iterator or createFS call is trying to make an instance of type "{0}", but that type has
+ been declared "abstract" in JCas, and no instances are allowed to be made.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#JCAS_MISSING_COVERCLASS">JCAS_MISSING_COVERCLASS</a></strong></code>
+<div class="block">The JCAS cover class "{0}" could not be loaded.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#JCAS_OLDSTYLE_REF_TO_NONJCAS_TYPE">JCAS_OLDSTYLE_REF_TO_NONJCAS_TYPE</a></strong></code>
+<div class="block">JCas is referencing via a JFSIterator or get method, a type, "{0}", which has no JCAS class
+ model.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#JCAS_TYPE_NOT_IN_CAS">JCAS_TYPE_NOT_IN_CAS</a></strong></code>
+<div class="block">JCas type "{0}" used in Java code, but was not declared in the XML type descriptor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#JCAS_UNKNOWN_TYPE_NOT_IN_CAS">JCAS_UNKNOWN_TYPE_NOT_IN_CAS</a></strong></code>
+<div class="block">Unknown JCas type used in Java code but was not declared or imported in the XML descriptor for
+ this component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#JCAS_UNSUPPORTED_OP_NOT_CAS">JCAS_UNSUPPORTED_OP_NOT_CAS</a></strong></code>
+<div class="block">The method "{0}" is not supported by this JCAS because it is not associated with a CAS view of
+ a CAS, but rather just with a base CAS.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#MULTIPLE_CREATE_MARKER">MULTIPLE_CREATE_MARKER</a></strong></code>
+<div class="block">Multiple Create Marker call for a CAS</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#NO_PRIMITIVE_TAIL">NO_PRIMITIVE_TAIL</a></strong></code>
+<div class="block">The feature path does not end in a primitive valued feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#NON_CREATABLE_TYPE">NON_CREATABLE_TYPE</a></strong></code>
+<div class="block">Can''t create FS of type "{0}" with this method.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#PRIMITIVE_VAL_FEAT">PRIMITIVE_VAL_FEAT</a></strong></code>
+<div class="block">Trying to access value of feature "{0}" as feature structure, but is primitive type.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#PROTECTED_SOFA_FEATURE">PROTECTED_SOFA_FEATURE</a></strong></code>
+<div class="block">Can''t use standard set methods with SofaFS features.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#SOFADATA_ALREADY_SET">SOFADATA_ALREADY_SET</a></strong></code>
+<div class="block">Data for Sofa feature {0} has already been set.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#SOFADATASTREAM_ERROR">SOFADATASTREAM_ERROR</a></strong></code>
+<div class="block">Error trying to open a stream to Sofa data.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#SOFANAME_ALREADY_EXISTS">SOFANAME_ALREADY_EXISTS</a></strong></code>
+<div class="block">A sofaFS with name {0} has already been created.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#SOFANAME_NOT_FOUND">SOFANAME_NOT_FOUND</a></strong></code>
+<div class="block">No sofaFS with name {0} found.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#SOFAREF_NOT_FOUND">SOFAREF_NOT_FOUND</a></strong></code>
+<div class="block">No sofaFS for specified sofaRef found.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#TYPE_NOT_IN_INDEX">TYPE_NOT_IN_INDEX</a></strong></code>
+<div class="block">Error accessing index "{0}" for type "{1}".</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#TYPESYSTEM_NOT_LOCKED">TYPESYSTEM_NOT_LOCKED</a></strong></code>
+<div class="block">Error accessing type system: the type system has not been committed.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#UNKNOWN_CONSTRAINT_FEAT">UNKNOWN_CONSTRAINT_FEAT</a></strong></code>
+<div class="block">Error applying FS constraString: no feature "{0}" in current type system.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#UNKNOWN_CONSTRAINT_TYPE">UNKNOWN_CONSTRAINT_TYPE</a></strong></code>
+<div class="block">Error applying FS constraString: no type "{0}" in current type system.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_org.apache.uima.UIMARuntimeException">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;org.apache.uima.<a href="../../../../org/apache/uima/UIMARuntimeException.html" title="class in org.apache.uima">UIMARuntimeException</a></h3>
+<code><a href="../../../../org/apache/uima/UIMARuntimeException.html#CAS_RELEASED_TO_WRONG_CAS_MANAGER">CAS_RELEASED_TO_WRONG_CAS_MANAGER</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#COPY_CAS_RANGE_TYPE_NAMES_NOT_EQUAL">COPY_CAS_RANGE_TYPE_NAMES_NOT_EQUAL</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#DEFINE_CAS_POOL_CALLED_TWICE">DEFINE_CAS_POOL_CALLED_TWICE</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#ECORE_UNRESOLVED_PROXY">ECORE_UNRESOLVED_PROXY</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#FEATURE_NOT_FOUND_DURING_CAS_COPY">FEATURE_NOT_FOUND_DURING_CAS_COPY</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#ILLEGAL_ADDING_OF_NEW_META_INFO_AFTER_CAS_DEFINED">ILLEGAL_ADDING_OF_NEW_META_INFO_AFTER_CAS_DEFINED</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#ILLEGAL_CAS_COPY_TO_SAME_CAS">ILLEGAL_CAS_COPY_TO_SAME_CAS</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#ILLEGAL_FS_FEAT_UPDATE">ILLEGAL_FS_FEAT_UPDATE</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#INCOMPATIBLE_TAF_JNI_LIBRARY">INCOMPATIBLE_TAF_JNI_LIBRARY</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#REQUESTED_TOO_MANY_CAS_INSTANCES">REQUESTED_TOO_MANY_CAS_INSTANCES</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#RESULT_SPEC_NULL">RESULT_SPEC_NULL</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#STANDARD_MESSAGE_CATALOG">STANDARD_MESSAGE_CATALOG</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#TYPE_NOT_FOUND_DURING_CAS_COPY">TYPE_NOT_FOUND_DURING_CAS_COPY</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#UIMA_CONTEXT_NULL">UIMA_CONTEXT_NULL</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#UIMA_ECORE_NOT_FOUND">UIMA_ECORE_NOT_FOUND</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#UNSUPPORTED_CAS_COPY_TO_OR_FROM_BASE_CAS">UNSUPPORTED_CAS_COPY_TO_OR_FROM_BASE_CAS</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#UNSUPPORTED_CAS_INTERFACE">UNSUPPORTED_CAS_INTERFACE</a>, <a href="../../../../org/apache/uima/UIMARuntimeException.html#VIEW_NOT_PART_OF_CAS">VIEW_NOT_PART_OF_CAS</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#CASRuntimeException()">CASRuntimeException</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#CASRuntimeException(java.lang.String)">CASRuntimeException</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;messageKey)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#CASRuntimeException(java.lang.String,%20java.lang.Object[])">CASRuntimeException</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessageKey,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;aArguments)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#CASRuntimeException(java.lang.String,%20java.lang.Object[],%20java.lang.Throwable)">CASRuntimeException</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessageKey,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;aArguments,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;aCause)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#CASRuntimeException(java.lang.String,%20java.lang.String,%20java.lang.Object[])">CASRuntimeException</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aResourceBundleName,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessageKey,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;aArguments)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#CASRuntimeException(java.lang.String,%20java.lang.String,%20java.lang.Object[],%20java.lang.Throwable)">CASRuntimeException</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aResourceBundleName,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessageKey,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;aArguments,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;aCause)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/uima/cas/CASRuntimeException.html#CASRuntimeException(java.lang.Throwable)">CASRuntimeException</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;aCause)</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.uima.InternationalizedRuntimeException">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.uima.<a href="../../../../org/apache/uima/InternationalizedRuntimeException.html" title="class in org.apache.uima">InternationalizedRuntimeException</a></h3>
+<code><a href="../../../../org/apache/uima/InternationalizedRuntimeException.html#getArguments()">getArguments</a>, <a href="../../../../org/apache/uima/InternationalizedRuntimeException.html#getCause()">getCause</a>, <a href="../../../../org/apache/uima/InternationalizedRuntimeException.html#getLocalizedMessage()">getLocalizedMessage</a>, <a href="../../../../org/apache/uima/InternationalizedRuntimeException.html#getLocalizedMessage(java.util.Locale)">getLocalizedMessage</a>, <a href="../../../../org/apache/uima/InternationalizedRuntimeException.html#getMessage()">getMessage</a>, <a href="../../../../org/apache/uima/InternationalizedRuntimeException.html#getMessageKey()">getMessageKey</a>, <a href="../../../../org/apache/uima/InternationalizedRuntimeException.html#getResourceBundleName()">getResourceBundleName</a>, <a href="../../../../org/apache/uima/InternationalizedRuntimeException.html#initCause(java.lang.Throwable)">initCause</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Throwable">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></h3>
+<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true#addSuppressed(java.lang.Throwable)" title="class or interface in java.lang">addSuppressed</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true#fillInStackTrace()" title="class or interface in java.lang">fillInStackTrace</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true#getStackTrace()" title="class or interface in java.lang">getStackTrace</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true#getSuppressed()" title="class or interface in java.lang">getSuppressed</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true#printStackTrace()" title="class or interface in java.lang">printStackTrace</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true#printStackTrace(java.io.PrintStream)" title="class or interface in java.lang">printStackTrace</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true#printStackTrace(java.io.PrintWriter)" title="class or interface in java.lang">printStackTrace</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true#setStackTrace(java.lang.StackTraceElement[])" title="class or interface in java.lang">setStackTrace</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true#toString()" title="class or interface in java.lang">toString</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="NON_CREATABLE_TYPE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NON_CREATABLE_TYPE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> NON_CREATABLE_TYPE</pre>
+<div class="block">Can''t create FS of type "{0}" with this method.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.NON_CREATABLE_TYPE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ILLEGAL_ARRAY_SIZE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ILLEGAL_ARRAY_SIZE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ILLEGAL_ARRAY_SIZE</pre>
+<div class="block">Array size must be &gt;= 0.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.ILLEGAL_ARRAY_SIZE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="INAPPROP_TYPE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INAPPROP_TYPE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> INAPPROP_TYPE</pre>
+<div class="block">Expected value of type "{0}", but found "{1}".</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.INAPPROP_TYPE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="INAPPROP_FEAT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INAPPROP_FEAT</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> INAPPROP_FEAT</pre>
+<div class="block">Feature "{0}" is not defined for type "{1}".</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.INAPPROP_FEAT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="INAPPROP_RANGE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INAPPROP_RANGE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> INAPPROP_RANGE</pre>
+<div class="block">Trying to access value of feature "{0}" as "{1}", but range of feature is "{2}".</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.INAPPROP_RANGE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PRIMITIVE_VAL_FEAT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PRIMITIVE_VAL_FEAT</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PRIMITIVE_VAL_FEAT</pre>
+<div class="block">Trying to access value of feature "{0}" as feature structure, but is primitive type.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.PRIMITIVE_VAL_FEAT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPESYSTEM_NOT_LOCKED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPESYSTEM_NOT_LOCKED</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPESYSTEM_NOT_LOCKED</pre>
+<div class="block">Error accessing type system: the type system has not been committed.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.TYPESYSTEM_NOT_LOCKED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ILLEGAL_STRING_VALUE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ILLEGAL_STRING_VALUE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ILLEGAL_STRING_VALUE</pre>
+<div class="block">Error setting string value: string "{0}" is not valid for a value of type "{1}".</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.ILLEGAL_STRING_VALUE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="UNKNOWN_CONSTRAINT_TYPE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UNKNOWN_CONSTRAINT_TYPE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> UNKNOWN_CONSTRAINT_TYPE</pre>
+<div class="block">Error applying FS constraString: no type "{0}" in current type system.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.UNKNOWN_CONSTRAINT_TYPE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="UNKNOWN_CONSTRAINT_FEAT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UNKNOWN_CONSTRAINT_FEAT</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> UNKNOWN_CONSTRAINT_FEAT</pre>
+<div class="block">Error applying FS constraString: no feature "{0}" in current type system.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.UNKNOWN_CONSTRAINT_FEAT">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CHILD_INDEX_OOB">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHILD_INDEX_OOB</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CHILD_INDEX_OOB</pre>
+<div class="block">Error accessing child node in tree, index out of range.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.CHILD_INDEX_OOB">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JCAS_CAS_MISMATCH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JCAS_CAS_MISMATCH</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> JCAS_CAS_MISMATCH</pre>
+<div class="block">CAS type system doesn''t match JCas Type definition for type "{0}".</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.JCAS_CAS_MISMATCH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JCAS_TYPE_NOT_IN_CAS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JCAS_TYPE_NOT_IN_CAS</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> JCAS_TYPE_NOT_IN_CAS</pre>
+<div class="block">JCas type "{0}" used in Java code, but was not declared in the XML type descriptor.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.JCAS_TYPE_NOT_IN_CAS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JCAS_UNKNOWN_TYPE_NOT_IN_CAS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JCAS_UNKNOWN_TYPE_NOT_IN_CAS</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> JCAS_UNKNOWN_TYPE_NOT_IN_CAS</pre>
+<div class="block">Unknown JCas type used in Java code but was not declared or imported in the XML descriptor for
+ this component.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.JCAS_UNKNOWN_TYPE_NOT_IN_CAS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JCAS_GET_NTH_ON_EMPTY_LIST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JCAS_GET_NTH_ON_EMPTY_LIST</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> JCAS_GET_NTH_ON_EMPTY_LIST</pre>
+<div class="block">JCas getNthElement method called via invalid object - an empty list: {0}.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.JCAS_GET_NTH_ON_EMPTY_LIST">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JCAS_GET_NTH_NEGATIVE_INDEX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JCAS_GET_NTH_NEGATIVE_INDEX</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> JCAS_GET_NTH_NEGATIVE_INDEX</pre>
+<div class="block">JCas getNthElement method called with index "{0}" which is negative.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.JCAS_GET_NTH_NEGATIVE_INDEX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JCAS_GET_NTH_PAST_END">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JCAS_GET_NTH_PAST_END</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> JCAS_GET_NTH_PAST_END</pre>
+<div class="block">JCas getNthElement method called with index "{0}" larger than the length of the list.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.JCAS_GET_NTH_PAST_END">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JCAS_OLDSTYLE_REF_TO_NONJCAS_TYPE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JCAS_OLDSTYLE_REF_TO_NONJCAS_TYPE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> JCAS_OLDSTYLE_REF_TO_NONJCAS_TYPE</pre>
+<div class="block">JCas is referencing via a JFSIterator or get method, a type, "{0}", which has no JCAS class
+ model. You must use FSIterator instead of JFSIterator.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.JCAS_OLDSTYLE_REF_TO_NONJCAS_TYPE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JCAS_MAKING_ABSTRACT_INSTANCE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JCAS_MAKING_ABSTRACT_INSTANCE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> JCAS_MAKING_ABSTRACT_INSTANCE</pre>
+<div class="block">A CAS iterator or createFS call is trying to make an instance of type "{0}", but that type has
+ been declared "abstract" in JCas, and no instances are allowed to be made.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.JCAS_MAKING_ABSTRACT_INSTANCE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JCAS_UNSUPPORTED_OP_NOT_CAS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JCAS_UNSUPPORTED_OP_NOT_CAS</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> JCAS_UNSUPPORTED_OP_NOT_CAS</pre>
+<div class="block">The method "{0}" is not supported by this JCAS because it is not associated with a CAS view of
+ a CAS, but rather just with a base CAS.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.JCAS_UNSUPPORTED_OP_NOT_CAS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SOFANAME_ALREADY_EXISTS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SOFANAME_ALREADY_EXISTS</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SOFANAME_ALREADY_EXISTS</pre>
+<div class="block">A sofaFS with name {0} has already been created.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.SOFANAME_ALREADY_EXISTS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SOFADATA_ALREADY_SET">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SOFADATA_ALREADY_SET</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SOFADATA_ALREADY_SET</pre>
+<div class="block">Data for Sofa feature {0} has already been set.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.SOFADATA_ALREADY_SET">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SOFANAME_NOT_FOUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SOFANAME_NOT_FOUND</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SOFANAME_NOT_FOUND</pre>
+<div class="block">No sofaFS with name {0} found.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.SOFANAME_NOT_FOUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SOFAREF_NOT_FOUND">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SOFAREF_NOT_FOUND</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SOFAREF_NOT_FOUND</pre>
+<div class="block">No sofaFS for specified sofaRef found.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.SOFAREF_NOT_FOUND">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="PROTECTED_SOFA_FEATURE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROTECTED_SOFA_FEATURE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PROTECTED_SOFA_FEATURE</pre>
+<div class="block">Can''t use standard set methods with SofaFS features.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.PROTECTED_SOFA_FEATURE">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="JCAS_MISSING_COVERCLASS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JCAS_MISSING_COVERCLASS</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> JCAS_MISSING_COVERCLASS</pre>
+<div class="block">The JCAS cover class "{0}" could not be loaded.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.JCAS_MISSING_COVERCLASS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="INVALID_FEATURE_PATH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INVALID_FEATURE_PATH</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> INVALID_FEATURE_PATH</pre>
+<div class="block">The feature path "{0}" is not valid.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.INVALID_FEATURE_PATH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="NO_PRIMITIVE_TAIL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NO_PRIMITIVE_TAIL</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> NO_PRIMITIVE_TAIL</pre>
+<div class="block">The feature path does not end in a primitive valued feature.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.NO_PRIMITIVE_TAIL">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="BLOB_SERIALIZATION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>BLOB_SERIALIZATION</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> BLOB_SERIALIZATION</pre>
+<div class="block">Error trying to do binary serialization of CAS data and write the BLOB to an output stream.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.BLOB_SERIALIZATION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="BLOB_DESERIALIZATION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>BLOB_DESERIALIZATION</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> BLOB_DESERIALIZATION</pre>
+<div class="block">Error trying to read BLOB data from an input stream and deserialize Stringo a CAS.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.BLOB_DESERIALIZATION">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="SOFADATASTREAM_ERROR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SOFADATASTREAM_ERROR</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SOFADATASTREAM_ERROR</pre>
+<div class="block">Error trying to open a stream to Sofa data.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.SOFADATASTREAM_ERROR">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="INVALID_BASE_CAS_METHOD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INVALID_BASE_CAS_METHOD</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> INVALID_BASE_CAS_METHOD</pre>
+<div class="block">Can''t call method "{0}" on the base CAS.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.INVALID_BASE_CAS_METHOD">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ANNOTATION_IN_WRONG_INDEX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ANNOTATION_IN_WRONG_INDEX</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ANNOTATION_IN_WRONG_INDEX</pre>
+<div class="block">Error - the Annotation "{0}" is over view "{1}" and cannot be added to indexes associated with
+ the different view "{2}".</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.ANNOTATION_IN_WRONG_INDEX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="TYPE_NOT_IN_INDEX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NOT_IN_INDEX</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> TYPE_NOT_IN_INDEX</pre>
+<div class="block">Error accessing index "{0}" for type "{1}". Index "{0}" is over type "{2}", which is not a
+ supertype of "{1}".</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.TYPE_NOT_IN_INDEX">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DISALLOW_CREATE_ANNOTATION_IN_BASE_CAS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DISALLOW_CREATE_ANNOTATION_IN_BASE_CAS</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DISALLOW_CREATE_ANNOTATION_IN_BASE_CAS</pre>
+<div class="block">The type "{0}", a subtype of AnnotationBase, can''t be created in the Base CAS.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.DISALLOW_CREATE_ANNOTATION_IN_BASE_CAS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CANNOT_CLONE_SOFA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CANNOT_CLONE_SOFA</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CANNOT_CLONE_SOFA</pre>
+<div class="block">SofaFS may not be cloned.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.CANNOT_CLONE_SOFA">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="CAS_MISMATCH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CAS_MISMATCH</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CAS_MISMATCH</pre>
+<div class="block">Mismatched CAS "{0}".</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.CAS_MISMATCH">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DELTA_CAS_PREEXISTING_FS_DISALLOWED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DELTA_CAS_PREEXISTING_FS_DISALLOWED</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DELTA_CAS_PREEXISTING_FS_DISALLOWED</pre>
+<div class="block">Received pre-existing FS "{0}".</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.DELTA_CAS_PREEXISTING_FS_DISALLOWED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="INVALID_MARKER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INVALID_MARKER</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> INVALID_MARKER</pre>
+<div class="block">Invalid Marker.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.INVALID_MARKER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="MULTIPLE_CREATE_MARKER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MULTIPLE_CREATE_MARKER</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> MULTIPLE_CREATE_MARKER</pre>
+<div class="block">Multiple Create Marker call for a CAS</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.MULTIPLE_CREATE_MARKER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DESERIALIZING_BINARY_INVALID_HEADER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DESERIALIZING_BINARY_INVALID_HEADER</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DESERIALIZING_BINARY_INVALID_HEADER</pre>
+<div class="block">Deserializing Binary Header invalid</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.DESERIALIZING_BINARY_INVALID_HEADER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DESERIALIZING_COMPRESSED_BINARY_UNSUPPORTED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DESERIALIZING_COMPRESSED_BINARY_UNSUPPORTED</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DESERIALIZING_COMPRESSED_BINARY_UNSUPPORTED</pre>
+<div class="block">Deserializing compressed binary other than form 4 not supported by this method</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.DESERIALIZING_COMPRESSED_BINARY_UNSUPPORTED">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DEREF_FS_OTHER_CAS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEREF_FS_OTHER_CAS</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DEREF_FS_OTHER_CAS</pre>
+<div class="block">Dereferencing a FeatureStructure of a CAS in a different CAS's context.
+  This can happen if you try to set a feature structure reference to a value of a feature structure belonging to 
+  an entirely different CAS.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.DEREF_FS_OTHER_CAS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="ILLEGAL_FEAT_SET">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ILLEGAL_FEAT_SET</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ILLEGAL_FEAT_SET</pre>
+<div class="block">While FS was in the index, illegal attempt to modify Feature "{0}" which is used as a key in one or more indexes; FS = "{1}"</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../constant-values.html#org.apache.uima.cas.CASRuntimeException.ILLEGAL_FEAT_SET">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="CASRuntimeException()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CASRuntimeException</h4>
+<pre>public&nbsp;CASRuntimeException()</pre>
+</li>
+</ul>
+<a name="CASRuntimeException(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CASRuntimeException</h4>
+<pre>public&nbsp;CASRuntimeException(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;messageKey)</pre>
+</li>
+</ul>
+<a name="CASRuntimeException(java.lang.String, java.lang.Object[], java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CASRuntimeException</h4>
+<pre>public&nbsp;CASRuntimeException(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessageKey,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;aArguments,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;aCause)</pre>
+</li>
+</ul>
+<a name="CASRuntimeException(java.lang.String, java.lang.Object[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CASRuntimeException</h4>
+<pre>public&nbsp;CASRuntimeException(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessageKey,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;aArguments)</pre>
+</li>
+</ul>
+<a name="CASRuntimeException(java.lang.String, java.lang.String, java.lang.Object[], java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CASRuntimeException</h4>
+<pre>public&nbsp;CASRuntimeException(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aResourceBundleName,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessageKey,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;aArguments,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;aCause)</pre>
+</li>
+</ul>
+<a name="CASRuntimeException(java.lang.String, java.lang.String, java.lang.Object[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CASRuntimeException</h4>
+<pre>public&nbsp;CASRuntimeException(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aResourceBundleName,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessageKey,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;aArguments)</pre>
+</li>
+</ul>
+<a name="CASRuntimeException(java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>CASRuntimeException</h4>
+<pre>public&nbsp;CASRuntimeException(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;aCause)</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/CASRuntimeException.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/uima/cas/CasOwner.html" title="interface in org.apache.uima.cas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/uima/cas/CommonArrayFS.html" title="interface in org.apache.uima.cas"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/uima/cas/CASRuntimeException.html" target="_top">Frames</a></li>
+<li><a href="CASRuntimeException.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#methods_inherited_from_class_org.apache.uima.InternationalizedRuntimeException">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Method</li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

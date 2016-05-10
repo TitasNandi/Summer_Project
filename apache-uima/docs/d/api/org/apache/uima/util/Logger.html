@@ -1,0 +1,587 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Logger (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Logger (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/Logger.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/uima/util/LoggerPrintStream.html" title="class in org.apache.uima.util"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/uima/util/Logger.html" target="_top">Frames</a></li>
+<li><a href="Logger.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.uima.util</div>
+<h2 title="Interface Logger" class="title">Interface Logger</h2>
+</div>
+<div class="contentContainer">
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public interface <span class="strong">Logger</span></pre>
+<div class="block">A <code>Logger</code> is a component used to log messages. This interface defines the standard
+ way for UIMA components to produce log output.
+ <p>
+ In the UIMA SDK, this interface is implemented using the Java 1.4 logger as a back end. If you
+ want to configure the logger, for example to specify the location of the log file and the logging
+ level, you should use the standard Java 1.4 logger properties or the java.util.logging APIs. See
+ the section "Specifying the Logging Configuration" in the Annotator and Analysis Engine
+ Developer's Guide chapter of the UIMA documentation for more information.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#isLoggable(org.apache.uima.util.Level)">isLoggable</a></strong>(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level)</code>
+<div class="block">Checks if the argument level is greater or equal to the specified level</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#log(org.apache.uima.util.Level,%20java.lang.String)">log</a></strong>(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessage)</code>
+<div class="block">Logs a message.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#log(org.apache.uima.util.Level,%20java.lang.String,%20java.lang.Object)">log</a></strong>(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessage,
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;param1)</code>
+<div class="block">Logs a message with one parameter</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#log(org.apache.uima.util.Level,%20java.lang.String,%20java.lang.Object[])">log</a></strong>(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessage,
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;params)</code>
+<div class="block">Logs a message with an arbitrary number of parameters</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#log(org.apache.uima.util.Level,%20java.lang.String,%20java.lang.Throwable)">log</a></strong>(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessage,
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;thrown)</code>
+<div class="block">Logs a message and a throwable object</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#log(java.lang.String)">log</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessage)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use new function with log level</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#log(java.lang.String,%20org.apache.uima.util.Level,%20java.lang.String,%20java.lang.Throwable)">log</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;wrapperFQCN,
+   <a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;thrown)</code>
+<div class="block">Generic logging method intended for logging wrappers.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#log(java.lang.String,%20java.lang.String,%20java.lang.Object[])">log</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aResourceBundleName,
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessageKey,
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;aArguments)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use new function with log level</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#logException(java.lang.Exception)">logException</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;aException)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use new function with log level</i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#logrb(org.apache.uima.util.Level,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)">logrb</a></strong>(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceClass,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceMethod,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bundleName,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msgKey)</code>
+<div class="block">Logs a message with a message key.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#logrb(org.apache.uima.util.Level,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.Object)">logrb</a></strong>(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceClass,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceMethod,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bundleName,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msgKey,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;param1)</code>
+<div class="block">Logs a message with a message key and one parameter.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#logrb(org.apache.uima.util.Level,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.Object[])">logrb</a></strong>(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceClass,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceMethod,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bundleName,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msgKey,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;params)</code>
+<div class="block">Logs a message with a message key and an arbitrary number of parameters.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#logrb(org.apache.uima.util.Level,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.Throwable)">logrb</a></strong>(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceClass,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceMethod,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bundleName,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msgKey,
+     <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;thrown)</code>
+<div class="block">Logs a message with a message key and a throwable object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#setLevel(org.apache.uima.util.Level)">setLevel</a></strong>(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level)</code>
+<div class="block">Sets the level of messages that will be logged by this logger.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#setOutputStream(java.io.OutputStream)">setOutputStream</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;aStream)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use external configuration possibility</i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#setOutputStream(java.io.PrintStream)">setOutputStream</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/PrintStream.html?is-external=true" title="class or interface in java.io">PrintStream</a>&nbsp;aStream)</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use external configuration possibility</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/Logger.html#setResourceManager(org.apache.uima.resource.ResourceManager)">setResourceManager</a></strong>(<a href="../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;resourceManager)</code>
+<div class="block">Sets the ResourceManager to use for message localization.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="log(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>log</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+void&nbsp;log(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessage)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use new function with log level</i></div>
+<div class="block">Logs a message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aMessage</code> - the message to be logged with message level INFO</dd></dl>
+</li>
+</ul>
+<a name="log(java.lang.String, java.lang.String, java.lang.Object[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>log</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+void&nbsp;log(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aResourceBundleName,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessageKey,
+                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;aArguments)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use new function with log level</i></div>
+<div class="block">Logs an internationalized message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aResourceBundleName</code> - base name of resource bundle</dd><dd><code>aMessageKey</code> - key of message to localize with message level INFO</dd><dd><code>aArguments</code> - arguments to message (may be null if none)</dd></dl>
+</li>
+</ul>
+<a name="logException(java.lang.Exception)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logException</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+void&nbsp;logException(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&nbsp;aException)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use new function with log level</i></div>
+<div class="block">Logs an exception</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aException</code> - the exception to be logged with message level INFO</dd></dl>
+</li>
+</ul>
+<a name="setOutputStream(java.io.PrintStream)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOutputStream</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+void&nbsp;setOutputStream(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/PrintStream.html?is-external=true" title="class or interface in java.io">PrintStream</a>&nbsp;aStream)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use external configuration possibility</i></div>
+<div class="block">Sets the output stream to which log messages will go. Setting the output stream to
+ <code>null</code> will disable the logger.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aStream</code> - <code>PrintStream</code> to which log messages will be printed</dd></dl>
+</li>
+</ul>
+<a name="setOutputStream(java.io.OutputStream)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOutputStream</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+void&nbsp;setOutputStream(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;aStream)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use external configuration possibility</i></div>
+<div class="block">Sets the output stream to which log messages will go. Setting the output stream to
+ <code>null</code> will disable the logger.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aStream</code> - <code>OutputStream</code> to which log messages will be printed</dd></dl>
+</li>
+</ul>
+<a name="log(org.apache.uima.util.Level, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>log</h4>
+<pre>void&nbsp;log(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessage)</pre>
+<div class="block">Logs a message.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>level</code> - message level</dd><dd><code>aMessage</code> - the message to be logged</dd></dl>
+</li>
+</ul>
+<a name="log(org.apache.uima.util.Level, java.lang.String, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>log</h4>
+<pre>void&nbsp;log(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessage,
+       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;param1)</pre>
+<div class="block">Logs a message with one parameter</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>level</code> - message level</dd><dd><code>aMessage</code> - the message to be logged</dd><dd><code>param1</code> - message parameter</dd></dl>
+</li>
+</ul>
+<a name="log(org.apache.uima.util.Level, java.lang.String, java.lang.Object[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>log</h4>
+<pre>void&nbsp;log(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessage,
+       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;params)</pre>
+<div class="block">Logs a message with an arbitrary number of parameters</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>level</code> - message level</dd><dd><code>aMessage</code> - the message to be logged</dd><dd><code>params</code> - message parameter array</dd></dl>
+</li>
+</ul>
+<a name="log(org.apache.uima.util.Level, java.lang.String, java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>log</h4>
+<pre>void&nbsp;log(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aMessage,
+       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;thrown)</pre>
+<div class="block">Logs a message and a throwable object</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>level</code> - message level</dd><dd><code>aMessage</code> - the message to be logged</dd><dd><code>thrown</code> - throwable object</dd></dl>
+</li>
+</ul>
+<a name="logrb(org.apache.uima.util.Level, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logrb</h4>
+<pre>void&nbsp;logrb(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceClass,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceMethod,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bundleName,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msgKey)</pre>
+<div class="block">Logs a message with a message key. The real message is extracted from a resource bundle.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>level</code> - message level</dd><dd><code>sourceClass</code> - source class name</dd><dd><code>sourceMethod</code> - source method name</dd><dd><code>bundleName</code> - resource bundle</dd><dd><code>msgKey</code> - message key</dd></dl>
+</li>
+</ul>
+<a name="logrb(org.apache.uima.util.Level, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logrb</h4>
+<pre>void&nbsp;logrb(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceClass,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceMethod,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bundleName,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msgKey,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;param1)</pre>
+<div class="block">Logs a message with a message key and one parameter. The real message is extracted from a
+ resource bundle.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>level</code> - message level</dd><dd><code>sourceClass</code> - source class name</dd><dd><code>sourceMethod</code> - source method name</dd><dd><code>bundleName</code> - resource bundle</dd><dd><code>msgKey</code> - message key</dd><dd><code>param1</code> - message parameter</dd></dl>
+</li>
+</ul>
+<a name="logrb(org.apache.uima.util.Level, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Object[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logrb</h4>
+<pre>void&nbsp;logrb(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceClass,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceMethod,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bundleName,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msgKey,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;params)</pre>
+<div class="block">Logs a message with a message key and an arbitrary number of parameters. The real message is
+ extracted from a resource bundle.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>level</code> - message level</dd><dd><code>sourceClass</code> - source class name</dd><dd><code>sourceMethod</code> - source method name</dd><dd><code>bundleName</code> - resource bundle</dd><dd><code>msgKey</code> - message key</dd><dd><code>params</code> - message parameter array with an arbitrary number of parameters</dd></dl>
+</li>
+</ul>
+<a name="logrb(org.apache.uima.util.Level, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>logrb</h4>
+<pre>void&nbsp;logrb(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceClass,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceMethod,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;bundleName,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;msgKey,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;thrown)</pre>
+<div class="block">Logs a message with a message key and a throwable object. The real message is extracted from a
+ resource bundle.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>level</code> - message level</dd><dd><code>sourceClass</code> - source class name</dd><dd><code>sourceMethod</code> - source method name</dd><dd><code>bundleName</code> - resource bundle</dd><dd><code>msgKey</code> - message key</dd><dd><code>thrown</code> - throwable object</dd></dl>
+</li>
+</ul>
+<a name="log(java.lang.String, org.apache.uima.util.Level, java.lang.String, java.lang.Throwable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>log</h4>
+<pre>void&nbsp;log(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;wrapperFQCN,
+       <a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level,
+       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;thrown)</pre>
+<div class="block">Generic logging method intended for logging wrappers.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>wrapperFQCN</code> - fully qualified class name of the wrapper</dd><dd><code>level</code> - message level</dd><dd><code>message</code> - message</dd><dd><code>thrown</code> - throwable object</dd></dl>
+</li>
+</ul>
+<a name="isLoggable(org.apache.uima.util.Level)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isLoggable</h4>
+<pre>boolean&nbsp;isLoggable(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level)</pre>
+<div class="block">Checks if the argument level is greater or equal to the specified level</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>level</code> - message level</dd>
+<dt><span class="strong">Returns:</span></dt><dd>boolean - true if the argument level is greater or equal to the specified level</dd></dl>
+</li>
+</ul>
+<a name="setLevel(org.apache.uima.util.Level)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setLevel</h4>
+<pre>void&nbsp;setLevel(<a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level)</pre>
+<div class="block">Sets the level of messages that will be logged by this logger. Note that if you call
+ <code>UIMAFramework.getLogger().setLevel(level)</code>, this will only change the logging
+ level for messages produced by the UIMA framework. It will NOT change the logging level for
+ messages produced by annotators. To change the logging level for an annotator, use
+ <code>UIMAFramework.getLogger(YourAnnotatorClass.class).setLevel(level)</code>.
+ <p>
+ If you need more flexibility it configuring the logger, consider using the standard Java logger
+ properties file or the java.util.logging APIs.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>level</code> - message level</dd></dl>
+</li>
+</ul>
+<a name="setResourceManager(org.apache.uima.resource.ResourceManager)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setResourceManager</h4>
+<pre>void&nbsp;setResourceManager(<a href="../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;resourceManager)</pre>
+<div class="block">Sets the ResourceManager to use for message localization. This method is intended for use by
+ the framework, not by user code.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>resourceManager</code> - A resource manager instance whose extension ClassLoader (if any) will be used for
+          message localization by this logger.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/Logger.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/uima/util/LoggerPrintStream.html" title="class in org.apache.uima.util"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/uima/util/Logger.html" target="_top">Frames</a></li>
+<li><a href="Logger.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>StringArray_Type (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="StringArray_Type (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/StringArray_Type.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/apache/uima/jcas/cas/StringArray.html" title="class in org.apache.uima.jcas.cas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/uima/jcas/cas/StringList.html" title="class in org.apache.uima.jcas.cas"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/jcas/cas/StringArray_Type.html" target="_top">Frames</a></li>
+<li><a href="StringArray_Type.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.uima.jcas.cas</div>
+<h2 title="Class StringArray_Type" class="title">Class StringArray_Type</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html" title="class in org.apache.uima.jcas.cas">org.apache.uima.jcas.cas.TOP_Type</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../org/apache/uima/jcas/cas/CommonArray_Type.html" title="class in org.apache.uima.jcas.cas">org.apache.uima.jcas.cas.CommonArray_Type</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.uima.jcas.cas.StringArray_Type</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public final class <span class="strong">StringArray_Type</span>
+extends <a href="../../../../../org/apache/uima/jcas/cas/CommonArray_Type.html" title="class in org.apache.uima.jcas.cas">CommonArray_Type</a></pre>
+<div class="block">The java Cas model for the CAS StringArray Type This is <b>not final</b> because the migration
+ from pre v08 has the old xxx_Type as a subclass of this.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/StringArray_Type.html#typeIndexID">typeIndexID</a></strong></code>
+<div class="block">this types ID - used to index a localTypeArray in JCas to get an index which indexes the global
+ typeArray in JCas instance to get a ref to this instance</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_org.apache.uima.jcas.cas.TOP_Type">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;org.apache.uima.jcas.cas.<a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html" title="class in org.apache.uima.jcas.cas">TOP_Type</a></h3>
+<code><a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#casImpl">casImpl</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#casType">casType</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#casTypeCode">casTypeCode</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#instanceOf_Type">instanceOf_Type</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#jcas">jcas</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#ll_cas">ll_cas</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#lowLevelArrayBoundChecks">lowLevelArrayBoundChecks</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#lowLevelTypeChecks">lowLevelTypeChecks</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#useExistingInstance">useExistingInstance</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/StringArray_Type.html#StringArray_Type(org.apache.uima.jcas.JCas,%20org.apache.uima.cas.Type)">StringArray_Type</a></strong>(<a href="../../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;jcas,
+                <a href="../../../../../org/apache/uima/cas/Type.html" title="interface in org.apache.uima.cas">Type</a>&nbsp;casType)</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/StringArray_Type.html#copyFromArray(int,%20java.lang.String[],%20int,%20int,%20int)">copyFromArray</a></strong>(int&nbsp;addr,
+             <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;src,
+             int&nbsp;srcOffset,
+             int&nbsp;destOffset,
+             int&nbsp;length)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/StringArray_Type.html#copyToArray(int,%20int,%20java.lang.String[],%20int,%20int)">copyToArray</a></strong>(int&nbsp;addr,
+           int&nbsp;srcOffset,
+           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;dest,
+           int&nbsp;destOffset,
+           int&nbsp;length)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/StringArray_Type.html#get(int,%20int)">get</a></strong>(int&nbsp;addr,
+   int&nbsp;i)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected org.apache.uima.cas.impl.FSGenerator&lt;?&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/StringArray_Type.html#getFSGenerator()">getFSGenerator</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/StringArray_Type.html#set(int,%20int,%20java.lang.String)">set</a></strong>(int&nbsp;addr,
+   int&nbsp;i,
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;v)</code>
+<div class="block">updates the Cas, setting the indexed value to the passed in Java String value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/StringArray_Type.html#toArray(int)">toArray</a></strong>(int&nbsp;addr)</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.uima.jcas.cas.CommonArray_Type">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.uima.jcas.cas.<a href="../../../../../org/apache/uima/jcas/cas/CommonArray_Type.html" title="class in org.apache.uima.jcas.cas">CommonArray_Type</a></h3>
+<code><a href="../../../../../org/apache/uima/jcas/cas/CommonArray_Type.html#size(int)">size</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.uima.jcas.cas.TOP_Type">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.uima.jcas.cas.<a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html" title="class in org.apache.uima.jcas.cas">TOP_Type</a></h3>
+<code><a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#addToIndexes(int)">addToIndexes</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#checkType(int)">checkType</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#getTypeIndexID()">getTypeIndexID</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#invalidTypeArg(int)">invalidTypeArg</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#noObjCreate()">noObjCreate</a>, <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#removeFromIndexes(int)">removeFromIndexes</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="typeIndexID">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>typeIndexID</h4>
+<pre>public static final&nbsp;int typeIndexID</pre>
+<div class="block">this types ID - used to index a localTypeArray in JCas to get an index which indexes the global
+ typeArray in JCas instance to get a ref to this instance</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="StringArray_Type(org.apache.uima.jcas.JCas, org.apache.uima.cas.Type)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>StringArray_Type</h4>
+<pre>public&nbsp;StringArray_Type(<a href="../../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;jcas,
+                <a href="../../../../../org/apache/uima/cas/Type.html" title="interface in org.apache.uima.cas">Type</a>&nbsp;casType)</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getFSGenerator()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFSGenerator</h4>
+<pre>protected&nbsp;org.apache.uima.cas.impl.FSGenerator&lt;?&gt;&nbsp;getFSGenerator()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html#getFSGenerator()">getFSGenerator</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html" title="class in org.apache.uima.jcas.cas">TOP_Type</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="get(int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>get</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;get(int&nbsp;addr,
+         int&nbsp;i)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>addr</code> - the low level CAS Feature Structure reference</dd><dd><code>i</code> - the index</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the indexed value from the corresponding Cas StringArray as a Java String.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../org/apache/uima/cas/StringArrayFS.html#get(int)"><code>StringArrayFS.get(int)</code></a></dd></dl>
+</li>
+</ul>
+<a name="set(int, int, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>set</h4>
+<pre>public&nbsp;void&nbsp;set(int&nbsp;addr,
+       int&nbsp;i,
+       <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;v)</pre>
+<div class="block">updates the Cas, setting the indexed value to the passed in Java String value.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>addr</code> - the low level CAS Feature Structure reference</dd><dd><code>i</code> - the index</dd><dd><code>v</code> - the value</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../org/apache/uima/cas/StringArrayFS.html#set(int,%20java.lang.String)"><code>StringArrayFS.set(int, String)</code></a></dd></dl>
+</li>
+</ul>
+<a name="copyFromArray(int, java.lang.String[], int, int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyFromArray</h4>
+<pre>public&nbsp;void&nbsp;copyFromArray(int&nbsp;addr,
+                 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;src,
+                 int&nbsp;srcOffset,
+                 int&nbsp;destOffset,
+                 int&nbsp;length)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>addr</code> - the low level CAS Feature Structure reference</dd><dd><code>src</code> - the Java object source</dd><dd><code>srcOffset</code> - the source offset</dd><dd><code>destOffset</code> - the destination offset in the CAS Feature Structure</dd><dd><code>length</code> - the number of items to copy</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../org/apache/uima/cas/StringArrayFS.html#copyFromArray(java.lang.String[],%20int,%20int,%20int)"><code>StringArrayFS.copyFromArray(String[], int, int, int)</code></a></dd></dl>
+</li>
+</ul>
+<a name="copyToArray(int, int, java.lang.String[], int, int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>copyToArray</h4>
+<pre>public&nbsp;void&nbsp;copyToArray(int&nbsp;addr,
+               int&nbsp;srcOffset,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;dest,
+               int&nbsp;destOffset,
+               int&nbsp;length)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>addr</code> - the low level CAS Feature Structure reference</dd><dd><code>srcOffset</code> - the offset in the CAS Feature Structure</dd><dd><code>dest</code> - the Java object destination</dd><dd><code>destOffset</code> - the destination offset</dd><dd><code>length</code> - the number of items to copy</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../org/apache/uima/cas/StringArrayFS.html#copyToArray(int,%20java.lang.String[],%20int,%20int)"><code>StringArrayFS.copyToArray(int, String[], int, int)</code></a></dd></dl>
+</li>
+</ul>
+<a name="toArray(int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toArray</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;toArray(int&nbsp;addr)</pre>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>addr</code> - the low level CAS Feature Structure reference</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a copy of the string array</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../org/apache/uima/cas/StringArrayFS.html#toArray()"><code>StringArrayFS.toArray()</code></a></dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/StringArray_Type.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/apache/uima/jcas/cas/StringArray.html" title="class in org.apache.uima.jcas.cas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/uima/jcas/cas/StringList.html" title="class in org.apache.uima.jcas.cas"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/jcas/cas/StringArray_Type.html" target="_top">Frames</a></li>
+<li><a href="StringArray_Type.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

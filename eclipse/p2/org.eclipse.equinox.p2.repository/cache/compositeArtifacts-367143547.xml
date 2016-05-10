@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeArtifactRepository version='1.0.0'?>
+<repository name='&quot;fuin.org&quot;'
+    type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+  <properties size='1'>
+    <!-- Current Unix epoch time in milliseconds -->
+    <property name='p2.timestamp' value='1353233898644'/>
+  </properties>
+  <children size='6'>
+    <child location='libraries'/>
+    <child location='srcmixins4j'/>    
+    <child location='dslddd'/>    
+    <child location='dslcqrs'/>    
+    <child location='http://jamopp.org/update_trunk'/>
+    <child location='http://emftext.org/update_trunk '/>
+  </children>
+</repository>

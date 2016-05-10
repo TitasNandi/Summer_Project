@@ -1,0 +1,2 @@
+Hello, my name is Titas. I would like to analyze the sentiment related to a Trip Advisor System. This would help analyze the effects of customer comments about Hotels and Restaurants.
+titas.ee13@iitp.ac.in

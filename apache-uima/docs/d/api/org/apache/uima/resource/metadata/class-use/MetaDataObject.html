@@ -1,0 +1,876 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Uses of Interface org.apache.uima.resource.metadata.MetaDataObject (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Uses of Interface org.apache.uima.resource.metadata.MetaDataObject (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../../../../../../overview-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/uima/resource/metadata/class-use/MetaDataObject.html" target="_top">Frames</a></li>
+<li><a href="MetaDataObject.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<div class="header">
+<h2 title="Uses of Interface org.apache.uima.resource.metadata.MetaDataObject" class="title">Uses of Interface<br>org.apache.uima.resource.metadata.MetaDataObject</h2>
+</div>
+<div class="classUseContainer">
+<ul class="blockList">
+<li class="blockList">
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing packages, and an explanation">
+<caption><span>Packages that use <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Package</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.uima.analysis_engine">org.apache.uima.analysis_engine</a></td>
+<td class="colLast">
+<div class="block">The Analysis Engine interface, along with supporting 
+interfaces and exception classes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.uima.analysis_engine.metadata">org.apache.uima.analysis_engine.metadata</a></td>
+<td class="colLast">
+<div class="block">Interfaces for objects that represent metadata for an
+Analysis Engine.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.uima.collection">org.apache.uima.collection</a></td>
+<td class="colLast">
+<div class="block">Classes and interfaces for collection processing.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.uima.collection.metadata">org.apache.uima.collection.metadata</a></td>
+<td class="colLast">
+<div class="block">Java object representation of a CPE Descriptor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.uima.flow">org.apache.uima.flow</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.uima.resource">org.apache.uima.resource</a></td>
+<td class="colLast">
+<div class="block">Interfaces for <code>Resources</code> and <code>ResourceSpecifiers</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.uima.resource.metadata">org.apache.uima.resource.metadata</a></td>
+<td class="colLast">
+<div class="block">Interfaces for objects that represent metadata for a
+Resource.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.uima.util">org.apache.uima.util</a></td>
+<td class="colLast">
+<div class="block">Utility classes and interfaces used by UIMA components.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.uima.analysis_engine">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/analysis_engine/package-summary.html">org.apache.uima.analysis_engine</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/analysis_engine/package-summary.html">org.apache.uima.analysis_engine</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html" title="interface in org.apache.uima.analysis_engine">AnalysisEngineDescription</a></strong></code>
+<div class="block">An <code>AnalysisEngineDescription</code> contains all of the information needed to instantiate
+ and use an <a href="../../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html" title="interface in org.apache.uima.analysis_engine"><code>AnalysisEngine</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/analysis_engine/TaeDescription.html" title="interface in org.apache.uima.analysis_engine">TaeDescription</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, <a href="../../../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html" title="interface in org.apache.uima.analysis_engine"><code>AnalysisEngineDescription</code></a> should be used instead. This interface
+             no longer defines any additional methods beyond those in AnalysisEngineDescription.</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/analysis_engine/TypeOrFeature.html" title="interface in org.apache.uima.analysis_engine">TypeOrFeature</a></strong></code>
+<div class="block">A reference to a Type or Feature in the Analysis Engine's TypeSystem.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../../org/apache/uima/analysis_engine/package-summary.html">org.apache.uima.analysis_engine</a> that return types with arguments of type <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a>&gt;</code></td>
+<td class="colLast"><span class="strong">AnalysisEngineDescription.</span><code><strong><a href="../../../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html#getDelegateAnalysisEngineSpecifiersWithImports()">getDelegateAnalysisEngineSpecifiersWithImports</a></strong>()</code>
+<div class="block">Retrieves a Map whose keys are string identifiers and whose values are the either
+ <a href="../../../../../../org/apache/uima/resource/metadata/Import.html" title="interface in org.apache.uima.resource.metadata"><code>Import</code></a> or <a href="../../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource"><code>ResourceSpecifier</code></a> objects.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.analysis_engine.metadata">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/analysis_engine/metadata/package-summary.html">org.apache.uima.analysis_engine.metadata</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/analysis_engine/metadata/package-summary.html">org.apache.uima.analysis_engine.metadata</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/analysis_engine/metadata/AnalysisEngineMetaData.html" title="interface in org.apache.uima.analysis_engine.metadata">AnalysisEngineMetaData</a></strong></code>
+<div class="block">Encapsulates all of the metadata for an Analysis Engine.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/analysis_engine/metadata/CapabilityLanguageFlow.html" title="interface in org.apache.uima.analysis_engine.metadata">CapabilityLanguageFlow</a></strong></code>
+<div class="block">A <code>CapabilityLanguageFlow</code> is a simple type of <a href="../../../../../../org/apache/uima/analysis_engine/metadata/FlowConstraints.html" title="interface in org.apache.uima.analysis_engine.metadata"><code>FlowConstraints</code></a> that
+ specifies the complete flow as a capabilityLanguage sequence.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/analysis_engine/metadata/FixedFlow.html" title="interface in org.apache.uima.analysis_engine.metadata">FixedFlow</a></strong></code>
+<div class="block">A <code>FixedFlow</code> is a simple type of <a href="../../../../../../org/apache/uima/analysis_engine/metadata/FlowConstraints.html" title="interface in org.apache.uima.analysis_engine.metadata"><code>FlowConstraints</code></a> that specifies the
+ complete flow as a fixed sequence.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/analysis_engine/metadata/FlowConstraints.html" title="interface in org.apache.uima.analysis_engine.metadata">FlowConstraints</a></strong></code>
+<div class="block">A <code>FlowConstraints</code> object represents constraints on the order of execution of
+ delegate Analysis Engines within an aggregate Analysis Engine.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/analysis_engine/metadata/FlowControllerDeclaration.html" title="interface in org.apache.uima.analysis_engine.metadata">FlowControllerDeclaration</a></strong></code>
+<div class="block">Declares which FlowController is used by the Aggregate Analysis Engine.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/analysis_engine/metadata/SofaMapping.html" title="interface in org.apache.uima.analysis_engine.metadata">SofaMapping</a></strong></code>
+<div class="block">Sofa Name mapping is required to connect the output Sofas from one component to the input Sofa of
+ another component.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.collection">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/collection/package-summary.html">org.apache.uima.collection</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/collection/package-summary.html">org.apache.uima.collection</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/CasConsumerDescription.html" title="interface in org.apache.uima.collection">CasConsumerDescription</a></strong></code>
+<div class="block">An <code>CasConsumerDescription</code> contains all of the information needed to instantiate
+ and use an <a href="../../../../../../org/apache/uima/collection/CasConsumer.html" title="interface in org.apache.uima.collection"><code>CasConsumer</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/CasInitializerDescription.html" title="interface in org.apache.uima.collection">CasInitializerDescription</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, CAS Initializers are deprecated. A component that performs an operation
+             like HTML detagging should instead be implemented as a "multi-Sofa" annotator. See
+             org.apache.uima.examples.XmlDetagger for an example.</i></div>
+</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/CollectionReaderDescription.html" title="interface in org.apache.uima.collection">CollectionReaderDescription</a></strong></code>
+<div class="block">An <code>CollectionReaderDescription</code> contains all of the information needed to
+ instantiate and use an <a href="../../../../../../org/apache/uima/collection/CollectionReader.html" title="interface in org.apache.uima.collection"><code>CollectionReader</code></a>.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.collection.metadata">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/collection/metadata/package-summary.html">org.apache.uima.collection.metadata</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/collection/metadata/package-summary.html">org.apache.uima.collection.metadata</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CasProcessorDeploymentParam.html" title="interface in org.apache.uima.collection.metadata">CasProcessorDeploymentParam</a></strong></code>
+<div class="block">An object that holds configuration information used for building CPE Descriptor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CasProcessorErrorHandling.html" title="interface in org.apache.uima.collection.metadata">CasProcessorErrorHandling</a></strong></code>
+<div class="block">An object to contains configuration specific to error handling applicable to every CasProcossor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CasProcessorErrorRateThreshold.html" title="interface in org.apache.uima.collection.metadata">CasProcessorErrorRateThreshold</a></strong></code>
+<div class="block">An object to contains configuration specific to error handling applicable to every CasProcessor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CasProcessorExecArg.html" title="interface in org.apache.uima.collection.metadata">CasProcessorExecArg</a></strong></code>
+<div class="block">An object containing an arbitrary value that will passed to a program launched by the CPE.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CasProcessorExecutable.html" title="interface in org.apache.uima.collection.metadata">CasProcessorExecutable</a></strong></code>
+<div class="block">An object containing configuration for a program that the CPE will use to launch CasProcessor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CasProcessorFilter.html" title="interface in org.apache.uima.collection.metadata">CasProcessorFilter</a></strong></code>
+<div class="block">Object containing a filter expression used by the CPE to route CAS's to CasProcessor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CasProcessorMaxRestarts.html" title="interface in org.apache.uima.collection.metadata">CasProcessorMaxRestarts</a></strong></code>
+<div class="block">An object that holds configuration related to handling max restarts for CasProcessors.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CasProcessorRunInSeperateProcess.html" title="interface in org.apache.uima.collection.metadata">CasProcessorRunInSeperateProcess</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CasProcessorRuntimeEnvParam.html" title="interface in org.apache.uima.collection.metadata">CasProcessorRuntimeEnvParam</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CasProcessorTimeout.html" title="interface in org.apache.uima.collection.metadata">CasProcessorTimeout</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeCasProcessor.html" title="interface in org.apache.uima.collection.metadata">CpeCasProcessor</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeCasProcessors.html" title="interface in org.apache.uima.collection.metadata">CpeCasProcessors</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeCheckpoint.html" title="interface in org.apache.uima.collection.metadata">CpeCheckpoint</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeCollectionReader.html" title="interface in org.apache.uima.collection.metadata">CpeCollectionReader</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeCollectionReaderCasInitializer.html" title="interface in org.apache.uima.collection.metadata">CpeCollectionReaderCasInitializer</a></strong></code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0 CAS Initializers are deprecated.</i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeCollectionReaderIterator.html" title="interface in org.apache.uima.collection.metadata">CpeCollectionReaderIterator</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeComponentDescriptor.html" title="interface in org.apache.uima.collection.metadata">CpeComponentDescriptor</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeConfiguration.html" title="interface in org.apache.uima.collection.metadata">CpeConfiguration</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeDescription.html" title="interface in org.apache.uima.collection.metadata">CpeDescription</a></strong></code>
+<div class="block">Java representation of a Collection Processing Engine (CPE) XML descriptor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeInclude.html" title="interface in org.apache.uima.collection.metadata">CpeInclude</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeIntegratedCasProcessor.html" title="interface in org.apache.uima.collection.metadata">CpeIntegratedCasProcessor</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeLocalCasProcessor.html" title="interface in org.apache.uima.collection.metadata">CpeLocalCasProcessor</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeRemoteCasProcessor.html" title="interface in org.apache.uima.collection.metadata">CpeRemoteCasProcessor</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeResourceManagerConfiguration.html" title="interface in org.apache.uima.collection.metadata">CpeResourceManagerConfiguration</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeSofaMapping.html" title="interface in org.apache.uima.collection.metadata">CpeSofaMapping</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/CpeSofaMappings.html" title="interface in org.apache.uima.collection.metadata">CpeSofaMappings</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/collection/metadata/OutputQueue.html" title="interface in org.apache.uima.collection.metadata">OutputQueue</a></strong></code>
+<div class="block">An object that holds configuration that is part of the CPE descriptor.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.flow">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/flow/package-summary.html">org.apache.uima.flow</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/flow/package-summary.html">org.apache.uima.flow</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/flow/FlowControllerDescription.html" title="interface in org.apache.uima.flow">FlowControllerDescription</a></strong></code>
+<div class="block">A <code>FlowControllerDescription</code> contains all of the information needed to instantiate
+ and use a <a href="../../../../../../org/apache/uima/flow/FlowController.html" title="interface in org.apache.uima.flow"><code>FlowController</code></a>.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.resource">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/resource/package-summary.html">org.apache.uima.resource</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/resource/package-summary.html">org.apache.uima.resource</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/ConfigurableDataResourceSpecifier.html" title="interface in org.apache.uima.resource">ConfigurableDataResourceSpecifier</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that locates a resource file using its URL.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/CustomResourceSpecifier.html" title="interface in org.apache.uima.resource">CustomResourceSpecifier</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that specifically names the
+ Java class that should be created.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/ExternalResourceDependency.html" title="interface in org.apache.uima.resource">ExternalResourceDependency</a></strong></code>
+<div class="block">An <code>ExternalResourceDependency</code> object describes an resources's requirements on an
+ external resource.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/ExternalResourceDescription.html" title="interface in org.apache.uima.resource">ExternalResourceDescription</a></strong></code>
+<div class="block">An <code>ExternalResourceDescription</code> object describes a resource that is loaded in the
+ <a href="../../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource"><code>ResourceManager</code></a> and may be shared between components.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/FileLanguageResourceSpecifier.html" title="interface in org.apache.uima.resource">FileLanguageResourceSpecifier</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that locates a resource file using its URL, where the
+ URL depends on an ISO language identifier.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/FileResourceSpecifier.html" title="interface in org.apache.uima.resource">FileResourceSpecifier</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that locates a resource file using its URL.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/JMSMessagingSpecifier.html" title="interface in org.apache.uima.resource">JMSMessagingSpecifier</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/MailMessagingSpecifier.html" title="interface in org.apache.uima.resource">MailMessagingSpecifier</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/MessagingSpecifier.html" title="interface in org.apache.uima.resource">MessagingSpecifier</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/MQMessagingSpecifier.html" title="interface in org.apache.uima.resource">MQMessagingSpecifier</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/Parameter.html" title="interface in org.apache.uima.resource">Parameter</a></strong></code>
+<div class="block">A general parameter having a name and a value, which are both strings.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/PearSpecifier.html" title="interface in org.apache.uima.resource">PearSpecifier</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that locate an installed pear <code>Resource</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/ResourceCreationSpecifier.html" title="interface in org.apache.uima.resource">ResourceCreationSpecifier</a></strong></code>
+<div class="block">A <code>ResourceCreationSpecifier</code> is the supertype of
+ <a href="../../../../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html" title="interface in org.apache.uima.analysis_engine"><code>AnalysisEngineDescription</code></a>,
+ <a href="../../../../../../org/apache/uima/collection/CasConsumerDescription.html" title="interface in org.apache.uima.collection"><code>CasConsumerDescription</code></a>,
+ <a href="../../../../../../org/apache/uima/collection/CollectionReaderDescription.html" title="interface in org.apache.uima.collection"><code>CollectionReaderDescription</code></a>, and
+ <a href="../../../../../../org/apache/uima/collection/CasInitializerDescription.html" title="interface in org.apache.uima.collection"><code>CasInitializerDescription</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/ResourceServiceSpecifier.html" title="interface in org.apache.uima.resource">ResourceServiceSpecifier</a></strong></code>
+<div class="block">A <code>ResourceServiceSpecifier</code> is a type of <code>ResourceSpecifier</code> that
+ contains information that can be used to locate an existing resource available as a service.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource">ResourceSpecifier</a></strong></code>
+<div class="block">A <code>ResourceSpecifier</code> contains information that can be used acquire a reference to a
+ <a href="../../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource"><code>Resource</code></a>, whether that is done by instantiating the resource locally or locating an
+ existing resource available as a service.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/ResourceSpecifierList.html" title="interface in org.apache.uima.resource">ResourceSpecifierList</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that is an aggregate of other
+ <code>ResourceSpecifier</code>s.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/URISpecifier.html" title="interface in org.apache.uima.resource">URISpecifier</a></strong></code>
+<div class="block">A type of <code>ResourceSpecifier</code> that locates an existing <code>Resource</code>
+ service by its URI.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.resource.metadata">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/resource/metadata/package-summary.html">org.apache.uima.resource.metadata</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subinterfaces, and an explanation">
+<caption><span>Subinterfaces of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/resource/metadata/package-summary.html">org.apache.uima.resource.metadata</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Interface and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/AllowedValue.html" title="interface in org.apache.uima.resource.metadata">AllowedValue</a></strong></code>
+<div class="block">Represents an allowed value for an "enumerated" type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/Capability.html" title="interface in org.apache.uima.resource.metadata">Capability</a></strong></code>
+<div class="block">A <code>Capability</code> defines an operation that an Resource can carry out.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/ConfigurationGroup.html" title="interface in org.apache.uima.resource.metadata">ConfigurationGroup</a></strong></code>
+<div class="block">A group of <a href="../../../../../../org/apache/uima/resource/metadata/ConfigurationParameter.html" title="interface in org.apache.uima.resource.metadata"><code>ConfigurationParameter</code></a>s.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/ConfigurationParameter.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameter</a></strong></code>
+<div class="block">Completely specifies a configuration parameter on a UIMA resource.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/ConfigurationParameterDeclarations.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameterDeclarations</a></strong></code>
+<div class="block">The declarations of configuration parameters in a Resource.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/ConfigurationParameterSettings.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameterSettings</a></strong></code>
+<div class="block">The values for <a href="../../../../../../org/apache/uima/resource/metadata/ConfigurationParameter.html" title="interface in org.apache.uima.resource.metadata"><code>ConfigurationParameter</code></a>s in a Resource.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/ExternalResourceBinding.html" title="interface in org.apache.uima.resource.metadata">ExternalResourceBinding</a></strong></code>
+<div class="block">Binds an <a href="../../../../../../org/apache/uima/resource/ExternalResourceDependency.html" title="interface in org.apache.uima.resource"><code>ExternalResourceDependency</code></a> to an
+ <a href="../../../../../../org/apache/uima/resource/ExternalResourceDescription.html" title="interface in org.apache.uima.resource"><code>ExternalResourceDescription</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/FeatureDescription.html" title="interface in org.apache.uima.resource.metadata">FeatureDescription</a></strong></code>
+<div class="block">A description of a CAS feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/FsIndexCollection.html" title="interface in org.apache.uima.resource.metadata">FsIndexCollection</a></strong></code>
+<div class="block">Description of a collection of CAS feature structure indexes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/FsIndexDescription.html" title="interface in org.apache.uima.resource.metadata">FsIndexDescription</a></strong></code>
+<div class="block">A description of a CAS feature structure index.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/FsIndexKeyDescription.html" title="interface in org.apache.uima.resource.metadata">FsIndexKeyDescription</a></strong></code>
+<div class="block">A description of a key defining a CAS feature structure index.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/Import.html" title="interface in org.apache.uima.resource.metadata">Import</a></strong></code>
+<div class="block">An import declaration.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/LanguagePrecondition.html" title="interface in org.apache.uima.resource.metadata">LanguagePrecondition</a></strong></code>
+<div class="block">A precondition on the language of the document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/MimeTypePrecondition.html" title="interface in org.apache.uima.resource.metadata">MimeTypePrecondition</a></strong></code>
+<div class="block">A precondition on the MIME Type of the entity.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/NameValuePair.html" title="interface in org.apache.uima.resource.metadata">NameValuePair</a></strong></code>
+<div class="block">A type of <code>MetaDataObject</code> that stores a name (String) and value (Object).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/Precondition.html" title="interface in org.apache.uima.resource.metadata">Precondition</a></strong></code>
+<div class="block">A <code>Precondition</code> of a Resource is a condition that an Entity and/or its analysis in
+ the <a href="../../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a> must satisfy before that Entity can be processed by the Resource.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/ProcessingResourceMetaData.html" title="interface in org.apache.uima.resource.metadata">ProcessingResourceMetaData</a></strong></code>
+<div class="block">Metadata that describes a "Processing" <a href="../../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource"><code>Resource</code></a> - that is, one
+ that reads or writes to the <a href="../../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/ResourceManagerConfiguration.html" title="interface in org.apache.uima.resource.metadata">ResourceManagerConfiguration</a></strong></code>
+<div class="block">Defines a set of external resources and their bindings to
+ <a href="../../../../../../org/apache/uima/resource/ExternalResourceDependency.html" title="interface in org.apache.uima.resource"><code>ExternalResourceDependencies</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/ResourceMetaData.html" title="interface in org.apache.uima.resource.metadata">ResourceMetaData</a></strong></code>
+<div class="block">Encapsulates all metadata for a <a href="../../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource"><code>Resource</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/SimplePrecondition.html" title="interface in org.apache.uima.resource.metadata">SimplePrecondition</a></strong></code>
+<div class="block"><code>SimplePrecondition</code> defines a few simple conditions that can be evaluated against a
+ <a href="../../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/TypeDescription.html" title="interface in org.apache.uima.resource.metadata">TypeDescription</a></strong></code>
+<div class="block">A description of a CAS Type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/TypePriorities.html" title="interface in org.apache.uima.resource.metadata">TypePriorities</a></strong></code>
+<div class="block">A declaration of priorities between CAS Types.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/TypePriorityList.html" title="interface in org.apache.uima.resource.metadata">TypePriorityList</a></strong></code>
+<div class="block">Declares a relative priority between CAS types.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>interface&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../../org/apache/uima/resource/metadata/TypeSystemDescription.html" title="interface in org.apache.uima.resource.metadata">TypeSystemDescription</a></strong></code>
+<div class="block">Description of a CAS TypeSystem.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.util">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a> in <a href="../../../../../../org/apache/uima/util/package-summary.html">org.apache.uima.util</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Method parameters in <a href="../../../../../../org/apache/uima/util/package-summary.html">org.apache.uima.util</a> with type arguments of type <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></code></td>
+<td class="colLast"><span class="strong">CasCreationUtils.</span><code><strong><a href="../../../../../../org/apache/uima/util/CasCreationUtils.html#createCas(java.util.Collection)">createCas</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;? extends <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a>&gt;&nbsp;aComponentDescriptionsOrMetaData)</code>
+<div class="block">Creates a new CAS instance for a collection of CAS Processors.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></code></td>
+<td class="colLast"><span class="strong">CasCreationUtils.</span><code><strong><a href="../../../../../../org/apache/uima/util/CasCreationUtils.html#createCas(java.util.Collection,%20java.util.Properties)">createCas</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;? extends <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a>&gt;&nbsp;aComponentDescriptionsOrMetaData,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util">Properties</a>&nbsp;aPerformanceTuningSettings)</code>
+<div class="block">Creates a new CAS instance for a collection of CAS Processors.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></code></td>
+<td class="colLast"><span class="strong">CasCreationUtils.</span><code><strong><a href="../../../../../../org/apache/uima/util/CasCreationUtils.html#createCas(java.util.Collection,%20java.util.Properties,%20org.apache.uima.resource.ResourceManager)">createCas</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;? extends <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a>&gt;&nbsp;aComponentDescriptionsOrMetaData,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util">Properties</a>&nbsp;aPerformanceTuningSettings,
+         <a href="../../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager)</code>
+<div class="block">Creates a new CAS instance for a collection of CAS Processors.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></code></td>
+<td class="colLast"><span class="strong">CasCreationUtils.</span><code><strong><a href="../../../../../../org/apache/uima/util/CasCreationUtils.html#createCas(java.util.Collection,%20org.apache.uima.cas.TypeSystem,%20java.util.Properties)">createCas</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;? extends <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a>&gt;&nbsp;aComponentDescriptionsOrMetaData,
+         <a href="../../../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;aTypeSystem,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util">Properties</a>&nbsp;aPerformanceTuningSettings)</code>
+<div class="block">Creates a new CAS instance for a collection of CAS Processors, which.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></code></td>
+<td class="colLast"><span class="strong">CasCreationUtils.</span><code><strong><a href="../../../../../../org/apache/uima/util/CasCreationUtils.html#createCas(java.util.Collection,%20org.apache.uima.cas.TypeSystem,%20java.util.Properties,%20org.apache.uima.resource.ResourceManager)">createCas</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;? extends <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a>&gt;&nbsp;aComponentDescriptionsOrMetaData,
+         <a href="../../../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;aTypeSystem,
+         <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util">Properties</a>&nbsp;aPerformanceTuningSettings,
+         <a href="../../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager)</code>
+<div class="block">Creates a new CAS instance for a collection of CAS Processors, which.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/uima/resource/metadata/ProcessingResourceMetaData.html" title="interface in org.apache.uima.resource.metadata">ProcessingResourceMetaData</a>&gt;</code></td>
+<td class="colLast"><span class="strong">CasCreationUtils.</span><code><strong><a href="../../../../../../org/apache/uima/util/CasCreationUtils.html#getMetaDataList(java.util.Collection,%20org.apache.uima.resource.ResourceManager)">getMetaDataList</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;? extends <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a>&gt;&nbsp;aComponentDescriptionOrMetaData,
+               <a href="../../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager)</code>
+<div class="block">Gets a list of ProcessingResourceMetadata objects from a list containing either
+ ResourceSpecifiers, ProcessingResourceMetadata objects, or subparts of
+ ProcessingResourceMetadata objects (type systems, indexes, or type priorities).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../../org/apache/uima/resource/metadata/ProcessingResourceMetaData.html" title="interface in org.apache.uima.resource.metadata">ProcessingResourceMetaData</a>&gt;</code></td>
+<td class="colLast"><span class="strong">CasCreationUtils.</span><code><strong><a href="../../../../../../org/apache/uima/util/CasCreationUtils.html#getMetaDataList(java.util.Collection,%20org.apache.uima.resource.ResourceManager,%20java.util.Map)">getMetaDataList</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;? extends <a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a>&gt;&nbsp;aComponentDescriptionOrMetaData,
+               <a href="../../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,? super <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a>&gt;&nbsp;aOutputFailedRemotes)</code>
+<div class="block">Gets a list of ProcessingResourceMetadata objects from a list containing either
+ ResourceSpecifiers, ProcessingResourceMetadata objects, or subparts of
+ ProcessingResourceMetadata objects (type systems, indexes, or type priorities).</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../../../../../../overview-tree.html">Tree</a></li>
+<li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../../index.html?org/apache/uima/resource/metadata/class-use/MetaDataObject.html" target="_top">Frames</a></li>
+<li><a href="MetaDataObject.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

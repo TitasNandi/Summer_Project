@@ -1,0 +1,1226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ResourceSpecifierFactory (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ResourceSpecifierFactory (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/ResourceSpecifierFactory.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../org/apache/uima/ResourceFactory.html" title="interface in org.apache.uima"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../org/apache/uima/UIMA_IllegalArgumentException.html" title="class in org.apache.uima"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?org/apache/uima/ResourceSpecifierFactory.html" target="_top">Frames</a></li>
+<li><a href="ResourceSpecifierFactory.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.uima</div>
+<h2 title="Interface ResourceSpecifierFactory" class="title">Interface ResourceSpecifierFactory</h2>
+</div>
+<div class="contentContainer">
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public interface <span class="strong">ResourceSpecifierFactory</span></pre>
+<div class="block">A factory used to create <a href="../../../org/apache/uima/resource/ResourceSpecifier.html" title="interface in org.apache.uima.resource"><code>ResourceSpecifier</code></a> instances and
+ instances of other objects needed to compose <code>ResourceSpecifier</code>s.
+ <p>
+ The primary method on this class is <a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createObject(java.lang.Class)"><code>createObject(Class)</code></a>. Given the <code>Class</code>
+ of a UIMA interface related to Resource Specifiers, this method will construct an instance that
+ implements that interface. Other methods are provided as a convenience for creating specific
+ types of objects.
+ <p>
+ A UIMA developer who implements a new type of Resource Specifier must register their
+ implementation with this factory using the <a href="../../../org/apache/uima/ResourceSpecifierFactory.html#addMapping(java.lang.String,%20java.lang.String)"><code>addMapping(String, String)</code></a> method.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#addMapping(java.lang.String,%20java.lang.String)">addMapping</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aInterfaceName,
+          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aClassName)</code>
+<div class="block">Adds a mapping from interface class to implementation class.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/AllowedValue.html" title="interface in org.apache.uima.resource.metadata">AllowedValue</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createAllowedValue()">createAllowedValue</a></strong>()</code>
+<div class="block">Creates an <code>AllowedValue</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html" title="interface in org.apache.uima.analysis_engine">AnalysisEngineDescription</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createAnalysisEngineDescription()">createAnalysisEngineDescription</a></strong>()</code>
+<div class="block">Creates a <code>AnalysisEngineDescription</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/analysis_engine/metadata/AnalysisEngineMetaData.html" title="interface in org.apache.uima.analysis_engine.metadata">AnalysisEngineMetaData</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createAnalysisEngineMetaData()">createAnalysisEngineMetaData</a></strong>()</code>
+<div class="block">Creates a <code>AnalysisEngineMetaData</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CasProcessorExecArg.html" title="interface in org.apache.uima.collection.metadata">CasProcessorExecArg</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createArg()">createArg</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/Capability.html" title="interface in org.apache.uima.resource.metadata">Capability</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createCapability()">createCapability</a></strong>()</code>
+<div class="block">Creates a <code>Capability</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/analysis_engine/metadata/CapabilityLanguageFlow.html" title="interface in org.apache.uima.analysis_engine.metadata">CapabilityLanguageFlow</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createCapabilityLanguageFlow()">createCapabilityLanguageFlow</a></strong>()</code>
+<div class="block">Creates a <code>CapabilityLanguageFlow</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/CasConsumerDescription.html" title="interface in org.apache.uima.collection">CasConsumerDescription</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createCasConsumerDescription()">createCasConsumerDescription</a></strong>()</code>
+<div class="block">Creates a <code>CasConsumerDescription</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CpeCollectionReaderCasInitializer.html" title="interface in org.apache.uima.collection.metadata">CpeCollectionReaderCasInitializer</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createCasInitializer()">createCasInitializer</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CpeCasProcessors.html" title="interface in org.apache.uima.collection.metadata">CpeCasProcessors</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createCasProcessors()">createCasProcessors</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CpeCheckpoint.html" title="interface in org.apache.uima.collection.metadata">CpeCheckpoint</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createCheckpoint()">createCheckpoint</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CpeCollectionReaderIterator.html" title="interface in org.apache.uima.collection.metadata">CpeCollectionReaderIterator</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createCollectionIterator()">createCollectionIterator</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CpeCollectionReader.html" title="interface in org.apache.uima.collection.metadata">CpeCollectionReader</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createCollectionReader()">createCollectionReader</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/CollectionReaderDescription.html" title="interface in org.apache.uima.collection">CollectionReaderDescription</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createCollectionReaderDescription()">createCollectionReaderDescription</a></strong>()</code>
+<div class="block">Creates a <code>CollectionReaderDescription</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/ConfigurationGroup.html" title="interface in org.apache.uima.resource.metadata">ConfigurationGroup</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createConfigurationGroup()">createConfigurationGroup</a></strong>()</code>
+<div class="block">Creates a <code>ConfigurationGroup</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/ConfigurationParameter.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createConfigurationParameter()">createConfigurationParameter</a></strong>()</code>
+<div class="block">Creates a <code>ConfigurationParameter</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/ConfigurationParameterDeclarations.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameterDeclarations</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createConfigurationParameterDeclarations()">createConfigurationParameterDeclarations</a></strong>()</code>
+<div class="block">Creates a <code>ConfigurationParameterDeclarations</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/ConfigurationParameterSettings.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameterSettings</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createConfigurationParameterSettings()">createConfigurationParameterSettings</a></strong>()</code>
+<div class="block">Creates a <code>ConfigurationParameterSettings</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CpeConfiguration.html" title="interface in org.apache.uima.collection.metadata">CpeConfiguration</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createCpeConfig()">createCpeConfig</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CpeDescription.html" title="interface in org.apache.uima.collection.metadata">CpeDescription</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createCpeDescription()">createCpeDescription</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/CustomResourceSpecifier.html" title="interface in org.apache.uima.resource">CustomResourceSpecifier</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createCustomResourceSpecifier()">createCustomResourceSpecifier</a></strong>()</code>
+<div class="block">Creates a <code>CustomResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CasProcessorDeploymentParams.html" title="interface in org.apache.uima.collection.metadata">CasProcessorDeploymentParams</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createDeploymentParameters()">createDeploymentParameters</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CpeComponentDescriptor.html" title="interface in org.apache.uima.collection.metadata">CpeComponentDescriptor</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createDescriptor()">createDescriptor</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CasProcessorRuntimeEnvParam.html" title="interface in org.apache.uima.collection.metadata">CasProcessorRuntimeEnvParam</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createEnv()">createEnv</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CasProcessorErrorHandling.html" title="interface in org.apache.uima.collection.metadata">CasProcessorErrorHandling</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createErrorHandling()">createErrorHandling</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CasProcessorExecutable.html" title="interface in org.apache.uima.collection.metadata">CasProcessorExecutable</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createExec()">createExec</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/ExternalResourceBinding.html" title="interface in org.apache.uima.resource.metadata">ExternalResourceBinding</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createExternalResourceBinding()">createExternalResourceBinding</a></strong>()</code>
+<div class="block">Creates an <code>ExternalResourceBinding</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/ExternalResourceDependency.html" title="interface in org.apache.uima.resource">ExternalResourceDependency</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createExternalResourceDependency()">createExternalResourceDependency</a></strong>()</code>
+<div class="block">Creates an <code>ExternalResourceDependency</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/ExternalResourceDescription.html" title="interface in org.apache.uima.resource">ExternalResourceDescription</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createExternalResourceDescription()">createExternalResourceDescription</a></strong>()</code>
+<div class="block">Creates an <code>ExternalResourceDescription</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/FeatureDescription.html" title="interface in org.apache.uima.resource.metadata">FeatureDescription</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createFeatureDescription()">createFeatureDescription</a></strong>()</code>
+<div class="block">Creates a <code>FeatureDescription</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/FileLanguageResourceSpecifier.html" title="interface in org.apache.uima.resource">FileLanguageResourceSpecifier</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createFileLanguageResourceSpecifier()">createFileLanguageResourceSpecifier</a></strong>()</code>
+<div class="block">Creates a <code>FileLanguageResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/FileResourceSpecifier.html" title="interface in org.apache.uima.resource">FileResourceSpecifier</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createFileResourceSpecifier()">createFileResourceSpecifier</a></strong>()</code>
+<div class="block">Creates a <code>FileResourceSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/analysis_engine/metadata/FixedFlow.html" title="interface in org.apache.uima.analysis_engine.metadata">FixedFlow</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createFixedFlow()">createFixedFlow</a></strong>()</code>
+<div class="block">Creates a <code>FixedFlow</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/analysis_engine/metadata/FlowControllerDeclaration.html" title="interface in org.apache.uima.analysis_engine.metadata">FlowControllerDeclaration</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createFlowControllerDeclaration()">createFlowControllerDeclaration</a></strong>()</code>
+<div class="block">Creates a <code>FlowControllerDeclaration</code></div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/flow/FlowControllerDescription.html" title="interface in org.apache.uima.flow">FlowControllerDescription</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createFlowControllerDescription()">createFlowControllerDescription</a></strong>()</code>
+<div class="block">Creates a <code>FlowControllerDescription</code></div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/FsIndexCollection.html" title="interface in org.apache.uima.resource.metadata">FsIndexCollection</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createFsIndexCollection()">createFsIndexCollection</a></strong>()</code>
+<div class="block">Creates an <code>FsIndexCollection</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/FsIndexDescription.html" title="interface in org.apache.uima.resource.metadata">FsIndexDescription</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createFsIndexDescription()">createFsIndexDescription</a></strong>()</code>
+<div class="block">Creates an <code>FsIndexDescription</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/FsIndexKeyDescription.html" title="interface in org.apache.uima.resource.metadata">FsIndexKeyDescription</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createFsIndexKeyDescription()">createFsIndexKeyDescription</a></strong>()</code>
+<div class="block">Creates an <code>FsIndexKeyDescription</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/Import.html" title="interface in org.apache.uima.resource.metadata">Import</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createImport()">createImport</a></strong>()</code>
+<div class="block">Creates an <code>Import</code></div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CpeInclude.html" title="interface in org.apache.uima.collection.metadata">CpeInclude</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createInclude()">createInclude</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/JMSMessagingSpecifier.html" title="interface in org.apache.uima.resource">JMSMessagingSpecifier</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createJMSMessagingSpecifier()">createJMSMessagingSpecifier</a></strong>()</code>
+<div class="block">Creates a <code>JMSMessagingSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/MailMessagingSpecifier.html" title="interface in org.apache.uima.resource">MailMessagingSpecifier</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createMailMessagingSpecifier()">createMailMessagingSpecifier</a></strong>()</code>
+<div class="block">Creates a <code>MailMessagingSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/MQMessagingSpecifier.html" title="interface in org.apache.uima.resource">MQMessagingSpecifier</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createMQMessagingSpecifier()">createMQMessagingSpecifier</a></strong>()</code>
+<div class="block">Creates a <code>MQMessagingSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/NameValuePair.html" title="interface in org.apache.uima.resource.metadata">NameValuePair</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createNameValuePair()">createNameValuePair</a></strong>()</code>
+<div class="block">Creates a <code>NameValuePair</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createObject(java.lang.Class)">createObject</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;aInterface)</code>
+<div class="block">Creates an object that implements the given interface.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/OperationalProperties.html" title="interface in org.apache.uima.resource.metadata">OperationalProperties</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createOperationalProperties()">createOperationalProperties</a></strong>()</code>
+<div class="block">Creates an <code>OperationalProperties</code></div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/OutputQueue.html" title="interface in org.apache.uima.collection.metadata">OutputQueue</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createOutputQueue()">createOutputQueue</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/Parameter.html" title="interface in org.apache.uima.resource">Parameter</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createParameter()">createParameter</a></strong>()</code>
+<div class="block">Creates a <code>Parameter</code></div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/PearSpecifier.html" title="interface in org.apache.uima.resource">PearSpecifier</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createPearSpecifier()">createPearSpecifier</a></strong>()</code>
+<div class="block">Creates a <code>PearSpecifier</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/ProcessingResourceMetaData.html" title="interface in org.apache.uima.resource.metadata">ProcessingResourceMetaData</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createProcessingResourceMetaData()">createProcessingResourceMetaData</a></strong>()</code>
+<div class="block">Creates a <code>ProcessingResourceMetaData</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/ResourceManagerConfiguration.html" title="interface in org.apache.uima.resource.metadata">ResourceManagerConfiguration</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createResourceManagerConfiguration()">createResourceManagerConfiguration</a></strong>()</code>
+<div class="block">Creates an <code>ResourceManagerConfiguration</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/ResourceMetaData.html" title="interface in org.apache.uima.resource.metadata">ResourceMetaData</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createResourceMetaData()">createResourceMetaData</a></strong>()</code>
+<div class="block">Creates a <code>ResourceMetaData</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createResultSpecification()">createResultSpecification</a></strong>()</code>
+<div class="block">Creates a <code>ResultSpecification</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/collection/metadata/CasProcessorRunInSeperateProcess.html" title="interface in org.apache.uima.collection.metadata">CasProcessorRunInSeperateProcess</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createRunInSeperateProcess()">createRunInSeperateProcess</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/SimplePrecondition.html" title="interface in org.apache.uima.resource.metadata">SimplePrecondition</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createSimplePrecondition()">createSimplePrecondition</a></strong>()</code>
+<div class="block">Creates a <code>SimplePrecondition</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/analysis_engine/metadata/SofaMapping.html" title="interface in org.apache.uima.analysis_engine.metadata">SofaMapping</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createSofaMapping()">createSofaMapping</a></strong>()</code>
+<div class="block">Creates a <code>SofaMapping</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/analysis_engine/TaeDescription.html" title="interface in org.apache.uima.analysis_engine">TaeDescription</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createTaeDescription()">createTaeDescription</a></strong>()</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>As of v2.0, <a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createAnalysisEngineDescription()"><code>createAnalysisEngineDescription()</code></a> should be used instead.</i></div>
+</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/TypeDescription.html" title="interface in org.apache.uima.resource.metadata">TypeDescription</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createTypeDescription()">createTypeDescription</a></strong>()</code>
+<div class="block">Creates a <code>TypeDescription</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/analysis_engine/TypeOrFeature.html" title="interface in org.apache.uima.analysis_engine">TypeOrFeature</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createTypeOrFeature()">createTypeOrFeature</a></strong>()</code>
+<div class="block">Creates a <code>TypeOrFeature</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/TypePriorities.html" title="interface in org.apache.uima.resource.metadata">TypePriorities</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createTypePriorities()">createTypePriorities</a></strong>()</code>
+<div class="block">Creates an <code>TypePriorities</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/TypePriorityList.html" title="interface in org.apache.uima.resource.metadata">TypePriorityList</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createTypePriorityList()">createTypePriorityList</a></strong>()</code>
+<div class="block">Creates an <code>TypePriorityList</code>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/TypeSystemDescription.html" title="interface in org.apache.uima.resource.metadata">TypeSystemDescription</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createTypeSystemDescription()">createTypeSystemDescription</a></strong>()</code>
+<div class="block">Creates a <code>TypeSystemDescription</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/resource/URISpecifier.html" title="interface in org.apache.uima.resource">URISpecifier</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createURISpecifier()">createURISpecifier</a></strong>()</code>
+<div class="block">Creates a <code>URISpecifier</code>.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="createObject(java.lang.Class)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createObject</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;createObject(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;aInterface)</pre>
+<div class="block">Creates an object that implements the given interface.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aInterface</code> - the <code>Class</code> object representing the type of interface to be instantiated.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an <code>Object</code> that implements <code>aInterface</code>. Returns
+         <code>null</code> if no object that implements <code>aInterface</code> is known to
+         this factory.</dd></dl>
+</li>
+</ul>
+<a name="addMapping(java.lang.String, java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addMapping</h4>
+<pre>void&nbsp;addMapping(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aInterfaceName,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aClassName)
+                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></pre>
+<div class="block">Adds a mapping from interface class to implementation class. Applications do not typically need
+ to use this method. UIMA developers who implement new types of <code>ResourceSpecifier</code>,
+ however, must register their implementations using this method so that this factory knows how
+ to construct instances of those implementation classes.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>aInterfaceName</code> - the fully-qualified name of a UIMA interface</dd><dd><code>aClassName</code> - the fully-qualified name of a class that implements <code>aInterfaceName</code>.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code> - if either of the classes named by <code>aInterfaceName</code> or
+           <code>aClassName</code> were not found.</dd></dl>
+</li>
+</ul>
+<a name="createURISpecifier()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createURISpecifier</h4>
+<pre><a href="../../../org/apache/uima/resource/URISpecifier.html" title="interface in org.apache.uima.resource">URISpecifier</a>&nbsp;createURISpecifier()</pre>
+<div class="block">Creates a <code>URISpecifier</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>URISpecifier</code>.</dd></dl>
+</li>
+</ul>
+<a name="createMQMessagingSpecifier()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createMQMessagingSpecifier</h4>
+<pre><a href="../../../org/apache/uima/resource/MQMessagingSpecifier.html" title="interface in org.apache.uima.resource">MQMessagingSpecifier</a>&nbsp;createMQMessagingSpecifier()</pre>
+<div class="block">Creates a <code>MQMessagingSpecifier</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>MQMessagingSpecifier</code>.</dd></dl>
+</li>
+</ul>
+<a name="createJMSMessagingSpecifier()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createJMSMessagingSpecifier</h4>
+<pre><a href="../../../org/apache/uima/resource/JMSMessagingSpecifier.html" title="interface in org.apache.uima.resource">JMSMessagingSpecifier</a>&nbsp;createJMSMessagingSpecifier()</pre>
+<div class="block">Creates a <code>JMSMessagingSpecifier</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>JMSMessagingSpecifier</code>.</dd></dl>
+</li>
+</ul>
+<a name="createMailMessagingSpecifier()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createMailMessagingSpecifier</h4>
+<pre><a href="../../../org/apache/uima/resource/MailMessagingSpecifier.html" title="interface in org.apache.uima.resource">MailMessagingSpecifier</a>&nbsp;createMailMessagingSpecifier()</pre>
+<div class="block">Creates a <code>MailMessagingSpecifier</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>MailMessagingSpecifier</code>.</dd></dl>
+</li>
+</ul>
+<a name="createFileResourceSpecifier()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFileResourceSpecifier</h4>
+<pre><a href="../../../org/apache/uima/resource/FileResourceSpecifier.html" title="interface in org.apache.uima.resource">FileResourceSpecifier</a>&nbsp;createFileResourceSpecifier()</pre>
+<div class="block">Creates a <code>FileResourceSpecifier</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>FileResourceSpecifier</code>.</dd></dl>
+</li>
+</ul>
+<a name="createFileLanguageResourceSpecifier()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFileLanguageResourceSpecifier</h4>
+<pre><a href="../../../org/apache/uima/resource/FileLanguageResourceSpecifier.html" title="interface in org.apache.uima.resource">FileLanguageResourceSpecifier</a>&nbsp;createFileLanguageResourceSpecifier()</pre>
+<div class="block">Creates a <code>FileLanguageResourceSpecifier</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>FileLanguageResourceSpecifier</code>.</dd></dl>
+</li>
+</ul>
+<a name="createAnalysisEngineDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createAnalysisEngineDescription</h4>
+<pre><a href="../../../org/apache/uima/analysis_engine/AnalysisEngineDescription.html" title="interface in org.apache.uima.analysis_engine">AnalysisEngineDescription</a>&nbsp;createAnalysisEngineDescription()</pre>
+<div class="block">Creates a <code>AnalysisEngineDescription</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>AnalysisEngineDescription</code>.</dd></dl>
+</li>
+</ul>
+<a name="createTaeDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTaeDescription</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+<a href="../../../org/apache/uima/analysis_engine/TaeDescription.html" title="interface in org.apache.uima.analysis_engine">TaeDescription</a>&nbsp;createTaeDescription()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>As of v2.0, <a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createAnalysisEngineDescription()"><code>createAnalysisEngineDescription()</code></a> should be used instead.</i></div>
+<div class="block">Creates a <code>AnalysisEngineDescription</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>AnalysisEngineDescription</code>.</dd></dl>
+</li>
+</ul>
+<a name="createResourceMetaData()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createResourceMetaData</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/ResourceMetaData.html" title="interface in org.apache.uima.resource.metadata">ResourceMetaData</a>&nbsp;createResourceMetaData()</pre>
+<div class="block">Creates a <code>ResourceMetaData</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>ResourceMetaData</code>.</dd></dl>
+</li>
+</ul>
+<a name="createProcessingResourceMetaData()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createProcessingResourceMetaData</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/ProcessingResourceMetaData.html" title="interface in org.apache.uima.resource.metadata">ProcessingResourceMetaData</a>&nbsp;createProcessingResourceMetaData()</pre>
+<div class="block">Creates a <code>ProcessingResourceMetaData</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>ProcessingResourceMetaData</code>.</dd></dl>
+</li>
+</ul>
+<a name="createAnalysisEngineMetaData()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createAnalysisEngineMetaData</h4>
+<pre><a href="../../../org/apache/uima/analysis_engine/metadata/AnalysisEngineMetaData.html" title="interface in org.apache.uima.analysis_engine.metadata">AnalysisEngineMetaData</a>&nbsp;createAnalysisEngineMetaData()</pre>
+<div class="block">Creates a <code>AnalysisEngineMetaData</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>AnalysisEngineMetaData</code>.</dd></dl>
+</li>
+</ul>
+<a name="createConfigurationParameterDeclarations()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createConfigurationParameterDeclarations</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/ConfigurationParameterDeclarations.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameterDeclarations</a>&nbsp;createConfigurationParameterDeclarations()</pre>
+<div class="block">Creates a <code>ConfigurationParameterDeclarations</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>ConfigurationParameterDeclarations</code>.</dd></dl>
+</li>
+</ul>
+<a name="createConfigurationParameter()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createConfigurationParameter</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/ConfigurationParameter.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameter</a>&nbsp;createConfigurationParameter()</pre>
+<div class="block">Creates a <code>ConfigurationParameter</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>ConfigurationParameter</code>.</dd></dl>
+</li>
+</ul>
+<a name="createConfigurationGroup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createConfigurationGroup</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/ConfigurationGroup.html" title="interface in org.apache.uima.resource.metadata">ConfigurationGroup</a>&nbsp;createConfigurationGroup()</pre>
+<div class="block">Creates a <code>ConfigurationGroup</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>ConfigurationGroup</code>.</dd></dl>
+</li>
+</ul>
+<a name="createConfigurationParameterSettings()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createConfigurationParameterSettings</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/ConfigurationParameterSettings.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameterSettings</a>&nbsp;createConfigurationParameterSettings()</pre>
+<div class="block">Creates a <code>ConfigurationParameterSettings</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>ConfigurationParameterSettings</code>.</dd></dl>
+</li>
+</ul>
+<a name="createCapability()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCapability</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/Capability.html" title="interface in org.apache.uima.resource.metadata">Capability</a>&nbsp;createCapability()</pre>
+<div class="block">Creates a <code>Capability</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>Capability</code>.</dd></dl>
+</li>
+</ul>
+<a name="createSimplePrecondition()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createSimplePrecondition</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/SimplePrecondition.html" title="interface in org.apache.uima.resource.metadata">SimplePrecondition</a>&nbsp;createSimplePrecondition()</pre>
+<div class="block">Creates a <code>SimplePrecondition</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>SimplePrecondition</code>.</dd></dl>
+</li>
+</ul>
+<a name="createTypeSystemDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTypeSystemDescription</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/TypeSystemDescription.html" title="interface in org.apache.uima.resource.metadata">TypeSystemDescription</a>&nbsp;createTypeSystemDescription()</pre>
+<div class="block">Creates a <code>TypeSystemDescription</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>TypeSystemDescription</code>.</dd></dl>
+</li>
+</ul>
+<a name="createTypeDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTypeDescription</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/TypeDescription.html" title="interface in org.apache.uima.resource.metadata">TypeDescription</a>&nbsp;createTypeDescription()</pre>
+<div class="block">Creates a <code>TypeDescription</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>TypeDescription</code>.</dd></dl>
+</li>
+</ul>
+<a name="createFeatureDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFeatureDescription</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/FeatureDescription.html" title="interface in org.apache.uima.resource.metadata">FeatureDescription</a>&nbsp;createFeatureDescription()</pre>
+<div class="block">Creates a <code>FeatureDescription</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>FeatureDescription</code>.</dd></dl>
+</li>
+</ul>
+<a name="createFsIndexCollection()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFsIndexCollection</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/FsIndexCollection.html" title="interface in org.apache.uima.resource.metadata">FsIndexCollection</a>&nbsp;createFsIndexCollection()</pre>
+<div class="block">Creates an <code>FsIndexCollection</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>FsIndexCollection</code>.</dd></dl>
+</li>
+</ul>
+<a name="createFsIndexDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFsIndexDescription</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/FsIndexDescription.html" title="interface in org.apache.uima.resource.metadata">FsIndexDescription</a>&nbsp;createFsIndexDescription()</pre>
+<div class="block">Creates an <code>FsIndexDescription</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>FsIndexDescription</code>.</dd></dl>
+</li>
+</ul>
+<a name="createFsIndexKeyDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFsIndexKeyDescription</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/FsIndexKeyDescription.html" title="interface in org.apache.uima.resource.metadata">FsIndexKeyDescription</a>&nbsp;createFsIndexKeyDescription()</pre>
+<div class="block">Creates an <code>FsIndexKeyDescription</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>FsIndexKeyDescription</code>.</dd></dl>
+</li>
+</ul>
+<a name="createFixedFlow()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFixedFlow</h4>
+<pre><a href="../../../org/apache/uima/analysis_engine/metadata/FixedFlow.html" title="interface in org.apache.uima.analysis_engine.metadata">FixedFlow</a>&nbsp;createFixedFlow()</pre>
+<div class="block">Creates a <code>FixedFlow</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>FixedFlow</code>.</dd></dl>
+</li>
+</ul>
+<a name="createCapabilityLanguageFlow()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCapabilityLanguageFlow</h4>
+<pre><a href="../../../org/apache/uima/analysis_engine/metadata/CapabilityLanguageFlow.html" title="interface in org.apache.uima.analysis_engine.metadata">CapabilityLanguageFlow</a>&nbsp;createCapabilityLanguageFlow()</pre>
+<div class="block">Creates a <code>CapabilityLanguageFlow</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>CapabilityLanguageFlow</code>.</dd></dl>
+</li>
+</ul>
+<a name="createNameValuePair()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createNameValuePair</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/NameValuePair.html" title="interface in org.apache.uima.resource.metadata">NameValuePair</a>&nbsp;createNameValuePair()</pre>
+<div class="block">Creates a <code>NameValuePair</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>NameValuePair</code>.</dd></dl>
+</li>
+</ul>
+<a name="createTypeOrFeature()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTypeOrFeature</h4>
+<pre><a href="../../../org/apache/uima/analysis_engine/TypeOrFeature.html" title="interface in org.apache.uima.analysis_engine">TypeOrFeature</a>&nbsp;createTypeOrFeature()</pre>
+<div class="block">Creates a <code>TypeOrFeature</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>TypeOrFeature</code>.</dd></dl>
+</li>
+</ul>
+<a name="createAllowedValue()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createAllowedValue</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/AllowedValue.html" title="interface in org.apache.uima.resource.metadata">AllowedValue</a>&nbsp;createAllowedValue()</pre>
+<div class="block">Creates an <code>AllowedValue</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>AllowedValue</code>.</dd></dl>
+</li>
+</ul>
+<a name="createTypePriorities()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTypePriorities</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/TypePriorities.html" title="interface in org.apache.uima.resource.metadata">TypePriorities</a>&nbsp;createTypePriorities()</pre>
+<div class="block">Creates an <code>TypePriorities</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>TypePriorities</code>.</dd></dl>
+</li>
+</ul>
+<a name="createTypePriorityList()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTypePriorityList</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/TypePriorityList.html" title="interface in org.apache.uima.resource.metadata">TypePriorityList</a>&nbsp;createTypePriorityList()</pre>
+<div class="block">Creates an <code>TypePriorityList</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>TypePriorityList</code>.</dd></dl>
+</li>
+</ul>
+<a name="createExternalResourceDependency()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createExternalResourceDependency</h4>
+<pre><a href="../../../org/apache/uima/resource/ExternalResourceDependency.html" title="interface in org.apache.uima.resource">ExternalResourceDependency</a>&nbsp;createExternalResourceDependency()</pre>
+<div class="block">Creates an <code>ExternalResourceDependency</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>ExternalResourceDependency</code>.</dd></dl>
+</li>
+</ul>
+<a name="createResourceManagerConfiguration()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createResourceManagerConfiguration</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/ResourceManagerConfiguration.html" title="interface in org.apache.uima.resource.metadata">ResourceManagerConfiguration</a>&nbsp;createResourceManagerConfiguration()</pre>
+<div class="block">Creates an <code>ResourceManagerConfiguration</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>ResourceManagerConfiguration</code>.</dd></dl>
+</li>
+</ul>
+<a name="createExternalResourceBinding()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createExternalResourceBinding</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/ExternalResourceBinding.html" title="interface in org.apache.uima.resource.metadata">ExternalResourceBinding</a>&nbsp;createExternalResourceBinding()</pre>
+<div class="block">Creates an <code>ExternalResourceBinding</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>ExternalResourceBinding</code>.</dd></dl>
+</li>
+</ul>
+<a name="createExternalResourceDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createExternalResourceDescription</h4>
+<pre><a href="../../../org/apache/uima/resource/ExternalResourceDescription.html" title="interface in org.apache.uima.resource">ExternalResourceDescription</a>&nbsp;createExternalResourceDescription()</pre>
+<div class="block">Creates an <code>ExternalResourceDescription</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>ExternalResourceDescription</code>.</dd></dl>
+</li>
+</ul>
+<a name="createCasConsumerDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCasConsumerDescription</h4>
+<pre><a href="../../../org/apache/uima/collection/CasConsumerDescription.html" title="interface in org.apache.uima.collection">CasConsumerDescription</a>&nbsp;createCasConsumerDescription()</pre>
+<div class="block">Creates a <code>CasConsumerDescription</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>CasConsumerDescription</code>.</dd></dl>
+</li>
+</ul>
+<a name="createCollectionReaderDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCollectionReaderDescription</h4>
+<pre><a href="../../../org/apache/uima/collection/CollectionReaderDescription.html" title="interface in org.apache.uima.collection">CollectionReaderDescription</a>&nbsp;createCollectionReaderDescription()</pre>
+<div class="block">Creates a <code>CollectionReaderDescription</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>CollectionReaderDescription</code>.</dd></dl>
+</li>
+</ul>
+<a name="createResultSpecification()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createResultSpecification</h4>
+<pre><a href="../../../org/apache/uima/analysis_engine/ResultSpecification.html" title="interface in org.apache.uima.analysis_engine">ResultSpecification</a>&nbsp;createResultSpecification()</pre>
+<div class="block">Creates a <code>ResultSpecification</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>ResultSpecification</code>.</dd></dl>
+</li>
+</ul>
+<a name="createSofaMapping()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createSofaMapping</h4>
+<pre><a href="../../../org/apache/uima/analysis_engine/metadata/SofaMapping.html" title="interface in org.apache.uima.analysis_engine.metadata">SofaMapping</a>&nbsp;createSofaMapping()</pre>
+<div class="block">Creates a <code>SofaMapping</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>SofaMapping</code>.</dd></dl>
+</li>
+</ul>
+<a name="createImport()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createImport</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/Import.html" title="interface in org.apache.uima.resource.metadata">Import</a>&nbsp;createImport()</pre>
+<div class="block">Creates an <code>Import</code></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>Import</code>.</dd></dl>
+</li>
+</ul>
+<a name="createOperationalProperties()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createOperationalProperties</h4>
+<pre><a href="../../../org/apache/uima/resource/metadata/OperationalProperties.html" title="interface in org.apache.uima.resource.metadata">OperationalProperties</a>&nbsp;createOperationalProperties()</pre>
+<div class="block">Creates an <code>OperationalProperties</code></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>OperationalProperties</code>.</dd></dl>
+</li>
+</ul>
+<a name="createParameter()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createParameter</h4>
+<pre><a href="../../../org/apache/uima/resource/Parameter.html" title="interface in org.apache.uima.resource">Parameter</a>&nbsp;createParameter()</pre>
+<div class="block">Creates a <code>Parameter</code></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>Parameter</code>.</dd></dl>
+</li>
+</ul>
+<a name="createFlowControllerDeclaration()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFlowControllerDeclaration</h4>
+<pre><a href="../../../org/apache/uima/analysis_engine/metadata/FlowControllerDeclaration.html" title="interface in org.apache.uima.analysis_engine.metadata">FlowControllerDeclaration</a>&nbsp;createFlowControllerDeclaration()</pre>
+<div class="block">Creates a <code>FlowControllerDeclaration</code></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>FlowControllerDeclaration</code>.</dd></dl>
+</li>
+</ul>
+<a name="createCustomResourceSpecifier()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCustomResourceSpecifier</h4>
+<pre><a href="../../../org/apache/uima/resource/CustomResourceSpecifier.html" title="interface in org.apache.uima.resource">CustomResourceSpecifier</a>&nbsp;createCustomResourceSpecifier()</pre>
+<div class="block">Creates a <code>CustomResourceSpecifier</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>CustomResourceSpecifier</code>.</dd></dl>
+</li>
+</ul>
+<a name="createPearSpecifier()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createPearSpecifier</h4>
+<pre><a href="../../../org/apache/uima/resource/PearSpecifier.html" title="interface in org.apache.uima.resource">PearSpecifier</a>&nbsp;createPearSpecifier()</pre>
+<div class="block">Creates a <code>PearSpecifier</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>PearSpecifier</code>.</dd></dl>
+</li>
+</ul>
+<a name="createFlowControllerDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFlowControllerDescription</h4>
+<pre><a href="../../../org/apache/uima/flow/FlowControllerDescription.html" title="interface in org.apache.uima.flow">FlowControllerDescription</a>&nbsp;createFlowControllerDescription()</pre>
+<div class="block">Creates a <code>FlowControllerDescription</code></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>FlowControllerDescription</code>.</dd></dl>
+</li>
+</ul>
+<a name="createCasInitializer()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCasInitializer</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CpeCollectionReaderCasInitializer.html" title="interface in org.apache.uima.collection.metadata">CpeCollectionReaderCasInitializer</a>&nbsp;createCasInitializer()</pre>
+</li>
+</ul>
+<a name="createCasProcessors()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCasProcessors</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CpeCasProcessors.html" title="interface in org.apache.uima.collection.metadata">CpeCasProcessors</a>&nbsp;createCasProcessors()</pre>
+</li>
+</ul>
+<a name="createCheckpoint()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCheckpoint</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CpeCheckpoint.html" title="interface in org.apache.uima.collection.metadata">CpeCheckpoint</a>&nbsp;createCheckpoint()</pre>
+</li>
+</ul>
+<a name="createCollectionIterator()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCollectionIterator</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CpeCollectionReaderIterator.html" title="interface in org.apache.uima.collection.metadata">CpeCollectionReaderIterator</a>&nbsp;createCollectionIterator()</pre>
+</li>
+</ul>
+<a name="createCollectionReader()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCollectionReader</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CpeCollectionReader.html" title="interface in org.apache.uima.collection.metadata">CpeCollectionReader</a>&nbsp;createCollectionReader()</pre>
+</li>
+</ul>
+<a name="createCpeConfig()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCpeConfig</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CpeConfiguration.html" title="interface in org.apache.uima.collection.metadata">CpeConfiguration</a>&nbsp;createCpeConfig()</pre>
+</li>
+</ul>
+<a name="createCpeDescription()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCpeDescription</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CpeDescription.html" title="interface in org.apache.uima.collection.metadata">CpeDescription</a>&nbsp;createCpeDescription()</pre>
+</li>
+</ul>
+<a name="createDescriptor()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createDescriptor</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CpeComponentDescriptor.html" title="interface in org.apache.uima.collection.metadata">CpeComponentDescriptor</a>&nbsp;createDescriptor()</pre>
+</li>
+</ul>
+<a name="createErrorHandling()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createErrorHandling</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CasProcessorErrorHandling.html" title="interface in org.apache.uima.collection.metadata">CasProcessorErrorHandling</a>&nbsp;createErrorHandling()</pre>
+</li>
+</ul>
+<a name="createInclude()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createInclude</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CpeInclude.html" title="interface in org.apache.uima.collection.metadata">CpeInclude</a>&nbsp;createInclude()</pre>
+</li>
+</ul>
+<a name="createRunInSeperateProcess()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createRunInSeperateProcess</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CasProcessorRunInSeperateProcess.html" title="interface in org.apache.uima.collection.metadata">CasProcessorRunInSeperateProcess</a>&nbsp;createRunInSeperateProcess()</pre>
+</li>
+</ul>
+<a name="createDeploymentParameters()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createDeploymentParameters</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CasProcessorDeploymentParams.html" title="interface in org.apache.uima.collection.metadata">CasProcessorDeploymentParams</a>&nbsp;createDeploymentParameters()</pre>
+</li>
+</ul>
+<a name="createExec()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createExec</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CasProcessorExecutable.html" title="interface in org.apache.uima.collection.metadata">CasProcessorExecutable</a>&nbsp;createExec()</pre>
+</li>
+</ul>
+<a name="createArg()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createArg</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CasProcessorExecArg.html" title="interface in org.apache.uima.collection.metadata">CasProcessorExecArg</a>&nbsp;createArg()</pre>
+</li>
+</ul>
+<a name="createOutputQueue()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createOutputQueue</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/OutputQueue.html" title="interface in org.apache.uima.collection.metadata">OutputQueue</a>&nbsp;createOutputQueue()</pre>
+</li>
+</ul>
+<a name="createEnv()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>createEnv</h4>
+<pre><a href="../../../org/apache/uima/collection/metadata/CasProcessorRuntimeEnvParam.html" title="interface in org.apache.uima.collection.metadata">CasProcessorRuntimeEnvParam</a>&nbsp;createEnv()</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/ResourceSpecifierFactory.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../org/apache/uima/ResourceFactory.html" title="interface in org.apache.uima"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../org/apache/uima/UIMA_IllegalArgumentException.html" title="class in org.apache.uima"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?org/apache/uima/ResourceSpecifierFactory.html" target="_top">Frames</a></li>
+<li><a href="ResourceSpecifierFactory.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

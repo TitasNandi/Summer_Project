@@ -1,0 +1,395 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Uses of Interface org.apache.uima.util.Logger (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Uses of Interface org.apache.uima.util.Logger (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../../../../../overview-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/util/class-use/Logger.html" target="_top">Frames</a></li>
+<li><a href="Logger.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<div class="header">
+<h2 title="Uses of Interface org.apache.uima.util.Logger" class="title">Uses of Interface<br>org.apache.uima.util.Logger</h2>
+</div>
+<div class="classUseContainer">
+<ul class="blockList">
+<li class="blockList">
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing packages, and an explanation">
+<caption><span>Packages that use <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Package</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.uima">org.apache.uima</a></td>
+<td class="colLast">
+<div class="block">The main package for the Unstructured Information Management Middleware 
+Architecture.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.uima.analysis_engine">org.apache.uima.analysis_engine</a></td>
+<td class="colLast">
+<div class="block">The Analysis Engine interface, along with supporting 
+interfaces and exception classes.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.uima.analysis_engine.annotator">org.apache.uima.analysis_engine.annotator</a></td>
+<td class="colLast">
+<div class="block">The Annotator Interfaces, along with supporting interfaces
+and exception classes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#org.apache.uima.resource">org.apache.uima.resource</a></td>
+<td class="colLast">
+<div class="block">Interfaces for <code>Resources</code> and <code>ResourceSpecifiers</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="#org.apache.uima.util">org.apache.uima.util</a></td>
+<td class="colLast">
+<div class="block">Utility classes and interfaces used by UIMA components.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<ul class="blockList">
+<li class="blockList"><a name="org.apache.uima">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a> in <a href="../../../../../org/apache/uima/package-summary.html">org.apache.uima</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/package-summary.html">org.apache.uima</a> that return <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected abstract <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#_getLogger()">_getLogger</a></strong>()</code>
+<div class="block">To be implemented by subclasses; this should return a reference to the default UIMA
+ <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util"><code>Logger</code></a> used by this implementation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected abstract <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#_getLogger(java.lang.Class)">_getLogger</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;component)</code>
+<div class="block">To be implemented by subclasses; this should return a reference to the UIMA <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util"><code>Logger</code></a> of
+ the specified source class.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected abstract <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#_newLogger()">_newLogger</a></strong>()</code>
+<div class="block">To be implemented by subclasses; this should return a new UIMA <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util"><code>Logger</code></a> instance.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
+<td class="colLast"><span class="strong">UimaContext.</span><code><strong><a href="../../../../../org/apache/uima/UimaContext.html#getLogger()">getLogger</a></strong>()</code>
+<div class="block">Gets the <code>Logger</code> to which log output will be sent.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#getLogger()">getLogger</a></strong>()</code>
+<div class="block">Gets the <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util"><code>Logger</code></a> used by the UIMA framework.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#getLogger(java.lang.Class)">getLogger</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;component)</code>
+<div class="block">Gets the <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util"><code>Logger</code></a> used by a particular Class, for example an
+ Annotator.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#newLogger()">newLogger</a></strong>()</code>
+<div class="block">Creates a new <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util"><code>Logger</code></a>, which can be passed for example to the
+ <a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#setLogger(org.apache.uima.util.Logger)"><code>AnalysisEngine.setLogger(Logger)</code></a> method in order to have separate Analysis Engine
+ instances used separate loggers.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/package-summary.html">org.apache.uima</a> with parameters of type <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">UimaContextAdmin.</span><code><strong><a href="../../../../../org/apache/uima/UimaContextAdmin.html#initializeRoot(org.apache.uima.util.Logger,%20org.apache.uima.resource.ResourceManager,%20org.apache.uima.resource.ConfigurationManager)">initializeRoot</a></strong>(<a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a>&nbsp;aLogger,
+              <a href="../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager,
+              <a href="../../../../../org/apache/uima/resource/ConfigurationManager.html" title="interface in org.apache.uima.resource">ConfigurationManager</a>&nbsp;aConfigurationManager)</code>
+<div class="block">Initializes a root UimaContext.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/UimaContextAdmin.html" title="interface in org.apache.uima">UimaContextAdmin</a></code></td>
+<td class="colLast"><span class="strong">UIMAFramework.</span><code><strong><a href="../../../../../org/apache/uima/UIMAFramework.html#newUimaContext(org.apache.uima.util.Logger,%20org.apache.uima.resource.ResourceManager,%20org.apache.uima.resource.ConfigurationManager)">newUimaContext</a></strong>(<a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a>&nbsp;aLogger,
+              <a href="../../../../../org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a>&nbsp;aResourceManager,
+              <a href="../../../../../org/apache/uima/resource/ConfigurationManager.html" title="interface in org.apache.uima.resource">ConfigurationManager</a>&nbsp;aConfigManager)</code>
+<div class="block">Gets a new instance of a <a href="../../../../../org/apache/uima/UimaContext.html" title="interface in org.apache.uima"><code>UimaContext</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">UimaContextAdmin.</span><code><strong><a href="../../../../../org/apache/uima/UimaContextAdmin.html#setLogger(org.apache.uima.util.Logger)">setLogger</a></strong>(<a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a>&nbsp;aLogger)</code>
+<div class="block">Sets the Logger for this UimaContext.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.analysis_engine">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a> in <a href="../../../../../org/apache/uima/analysis_engine/package-summary.html">org.apache.uima.analysis_engine</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/analysis_engine/package-summary.html">org.apache.uima.analysis_engine</a> that return <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
+<td class="colLast"><span class="strong">AnalysisEngine.</span><code><strong><a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#getLogger()">getLogger</a></strong>()</code>
+<div class="block">Gets the Logger that this Analysis Engine is currently using.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/analysis_engine/package-summary.html">org.apache.uima.analysis_engine</a> with parameters of type <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">AnalysisEngine.</span><code><strong><a href="../../../../../org/apache/uima/analysis_engine/AnalysisEngine.html#setLogger(org.apache.uima.util.Logger)">setLogger</a></strong>(<a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a>&nbsp;aLogger)</code>
+<div class="block">Sets the Logger that this Analysis Engine will use.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.analysis_engine.annotator">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a> in <a href="../../../../../org/apache/uima/analysis_engine/annotator/package-summary.html">org.apache.uima.analysis_engine.annotator</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/analysis_engine/annotator/package-summary.html">org.apache.uima.analysis_engine.annotator</a> that return <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
+<td class="colLast"><span class="strong">AnnotatorContext.</span><code><strong><a href="../../../../../org/apache/uima/analysis_engine/annotator/AnnotatorContext.html#getLogger()">getLogger</a></strong>()</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+<div class="block">Gets the <code>Logger</code> to which this annotator should send its log output.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.resource">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a> in <a href="../../../../../org/apache/uima/resource/package-summary.html">org.apache.uima.resource</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/resource/package-summary.html">org.apache.uima.resource</a> that return <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
+<td class="colLast"><span class="strong">Resource.</span><code><strong><a href="../../../../../org/apache/uima/resource/Resource.html#getLogger()">getLogger</a></strong>()</code>
+<div class="block">Gets the Logger that this Resource is currently using.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
+<td class="colLast"><span class="strong">Resource_ImplBase.</span><code><strong><a href="../../../../../org/apache/uima/resource/Resource_ImplBase.html#getLogger()">getLogger</a></strong>()</code>
+<div class="block">Get the logger for this UIMA framework class.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/resource/package-summary.html">org.apache.uima.resource</a> with parameters of type <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">Resource.</span><code><strong><a href="../../../../../org/apache/uima/resource/Resource.html#setLogger(org.apache.uima.util.Logger)">setLogger</a></strong>(<a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a>&nbsp;aLogger)</code>
+<div class="block">Sets the Logger that this Resource will use.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">Resource_ImplBase.</span><code><strong><a href="../../../../../org/apache/uima/resource/Resource_ImplBase.html#setLogger(org.apache.uima.util.Logger)">setLogger</a></strong>(<a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a>&nbsp;aLogger)</code>
+<div class="block">Set the logger in the current UimaContext for use by user annotators.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="org.apache.uima.util">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a> in <a href="../../../../../org/apache/uima/util/package-summary.html">org.apache.uima.util</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/apache/uima/util/package-summary.html">org.apache.uima.util</a> with parameters of type <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><span class="strong">MessageReport.</span><code><strong><a href="../../../../../org/apache/uima/util/MessageReport.html#decreasingWithTrace(java.util.concurrent.atomic.AtomicInteger,%20java.lang.String,%20org.apache.uima.util.Logger)">decreasingWithTrace</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a>&nbsp;errorCount,
+                   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
+                   <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a>&nbsp;logger)</code>
+<div class="block">Issues message at warning or fine level (fine if enabled, includes stack trace)</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../../org/apache/uima/util/package-summary.html">org.apache.uima.util</a> with parameters of type <a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/util/LoggerPrintStream.html#LoggerPrintStream(org.apache.uima.util.Logger,%20org.apache.uima.util.Level)">LoggerPrintStream</a></strong>(<a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a>&nbsp;logger,
+                 <a href="../../../../../org/apache/uima/util/Level.html" title="class in org.apache.uima.util">Level</a>&nbsp;level)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="../package-summary.html">Package</a></li>
+<li><a href="../../../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Class</a></li>
+<li class="navBarCell1Rev">Use</li>
+<li><a href="../../../../../overview-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev</li>
+<li>Next</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/util/class-use/Logger.html" target="_top">Frames</a></li>
+<li><a href="Logger.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TOP (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="TOP (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/TOP.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/apache/uima/jcas/cas/StringList_Type.html" title="class in org.apache.uima.jcas.cas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html" title="class in org.apache.uima.jcas.cas"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/jcas/cas/TOP.html" target="_top">Frames</a></li>
+<li><a href="TOP.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.uima.jcas.cas</div>
+<h2 title="Class TOP" class="title">Class TOP</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.uima.cas.impl.FeatureStructureImpl</li>
+<li>
+<ul class="inheritance">
+<li>org.apache.uima.jcas.cas.TOP</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</a>, <a href="../../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a></dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../../org/apache/uima/jcas/cas/AnnotationBase.html" title="class in org.apache.uima.jcas.cas">AnnotationBase</a>, <a href="../../../../../org/apache/uima/jcas/cas/BooleanArray.html" title="class in org.apache.uima.jcas.cas">BooleanArray</a>, <a href="../../../../../org/apache/uima/jcas/cas/ByteArray.html" title="class in org.apache.uima.jcas.cas">ByteArray</a>, <a href="../../../../../org/apache/uima/jcas/cas/DoubleArray.html" title="class in org.apache.uima.jcas.cas">DoubleArray</a>, <a href="../../../../../org/apache/uima/jcas/cas/FloatArray.html" title="class in org.apache.uima.jcas.cas">FloatArray</a>, <a href="../../../../../org/apache/uima/jcas/cas/FloatList.html" title="class in org.apache.uima.jcas.cas">FloatList</a>, <a href="../../../../../org/apache/uima/jcas/cas/FSArray.html" title="class in org.apache.uima.jcas.cas">FSArray</a>, <a href="../../../../../org/apache/uima/jcas/cas/FSList.html" title="class in org.apache.uima.jcas.cas">FSList</a>, <a href="../../../../../org/apache/uima/jcas/cas/IntegerArray.html" title="class in org.apache.uima.jcas.cas">IntegerArray</a>, <a href="../../../../../org/apache/uima/jcas/cas/IntegerList.html" title="class in org.apache.uima.jcas.cas">IntegerList</a>, <a href="../../../../../org/apache/uima/jcas/cas/LongArray.html" title="class in org.apache.uima.jcas.cas">LongArray</a>, <a href="../../../../../org/apache/uima/jcas/cas/ShortArray.html" title="class in org.apache.uima.jcas.cas">ShortArray</a>, <a href="../../../../../org/apache/uima/jcas/cas/Sofa.html" title="class in org.apache.uima.jcas.cas">Sofa</a>, <a href="../../../../../org/apache/uima/jcas/cas/StringArray.html" title="class in org.apache.uima.jcas.cas">StringArray</a>, <a href="../../../../../org/apache/uima/jcas/cas/StringList.html" title="class in org.apache.uima.jcas.cas">StringList</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="strong">TOP</span>
+extends org.apache.uima.cas.impl.FeatureStructureImpl</pre>
+<div class="block">The Java Class model corresponding to the Cas TOP type. This type is the super type of all
+ feature structures. This type implements FeatureStructure since subclasses of it are the FSs
+ generated by this system.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#addr">addr</a></strong></code>
+<div class="block">used to reference the corresponding Cas instance</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html" title="class in org.apache.uima.jcas.cas">TOP_Type</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#jcasType">jcasType</a></strong></code>
+<div class="block">used to reference the corresponding TOP_Type instance</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#type">type</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#typeIndexID">typeIndexID</a></strong></code>
+<div class="block">Each cover class when loaded sets an index.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected </code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#TOP()">TOP</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#TOP(int,%20org.apache.uima.jcas.cas.TOP_Type)">TOP</a></strong>(int&nbsp;addr,
+   <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html" title="class in org.apache.uima.jcas.cas">TOP_Type</a>&nbsp;jcasType)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#TOP(org.apache.uima.jcas.JCas)">TOP</a></strong>(<a href="../../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;jcas)</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#addToIndexes()">addToIndexes</a></strong>()</code>
+<div class="block">add the corresponding FeatureStructure to all Cas indexes in the view where this FS was created</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#addToIndexes(org.apache.uima.jcas.JCas)">addToIndexes</a></strong>(<a href="../../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;jcas)</code>
+<div class="block">add this FS to indexes in a specific view, perhaps different from the creation view</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#equals(java.lang.Object)">equals</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>
+<div class="block">A feature structure is equal to another feature structure iff it is identical in the underlying
+ representation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#getAddress()">getAddress</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#getCAS()">getCAS</a></strong>()</code>
+<div class="block">Return the CAS that this FS belongs to.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>org.apache.uima.cas.impl.CASImpl</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#getCASImpl()">getCASImpl</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>org.apache.uima.cas.impl.LowLevelCAS</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#getLowLevelCas()">getLowLevelCas</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#getTypeIndexID()">getTypeIndexID</a></strong>()</code>
+<div class="block">used to obtain reference to the TOP_Type instance</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#hashCode()">hashCode</a></strong>()</code>
+<div class="block">Will return a hash code that's consistent with equality, i.e., if two FSs are equal, they will
+ also return the same hash code.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#removeFromIndexes()">removeFromIndexes</a></strong>()</code>
+<div class="block">remove the corresponding FeatureStructure from all Cas indexes in the view where this FS was created</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/jcas/cas/TOP.html#removeFromIndexes(org.apache.uima.jcas.JCas)">removeFromIndexes</a></strong>(<a href="../../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;jcas)</code>
+<div class="block">remove this FS from indexes in a specific view, perhaps different from the view where this was created.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.apache.uima.cas.impl.FeatureStructureImpl">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.apache.uima.cas.impl.FeatureStructureImpl</h3>
+<code>clone, getavoidcollisionTypeCode, getBooleanValue, getByteValue, getDoubleValue, getFeatureValue, getFeatureValueAsString, getFloatValue, getIntValue, getLongValue, getShortValue, getStringValue, getType, prettyPrint, prettyPrint, prettyPrint, setBooleanValue, setByteValue, setDoubleValue, setFeatureValue, setFeatureValueFromString, setFloatValue, setIntValue, setLongValue, setShortValue, setStringValue, toString, toString</code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="typeIndexID">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>typeIndexID</h4>
+<pre>public static final&nbsp;int typeIndexID</pre>
+<div class="block">Each cover class when loaded sets an index. Used in the JCas typeArray to go from the cover
+ class or class instance to the corresponding instance of the _Type class</div>
+</li>
+</ul>
+<a name="type">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>type</h4>
+<pre>public static final&nbsp;int type</pre>
+</li>
+</ul>
+<a name="jcasType">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>jcasType</h4>
+<pre>public&nbsp;<a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html" title="class in org.apache.uima.jcas.cas">TOP_Type</a> jcasType</pre>
+<div class="block">used to reference the corresponding TOP_Type instance</div>
+</li>
+</ul>
+<a name="addr">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>addr</h4>
+<pre>protected final&nbsp;int addr</pre>
+<div class="block">used to reference the corresponding Cas instance</div>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="TOP()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TOP</h4>
+<pre>protected&nbsp;TOP()</pre>
+</li>
+</ul>
+<a name="TOP(int, org.apache.uima.jcas.cas.TOP_Type)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TOP</h4>
+<pre>public&nbsp;TOP(int&nbsp;addr,
+   <a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html" title="class in org.apache.uima.jcas.cas">TOP_Type</a>&nbsp;jcasType)</pre>
+</li>
+</ul>
+<a name="TOP(org.apache.uima.jcas.JCas)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TOP</h4>
+<pre>public&nbsp;TOP(<a href="../../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;jcas)</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getTypeIndexID()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTypeIndexID</h4>
+<pre>public&nbsp;int&nbsp;getTypeIndexID()</pre>
+<div class="block">used to obtain reference to the TOP_Type instance</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the type array index</dd></dl>
+</li>
+</ul>
+<a name="addToIndexes()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addToIndexes</h4>
+<pre>public&nbsp;void&nbsp;addToIndexes()</pre>
+<div class="block">add the corresponding FeatureStructure to all Cas indexes in the view where this FS was created</div>
+</li>
+</ul>
+<a name="addToIndexes(org.apache.uima.jcas.JCas)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addToIndexes</h4>
+<pre>public&nbsp;void&nbsp;addToIndexes(<a href="../../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;jcas)</pre>
+<div class="block">add this FS to indexes in a specific view, perhaps different from the creation view</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>jcas</code> - the JCas</dd></dl>
+</li>
+</ul>
+<a name="removeFromIndexes()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeFromIndexes</h4>
+<pre>public&nbsp;void&nbsp;removeFromIndexes()</pre>
+<div class="block">remove the corresponding FeatureStructure from all Cas indexes in the view where this FS was created</div>
+</li>
+</ul>
+<a name="removeFromIndexes(org.apache.uima.jcas.JCas)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeFromIndexes</h4>
+<pre>public&nbsp;void&nbsp;removeFromIndexes(<a href="../../../../../org/apache/uima/jcas/JCas.html" title="interface in org.apache.uima.jcas">JCas</a>&nbsp;jcas)</pre>
+<div class="block">remove this FS from indexes in a specific view, perhaps different from the view where this was created.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>jcas</code> - the JCas</dd></dl>
+</li>
+</ul>
+<a name="getAddress()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAddress</h4>
+<pre>public&nbsp;int&nbsp;getAddress()</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>getAddress</code>&nbsp;in class&nbsp;<code>org.apache.uima.cas.impl.FeatureStructureImpl</code></dd>
+</dl>
+</li>
+</ul>
+<a name="getCASImpl()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCASImpl</h4>
+<pre>public&nbsp;org.apache.uima.cas.impl.CASImpl&nbsp;getCASImpl()</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code>getCASImpl</code>&nbsp;in class&nbsp;<code>org.apache.uima.cas.impl.FeatureStructureImpl</code></dd>
+</dl>
+</li>
+</ul>
+<a name="getCAS()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCAS</h4>
+<pre>public&nbsp;<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;getCAS()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/uima/cas/FeatureStructure.html#getCAS()">FeatureStructure</a></code></strong></div>
+<div class="block">Return the CAS that this FS belongs to.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the CAS view where this FS was created</dd></dl>
+</li>
+</ul>
+<a name="getLowLevelCas()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLowLevelCas</h4>
+<pre>public&nbsp;org.apache.uima.cas.impl.LowLevelCAS&nbsp;getLowLevelCas()</pre>
+</li>
+</ul>
+<a name="equals(java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/uima/cas/FeatureStructure.html#equals(java.lang.Object)">FeatureStructure</a></code></strong></div>
+<div class="block">A feature structure is equal to another feature structure iff it is identical in the underlying
+ representation.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../org/apache/uima/cas/FeatureStructure.html#equals(java.lang.Object)">equals</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../org/apache/uima/cas/FeatureStructure.html#hashCode()">FeatureStructure</a></code></strong></div>
+<div class="block">Will return a hash code that's consistent with equality, i.e., if two FSs are equal, they will
+ also return the same hash code.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../org/apache/uima/cas/FeatureStructure.html#hashCode()">hashCode</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../org/apache/uima/cas/FeatureStructure.html" title="interface in org.apache.uima.cas">FeatureStructure</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>The hash code.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/TOP.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/apache/uima/jcas/cas/StringList_Type.html" title="class in org.apache.uima.jcas.cas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/uima/jcas/cas/TOP_Type.html" title="class in org.apache.uima.jcas.cas"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/jcas/cas/TOP.html" target="_top">Frames</a></li>
+<li><a href="TOP.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

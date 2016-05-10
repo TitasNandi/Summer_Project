@@ -1,0 +1,831 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PackageBrowser (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PackageBrowser (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PackageBrowser.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/apache/uima/pear/tools/LocalInstallationAgent.html" title="class in org.apache.uima.pear.tools"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/uima/pear/tools/PackageCreator.html" title="class in org.apache.uima.pear.tools"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/pear/tools/PackageBrowser.html" target="_top">Frames</a></li>
+<li><a href="PackageBrowser.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.uima.pear.tools</div>
+<h2 title="Class PackageBrowser" class="title">Class PackageBrowser</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.uima.pear.tools.PackageBrowser</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">PackageBrowser</span>
+extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">The <code>PackageBrowser</code> class allows browsing both archived and unarchived PEAR
+ packages, finding package files and directories, loading installation descriptor files and
+ returning run-time environment settings required for installed components.</div>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../org/apache/uima/pear/tools/InstallationDescriptor.html" title="class in org.apache.uima.pear.tools"><code>InstallationDescriptor</code></a></dd></dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#BINARY_DIR">BINARY_DIR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#CONFIGURATION_DIR">CONFIGURATION_DIR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#DATA_DIR">DATA_DIR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#DESCRIPTORS_DIR">DESCRIPTORS_DIR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#DOCUMENTATION_DIR">DOCUMENTATION_DIR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#INSTALLATION_DESCRIPTOR_FILE">INSTALLATION_DESCRIPTOR_FILE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#LIBRARY_DIR">LIBRARY_DIR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#METADATA_DIR">METADATA_DIR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#PEAR_PROPERTIES_FILE">PEAR_PROPERTIES_FILE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#RESOURCES_DIR">RESOURCES_DIR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#SETENV_TXT_FILE">SETENV_TXT_FILE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#SOURCES_DIR">SOURCES_DIR</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#SUBMISSION_PROPERTIES_FILE">SUBMISSION_PROPERTIES_FILE</a></strong></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#PackageBrowser(java.io.File)">PackageBrowser</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;pearPackageDir)</code>
+<div class="block">Constructor that allows browsing a given unacrhived PEAR package before or after its
+ installation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#PackageBrowser(java.util.jar.JarFile)">PackageBrowser</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/jar/JarFile.html?is-external=true" title="class or interface in java.util.jar">JarFile</a>&nbsp;pearPackage)</code>
+<div class="block">Constructor that allows browsing a given PEAR package without unarchiving it.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#buildComponentClassPath()">buildComponentClassPath</a></strong>()</code>
+<div class="block">Creates a string that should be added to the CLASSPATH to run the given installed component,
+ based on its installation descriptor specifications, as well as the contents of its
+ <code>lib</code> directory.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#buildComponentClassPath(boolean,%20boolean)">buildComponentClassPath</a></strong>(boolean&nbsp;relativePath,
+                       boolean&nbsp;addLibDir)</code>
+<div class="block">Creates a string that should be added to the CLASSPATH to run the given installed component,
+ based on its installation descriptor specifications, as well as the contents of its
+ <code>lib</code> directory.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#buildComponentPath()">buildComponentPath</a></strong>()</code>
+<div class="block">Creates a string that should be added to the PATH to run the given installed component, based
+ on the PEAR package defaults and its installation descriptor specifications.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#buildComponentPath(boolean)">buildComponentPath</a></strong>(boolean&nbsp;relativePath)</code>
+<div class="block">Creates a string that should be added to the PATH to run the given installed component, based
+ on the PEAR package defaults and its installation descriptor specifications.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#buildComponentRuntimeClassPath()">buildComponentRuntimeClassPath</a></strong>()</code>
+<div class="block">Like <a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#buildComponentClassPath()"><code>buildComponentClassPath()</code></a>, but without all jars from the lib dir.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#findDirectory(java.lang.String)">findDirectory</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;dirNamePattern)</code>
+<div class="block">Looks for package directories matching a given directory name pattern in the PEAR package.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#findFile(java.lang.String)">findFile</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileNamePattern)</code>
+<div class="block">Looks for package files matching a given file name pattern in the PEAR package.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#findStandardDirectory(java.lang.String)">findStandardDirectory</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;stdDirName)</code>
+<div class="block">Looks for a given standard package directory.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#findStandardFile(java.lang.String)">findStandardFile</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;stdFileName)</code>
+<div class="block">Looks for a given standard package file.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#getAllDirectories()">getAllDirectories</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#getAllFiles()">getAllFiles</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#getComponentDataPath()">getComponentDataPath</a></strong>()</code>
+<div class="block">Returns the UIMA datapath setting for the component.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util">Properties</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#getComponentEnvVars()">getComponentEnvVars</a></strong>()</code>
+<div class="block">Returns the environment variable settings for the component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#getComponentPearDescPath()">getComponentPearDescPath</a></strong>()</code>
+<div class="block">returns the pear component pearSpecifier file path.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../org/apache/uima/pear/tools/InstallationDescriptor.html" title="class in org.apache.uima.pear.tools">InstallationDescriptor</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#getInstallationDescriptor()">getInstallationDescriptor</a></strong>()</code>
+<div class="block">Loads the <code>INSTALLATION_DESCRIPTOR_FILE</code> file, and creates the
+ <code>InstallationDescriptor</code> (InsD) object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#getRootDirectory()">getRootDirectory</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#isArchived()">isArchived</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="BINARY_DIR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>BINARY_DIR</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> BINARY_DIR</pre>
+</li>
+</ul>
+<a name="CONFIGURATION_DIR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CONFIGURATION_DIR</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CONFIGURATION_DIR</pre>
+</li>
+</ul>
+<a name="DATA_DIR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DATA_DIR</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DATA_DIR</pre>
+</li>
+</ul>
+<a name="DESCRIPTORS_DIR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DESCRIPTORS_DIR</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DESCRIPTORS_DIR</pre>
+</li>
+</ul>
+<a name="DOCUMENTATION_DIR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DOCUMENTATION_DIR</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> DOCUMENTATION_DIR</pre>
+</li>
+</ul>
+<a name="LIBRARY_DIR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LIBRARY_DIR</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> LIBRARY_DIR</pre>
+</li>
+</ul>
+<a name="METADATA_DIR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>METADATA_DIR</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> METADATA_DIR</pre>
+</li>
+</ul>
+<a name="RESOURCES_DIR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>RESOURCES_DIR</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> RESOURCES_DIR</pre>
+</li>
+</ul>
+<a name="SOURCES_DIR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SOURCES_DIR</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SOURCES_DIR</pre>
+</li>
+</ul>
+<a name="INSTALLATION_DESCRIPTOR_FILE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INSTALLATION_DESCRIPTOR_FILE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> INSTALLATION_DESCRIPTOR_FILE</pre>
+</li>
+</ul>
+<a name="PEAR_PROPERTIES_FILE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PEAR_PROPERTIES_FILE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PEAR_PROPERTIES_FILE</pre>
+</li>
+</ul>
+<a name="SUBMISSION_PROPERTIES_FILE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SUBMISSION_PROPERTIES_FILE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SUBMISSION_PROPERTIES_FILE</pre>
+</li>
+</ul>
+<a name="SETENV_TXT_FILE">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>SETENV_TXT_FILE</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> SETENV_TXT_FILE</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="PackageBrowser(java.util.jar.JarFile)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PackageBrowser</h4>
+<pre>public&nbsp;PackageBrowser(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/jar/JarFile.html?is-external=true" title="class or interface in java.util.jar">JarFile</a>&nbsp;pearPackage)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Constructor that allows browsing a given PEAR package without unarchiving it.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pearPackage</code> - The given archived PEAR package to browse.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if a problem with IO</dd></dl>
+</li>
+</ul>
+<a name="PackageBrowser(java.io.File)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PackageBrowser</h4>
+<pre>public&nbsp;PackageBrowser(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;pearPackageDir)
+               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Constructor that allows browsing a given unacrhived PEAR package before or after its
+ installation.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>pearPackageDir</code> - The root directory where the PEAR package was unarchived.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if a problem with IO</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="buildComponentClassPath()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildComponentClassPath</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;buildComponentClassPath()
+                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Creates a string that should be added to the CLASSPATH to run the given installed component,
+ based on its installation descriptor specifications, as well as the contents of its
+ <code>lib</code> directory. The output string includes absolute path expressions for all
+ relevant objects containing in the component PEAR package. If the component package is
+ archived, returns <code>null</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The string that needs to be added to the CLASSPATH to run the given installed
+         component.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If any I/O exception occurred.</dd></dl>
+</li>
+</ul>
+<a name="buildComponentRuntimeClassPath()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildComponentRuntimeClassPath</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;buildComponentRuntimeClassPath()
+                                      throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Like <a href="../../../../../org/apache/uima/pear/tools/PackageBrowser.html#buildComponentClassPath()"><code>buildComponentClassPath()</code></a>, but without all jars from the lib dir.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The runtime classpath for the component.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there was an IO problem</dd></dl>
+</li>
+</ul>
+<a name="buildComponentClassPath(boolean, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildComponentClassPath</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;buildComponentClassPath(boolean&nbsp;relativePath,
+                             boolean&nbsp;addLibDir)
+                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Creates a string that should be added to the CLASSPATH to run the given installed component,
+ based on its installation descriptor specifications, as well as the contents of its
+ <code>lib</code> directory. The output string includes absolute or relative path expressions
+ for all relevant objects containing in the component PEAR package, depending on the value of a
+ given <code>boolean</code> argument. If the component package is archived, returns
+ <code>null</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>relativePath</code> - If <code>true</code>, the output string will include relative path expressions for
+          all relevant objects containing in the component PEAR package, otherwise it will
+          contain absolute path expressions for these objects.</dd><dd><code>addLibDir</code> - Whether to add jars from the lib dir to the classpath (true at packaging time, false
+          at runtime).</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The string that should be added to the CLASSPATH to run the given installed component.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If any I/O exception occurred.</dd></dl>
+</li>
+</ul>
+<a name="buildComponentPath()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildComponentPath</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;buildComponentPath()
+                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Creates a string that should be added to the PATH to run the given installed component, based
+ on the PEAR package defaults and its installation descriptor specifications. The output string
+ includes absolute path expressions for all relevant objects containing in the component PEAR
+ package. If the component package is archived, returns <code>null</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The string that needs to be added to the PATH to run the given installed component.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If any I/O exception occurred.</dd></dl>
+</li>
+</ul>
+<a name="buildComponentPath(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>buildComponentPath</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;buildComponentPath(boolean&nbsp;relativePath)
+                          throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Creates a string that should be added to the PATH to run the given installed component, based
+ on the PEAR package defaults and its installation descriptor specifications. The output string
+ includes absolute or relative path expressions for all relevant objects containing in the
+ component PEAR package, depending on the value of a given <code>boolean</code> argument. If
+ the component package is archived, returns <code>null</code>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>relativePath</code> - If <code>true</code>, the output string will include relative path expressions for
+          all relevant objects containing in the component PEAR package, otherwise it will
+          contain absolute path expressions for these objects.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The string that needs to be added to the PATH to run the given installed component.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If any I/O exception occurred.</dd></dl>
+</li>
+</ul>
+<a name="findDirectory(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findDirectory</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>[]&nbsp;findDirectory(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;dirNamePattern)</pre>
+<div class="block">Looks for package directories matching a given directory name pattern in the PEAR package. If
+ the given directory name pattern starts with '/' or '\', the method looks for directory names
+ that start with the given name pattern, otherwise it looks for directory names that contain the
+ given name pattern as a substring. The method does not support wild cards.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>dirNamePattern</code> - The given directory name pattern to look for.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The array of matching package directories.</dd></dl>
+</li>
+</ul>
+<a name="findFile(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findFile</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>[]&nbsp;findFile(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileNamePattern)</pre>
+<div class="block">Looks for package files matching a given file name pattern in the PEAR package. If the given
+ file name pattern starts with '/' or '\', the method looks for file names that start from the
+ given name pattern, otherwise it looks for file names that contain the given name pattern as a
+ substring. The method does not support wild cards.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>fileNamePattern</code> - The given file name pattern to look for.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The array of matching package files.</dd></dl>
+</li>
+</ul>
+<a name="findStandardDirectory(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findStandardDirectory</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;findStandardDirectory(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;stdDirName)</pre>
+<div class="block">Looks for a given standard package directory. This method assumes that the given standard
+ directory name is the full name of the directory in the package root directory.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>stdDirName</code> - The given full standard package directory name.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The specified standard package directory, if this directory exists in the package,
+         <code>null</code> otherwise.</dd></dl>
+</li>
+</ul>
+<a name="findStandardFile(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>findStandardFile</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;findStandardFile(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;stdFileName)</pre>
+<div class="block">Looks for a given standard package file. This method assumes that the given standard file name
+ is the full name of the file in the package root directory.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>stdFileName</code> - The given full standard package file name.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The specified standard package file, if this file exists in the package,
+         <code>null</code> otherwise.</dd></dl>
+</li>
+</ul>
+<a name="getAllDirectories()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAllDirectories</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>[]&nbsp;getAllDirectories()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Array of <code>File</code> objects representing all directories existing in the
+         package.</dd></dl>
+</li>
+</ul>
+<a name="getAllFiles()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAllFiles</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>[]&nbsp;getAllFiles()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Array of <code>File</code> objects representing all files existing in the package.</dd></dl>
+</li>
+</ul>
+<a name="getInstallationDescriptor()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInstallationDescriptor</h4>
+<pre>public&nbsp;<a href="../../../../../org/apache/uima/pear/tools/InstallationDescriptor.html" title="class in org.apache.uima.pear.tools">InstallationDescriptor</a>&nbsp;getInstallationDescriptor()
+                                                 throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Loads the <code>INSTALLATION_DESCRIPTOR_FILE</code> file, and creates the
+ <code>InstallationDescriptor</code> (InsD) object. <b>Note:</b> if the component package has
+ been installed, the InsD object contains real specifications of package directories, otherwise
+ it may contain macros like <code>$main_root</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The InsD object corresponding the installation descriptor file.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If any I/O exception occurred.</dd></dl>
+</li>
+</ul>
+<a name="getRootDirectory()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRootDirectory</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;getRootDirectory()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The package root directory, where the package was unarchived, or the directory
+         corresponding to the package file path without its extension, if the archived package
+         was specified.</dd></dl>
+</li>
+</ul>
+<a name="isArchived()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isArchived</h4>
+<pre>public&nbsp;boolean&nbsp;isArchived()</pre>
+<dl><dt><span class="strong">Returns:</span></dt><dd><code>true</code>, if the archived package was specified, <code>false</code>
+         otherwise.</dd></dl>
+</li>
+</ul>
+<a name="getComponentPearDescPath()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getComponentPearDescPath</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getComponentPearDescPath()
+                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">returns the pear component pearSpecifier file path.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>returns the pear component pearSpecifier file path or null if an archived package was
+         used.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there was an IO problem</dd></dl>
+</li>
+</ul>
+<a name="getComponentDataPath()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getComponentDataPath</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getComponentDataPath()
+                            throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Returns the UIMA datapath setting for the component.
+ 
+ The datapath of the component must be specified as environment variable with the key
+ <code>uima.datapath</code>.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the datapath setting for the component or null if the datapath is not specified.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If any I/O exception occurred while reading the component meta data.</dd></dl>
+</li>
+</ul>
+<a name="getComponentEnvVars()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getComponentEnvVars</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util">Properties</a>&nbsp;getComponentEnvVars()
+                               throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Returns the environment variable settings for the component. The variable settings does not
+ contain the <code>classpath</code> and <code>uima.datapath</code> settings for the
+ component.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>returns the environment variable settings for the component</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If any I/O exception occurred while reading the component meta data.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/PackageBrowser.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/apache/uima/pear/tools/LocalInstallationAgent.html" title="class in org.apache.uima.pear.tools"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../org/apache/uima/pear/tools/PackageCreator.html" title="class in org.apache.uima.pear.tools"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/pear/tools/PackageBrowser.html" target="_top">Frames</a></li>
+<li><a href="PackageBrowser.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

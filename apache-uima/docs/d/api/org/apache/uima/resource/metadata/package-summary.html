@@ -1,0 +1,301 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.apache.uima.resource.metadata (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="org.apache.uima.resource.metadata (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li class="navBarCell1Rev">Package</li>
+<li>Class</li>
+<li><a href="package-use.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/apache/uima/resource/package-summary.html">Prev Package</a></li>
+<li><a href="../../../../../org/apache/uima/search/package-summary.html">Next Package</a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/resource/metadata/package-summary.html" target="_top">Frames</a></li>
+<li><a href="package-summary.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<div class="header">
+<h1 title="Package" class="title">Package&nbsp;org.apache.uima.resource.metadata</h1>
+<div class="docSummary">
+<div class="block">Interfaces for objects that represent metadata for a
+Resource.</div>
+</div>
+<p>See:&nbsp;<a href="#package_description">Description</a></p>
+</div>
+<div class="contentContainer">
+<ul class="blockList">
+<li class="blockList">
+<table class="packageSummary" border="0" cellpadding="3" cellspacing="0" summary="Interface Summary table, listing interfaces, and an explanation">
+<caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Interface</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/AllowedValue.html" title="interface in org.apache.uima.resource.metadata">AllowedValue</a></td>
+<td class="colLast">
+<div class="block">Represents an allowed value for an "enumerated" type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/Capability.html" title="interface in org.apache.uima.resource.metadata">Capability</a></td>
+<td class="colLast">
+<div class="block">A <code>Capability</code> defines an operation that an Resource can carry out.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/ConfigurationGroup.html" title="interface in org.apache.uima.resource.metadata">ConfigurationGroup</a></td>
+<td class="colLast">
+<div class="block">A group of <a href="../../../../../org/apache/uima/resource/metadata/ConfigurationParameter.html" title="interface in org.apache.uima.resource.metadata"><code>ConfigurationParameter</code></a>s.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/ConfigurationParameter.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameter</a></td>
+<td class="colLast">
+<div class="block">Completely specifies a configuration parameter on a UIMA resource.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/ConfigurationParameterDeclarations.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameterDeclarations</a></td>
+<td class="colLast">
+<div class="block">The declarations of configuration parameters in a Resource.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/ConfigurationParameterSettings.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameterSettings</a></td>
+<td class="colLast">
+<div class="block">The values for <a href="../../../../../org/apache/uima/resource/metadata/ConfigurationParameter.html" title="interface in org.apache.uima.resource.metadata"><code>ConfigurationParameter</code></a>s in a Resource.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/ExternalResourceBinding.html" title="interface in org.apache.uima.resource.metadata">ExternalResourceBinding</a></td>
+<td class="colLast">
+<div class="block">Binds an <a href="../../../../../org/apache/uima/resource/ExternalResourceDependency.html" title="interface in org.apache.uima.resource"><code>ExternalResourceDependency</code></a> to an
+ <a href="../../../../../org/apache/uima/resource/ExternalResourceDescription.html" title="interface in org.apache.uima.resource"><code>ExternalResourceDescription</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/FeatureDescription.html" title="interface in org.apache.uima.resource.metadata">FeatureDescription</a></td>
+<td class="colLast">
+<div class="block">A description of a CAS feature.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/FsIndexCollection.html" title="interface in org.apache.uima.resource.metadata">FsIndexCollection</a></td>
+<td class="colLast">
+<div class="block">Description of a collection of CAS feature structure indexes.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/FsIndexDescription.html" title="interface in org.apache.uima.resource.metadata">FsIndexDescription</a></td>
+<td class="colLast">
+<div class="block">A description of a CAS feature structure index.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/FsIndexKeyDescription.html" title="interface in org.apache.uima.resource.metadata">FsIndexKeyDescription</a></td>
+<td class="colLast">
+<div class="block">A description of a key defining a CAS feature structure index.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/Import.html" title="interface in org.apache.uima.resource.metadata">Import</a></td>
+<td class="colLast">
+<div class="block">An import declaration.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/LanguagePrecondition.html" title="interface in org.apache.uima.resource.metadata">LanguagePrecondition</a></td>
+<td class="colLast">
+<div class="block">A precondition on the language of the document.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/MetaDataObject.html" title="interface in org.apache.uima.resource.metadata">MetaDataObject</a></td>
+<td class="colLast">
+<div class="block">An object used to represent metadata of a <code>Resource</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/MimeTypePrecondition.html" title="interface in org.apache.uima.resource.metadata">MimeTypePrecondition</a></td>
+<td class="colLast">
+<div class="block">A precondition on the MIME Type of the entity.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/NameValuePair.html" title="interface in org.apache.uima.resource.metadata">NameValuePair</a></td>
+<td class="colLast">
+<div class="block">A type of <code>MetaDataObject</code> that stores a name (String) and value (Object).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/OperationalProperties.html" title="interface in org.apache.uima.resource.metadata">OperationalProperties</a></td>
+<td class="colLast">
+<div class="block">Operational Properties for a UIMA component.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/Precondition.html" title="interface in org.apache.uima.resource.metadata">Precondition</a></td>
+<td class="colLast">
+<div class="block">A <code>Precondition</code> of a Resource is a condition that an Entity and/or its analysis in
+ the <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a> must satisfy before that Entity can be processed by the Resource.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/ProcessingResourceMetaData.html" title="interface in org.apache.uima.resource.metadata">ProcessingResourceMetaData</a></td>
+<td class="colLast">
+<div class="block">Metadata that describes a "Processing" <a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource"><code>Resource</code></a> - that is, one
+ that reads or writes to the <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/ResourceManagerConfiguration.html" title="interface in org.apache.uima.resource.metadata">ResourceManagerConfiguration</a></td>
+<td class="colLast">
+<div class="block">Defines a set of external resources and their bindings to
+ <a href="../../../../../org/apache/uima/resource/ExternalResourceDependency.html" title="interface in org.apache.uima.resource"><code>ExternalResourceDependencies</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/ResourceMetaData.html" title="interface in org.apache.uima.resource.metadata">ResourceMetaData</a></td>
+<td class="colLast">
+<div class="block">Encapsulates all metadata for a <a href="../../../../../org/apache/uima/resource/Resource.html" title="interface in org.apache.uima.resource"><code>Resource</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/SimplePrecondition.html" title="interface in org.apache.uima.resource.metadata">SimplePrecondition</a></td>
+<td class="colLast">
+<div class="block"><code>SimplePrecondition</code> defines a few simple conditions that can be evaluated against a
+ <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas"><code>CAS</code></a>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/TypeDescription.html" title="interface in org.apache.uima.resource.metadata">TypeDescription</a></td>
+<td class="colLast">
+<div class="block">A description of a CAS Type.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/TypePriorities.html" title="interface in org.apache.uima.resource.metadata">TypePriorities</a></td>
+<td class="colLast">
+<div class="block">A declaration of priorities between CAS Types.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/TypePriorityList.html" title="interface in org.apache.uima.resource.metadata">TypePriorityList</a></td>
+<td class="colLast">
+<div class="block">Declares a relative priority between CAS types.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../../../org/apache/uima/resource/metadata/TypeSystemDescription.html" title="interface in org.apache.uima.resource.metadata">TypeSystemDescription</a></td>
+<td class="colLast">
+<div class="block">Description of a CAS TypeSystem.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<a name="package_description">
+<!--   -->
+</a>
+<h2 title="Package org.apache.uima.resource.metadata Description">Package org.apache.uima.resource.metadata Description</h2>
+<div class="block">Interfaces for objects that represent metadata for a
+Resource.</div>
+</div>
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li class="navBarCell1Rev">Package</li>
+<li>Class</li>
+<li><a href="package-use.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../../org/apache/uima/resource/package-summary.html">Prev Package</a></li>
+<li><a href="../../../../../org/apache/uima/search/package-summary.html">Next Package</a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/resource/metadata/package-summary.html" target="_top">Frames</a></li>
+<li><a href="package-summary.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

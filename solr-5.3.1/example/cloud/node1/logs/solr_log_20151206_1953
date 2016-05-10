@@ -1,0 +1,1083 @@
+INFO  - 2015-12-03 16:59:53.797; [   ] org.eclipse.jetty.util.log.Log; Logging initialized @773ms
+INFO  - 2015-12-03 16:59:54.443; [   ] org.eclipse.jetty.server.Server; jetty-9.2.11.v20150529
+WARN  - 2015-12-03 16:59:54.494; [   ] org.eclipse.jetty.server.handler.RequestLogHandler; !RequestLog
+INFO  - 2015-12-03 16:59:54.496; [   ] org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor [file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/server/contexts/] at interval 0
+INFO  - 2015-12-03 16:59:55.414; [   ] org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+WARN  - 2015-12-03 16:59:55.455; [   ] org.eclipse.jetty.security.ConstraintSecurityHandler; ServletContext@o.e.j.w.WebAppContext@68be2bc2{/solr,file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/server/solr-webapp/webapp/,STARTING}{/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/server/solr-webapp/webapp} has uncovered http methods for path: /
+INFO  - 2015-12-03 16:59:55.678; [   ] org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init(): WebAppClassLoader=226710952@d8355a8
+INFO  - 2015-12-03 16:59:55.898; [   ] org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2015-12-03 16:59:55.899; [   ] org.apache.solr.core.SolrResourceLoader; using system property solr.solr.home: /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr
+INFO  - 2015-12-03 16:59:55.905; [   ] org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/'
+INFO  - 2015-12-03 16:59:56.399; [   ] org.apache.solr.core.SolrXmlConfig; Loading container configuration from /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/solr.xml
+INFO  - 2015-12-03 16:59:56.818; [   ] org.apache.solr.core.CorePropertiesLocator; Config-defined core root directory: /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr
+INFO  - 2015-12-03 16:59:56.982; [   ] org.apache.solr.core.CoreContainer; New CoreContainer 1164107853
+INFO  - 2015-12-03 16:59:56.983; [   ] org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/]
+INFO  - 2015-12-03 16:59:56.983; [   ] org.apache.solr.core.CoreContainer; loading shared library: /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/lib
+WARN  - 2015-12-03 16:59:56.984; [   ] org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: lib (resolved as: /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/lib).
+INFO  - 2015-12-03 16:59:57.064; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; created with socketTimeout : 600000,connTimeout : 60000,maxConnectionsPerHost : 20,maxConnections : 10000,corePoolSize : 0,maximumPoolSize : 2147483647,maxThreadIdleTime : 5,sizeOfQueue : -1,fairnessPolicy : false,useRetries : false,
+INFO  - 2015-12-03 16:59:57.611; [   ] org.apache.solr.update.UpdateShardHandler; Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+INFO  - 2015-12-03 16:59:57.613; [   ] org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2015-12-03 16:59:57.614; [   ] org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2015-12-03 16:59:57.662; [   ] org.apache.solr.cloud.SolrZkServer; STARTING EMBEDDED STANDALONE ZOOKEEPER SERVER at port 9983
+INFO  - 2015-12-03 16:59:58.163; [   ] org.apache.solr.core.ZkContainer; Zookeeper client=localhost:9983
+INFO  - 2015-12-03 16:59:58.241; [   ] org.apache.solr.common.cloud.ConnectionManager; Waiting for client to connect to ZooKeeper
+INFO  - 2015-12-03 16:59:58.859; [   ] org.apache.solr.common.cloud.ConnectionManager; Watcher org.apache.solr.common.cloud.ConnectionManager@31426364 name:ZooKeeperConnection Watcher:localhost:9983 got event WatchedEvent state:SyncConnected type:None path:null path:null type:None
+INFO  - 2015-12-03 16:59:58.860; [   ] org.apache.solr.common.cloud.ConnectionManager; Client is connected to ZooKeeper
+INFO  - 2015-12-03 16:59:59.012; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer/queue
+INFO  - 2015-12-03 16:59:59.175; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer/collection-queue-work
+INFO  - 2015-12-03 16:59:59.308; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer/collection-map-running
+INFO  - 2015-12-03 16:59:59.418; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer/collection-map-completed
+INFO  - 2015-12-03 16:59:59.527; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer/collection-map-failure
+INFO  - 2015-12-03 16:59:59.623; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /live_nodes
+INFO  - 2015-12-03 16:59:59.686; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /collections
+INFO  - 2015-12-03 16:59:59.755; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /aliases.json
+INFO  - 2015-12-03 16:59:59.830; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /clusterstate.json
+INFO  - 2015-12-03 16:59:59.893; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /security.json
+INFO  - 2015-12-03 16:59:59.952; [   ] org.apache.solr.cloud.ZkController; Register node as live in ZooKeeper:/live_nodes/127.0.1.1:8983_solr
+INFO  - 2015-12-03 17:00:00.012; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /live_nodes/127.0.1.1:8983_solr
+INFO  - 2015-12-03 17:00:00.094; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer_elect
+INFO  - 2015-12-03 17:00:00.164; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer_elect/election
+INFO  - 2015-12-03 17:00:00.240; [   ] org.apache.solr.cloud.Overseer; Overseer (id=null) closing
+INFO  - 2015-12-03 17:00:00.301; [   ] org.apache.solr.cloud.LeaderElector; Joined leadership election with path: /overseer_elect/election/94972280690769920-127.0.1.1:8983_solr-n_0000000000
+INFO  - 2015-12-03 17:00:00.371; [   ] org.apache.solr.cloud.OverseerElectionContext; I am going to be the leader 127.0.1.1:8983_solr
+INFO  - 2015-12-03 17:00:00.380; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer_elect/leader
+INFO  - 2015-12-03 17:00:00.446; [   ] org.apache.solr.cloud.Overseer; Overseer (id=94972280690769920-127.0.1.1:8983_solr-n_0000000000) starting
+INFO  - 2015-12-03 17:00:00.633; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /overseer/queue-work
+INFO  - 2015-12-03 17:00:01.011; [   ] org.apache.solr.cloud.OverseerAutoReplicaFailoverThread; Starting OverseerAutoReplicaFailoverThread autoReplicaFailoverWorkLoopDelay=10000 autoReplicaFailoverWaitAfterExpiration=30000 autoReplicaFailoverBadNodeExpiration=60000
+INFO  - 2015-12-03 17:00:01.105; [   ] org.apache.solr.cloud.OverseerCollectionProcessor; Process current queue of collection creations
+INFO  - 2015-12-03 17:00:01.105; [   ] org.apache.solr.common.cloud.ZkStateReader; Updating cluster state from ZooKeeper... 
+INFO  - 2015-12-03 17:00:01.154; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; Starting to work on the main queue
+INFO  - 2015-12-03 17:00:01.278; [   ] org.apache.solr.core.CoreContainer; Security conf doesn't exist. Skipping setup for authorization module.
+INFO  - 2015-12-03 17:00:01.279; [   ] org.apache.solr.core.CoreContainer; No authentication plugin used.
+INFO  - 2015-12-03 17:00:01.409; [   ] org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr
+INFO  - 2015-12-03 17:00:01.413; [   ] org.apache.solr.core.CorePropertiesLocator; Found 0 core definitions
+INFO  - 2015-12-03 17:00:01.415; [   ] org.apache.solr.servlet.SolrDispatchFilter; user.dir=/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/server
+INFO  - 2015-12-03 17:00:01.415; [   ] org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2015-12-03 17:00:01.476; [   ] org.eclipse.jetty.server.handler.ContextHandler; Started o.e.j.w.WebAppContext@68be2bc2{/solr,file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/server/solr-webapp/webapp/,AVAILABLE}{/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/server/solr-webapp/webapp}
+INFO  - 2015-12-03 17:00:01.482; [   ] org.eclipse.jetty.server.AbstractConnector; Started ServerConnector@6440112d{HTTP/1.1}{0.0.0.0:8983}
+INFO  - 2015-12-03 17:00:01.482; [   ] org.eclipse.jetty.server.Server; Started @8460ms
+INFO  - 2015-12-03 17:00:03.787; [   ] org.apache.solr.servlet.HttpSolrCall; [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=87 
+INFO  - 2015-12-03 17:00:03.893; [   ] org.apache.solr.handler.admin.CollectionsHandler; Invoked Collection Action :clusterstatus with params action=CLUSTERSTATUS&wt=json 
+INFO  - 2015-12-03 17:00:03.898; [   ] org.apache.solr.servlet.HttpSolrCall; [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json} status=0 QTime=11 
+INFO  - 2015-12-03 17:00:09.881; [   ] org.apache.solr.handler.admin.CollectionsHandler; Invoked Collection Action :list with params action=list&wt=json 
+INFO  - 2015-12-03 17:00:09.882; [   ] org.apache.solr.servlet.HttpSolrCall; [admin] webapp=null path=/admin/collections params={action=list&wt=json} status=0 QTime=0 
+INFO  - 2015-12-03 17:00:09.891; [   ] org.apache.solr.servlet.HttpSolrCall; [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=3 
+INFO  - 2015-12-03 17:00:09.898; [   ] org.apache.solr.handler.admin.CollectionsHandler; Invoked Collection Action :clusterstatus with params action=CLUSTERSTATUS&wt=json 
+INFO  - 2015-12-03 17:00:09.901; [   ] org.apache.solr.servlet.HttpSolrCall; [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json} status=0 QTime=3 
+INFO  - 2015-12-03 17:00:16.647; [   ] org.apache.solr.handler.admin.CollectionsHandler; Invoked Collection Action :list with params action=list&wt=json 
+INFO  - 2015-12-03 17:00:16.648; [   ] org.apache.solr.servlet.HttpSolrCall; [admin] webapp=null path=/admin/collections params={action=list&wt=json} status=0 QTime=1 
+INFO  - 2015-12-03 17:00:16.661; [   ] org.apache.solr.handler.admin.CollectionsHandler; Invoked Collection Action :create with params replicationFactor=2&maxShardsPerNode=2&collection.configName=gettingstarted&name=gettingstarted&action=CREATE&numShards=2&wt=json 
+INFO  - 2015-12-03 17:00:16.776; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/collection-queue-work state SyncConnected
+INFO  - 2015-12-03 17:00:16.853; [   ] org.apache.solr.cloud.OverseerCollectionProcessor; Overseer Collection Processor: Get the message id:/overseer/collection-queue-work/qn-0000000000 message:{
+  "name":"gettingstarted",
+  "fromApi":"true",
+  "replicationFactor":"2",
+  "collection.configName":"gettingstarted",
+  "numShards":"2",
+  "maxShardsPerNode":"2",
+  "stateFormat":"2",
+  "operation":"create"}
+WARN  - 2015-12-03 17:00:16.864; [   ] org.apache.solr.cloud.OverseerCollectionProcessor; OverseerCollectionProcessor.processMessage : create , {
+  "name":"gettingstarted",
+  "fromApi":"true",
+  "replicationFactor":"2",
+  "collection.configName":"gettingstarted",
+  "numShards":"2",
+  "maxShardsPerNode":"2",
+  "stateFormat":"2",
+  "operation":"create"}
+INFO  - 2015-12-03 17:00:16.904; [   ] org.apache.solr.cloud.OverseerCollectionProcessor; creating collections conf node /collections/gettingstarted 
+INFO  - 2015-12-03 17:00:16.905; [   ] org.apache.solr.common.cloud.SolrZkClient; makePath: /collections/gettingstarted
+INFO  - 2015-12-03 17:00:17.151; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:17.154; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 1, message = {
+  "name":"gettingstarted",
+  "fromApi":"true",
+  "replicationFactor":"2",
+  "collection.configName":"gettingstarted",
+  "numShards":"2",
+  "maxShardsPerNode":"2",
+  "stateFormat":"2",
+  "operation":"create"} current state version: 0
+INFO  - 2015-12-03 17:00:17.159; [   ] org.apache.solr.cloud.overseer.ClusterStateMutator; building a new cName: gettingstarted
+INFO  - 2015-12-03 17:00:17.283; [   ] org.apache.solr.cloud.overseer.ZkStateWriter; going to create_collection /collections/gettingstarted/state.json
+INFO  - 2015-12-03 17:00:17.479; [   ] org.apache.solr.common.cloud.ZkStateReader$2; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/clusterstate.json, has occurred - updating... (live nodes size: 2)
+INFO  - 2015-12-03 17:00:17.575; [   ] org.apache.solr.common.cloud.ZkStateReader$2; Updated cluster state version to 1
+INFO  - 2015-12-03 17:00:17.698; [   ] org.apache.solr.cloud.OverseerCollectionProcessor; Creating SolrCores for new collection gettingstarted, shardNames [shard1, shard2] , replicationFactor : 2
+INFO  - 2015-12-03 17:00:17.698; [   ] org.apache.solr.cloud.OverseerCollectionProcessor; Creating core gettingstarted_shard1_replica2 as part of shard shard1 of collection gettingstarted on 127.0.1.1:7574_solr
+INFO  - 2015-12-03 17:00:17.704; [   ] org.apache.solr.cloud.OverseerCollectionProcessor; Creating core gettingstarted_shard2_replica1 as part of shard shard2 of collection gettingstarted on 127.0.1.1:8983_solr
+INFO  - 2015-12-03 17:00:17.705; [   ] org.apache.solr.cloud.OverseerCollectionProcessor; Creating core gettingstarted_shard2_replica2 as part of shard shard2 of collection gettingstarted on 127.0.1.1:7574_solr
+INFO  - 2015-12-03 17:00:17.725; [   ] org.apache.solr.cloud.OverseerCollectionProcessor; Creating core gettingstarted_shard1_replica1 as part of shard shard1 of collection gettingstarted on 127.0.1.1:8983_solr
+INFO  - 2015-12-03 17:00:18.049; [   ] org.apache.solr.handler.admin.CoreAdminHandler; core create command qt=/admin/cores&collection.configName=gettingstarted&name=gettingstarted_shard1_replica1&action=CREATE&numShards=2&collection=gettingstarted&shard=shard1&wt=javabin&version=2
+INFO  - 2015-12-03 17:00:18.049; [   ] org.apache.solr.handler.admin.CoreAdminHandler; core create command qt=/admin/cores&collection.configName=gettingstarted&name=gettingstarted_shard2_replica1&action=CREATE&numShards=2&collection=gettingstarted&shard=shard2&wt=javabin&version=2
+INFO  - 2015-12-03 17:00:18.074; [   ] org.apache.solr.core.CoreDescriptor; Created CoreDescriptor: {name=gettingstarted_shard1_replica1, config=solrconfig.xml, transient=false, schema=schema.xml, loadOnStartup=true, configSetProperties=configsetprops.json, instanceDir=gettingstarted_shard1_replica1, collection=gettingstarted, absoluteInstDir=/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/, numShards=2, dataDir=data/, shard=shard1}
+INFO  - 2015-12-03 17:00:18.074; [   ] org.apache.solr.core.CoreDescriptor; Created CoreDescriptor: {name=gettingstarted_shard2_replica1, config=solrconfig.xml, transient=false, schema=schema.xml, loadOnStartup=true, configSetProperties=configsetprops.json, instanceDir=gettingstarted_shard2_replica1, collection=gettingstarted, absoluteInstDir=/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/, numShards=2, dataDir=data/, shard=shard2}
+INFO  - 2015-12-03 17:00:18.087; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; publishing state=down
+INFO  - 2015-12-03 17:00:18.090; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; publishing state=down
+INFO  - 2015-12-03 17:00:18.247; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:18.312; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; Registering watch for external collection gettingstarted
+INFO  - 2015-12-03 17:00:18.313; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; addZkWatch gettingstarted
+INFO  - 2015-12-03 17:00:18.382; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; Updating collection state at /collections/gettingstarted/state.json from ZooKeeper... 
+INFO  - 2015-12-03 17:00:18.382; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 2, message = {
+  "core":"gettingstarted_shard2_replica1",
+  "roles":null,
+  "base_url":"http://127.0.1.1:8983/solr",
+  "node_name":"127.0.1.1:8983_solr",
+  "numShards":"2",
+  "state":"down",
+  "shard":"shard2",
+  "collection":"gettingstarted",
+  "operation":"state"} current state version: 1
+INFO  - 2015-12-03 17:00:18.456; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; Registering watch for external collection gettingstarted
+INFO  - 2015-12-03 17:00:18.461; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 0 
+INFO  - 2015-12-03 17:00:18.463; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; look for our core node name
+INFO  - 2015-12-03 17:00:18.464; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; look for our core node name
+INFO  - 2015-12-03 17:00:18.469; [   ] org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=2 message={
+  "core":"gettingstarted_shard2_replica1",
+  "roles":null,
+  "base_url":"http://127.0.1.1:8983/solr",
+  "node_name":"127.0.1.1:8983_solr",
+  "numShards":"2",
+  "state":"down",
+  "shard":"shard2",
+  "collection":"gettingstarted",
+  "operation":"state"}
+INFO  - 2015-12-03 17:00:18.638; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 3, message = {
+  "core":"gettingstarted_shard1_replica2",
+  "roles":null,
+  "base_url":"http://127.0.1.1:7574/solr",
+  "node_name":"127.0.1.1:7574_solr",
+  "numShards":"2",
+  "state":"down",
+  "shard":"shard1",
+  "collection":"gettingstarted",
+  "operation":"state"} current state version: 1
+INFO  - 2015-12-03 17:00:18.640; [   ] org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=2 message={
+  "core":"gettingstarted_shard1_replica2",
+  "roles":null,
+  "base_url":"http://127.0.1.1:7574/solr",
+  "node_name":"127.0.1.1:7574_solr",
+  "numShards":"2",
+  "state":"down",
+  "shard":"shard1",
+  "collection":"gettingstarted",
+  "operation":"state"}
+INFO  - 2015-12-03 17:00:18.758; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:18.760; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 3, message = {
+  "core":"gettingstarted_shard1_replica1",
+  "roles":null,
+  "base_url":"http://127.0.1.1:8983/solr",
+  "node_name":"127.0.1.1:8983_solr",
+  "numShards":"2",
+  "state":"down",
+  "shard":"shard1",
+  "collection":"gettingstarted",
+  "operation":"state"} current state version: 1
+INFO  - 2015-12-03 17:00:18.762; [   ] org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=2 message={
+  "core":"gettingstarted_shard1_replica1",
+  "roles":null,
+  "base_url":"http://127.0.1.1:8983/solr",
+  "node_name":"127.0.1.1:8983_solr",
+  "numShards":"2",
+  "state":"down",
+  "shard":"shard1",
+  "collection":"gettingstarted",
+  "operation":"state"}
+INFO  - 2015-12-03 17:00:18.880; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 1, message = {
+  "core":"gettingstarted_shard2_replica2",
+  "roles":null,
+  "base_url":"http://127.0.1.1:7574/solr",
+  "node_name":"127.0.1.1:7574_solr",
+  "numShards":"2",
+  "state":"down",
+  "shard":"shard2",
+  "collection":"gettingstarted",
+  "operation":"state"} current state version: 1
+INFO  - 2015-12-03 17:00:18.881; [   ] org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=2 message={
+  "core":"gettingstarted_shard2_replica2",
+  "roles":null,
+  "base_url":"http://127.0.1.1:7574/solr",
+  "node_name":"127.0.1.1:7574_solr",
+  "numShards":"2",
+  "state":"down",
+  "shard":"shard2",
+  "collection":"gettingstarted",
+  "operation":"state"}
+INFO  - 2015-12-03 17:00:18.979; [   ] org.apache.solr.cloud.overseer.ZkStateWriter; going to update_collection /collections/gettingstarted/state.json version: 0
+INFO  - 2015-12-03 17:00:19.058; [   ] org.apache.solr.common.cloud.ZkStateReader$8; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/gettingstarted/state.json for collection gettingstarted has occurred - updating... (live nodes size: 2)
+INFO  - 2015-12-03 17:00:19.062; [   ] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 1 
+INFO  - 2015-12-03 17:00:19.385; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:19.465; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for gettingstarted_shard2_replica1
+INFO  - 2015-12-03 17:00:19.466; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; Check for collection zkNode:gettingstarted
+INFO  - 2015-12-03 17:00:19.467; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; Collection zkNode exists
+INFO  - 2015-12-03 17:00:19.467; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; waiting to find shard id in clusterstate for gettingstarted_shard1_replica1
+INFO  - 2015-12-03 17:00:19.467; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; Load collection config from:/collections/gettingstarted
+INFO  - 2015-12-03 17:00:19.468; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; Check for collection zkNode:gettingstarted
+INFO  - 2015-12-03 17:00:19.469; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; Collection zkNode exists
+INFO  - 2015-12-03 17:00:19.469; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.common.cloud.ZkStateReader; Load collection config from:/collections/gettingstarted
+INFO  - 2015-12-03 17:00:19.470; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; path=/collections/gettingstarted configName=gettingstarted specified config exists in ZooKeeper
+INFO  - 2015-12-03 17:00:19.472; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.common.cloud.ZkStateReader; path=/collections/gettingstarted configName=gettingstarted specified config exists in ZooKeeper
+INFO  - 2015-12-03 17:00:19.475; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/'
+INFO  - 2015-12-03 17:00:19.478; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/'
+INFO  - 2015-12-03 17:00:19.542; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.Config; loaded config solrconfig.xml with version 0 
+INFO  - 2015-12-03 17:00:19.547; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.Config; loaded config solrconfig.xml with version 0 
+INFO  - 2015-12-03 17:00:19.743; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.RequestParams; conf resource params.json loaded . version : 0 
+INFO  - 2015-12-03 17:00:19.745; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.RequestParams; conf resource params.json loaded . version : 0 
+INFO  - 2015-12-03 17:00:19.747; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.RequestParams; request params refreshed to version 0
+INFO  - 2015-12-03 17:00:19.747; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrConfig; current version of requestparams : 0
+INFO  - 2015-12-03 17:00:19.748; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.RequestParams; request params refreshed to version 0
+INFO  - 2015-12-03 17:00:19.751; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrConfig; current version of requestparams : 0
+INFO  - 2015-12-03 17:00:19.762; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2015-12-03 17:00:19.767; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2015-12-03 17:00:19.792; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/pdfbox-1.8.8.jar' to classloader
+INFO  - 2015-12-03 17:00:19.792; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/pdfbox-1.8.8.jar' to classloader
+INFO  - 2015-12-03 17:00:19.794; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2015-12-03 17:00:19.795; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2015-12-03 17:00:19.820; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2015-12-03 17:00:19.821; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2015-12-03 17:00:19.823; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/aspectjrt-1.8.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.823; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/aspectjrt-1.8.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.825; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2015-12-03 17:00:19.826; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2015-12-03 17:00:19.827; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2015-12-03 17:00:19.828; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2015-12-03 17:00:19.830; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.830; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.832; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/commons-compress-1.8.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.833; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/commons-compress-1.8.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.835; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/fontbox-1.8.8.jar' to classloader
+INFO  - 2015-12-03 17:00:19.836; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/fontbox-1.8.8.jar' to classloader
+INFO  - 2015-12-03 17:00:19.837; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/icu4j-54.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.838; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/icu4j-54.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.839; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/isoparser-1.0.2.jar' to classloader
+INFO  - 2015-12-03 17:00:19.843; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/isoparser-1.0.2.jar' to classloader
+INFO  - 2015-12-03 17:00:19.844; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/java-libpst-0.8.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.845; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/java-libpst-0.8.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.845; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.846; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.847; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/jempbox-1.8.8.jar' to classloader
+INFO  - 2015-12-03 17:00:19.847; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/jempbox-1.8.8.jar' to classloader
+INFO  - 2015-12-03 17:00:19.848; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/jmatio-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.848; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/jmatio-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.849; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2015-12-03 17:00:19.850; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2015-12-03 17:00:19.851; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2015-12-03 17:00:19.851; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2015-12-03 17:00:19.852; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:19.852; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:19.853; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-ooxml-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:19.854; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-ooxml-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:19.854; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-ooxml-schemas-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:19.855; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-ooxml-schemas-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:19.855; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-scratchpad-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:19.856; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-scratchpad-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:19.856; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/rome-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.857; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/rome-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.858; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.858; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.859; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-core-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.860; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-core-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.860; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-java7-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.861; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-java7-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.861; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-parsers-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.862; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-xmp-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.862; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-parsers-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.863; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/vorbis-java-core-0.6.jar' to classloader
+INFO  - 2015-12-03 17:00:19.863; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-xmp-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.864; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/vorbis-java-core-0.6.jar' to classloader
+INFO  - 2015-12-03 17:00:19.864; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/vorbis-java-tika-0.6.jar' to classloader
+INFO  - 2015-12-03 17:00:19.865; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.865; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/vorbis-java-tika-0.6.jar' to classloader
+INFO  - 2015-12-03 17:00:19.866; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.866; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xmlbeans-2.6.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.867; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2015-12-03 17:00:19.867; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xmlbeans-2.6.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.869; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xz-1.5.jar' to classloader
+INFO  - 2015-12-03 17:00:19.869; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2015-12-03 17:00:19.897; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xz-1.5.jar' to classloader
+INFO  - 2015-12-03 17:00:19.899; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-cell-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.903; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-cell-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.904; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/attributes-binder-1.2.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.905; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/carrot2-mini-3.9.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.906; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2015-12-03 17:00:19.907; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2015-12-03 17:00:19.907; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/attributes-binder-1.2.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.907; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2015-12-03 17:00:19.908; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/carrot2-mini-3.9.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.908; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2015-12-03 17:00:19.909; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.909; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2015-12-03 17:00:19.909; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2015-12-03 17:00:19.910; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.910; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2015-12-03 17:00:19.911; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.911; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2015-12-03 17:00:19.912; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.912; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-clustering-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.914; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-clustering-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.915; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.916; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2015-12-03 17:00:19.929; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-langid-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.929; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.930; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2015-12-03 17:00:19.932; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-langid-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.934; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/commons-beanutils-1.8.3.jar' to classloader
+INFO  - 2015-12-03 17:00:19.934; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/commons-beanutils-1.8.3.jar' to classloader
+INFO  - 2015-12-03 17:00:19.934; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.935; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.935; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.935; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:19.936; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.937; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2015-12-03 17:00:19.993; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-velocity-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:19.995; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-velocity-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:21.696; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 5.3.1
+INFO  - 2015-12-03 17:00:21.713; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 5.3.1
+INFO  - 2015-12-03 17:00:22.085; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2015-12-03 17:00:22.147; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.schema.IndexSchema; Reading Solr Schema from /configs/gettingstarted/managed-schema
+INFO  - 2015-12-03 17:00:22.169; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2015-12-03 17:00:22.175; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.schema.IndexSchema; Reading Solr Schema from /configs/gettingstarted/managed-schema
+INFO  - 2015-12-03 17:00:22.320; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.schema.IndexSchema; [gettingstarted_shard1_replica1] Schema name=example-data-driven-schema
+INFO  - 2015-12-03 17:00:22.355; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.schema.IndexSchema; [gettingstarted_shard2_replica1] Schema name=example-data-driven-schema
+INFO  - 2015-12-03 17:00:24.047; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2015-12-03 17:00:24.050; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2015-12-03 17:00:24.746; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2015-12-03 17:00:24.754; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2015-12-03 17:00:24.756; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2015-12-03 17:00:24.765; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2015-12-03 17:00:24.861; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.ConfigSetProperties; Did not find ConfigSet properties, assuming default properties: Can't find resource 'configsetprops.json' in classpath or '/configs/gettingstarted', cwd=/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/server
+INFO  - 2015-12-03 17:00:24.863; [c:gettingstarted s:shard1  x:gettingstarted_shard1_replica1] org.apache.solr.core.CoreContainer; Creating SolrCore 'gettingstarted_shard1_replica1' using configuration from collection gettingstarted
+INFO  - 2015-12-03 17:00:24.867; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2015-12-03 17:00:25.147; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.ConfigSetProperties; Did not find ConfigSet properties, assuming default properties: Can't find resource 'configsetprops.json' in classpath or '/configs/gettingstarted', cwd=/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/server
+INFO  - 2015-12-03 17:00:25.151; [c:gettingstarted s:shard2  x:gettingstarted_shard2_replica1] org.apache.solr.core.CoreContainer; Creating SolrCore 'gettingstarted_shard2_replica1' using configuration from collection gettingstarted
+INFO  - 2015-12-03 17:00:25.152; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2015-12-03 17:00:25.227; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore; [[gettingstarted_shard1_replica1] ] Opening new SolrCore at [/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/], dataDir=[null]
+INFO  - 2015-12-03 17:00:25.238; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [[gettingstarted_shard2_replica1] ] Opening new SolrCore at [/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/], dataDir=[null]
+INFO  - 2015-12-03 17:00:25.252; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.JmxMonitoredMap; JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@5e285179
+INFO  - 2015-12-03 17:00:25.252; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.JmxMonitoredMap; JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@5e285179
+INFO  - 2015-12-03 17:00:25.412; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore; [[gettingstarted_shard1_replica1] ] Added SolrEventListener for newSearcher: [org.apache.solr.core.QuerySenderListener{queries=[]}]
+INFO  - 2015-12-03 17:00:25.413; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [[gettingstarted_shard2_replica1] ] Added SolrEventListener for newSearcher: [org.apache.solr.core.QuerySenderListener{queries=[]}]
+INFO  - 2015-12-03 17:00:25.413; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [[gettingstarted_shard2_replica1] ] Added SolrEventListener for firstSearcher: [org.apache.solr.core.QuerySenderListener{queries=[]}]
+INFO  - 2015-12-03 17:00:25.415; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore; [[gettingstarted_shard1_replica1] ] Added SolrEventListener for firstSearcher: [org.apache.solr.core.QuerySenderListener{queries=[]}]
+INFO  - 2015-12-03 17:00:25.486; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.CachingDirectoryFactory; return new directory for /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/data
+INFO  - 2015-12-03 17:00:25.488; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; New index directory detected: old=null new=/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/data/index/
+WARN  - 2015-12-03 17:00:25.490; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard2_replica1] Solr index directory '/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/data/index' doesn't exist. Creating new index...
+INFO  - 2015-12-03 17:00:25.491; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.CachingDirectoryFactory; return new directory for /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/data
+INFO  - 2015-12-03 17:00:25.510; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore; New index directory detected: old=null new=/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/data/index/
+WARN  - 2015-12-03 17:00:25.513; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard1_replica1] Solr index directory '/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/data/index' doesn't exist. Creating new index...
+INFO  - 2015-12-03 17:00:25.532; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.CachingDirectoryFactory; return new directory for /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/data/index
+INFO  - 2015-12-03 17:00:25.533; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.CachingDirectoryFactory; return new directory for /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/data/index
+INFO  - 2015-12-03 17:00:25.973; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@1dc1a510; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2015-12-03 17:00:25.993; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@1dc1a510; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2015-12-03 17:00:25.994; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2015-12-03 17:00:25.994; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2015-12-03 17:00:26.065; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore$12; Looking for old index directories to cleanup for core gettingstarted_shard1_replica1 in /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/data/
+INFO  - 2015-12-03 17:00:26.068; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore$12; Looking for old index directories to cleanup for core gettingstarted_shard2_replica1 in /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/data/
+INFO  - 2015-12-03 17:00:26.073; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.PluginBag; queryResponseWriter : 'velocity' created with startup=lazy 
+INFO  - 2015-12-03 17:00:26.074; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; queryResponseWriter : 'velocity' created with startup=lazy 
+INFO  - 2015-12-03 17:00:26.094; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2015-12-03 17:00:26.097; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2015-12-03 17:00:26.410; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.processor.UpdateRequestProcessorChain; creating updateRequestProcessorChain "add-unknown-fields-to-the-schema"
+INFO  - 2015-12-03 17:00:26.410; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.processor.UpdateRequestProcessorChain; creating updateRequestProcessorChain "add-unknown-fields-to-the-schema"
+INFO  - 2015-12-03 17:00:27.212; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2015-12-03 17:00:27.218; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2015-12-03 17:00:27.394; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:27.394; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:28.054; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:28.056; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:28.062; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:28.062; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:28.090; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:28.123; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:28.254; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/update/extract' created with startup=lazy 
+INFO  - 2015-12-03 17:00:28.254; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.PluginBag; requestHandler : '/update/extract' created with startup=lazy 
+INFO  - 2015-12-03 17:00:28.302; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/analysis/field' created with startup=lazy 
+INFO  - 2015-12-03 17:00:28.306; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/analysis/document' created with startup=lazy 
+INFO  - 2015-12-03 17:00:28.303; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.PluginBag; requestHandler : '/analysis/field' created with startup=lazy 
+INFO  - 2015-12-03 17:00:29.000; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.PluginBag; requestHandler : '/analysis/document' created with startup=lazy 
+INFO  - 2015-12-03 17:00:29.003; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.PluginBag; requestHandler : '/spell' created with startup=lazy 
+INFO  - 2015-12-03 17:00:29.003; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/spell' created with startup=lazy 
+INFO  - 2015-12-03 17:00:29.004; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.PluginBag; requestHandler : '/tvrh' created with startup=lazy 
+INFO  - 2015-12-03 17:00:29.004; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.PluginBag; requestHandler : '/terms' created with startup=lazy 
+INFO  - 2015-12-03 17:00:29.004; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/tvrh' created with startup=lazy 
+INFO  - 2015-12-03 17:00:29.005; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.PluginBag; requestHandler : '/elevate' created with startup=lazy 
+INFO  - 2015-12-03 17:00:29.005; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/terms' created with startup=lazy 
+INFO  - 2015-12-03 17:00:29.005; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.RequestHandlers; Registered paths: /admin/mbeans,/browse,/update/json/docs,/admin/luke,/export,/get,/admin/properties,/elevate,/update/json,/admin/threads,/query,/analysis/field,/analysis/document,/spell,/update/csv,/tvrh,/select,/admin/segments,/admin/system,/replication,/config,/stream,/schema,/admin/plugins,/admin/logging,/admin/ping,/update,/admin/file,/debug/dump,/terms,/update/extract
+INFO  - 2015-12-03 17:00:29.005; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/elevate' created with startup=lazy 
+INFO  - 2015-12-03 17:00:29.006; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.RequestHandlers; Registered paths: /admin/mbeans,/browse,/update/json/docs,/admin/luke,/export,/get,/admin/properties,/elevate,/update/json,/admin/threads,/query,/analysis/field,/analysis/document,/spell,/update/csv,/tvrh,/select,/admin/segments,/admin/system,/replication,/config,/stream,/schema,/admin/plugins,/admin/logging,/admin/ping,/update,/admin/file,/debug/dump,/terms,/update/extract
+INFO  - 2015-12-03 17:00:29.008; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore; Using default statsCache cache: org.apache.solr.search.stats.LocalStatsCache
+INFO  - 2015-12-03 17:00:29.008; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; Using default statsCache cache: org.apache.solr.search.stats.LocalStatsCache
+INFO  - 2015-12-03 17:00:29.021; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateHandler; Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+INFO  - 2015-12-03 17:00:29.021; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.UpdateHandler; Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+INFO  - 2015-12-03 17:00:29.023; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+INFO  - 2015-12-03 17:00:29.023; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.UpdateLog; Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+INFO  - 2015-12-03 17:00:29.075; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2015-12-03 17:00:29.075; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2015-12-03 17:00:29.075; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2015-12-03 17:00:29.076; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2015-12-03 17:00:29.089; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@1dc1a510; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2015-12-03 17:00:29.089; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@1dc1a510; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2015-12-03 17:00:29.090; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2015-12-03 17:00:29.090; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2015-12-03 17:00:29.366; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.search.SolrIndexSearcher; Opening Searcher@5f2ec9ef[gettingstarted_shard2_replica1] main
+INFO  - 2015-12-03 17:00:29.366; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.search.SolrIndexSearcher; Opening Searcher@425de726[gettingstarted_shard1_replica1] main
+INFO  - 2015-12-03 17:00:29.757; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.common.cloud.ZkStateReader; Load collection config from:/collections/gettingstarted
+INFO  - 2015-12-03 17:00:29.757; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; Load collection config from:/collections/gettingstarted
+INFO  - 2015-12-03 17:00:29.761; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.common.cloud.ZkStateReader; path=/collections/gettingstarted configName=gettingstarted specified config exists in ZooKeeper
+INFO  - 2015-12-03 17:00:29.762; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; path=/collections/gettingstarted configName=gettingstarted specified config exists in ZooKeeper
+INFO  - 2015-12-03 17:00:29.799; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.rest.ManagedResourceStorage; Setting up ZooKeeper-based storage for the RestManager with znodeBase: /configs/gettingstarted
+INFO  - 2015-12-03 17:00:29.800; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage; Setting up ZooKeeper-based storage for the RestManager with znodeBase: /configs/gettingstarted
+INFO  - 2015-12-03 17:00:29.804; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.rest.ManagedResourceStorage$ZooKeeperStorageIO; Configured ZooKeeperStorageIO with znodeBase: /configs/gettingstarted
+INFO  - 2015-12-03 17:00:29.925; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.rest.RestManager; Initializing RestManager with initArgs: {}
+INFO  - 2015-12-03 17:00:29.804; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage$ZooKeeperStorageIO; Configured ZooKeeperStorageIO with znodeBase: /configs/gettingstarted
+INFO  - 2015-12-03 17:00:30.086; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.RestManager; Initializing RestManager with initArgs: {}
+INFO  - 2015-12-03 17:00:30.499; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage; Reading _rest_managed.json using ZooKeeperStorageIO:path=/configs/gettingstarted
+INFO  - 2015-12-03 17:00:30.499; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.rest.ManagedResourceStorage; Reading _rest_managed.json using ZooKeeperStorageIO:path=/configs/gettingstarted
+INFO  - 2015-12-03 17:00:30.500; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage$ZooKeeperStorageIO; No data found for znode /configs/gettingstarted/_rest_managed.json
+INFO  - 2015-12-03 17:00:30.501; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage; Loaded null at path _rest_managed.json using ZooKeeperStorageIO:path=/configs/gettingstarted
+INFO  - 2015-12-03 17:00:30.502; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.RestManager; Initializing 0 registered ManagedResources
+INFO  - 2015-12-03 17:00:30.503; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.rest.ManagedResourceStorage$ZooKeeperStorageIO; No data found for znode /configs/gettingstarted/_rest_managed.json
+INFO  - 2015-12-03 17:00:30.613; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.rest.ManagedResourceStorage; Loaded null at path _rest_managed.json using ZooKeeperStorageIO:path=/configs/gettingstarted
+INFO  - 2015-12-03 17:00:30.613; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.rest.RestManager; Initializing 0 registered ManagedResources
+INFO  - 2015-12-03 17:00:30.614; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.schema.ZkIndexSchemaReader; Creating ZooKeeper watch for the managed schema at /configs/gettingstarted/managed-schema
+INFO  - 2015-12-03 17:00:30.614; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.schema.ZkIndexSchemaReader; Creating ZooKeeper watch for the managed schema at /configs/gettingstarted/managed-schema
+INFO  - 2015-12-03 17:00:30.843; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2015-12-03 17:00:30.843; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2015-12-03 17:00:31.021; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2015-12-03 17:00:31.021; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2015-12-03 17:00:31.140; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2015-12-03 17:00:31.140; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2015-12-03 17:00:31.148; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; Load collection config from:/collections/gettingstarted
+INFO  - 2015-12-03 17:00:31.148; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.common.cloud.ZkStateReader; Load collection config from:/collections/gettingstarted
+INFO  - 2015-12-03 17:00:31.155; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; path=/collections/gettingstarted configName=gettingstarted specified config exists in ZooKeeper
+INFO  - 2015-12-03 17:00:31.156; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.common.cloud.ZkStateReader; path=/collections/gettingstarted configName=gettingstarted specified config exists in ZooKeeper
+INFO  - 2015-12-03 17:00:31.257; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2015-12-03 17:00:31.260; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2015-12-03 17:00:31.267; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@5f2ec9ef[gettingstarted_shard2_replica1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-12-03 17:00:31.268; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2015-12-03 17:00:31.268; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2015-12-03 17:00:31.268; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2015-12-03 17:00:31.267; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@425de726[gettingstarted_shard1_replica1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-12-03 17:00:31.269; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2015-12-03 17:00:31.269; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2015-12-03 17:00:31.269; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2015-12-03 17:00:31.272; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard2_replica1] Registered new searcher Searcher@5f2ec9ef[gettingstarted_shard2_replica1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-12-03 17:00:31.275; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Looking up max value of version field to seed version buckets
+INFO  - 2015-12-03 17:00:31.278; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard1_replica1] Registered new searcher Searcher@425de726[gettingstarted_shard1_replica1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-12-03 17:00:31.279; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.VersionInfo; Refreshing highest value of _version_ for 65536 version buckets from index
+INFO  - 2015-12-03 17:00:31.284; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.VersionInfo; No terms found for _version_, cannot seed version bucket highest value from index
+INFO  - 2015-12-03 17:00:31.286; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.UpdateLog; Looking up max value of version field to seed version buckets
+INFO  - 2015-12-03 17:00:31.310; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Could not find max version in index or recent updates, using new clock 1519556526142914560
+INFO  - 2015-12-03 17:00:31.310; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.VersionInfo; Refreshing highest value of _version_ for 65536 version buckets from index
+INFO  - 2015-12-03 17:00:31.312; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.VersionInfo; No terms found for _version_, cannot seed version bucket highest value from index
+INFO  - 2015-12-03 17:00:31.312; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.UpdateLog; Could not find max version in index or recent updates, using new clock 1519556526145011712
+INFO  - 2015-12-03 17:00:31.319; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Took 41 ms to seed version buckets with highest version 1519556526142914560
+INFO  - 2015-12-03 17:00:31.320; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.UpdateLog; Took 10 ms to seed version buckets with highest version 1519556526145011712
+INFO  - 2015-12-03 17:00:31.355; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; watch zkdir /configs/gettingstarted
+INFO  - 2015-12-03 17:00:31.421; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.CoreContainer; registering core: gettingstarted_shard1_replica1
+INFO  - 2015-12-03 17:00:31.422; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; Register replica - core:gettingstarted_shard1_replica1 address:http://127.0.1.1:8983/solr collection:gettingstarted shard:shard1
+INFO  - 2015-12-03 17:00:31.422; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.CoreContainer; registering core: gettingstarted_shard2_replica1
+INFO  - 2015-12-03 17:00:31.423; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; Register replica - core:gettingstarted_shard2_replica1 address:http://127.0.1.1:8983/solr collection:gettingstarted shard:shard2
+INFO  - 2015-12-03 17:00:31.637; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.SolrZkClient; makePath: /collections/gettingstarted/leader_elect/shard2/election
+INFO  - 2015-12-03 17:00:31.637; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.common.cloud.SolrZkClient; makePath: /collections/gettingstarted/leader_elect/shard1/election
+INFO  - 2015-12-03 17:00:32.584; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.LeaderElector; Joined leadership election with path: /collections/gettingstarted/leader_elect/shard2/election/94972280690769920-core_node1-n_0000000001
+INFO  - 2015-12-03 17:00:32.713; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.LeaderElector; Joined leadership election with path: /collections/gettingstarted/leader_elect/shard1/election/94972280690769920-core_node3-n_0000000001
+INFO  - 2015-12-03 17:00:32.928; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:33.001; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.LeaderElector; Watching path /collections/gettingstarted/leader_elect/shard2/election/94972280690769922-core_node4-n_0000000000 to know if I could be the leader
+INFO  - 2015-12-03 17:00:33.002; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.LeaderElector; Watching path /collections/gettingstarted/leader_elect/shard1/election/94972280690769922-core_node2-n_0000000000 to know if I could be the leader
+INFO  - 2015-12-03 17:00:33.003; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 2, message = {
+  "operation":"leader",
+  "shard":"shard2",
+  "collection":"gettingstarted"} current state version: 1
+INFO  - 2015-12-03 17:00:34.353; [   ] org.apache.solr.cloud.overseer.ZkStateWriter; going to update_collection /collections/gettingstarted/state.json version: 1
+INFO  - 2015-12-03 17:00:34.542; [   ] org.apache.solr.common.cloud.ZkStateReader$8; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/gettingstarted/state.json for collection gettingstarted has occurred - updating... (live nodes size: 2)
+INFO  - 2015-12-03 17:00:34.862; [   ] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 2 
+INFO  - 2015-12-03 17:00:34.994; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 1, message = {
+  "operation":"leader",
+  "shard":"shard1",
+  "collection":"gettingstarted"} current state version: 1
+INFO  - 2015-12-03 17:00:35.188; [   ] org.apache.solr.cloud.overseer.ZkStateWriter; going to update_collection /collections/gettingstarted/state.json version: 2
+INFO  - 2015-12-03 17:00:35.403; [   ] org.apache.solr.common.cloud.ZkStateReader$8; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/gettingstarted/state.json for collection gettingstarted has occurred - updating... (live nodes size: 2)
+INFO  - 2015-12-03 17:00:35.547; [   ] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 3 
+INFO  - 2015-12-03 17:00:35.724; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:36.468; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:36.554; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 2, message = {
+  "operation":"leader",
+  "shard":"shard2",
+  "collection":"gettingstarted",
+  "base_url":"http://127.0.1.1:7574/solr",
+  "core":"gettingstarted_shard2_replica2",
+  "state":"active"} current state version: 1
+INFO  - 2015-12-03 17:00:36.646; [   ] org.apache.solr.cloud.overseer.ZkStateWriter; going to update_collection /collections/gettingstarted/state.json version: 3
+INFO  - 2015-12-03 17:00:36.776; [   ] org.apache.solr.common.cloud.ZkStateReader$8; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/gettingstarted/state.json for collection gettingstarted has occurred - updating... (live nodes size: 2)
+INFO  - 2015-12-03 17:00:36.778; [   ] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 4 
+INFO  - 2015-12-03 17:00:36.884; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; We are http://127.0.1.1:8983/solr/gettingstarted_shard2_replica1/ and leader is http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/
+INFO  - 2015-12-03 17:00:36.988; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 1, message = {
+  "operation":"leader",
+  "shard":"shard1",
+  "collection":"gettingstarted",
+  "base_url":"http://127.0.1.1:7574/solr",
+  "core":"gettingstarted_shard1_replica2",
+  "state":"active"} current state version: 1
+INFO  - 2015-12-03 17:00:36.989; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; No LogReplay needed for core=gettingstarted_shard2_replica1 baseURL=http://127.0.1.1:8983/solr
+INFO  - 2015-12-03 17:00:36.989; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; Core needs to recover:gettingstarted_shard2_replica1
+INFO  - 2015-12-03 17:00:36.990; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.DefaultSolrCoreState; Running recovery - first canceling any ongoing recovery
+INFO  - 2015-12-03 17:00:37.150; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; Starting recovery process. recoveringAfterStartup=true
+INFO  - 2015-12-03 17:00:37.264; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 4 
+INFO  - 2015-12-03 17:00:37.263; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:37.263; [   ] org.apache.solr.cloud.overseer.ZkStateWriter; going to update_collection /collections/gettingstarted/state.json version: 4
+INFO  - 2015-12-03 17:00:37.277; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; ###### startupVersions=[]
+INFO  - 2015-12-03 17:00:37.344; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; Publishing state of core gettingstarted_shard2_replica1 as recovering, leader is http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ and I am http://127.0.1.1:8983/solr/gettingstarted_shard2_replica1/
+INFO  - 2015-12-03 17:00:37.537; [   ] org.apache.solr.common.cloud.ZkStateReader$8; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/gettingstarted/state.json for collection gettingstarted has occurred - updating... (live nodes size: 2)
+INFO  - 2015-12-03 17:00:37.554; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; publishing state=recovering
+INFO  - 2015-12-03 17:00:37.811; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 1, message = {
+  "core":"gettingstarted_shard2_replica2",
+  "core_node_name":"core_node4",
+  "roles":null,
+  "base_url":"http://127.0.1.1:7574/solr",
+  "node_name":"127.0.1.1:7574_solr",
+  "numShards":"2",
+  "state":"active",
+  "shard":"shard2",
+  "collection":"gettingstarted",
+  "operation":"state"} current state version: 1
+INFO  - 2015-12-03 17:00:37.857; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.servlet.HttpSolrCall; [admin] webapp=null path=/admin/cores params={qt=/admin/cores&collection.configName=gettingstarted&name=gettingstarted_shard2_replica1&action=CREATE&numShards=2&collection=gettingstarted&shard=shard2&wt=javabin&version=2} status=0 QTime=19812 
+INFO  - 2015-12-03 17:00:37.810; [   ] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 5 
+INFO  - 2015-12-03 17:00:37.956; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:37.954; [   ] org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=2 message={
+  "core":"gettingstarted_shard2_replica2",
+  "core_node_name":"core_node4",
+  "roles":null,
+  "base_url":"http://127.0.1.1:7574/solr",
+  "node_name":"127.0.1.1:7574_solr",
+  "numShards":"2",
+  "state":"active",
+  "shard":"shard2",
+  "collection":"gettingstarted",
+  "operation":"state"}
+INFO  - 2015-12-03 17:00:37.988; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; We are http://127.0.1.1:8983/solr/gettingstarted_shard1_replica1/ and leader is http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/
+INFO  - 2015-12-03 17:00:38.068; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; No LogReplay needed for core=gettingstarted_shard1_replica1 baseURL=http://127.0.1.1:8983/solr
+INFO  - 2015-12-03 17:00:38.068; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; Core needs to recover:gettingstarted_shard1_replica1
+INFO  - 2015-12-03 17:00:38.069; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.DefaultSolrCoreState; Running recovery - first canceling any ongoing recovery
+INFO  - 2015-12-03 17:00:38.105; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; Starting recovery process. recoveringAfterStartup=true
+INFO  - 2015-12-03 17:00:38.258; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 5 
+INFO  - 2015-12-03 17:00:38.257; [   ] org.apache.solr.cloud.overseer.ZkStateWriter; going to update_collection /collections/gettingstarted/state.json version: 5
+INFO  - 2015-12-03 17:00:38.269; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; ###### startupVersions=[]
+INFO  - 2015-12-03 17:00:38.269; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; Publishing state of core gettingstarted_shard1_replica1 as recovering, leader is http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ and I am http://127.0.1.1:8983/solr/gettingstarted_shard1_replica1/
+INFO  - 2015-12-03 17:00:38.270; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; publishing state=recovering
+INFO  - 2015-12-03 17:00:38.270; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; Sending prep recovery command to http://127.0.1.1:7574/solr; WaitForState: action=PREPRECOVERY&core=gettingstarted_shard2_replica2&nodeName=127.0.1.1%3A8983_solr&coreNodeName=core_node1&state=recovering&checkLive=true&onlyIfLeader=true&onlyIfLeaderActive=true
+INFO  - 2015-12-03 17:00:38.270; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.servlet.HttpSolrCall; [admin] webapp=null path=/admin/cores params={qt=/admin/cores&collection.configName=gettingstarted&name=gettingstarted_shard1_replica1&action=CREATE&numShards=2&collection=gettingstarted&shard=shard1&wt=javabin&version=2} status=0 QTime=20224 
+INFO  - 2015-12-03 17:00:38.379; [   ] org.apache.solr.common.cloud.ZkStateReader$8; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/gettingstarted/state.json for collection gettingstarted has occurred - updating... (live nodes size: 2)
+INFO  - 2015-12-03 17:00:38.561; [   ] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 6 
+INFO  - 2015-12-03 17:00:38.562; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; Sending prep recovery command to http://127.0.1.1:7574/solr; WaitForState: action=PREPRECOVERY&core=gettingstarted_shard1_replica2&nodeName=127.0.1.1%3A8983_solr&coreNodeName=core_node3&state=recovering&checkLive=true&onlyIfLeader=true&onlyIfLeaderActive=true
+INFO  - 2015-12-03 17:00:38.575; [   ] org.apache.solr.cloud.OverseerCollectionProcessor; Finished create command on all shards for collection: gettingstarted
+INFO  - 2015-12-03 17:00:38.797; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 3, message = {
+  "core":"gettingstarted_shard2_replica1",
+  "core_node_name":"core_node1",
+  "roles":null,
+  "base_url":"http://127.0.1.1:8983/solr",
+  "node_name":"127.0.1.1:8983_solr",
+  "numShards":"2",
+  "state":"recovering",
+  "shard":"shard2",
+  "collection":"gettingstarted",
+  "operation":"state"} current state version: 1
+INFO  - 2015-12-03 17:00:38.798; [   ] org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=2 message={
+  "core":"gettingstarted_shard2_replica1",
+  "core_node_name":"core_node1",
+  "roles":null,
+  "base_url":"http://127.0.1.1:8983/solr",
+  "node_name":"127.0.1.1:8983_solr",
+  "numShards":"2",
+  "state":"recovering",
+  "shard":"shard2",
+  "collection":"gettingstarted",
+  "operation":"state"}
+INFO  - 2015-12-03 17:00:38.992; [   ] org.apache.solr.cloud.overseer.ZkStateWriter; going to update_collection /collections/gettingstarted/state.json version: 6
+INFO  - 2015-12-03 17:00:39.201; [   ] org.apache.solr.common.cloud.ZkStateReader$8; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/gettingstarted/state.json for collection gettingstarted has occurred - updating... (live nodes size: 2)
+INFO  - 2015-12-03 17:00:39.202; [   ] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 7 
+INFO  - 2015-12-03 17:00:39.409; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:39.409; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 3, message = {
+  "core":"gettingstarted_shard1_replica2",
+  "core_node_name":"core_node2",
+  "roles":null,
+  "base_url":"http://127.0.1.1:7574/solr",
+  "node_name":"127.0.1.1:7574_solr",
+  "numShards":"2",
+  "state":"active",
+  "shard":"shard1",
+  "collection":"gettingstarted",
+  "operation":"state"} current state version: 1
+INFO  - 2015-12-03 17:00:39.410; [   ] org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=2 message={
+  "core":"gettingstarted_shard1_replica2",
+  "core_node_name":"core_node2",
+  "roles":null,
+  "base_url":"http://127.0.1.1:7574/solr",
+  "node_name":"127.0.1.1:7574_solr",
+  "numShards":"2",
+  "state":"active",
+  "shard":"shard1",
+  "collection":"gettingstarted",
+  "operation":"state"}
+INFO  - 2015-12-03 17:00:39.496; [   ] org.apache.solr.cloud.overseer.ZkStateWriter; going to update_collection /collections/gettingstarted/state.json version: 7
+INFO  - 2015-12-03 17:00:39.576; [   ] org.apache.solr.common.cloud.ZkStateReader$8; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/gettingstarted/state.json for collection gettingstarted has occurred - updating... (live nodes size: 2)
+INFO  - 2015-12-03 17:00:39.577; [   ] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 8 
+INFO  - 2015-12-03 17:00:39.723; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard1_replica1] webapp=/solr path=/get params={distrib=false&qt=/get&getVersions=100&wt=javabin&version=2} status=0 QTime=143 
+INFO  - 2015-12-03 17:00:39.723; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard2_replica1] webapp=/solr path=/get params={distrib=false&qt=/get&getVersions=100&wt=javabin&version=2} status=0 QTime=143 
+INFO  - 2015-12-03 17:00:39.814; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 1, message = {
+  "core":"gettingstarted_shard1_replica1",
+  "core_node_name":"core_node3",
+  "roles":null,
+  "base_url":"http://127.0.1.1:8983/solr",
+  "node_name":"127.0.1.1:8983_solr",
+  "numShards":"2",
+  "state":"recovering",
+  "shard":"shard1",
+  "collection":"gettingstarted",
+  "operation":"state"} current state version: 1
+INFO  - 2015-12-03 17:00:39.815; [   ] org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=2 message={
+  "core":"gettingstarted_shard1_replica1",
+  "core_node_name":"core_node3",
+  "roles":null,
+  "base_url":"http://127.0.1.1:8983/solr",
+  "node_name":"127.0.1.1:8983_solr",
+  "numShards":"2",
+  "state":"recovering",
+  "shard":"shard1",
+  "collection":"gettingstarted",
+  "operation":"state"}
+INFO  - 2015-12-03 17:00:39.830; [   ] org.apache.solr.cloud.OverseerCollectionProcessor$Runner; Overseer Collection Processor: Message id:/overseer/collection-queue-work/qn-0000000000 complete, response:{success={null={responseHeader={status=0,QTime=19812},core=gettingstarted_shard2_replica1},null={responseHeader={status=0,QTime=19797},core=gettingstarted_shard2_replica2},null={responseHeader={status=0,QTime=20224},core=gettingstarted_shard1_replica1},null={responseHeader={status=0,QTime=20024},core=gettingstarted_shard1_replica2}}}
+INFO  - 2015-12-03 17:00:39.947; [   ] org.apache.solr.cloud.overseer.ZkStateWriter; going to update_collection /collections/gettingstarted/state.json version: 8
+INFO  - 2015-12-03 17:00:40.047; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeDataChanged fired on path /overseer/collection-queue-work/qnr-0000000000 state SyncConnected
+INFO  - 2015-12-03 17:00:40.143; [   ] org.apache.solr.common.cloud.ZkStateReader$8; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/gettingstarted/state.json for collection gettingstarted has occurred - updating... (live nodes size: 2)
+INFO  - 2015-12-03 17:00:40.246; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/collection-queue-work state SyncConnected
+INFO  - 2015-12-03 17:00:40.247; [   ] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 9 
+INFO  - 2015-12-03 17:00:40.303; [   ] org.apache.solr.servlet.HttpSolrCall; [admin] webapp=null path=/admin/collections params={replicationFactor=2&maxShardsPerNode=2&collection.configName=gettingstarted&name=gettingstarted&action=CREATE&numShards=2&wt=json} status=0 QTime=23642 
+INFO  - 2015-12-03 17:00:40.566; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:40.893; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$Command; Executed config commands successfully and persisted to ZK [{"set-property":{"updateHandler.autoSoftCommit.maxTime":"3000"}}]
+INFO  - 2015-12-03 17:00:40.896; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler; Waiting up to 30 secs for 2 replicas to set the property overlay to be of version 0 for collection gettingstarted
+INFO  - 2015-12-03 17:00:40.897; [   ] org.apache.solr.core.SolrCore$11; config update listener called for core gettingstarted_shard2_replica1
+INFO  - 2015-12-03 17:00:40.899; [   ] org.apache.solr.core.SolrConfig; current version of requestparams : 0
+INFO  - 2015-12-03 17:00:40.902; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 0 secs, maxWait 30
+INFO  - 2015-12-03 17:00:40.902; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 0 secs, maxWait 30
+INFO  - 2015-12-03 17:00:40.904; [   ] org.apache.solr.core.SolrCore; /configs/gettingstarted/configoverlay.json is stale will need an update from -1 to 0
+INFO  - 2015-12-03 17:00:40.905; [   ] org.apache.solr.core.SolrCore$11; core reload gettingstarted_shard2_replica1
+INFO  - 2015-12-03 17:00:40.906; [   ] org.apache.solr.cloud.ZkController; Check for collection zkNode:gettingstarted
+INFO  - 2015-12-03 17:00:40.907; [   ] org.apache.solr.cloud.ZkController; Collection zkNode exists
+INFO  - 2015-12-03 17:00:40.911; [   ] org.apache.solr.common.cloud.ZkStateReader; Load collection config from:/collections/gettingstarted
+INFO  - 2015-12-03 17:00:40.924; [   ] org.apache.solr.common.cloud.ZkStateReader; path=/collections/gettingstarted configName=gettingstarted specified config exists in ZooKeeper
+INFO  - 2015-12-03 17:00:40.928; [   ] org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/'
+INFO  - 2015-12-03 17:00:40.999; [   ] org.apache.solr.core.Config; loaded config solrconfig.xml with version 0 
+INFO  - 2015-12-03 17:00:41.069; [   ] org.apache.solr.core.SolrConfig; config overlay loaded . version : 0 
+INFO  - 2015-12-03 17:00:41.071; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ for prop overlay   after 1 attempts
+INFO  - 2015-12-03 17:00:41.077; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 0 secs, maxWait 30
+INFO  - 2015-12-03 17:00:41.079; [   ] org.apache.solr.core.RequestParams; conf resource params.json loaded . version : 0 
+INFO  - 2015-12-03 17:00:41.083; [   ] org.apache.solr.core.RequestParams; request params refreshed to version 0
+INFO  - 2015-12-03 17:00:41.084; [   ] org.apache.solr.core.SolrConfig; current version of requestparams : 0
+INFO  - 2015-12-03 17:00:41.087; [   ] org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2015-12-03 17:00:41.089; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/pdfbox-1.8.8.jar' to classloader
+INFO  - 2015-12-03 17:00:41.090; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2015-12-03 17:00:41.090; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2015-12-03 17:00:41.090; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/aspectjrt-1.8.0.jar' to classloader
+INFO  - 2015-12-03 17:00:41.091; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2015-12-03 17:00:41.099; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2015-12-03 17:00:41.099; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:41.100; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/commons-compress-1.8.1.jar' to classloader
+INFO  - 2015-12-03 17:00:41.100; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/fontbox-1.8.8.jar' to classloader
+INFO  - 2015-12-03 17:00:41.101; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/icu4j-54.1.jar' to classloader
+INFO  - 2015-12-03 17:00:41.102; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ for prop overlay   after 1 attempts
+INFO  - 2015-12-03 17:00:41.102; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 0 secs, maxWait 30
+INFO  - 2015-12-03 17:00:41.105; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/isoparser-1.0.2.jar' to classloader
+INFO  - 2015-12-03 17:00:41.107; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/java-libpst-0.8.1.jar' to classloader
+INFO  - 2015-12-03 17:00:41.107; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:41.110; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/jempbox-1.8.8.jar' to classloader
+INFO  - 2015-12-03 17:00:41.113; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/jmatio-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:41.114; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2015-12-03 17:00:41.116; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2015-12-03 17:00:41.116; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:41.117; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-ooxml-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:41.120; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-ooxml-schemas-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:41.121; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-scratchpad-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:41.122; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/rome-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:41.122; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2015-12-03 17:00:41.123; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-core-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:41.124; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-java7-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:41.124; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-parsers-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:41.125; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-xmp-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:41.126; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/vorbis-java-core-0.6.jar' to classloader
+INFO  - 2015-12-03 17:00:41.132; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/vorbis-java-tika-0.6.jar' to classloader
+INFO  - 2015-12-03 17:00:41.133; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2015-12-03 17:00:41.135; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xmlbeans-2.6.0.jar' to classloader
+INFO  - 2015-12-03 17:00:41.136; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2015-12-03 17:00:41.141; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xz-1.5.jar' to classloader
+INFO  - 2015-12-03 17:00:41.151; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-cell-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:41.154; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/attributes-binder-1.2.1.jar' to classloader
+INFO  - 2015-12-03 17:00:41.155; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/carrot2-mini-3.9.0.jar' to classloader
+INFO  - 2015-12-03 17:00:41.155; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2015-12-03 17:00:41.156; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2015-12-03 17:00:41.157; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2015-12-03 17:00:41.158; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:41.158; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2015-12-03 17:00:41.159; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2015-12-03 17:00:41.161; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-clustering-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:41.163; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2015-12-03 17:00:41.164; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2015-12-03 17:00:41.166; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-langid-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:41.168; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/commons-beanutils-1.8.3.jar' to classloader
+INFO  - 2015-12-03 17:00:41.168; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2015-12-03 17:00:41.169; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:41.171; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2015-12-03 17:00:41.173; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-velocity-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:41.215; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ for prop overlay   after 2 attempts
+INFO  - 2015-12-03 17:00:41.216; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 0 secs, maxWait 30
+INFO  - 2015-12-03 17:00:41.222; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ for prop overlay   after 2 attempts
+INFO  - 2015-12-03 17:00:41.223; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 0 secs, maxWait 30
+INFO  - 2015-12-03 17:00:41.255; [   ] org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 5.3.1
+INFO  - 2015-12-03 17:00:41.381; [   ] org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2015-12-03 17:00:41.386; [   ] org.apache.solr.schema.IndexSchema; Reading Solr Schema from /configs/gettingstarted/managed-schema
+INFO  - 2015-12-03 17:00:41.415; [   ] org.apache.solr.schema.IndexSchema; [gettingstarted_shard2_replica1] Schema name=example-data-driven-schema
+INFO  - 2015-12-03 17:00:41.471; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ for prop overlay   after 3 attempts
+INFO  - 2015-12-03 17:00:41.471; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 0 secs, maxWait 30
+INFO  - 2015-12-03 17:00:41.492; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ for prop overlay   after 3 attempts
+INFO  - 2015-12-03 17:00:41.493; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 0 secs, maxWait 30
+INFO  - 2015-12-03 17:00:41.649; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ for prop overlay   after 4 attempts
+INFO  - 2015-12-03 17:00:41.649; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 0 secs, maxWait 30
+INFO  - 2015-12-03 17:00:41.697; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ for prop overlay   after 4 attempts
+INFO  - 2015-12-03 17:00:41.697; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 0 secs, maxWait 30
+INFO  - 2015-12-03 17:00:41.792; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ for prop overlay   after 5 attempts
+INFO  - 2015-12-03 17:00:41.793; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 0 secs, maxWait 30
+INFO  - 2015-12-03 17:00:41.822; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ for prop overlay   after 5 attempts
+INFO  - 2015-12-03 17:00:41.822; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 0 secs, maxWait 30
+INFO  - 2015-12-03 17:00:41.915; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ for prop overlay   after 6 attempts
+INFO  - 2015-12-03 17:00:41.915; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 1 secs, maxWait 30
+INFO  - 2015-12-03 17:00:41.939; [   ] org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2015-12-03 17:00:42.001; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ for prop overlay   after 6 attempts
+INFO  - 2015-12-03 17:00:42.002; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 1 secs, maxWait 30
+INFO  - 2015-12-03 17:00:42.052; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2015-12-03 17:00:42.053; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ for prop overlay   after 7 attempts
+INFO  - 2015-12-03 17:00:42.054; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 1 secs, maxWait 30
+INFO  - 2015-12-03 17:00:42.058; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2015-12-03 17:00:42.092; [   ] org.apache.solr.core.ConfigSetProperties; Did not find ConfigSet properties, assuming default properties: Can't find resource 'configsetprops.json' in classpath or '/configs/gettingstarted', cwd=/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/server
+INFO  - 2015-12-03 17:00:42.093; [   ] org.apache.solr.core.CoreContainer; Reloading SolrCore 'gettingstarted_shard2_replica1' using configuration from collection gettingstarted
+INFO  - 2015-12-03 17:00:42.094; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [[gettingstarted_shard2_replica1] ] Opening new SolrCore at [/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/], dataDir=[/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/data/]
+INFO  - 2015-12-03 17:00:42.095; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.JmxMonitoredMap; JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@5e285179
+INFO  - 2015-12-03 17:00:42.095; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [[gettingstarted_shard2_replica1] ] Added SolrEventListener for newSearcher: [org.apache.solr.core.QuerySenderListener{queries=[]}]
+INFO  - 2015-12-03 17:00:42.096; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [[gettingstarted_shard2_replica1] ] Added SolrEventListener for firstSearcher: [org.apache.solr.core.QuerySenderListener{queries=[]}]
+INFO  - 2015-12-03 17:00:42.096; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; New index directory detected: old=null new=/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/data/index/
+INFO  - 2015-12-03 17:00:42.107; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; queryResponseWriter : 'velocity' created with startup=lazy 
+INFO  - 2015-12-03 17:00:42.111; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2015-12-03 17:00:42.115; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore$12; Looking for old index directories to cleanup for core gettingstarted_shard2_replica1 in /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/data/
+INFO  - 2015-12-03 17:00:42.128; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.processor.UpdateRequestProcessorChain; creating updateRequestProcessorChain "add-unknown-fields-to-the-schema"
+INFO  - 2015-12-03 17:00:42.132; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2015-12-03 17:00:42.136; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:42.138; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:42.140; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ for prop overlay   after 7 attempts
+INFO  - 2015-12-03 17:00:42.141; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 1 secs, maxWait 30
+INFO  - 2015-12-03 17:00:42.144; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:42.146; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:42.157; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/update/extract' created with startup=lazy 
+INFO  - 2015-12-03 17:00:42.162; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/analysis/field' created with startup=lazy 
+INFO  - 2015-12-03 17:00:42.164; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/analysis/document' created with startup=lazy 
+INFO  - 2015-12-03 17:00:42.166; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/spell' created with startup=lazy 
+INFO  - 2015-12-03 17:00:42.167; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/tvrh' created with startup=lazy 
+INFO  - 2015-12-03 17:00:42.167; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/terms' created with startup=lazy 
+INFO  - 2015-12-03 17:00:42.168; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/elevate' created with startup=lazy 
+INFO  - 2015-12-03 17:00:42.169; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.RequestHandlers; Registered paths: /admin/mbeans,/browse,/update/json/docs,/admin/luke,/export,/get,/admin/properties,/elevate,/update/json,/admin/threads,/query,/analysis/field,/analysis/document,/spell,/update/csv,/tvrh,/select,/admin/segments,/admin/system,/replication,/config,/stream,/schema,/admin/plugins,/admin/logging,/admin/ping,/update,/admin/file,/debug/dump,/terms,/update/extract
+INFO  - 2015-12-03 17:00:42.172; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; Using default statsCache cache: org.apache.solr.search.stats.LocalStatsCache
+INFO  - 2015-12-03 17:00:42.173; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2015-12-03 17:00:42.173; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.CommitTracker; Soft AutoCommit: if uncommited for 3000ms; 
+INFO  - 2015-12-03 17:00:42.183; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ for prop overlay   after 8 attempts
+INFO  - 2015-12-03 17:00:42.184; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 1 secs, maxWait 30
+INFO  - 2015-12-03 17:00:42.188; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.search.SolrIndexSearcher; Opening Searcher@6d2431da[gettingstarted_shard2_replica1] main
+INFO  - 2015-12-03 17:00:42.189; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; Load collection config from:/collections/gettingstarted
+INFO  - 2015-12-03 17:00:42.191; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; path=/collections/gettingstarted configName=gettingstarted specified config exists in ZooKeeper
+INFO  - 2015-12-03 17:00:42.191; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage; Setting up ZooKeeper-based storage for the RestManager with znodeBase: /configs/gettingstarted
+INFO  - 2015-12-03 17:00:42.192; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage$ZooKeeperStorageIO; Configured ZooKeeperStorageIO with znodeBase: /configs/gettingstarted
+INFO  - 2015-12-03 17:00:42.193; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.RestManager; Initializing RestManager with initArgs: {}
+INFO  - 2015-12-03 17:00:42.194; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage; Reading _rest_managed.json using ZooKeeperStorageIO:path=/configs/gettingstarted
+INFO  - 2015-12-03 17:00:42.195; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage$ZooKeeperStorageIO; No data found for znode /configs/gettingstarted/_rest_managed.json
+INFO  - 2015-12-03 17:00:42.198; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage; Loaded null at path _rest_managed.json using ZooKeeperStorageIO:path=/configs/gettingstarted
+INFO  - 2015-12-03 17:00:42.199; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.RestManager; Initializing 0 registered ManagedResources
+INFO  - 2015-12-03 17:00:42.200; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.schema.ZkIndexSchemaReader; Creating ZooKeeper watch for the managed schema at /configs/gettingstarted/managed-schema
+INFO  - 2015-12-03 17:00:42.201; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2015-12-03 17:00:42.202; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2015-12-03 17:00:42.203; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2015-12-03 17:00:42.204; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; Load collection config from:/collections/gettingstarted
+INFO  - 2015-12-03 17:00:42.207; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; path=/collections/gettingstarted configName=gettingstarted specified config exists in ZooKeeper
+INFO  - 2015-12-03 17:00:42.208; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2015-12-03 17:00:42.208; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@6d2431da[gettingstarted_shard2_replica1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-12-03 17:00:42.209; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2015-12-03 17:00:42.209; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2015-12-03 17:00:42.209; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2015-12-03 17:00:42.211; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard2_replica1] Registered new searcher Searcher@6d2431da[gettingstarted_shard2_replica1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-12-03 17:00:42.214; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Looking up max value of version field to seed version buckets
+INFO  - 2015-12-03 17:00:42.214; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.VersionInfo; Refreshing highest value of _version_ for 65536 version buckets from index
+INFO  - 2015-12-03 17:00:42.214; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.VersionInfo; No terms found for _version_, cannot seed version bucket highest value from index
+INFO  - 2015-12-03 17:00:42.214; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Could not find max version in index or recent updates, using new clock 1519556537576587264
+INFO  - 2015-12-03 17:00:42.237; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Took 23 ms to seed version buckets with highest version 1519556537576587264
+INFO  - 2015-12-03 17:00:42.246; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.DefaultSolrCoreState; Creating new IndexWriter...
+INFO  - 2015-12-03 17:00:42.246; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.DefaultSolrCoreState; Waiting until IndexWriter is unused... core=gettingstarted_shard2_replica1
+INFO  - 2015-12-03 17:00:42.246; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.DefaultSolrCoreState; Closing old IndexWriter... core=gettingstarted_shard2_replica1
+INFO  - 2015-12-03 17:00:42.257; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ for prop overlay   after 8 attempts
+INFO  - 2015-12-03 17:00:42.258; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 1 secs, maxWait 30
+INFO  - 2015-12-03 17:00:42.267; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard2_replica1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@1dc1a510; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2015-12-03 17:00:42.268; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2015-12-03 17:00:42.269; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.DefaultSolrCoreState; New IndexWriter is ready to be used.
+INFO  - 2015-12-03 17:00:42.270; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.search.SolrIndexSearcher; Opening Searcher@2811ad29[gettingstarted_shard2_replica1] main
+INFO  - 2015-12-03 17:00:42.273; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@2811ad29[gettingstarted_shard2_replica1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-12-03 17:00:42.273; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2015-12-03 17:00:42.279; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard2_replica1] Registered new searcher Searcher@2811ad29[gettingstarted_shard2_replica1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-12-03 17:00:42.279; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.CoreContainer; replacing core: gettingstarted_shard2_replica1
+INFO  - 2015-12-03 17:00:42.281; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore$11; config update listener called for core gettingstarted_shard1_replica1
+INFO  - 2015-12-03 17:00:42.282; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrConfig; current version of requestparams : 0
+INFO  - 2015-12-03 17:00:42.283; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; /configs/gettingstarted/configoverlay.json is stale will need an update from -1 to 0
+INFO  - 2015-12-03 17:00:42.287; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore$11; core reload gettingstarted_shard1_replica1
+INFO  - 2015-12-03 17:00:42.287; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; Check for collection zkNode:gettingstarted
+INFO  - 2015-12-03 17:00:42.288; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; Collection zkNode exists
+INFO  - 2015-12-03 17:00:42.288; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; Load collection config from:/collections/gettingstarted
+INFO  - 2015-12-03 17:00:42.289; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; path=/collections/gettingstarted configName=gettingstarted specified config exists in ZooKeeper
+INFO  - 2015-12-03 17:00:42.290; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/'
+INFO  - 2015-12-03 17:00:42.311; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.Config; loaded config solrconfig.xml with version 0 
+INFO  - 2015-12-03 17:00:42.315; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ for prop overlay   after 9 attempts
+INFO  - 2015-12-03 17:00:42.315; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 1 secs, maxWait 30
+INFO  - 2015-12-03 17:00:42.329; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrConfig; config overlay loaded . version : 0 
+INFO  - 2015-12-03 17:00:42.333; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.RequestParams; conf resource params.json loaded . version : 0 
+INFO  - 2015-12-03 17:00:42.334; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.RequestParams; request params refreshed to version 0
+INFO  - 2015-12-03 17:00:42.334; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrConfig; current version of requestparams : 0
+INFO  - 2015-12-03 17:00:42.335; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2015-12-03 17:00:42.340; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/pdfbox-1.8.8.jar' to classloader
+INFO  - 2015-12-03 17:00:42.341; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2015-12-03 17:00:42.341; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2015-12-03 17:00:42.342; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/aspectjrt-1.8.0.jar' to classloader
+INFO  - 2015-12-03 17:00:42.342; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2015-12-03 17:00:42.343; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2015-12-03 17:00:42.344; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:42.344; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/commons-compress-1.8.1.jar' to classloader
+INFO  - 2015-12-03 17:00:42.347; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/fontbox-1.8.8.jar' to classloader
+INFO  - 2015-12-03 17:00:42.347; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/icu4j-54.1.jar' to classloader
+INFO  - 2015-12-03 17:00:42.348; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/isoparser-1.0.2.jar' to classloader
+INFO  - 2015-12-03 17:00:42.348; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/java-libpst-0.8.1.jar' to classloader
+INFO  - 2015-12-03 17:00:42.349; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:42.349; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/jempbox-1.8.8.jar' to classloader
+INFO  - 2015-12-03 17:00:42.349; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/jmatio-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:42.350; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2015-12-03 17:00:42.350; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2015-12-03 17:00:42.350; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:42.351; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-ooxml-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:42.351; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-ooxml-schemas-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:42.351; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/poi-scratchpad-3.11.jar' to classloader
+INFO  - 2015-12-03 17:00:42.352; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/rome-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:42.352; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2015-12-03 17:00:42.355; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-core-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:42.355; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-java7-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:42.355; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-parsers-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:42.356; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/tika-xmp-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:42.356; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/vorbis-java-core-0.6.jar' to classloader
+INFO  - 2015-12-03 17:00:42.357; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/vorbis-java-tika-0.6.jar' to classloader
+INFO  - 2015-12-03 17:00:42.359; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2015-12-03 17:00:42.359; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xmlbeans-2.6.0.jar' to classloader
+INFO  - 2015-12-03 17:00:42.360; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2015-12-03 17:00:42.360; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/extraction/lib/xz-1.5.jar' to classloader
+INFO  - 2015-12-03 17:00:42.361; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-cell-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:42.364; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/attributes-binder-1.2.1.jar' to classloader
+INFO  - 2015-12-03 17:00:42.367; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/carrot2-mini-3.9.0.jar' to classloader
+INFO  - 2015-12-03 17:00:42.367; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2015-12-03 17:00:42.367; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2015-12-03 17:00:42.368; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2015-12-03 17:00:42.368; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2015-12-03 17:00:42.369; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2015-12-03 17:00:42.369; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2015-12-03 17:00:42.372; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-clustering-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:42.374; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2015-12-03 17:00:42.375; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2015-12-03 17:00:42.377; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-langid-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:42.381; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/commons-beanutils-1.8.3.jar' to classloader
+INFO  - 2015-12-03 17:00:42.382; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2015-12-03 17:00:42.382; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2015-12-03 17:00:42.382; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2015-12-03 17:00:42.383; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrResourceLoader; Adding 'file:/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/dist/solr-velocity-5.3.1.jar' to classloader
+INFO  - 2015-12-03 17:00:42.455; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ for prop overlay   after 9 attempts
+INFO  - 2015-12-03 17:00:42.455; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 1 secs, maxWait 30
+INFO  - 2015-12-03 17:00:42.489; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ for prop overlay   after 10 attempts
+INFO  - 2015-12-03 17:00:42.490; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 1 secs, maxWait 30
+INFO  - 2015-12-03 17:00:42.505; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 5.3.1
+INFO  - 2015-12-03 17:00:42.542; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2015-12-03 17:00:42.544; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.schema.IndexSchema; Reading Solr Schema from /configs/gettingstarted/managed-schema
+INFO  - 2015-12-03 17:00:42.590; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.schema.IndexSchema; [gettingstarted_shard1_replica1] Schema name=example-data-driven-schema
+INFO  - 2015-12-03 17:00:42.612; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ for prop overlay   after 10 attempts
+INFO  - 2015-12-03 17:00:42.612; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 1 secs, maxWait 30
+INFO  - 2015-12-03 17:00:42.634; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ for prop overlay   after 11 attempts
+INFO  - 2015-12-03 17:00:42.634; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 1 secs, maxWait 30
+INFO  - 2015-12-03 17:00:42.737; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Could not get expectedVersion 0 from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ for prop overlay   after 11 attempts
+INFO  - 2015-12-03 17:00:42.738; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler$PerReplicaCallable; Time elapsed : 1 secs, maxWait 30
+INFO  - 2015-12-03 17:00:42.853; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.SolrConfigHandler; Took 2 secs to set the property overlay to be of version 0 for collection gettingstarted
+INFO  - 2015-12-03 17:00:42.854; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard2_replica1] webapp=/solr path=/config params={wt=javabin&version=2} status=0 QTime=2273 
+INFO  - 2015-12-03 17:00:43.002; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2015-12-03 17:00:43.140; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2015-12-03 17:00:43.146; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2015-12-03 17:00:43.217; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.ConfigSetProperties; Did not find ConfigSet properties, assuming default properties: Can't find resource 'configsetprops.json' in classpath or '/configs/gettingstarted', cwd=/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/server
+INFO  - 2015-12-03 17:00:43.218; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.CoreContainer; Reloading SolrCore 'gettingstarted_shard1_replica1' using configuration from collection gettingstarted
+INFO  - 2015-12-03 17:00:43.219; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [[gettingstarted_shard1_replica1] ] Opening new SolrCore at [/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/], dataDir=[/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/data/]
+INFO  - 2015-12-03 17:00:43.219; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.JmxMonitoredMap; JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@5e285179
+INFO  - 2015-12-03 17:00:43.220; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [[gettingstarted_shard1_replica1] ] Added SolrEventListener for newSearcher: [org.apache.solr.core.QuerySenderListener{queries=[]}]
+INFO  - 2015-12-03 17:00:43.220; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [[gettingstarted_shard1_replica1] ] Added SolrEventListener for firstSearcher: [org.apache.solr.core.QuerySenderListener{queries=[]}]
+INFO  - 2015-12-03 17:00:43.221; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; New index directory detected: old=null new=/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/data/index/
+INFO  - 2015-12-03 17:00:43.227; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; queryResponseWriter : 'velocity' created with startup=lazy 
+INFO  - 2015-12-03 17:00:43.227; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2015-12-03 17:00:43.233; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.processor.UpdateRequestProcessorChain; creating updateRequestProcessorChain "add-unknown-fields-to-the-schema"
+INFO  - 2015-12-03 17:00:43.234; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore$12; Looking for old index directories to cleanup for core gettingstarted_shard1_replica1 in /mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/data/
+INFO  - 2015-12-03 17:00:43.245; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2015-12-03 17:00:43.252; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:43.255; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:43.260; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:43.265; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2015-12-03 17:00:43.274; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/update/extract' created with startup=lazy 
+INFO  - 2015-12-03 17:00:43.279; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/analysis/field' created with startup=lazy 
+INFO  - 2015-12-03 17:00:43.281; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/analysis/document' created with startup=lazy 
+INFO  - 2015-12-03 17:00:43.283; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/spell' created with startup=lazy 
+INFO  - 2015-12-03 17:00:43.284; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/tvrh' created with startup=lazy 
+INFO  - 2015-12-03 17:00:43.284; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/terms' created with startup=lazy 
+INFO  - 2015-12-03 17:00:43.284; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.PluginBag; requestHandler : '/elevate' created with startup=lazy 
+INFO  - 2015-12-03 17:00:43.284; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.RequestHandlers; Registered paths: /admin/mbeans,/browse,/update/json/docs,/admin/luke,/export,/get,/admin/properties,/elevate,/update/json,/admin/threads,/query,/analysis/field,/analysis/document,/spell,/update/csv,/tvrh,/select,/admin/segments,/admin/system,/replication,/config,/stream,/schema,/admin/plugins,/admin/logging,/admin/ping,/update,/admin/file,/debug/dump,/terms,/update/extract
+INFO  - 2015-12-03 17:00:43.287; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; Using default statsCache cache: org.apache.solr.search.stats.LocalStatsCache
+INFO  - 2015-12-03 17:00:43.295; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2015-12-03 17:00:43.295; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.CommitTracker; Soft AutoCommit: if uncommited for 3000ms; 
+INFO  - 2015-12-03 17:00:43.310; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.search.SolrIndexSearcher; Opening Searcher@18f4f8e3[gettingstarted_shard1_replica1] main
+INFO  - 2015-12-03 17:00:43.310; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; Load collection config from:/collections/gettingstarted
+INFO  - 2015-12-03 17:00:43.311; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; path=/collections/gettingstarted configName=gettingstarted specified config exists in ZooKeeper
+INFO  - 2015-12-03 17:00:43.315; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage; Setting up ZooKeeper-based storage for the RestManager with znodeBase: /configs/gettingstarted
+INFO  - 2015-12-03 17:00:43.315; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage$ZooKeeperStorageIO; Configured ZooKeeperStorageIO with znodeBase: /configs/gettingstarted
+INFO  - 2015-12-03 17:00:43.315; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.RestManager; Initializing RestManager with initArgs: {}
+INFO  - 2015-12-03 17:00:43.316; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage; Reading _rest_managed.json using ZooKeeperStorageIO:path=/configs/gettingstarted
+INFO  - 2015-12-03 17:00:43.316; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage$ZooKeeperStorageIO; No data found for znode /configs/gettingstarted/_rest_managed.json
+INFO  - 2015-12-03 17:00:43.316; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.ManagedResourceStorage; Loaded null at path _rest_managed.json using ZooKeeperStorageIO:path=/configs/gettingstarted
+INFO  - 2015-12-03 17:00:43.317; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.rest.RestManager; Initializing 0 registered ManagedResources
+INFO  - 2015-12-03 17:00:43.317; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.schema.ZkIndexSchemaReader; Creating ZooKeeper watch for the managed schema at /configs/gettingstarted/managed-schema
+INFO  - 2015-12-03 17:00:43.318; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2015-12-03 17:00:43.323; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2015-12-03 17:00:43.323; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2015-12-03 17:00:43.324; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; Load collection config from:/collections/gettingstarted
+INFO  - 2015-12-03 17:00:43.325; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.common.cloud.ZkStateReader; path=/collections/gettingstarted configName=gettingstarted specified config exists in ZooKeeper
+INFO  - 2015-12-03 17:00:43.327; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2015-12-03 17:00:43.327; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@18f4f8e3[gettingstarted_shard1_replica1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-12-03 17:00:43.328; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2015-12-03 17:00:43.328; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2015-12-03 17:00:43.328; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2015-12-03 17:00:43.329; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard1_replica1] Registered new searcher Searcher@18f4f8e3[gettingstarted_shard1_replica1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-12-03 17:00:43.341; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Looking up max value of version field to seed version buckets
+INFO  - 2015-12-03 17:00:43.343; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.VersionInfo; Refreshing highest value of _version_ for 65536 version buckets from index
+INFO  - 2015-12-03 17:00:43.349; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.VersionInfo; No terms found for _version_, cannot seed version bucket highest value from index
+INFO  - 2015-12-03 17:00:43.349; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Could not find max version in index or recent updates, using new clock 1519556538766721024
+INFO  - 2015-12-03 17:00:43.356; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Took 13 ms to seed version buckets with highest version 1519556538766721024
+INFO  - 2015-12-03 17:00:43.357; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.DefaultSolrCoreState; Creating new IndexWriter...
+INFO  - 2015-12-03 17:00:43.357; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.DefaultSolrCoreState; Waiting until IndexWriter is unused... core=gettingstarted_shard1_replica1
+INFO  - 2015-12-03 17:00:43.357; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.DefaultSolrCoreState; Closing old IndexWriter... core=gettingstarted_shard1_replica1
+INFO  - 2015-12-03 17:00:43.371; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/mnt/Titas/1_QA_MODEL/Tools/solr-5.3.1/example/cloud/node1/solr/gettingstarted_shard1_replica1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@1dc1a510; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2015-12-03 17:00:43.372; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2015-12-03 17:00:43.372; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.DefaultSolrCoreState; New IndexWriter is ready to be used.
+INFO  - 2015-12-03 17:00:43.373; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.search.SolrIndexSearcher; Opening Searcher@2db81257[gettingstarted_shard1_replica1] main
+INFO  - 2015-12-03 17:00:43.374; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@2db81257[gettingstarted_shard1_replica1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-12-03 17:00:43.374; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2015-12-03 17:00:43.376; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard1_replica1] Registered new searcher Searcher@2db81257[gettingstarted_shard1_replica1] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+INFO  - 2015-12-03 17:00:43.376; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.CoreContainer; replacing core: gettingstarted_shard1_replica1
+INFO  - 2015-12-03 17:00:46.816; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; Attempting to PeerSync from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/ - recoveringAfterStartup=true
+INFO  - 2015-12-03 17:00:46.820; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.PeerSync; PeerSync: core=gettingstarted_shard2_replica1 url=http://127.0.1.1:8983/solr START replicas=[http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/] nUpdates=100
+WARN  - 2015-12-03 17:00:46.821; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.PeerSync; no frame of reference to tell if we've missed updates
+INFO  - 2015-12-03 17:00:46.821; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; PeerSync Recovery was not successful - trying replication.
+INFO  - 2015-12-03 17:00:46.821; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; Starting Replication Recovery.
+INFO  - 2015-12-03 17:00:46.822; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; Begin buffering updates.
+INFO  - 2015-12-03 17:00:46.822; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Starting to buffer updates. FSUpdateLog{state=ACTIVE, tlog=null}
+INFO  - 2015-12-03 17:00:46.822; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; Attempting to replicate from http://127.0.1.1:7574/solr/gettingstarted_shard2_replica2/.
+INFO  - 2015-12-03 17:00:46.946; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; No replay needed.
+INFO  - 2015-12-03 17:00:46.946; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; Replication Recovery was successful - registering as Active.
+INFO  - 2015-12-03 17:00:46.946; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; publishing state=active
+INFO  - 2015-12-03 17:00:47.100; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; Updating version bucket highest from index after successful recovery.
+INFO  - 2015-12-03 17:00:47.100; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:47.100; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Looking up max value of version field to seed version buckets
+INFO  - 2015-12-03 17:00:47.102; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 1, message = {
+  "core":"gettingstarted_shard2_replica1",
+  "core_node_name":"core_node1",
+  "roles":null,
+  "base_url":"http://127.0.1.1:8983/solr",
+  "node_name":"127.0.1.1:8983_solr",
+  "numShards":"2",
+  "state":"active",
+  "shard":"shard2",
+  "collection":"gettingstarted",
+  "operation":"state"} current state version: 1
+INFO  - 2015-12-03 17:00:47.103; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.VersionInfo; Refreshing highest value of _version_ for 65536 version buckets from index
+INFO  - 2015-12-03 17:00:47.104; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.VersionInfo; No terms found for _version_, cannot seed version bucket highest value from index
+INFO  - 2015-12-03 17:00:47.104; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Could not find max version in index or recent updates, using new clock 1519556542704123904
+INFO  - 2015-12-03 17:00:47.111; [   ] org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=2 message={
+  "core":"gettingstarted_shard2_replica1",
+  "core_node_name":"core_node1",
+  "roles":null,
+  "base_url":"http://127.0.1.1:8983/solr",
+  "node_name":"127.0.1.1:8983_solr",
+  "numShards":"2",
+  "state":"active",
+  "shard":"shard2",
+  "collection":"gettingstarted",
+  "operation":"state"}
+INFO  - 2015-12-03 17:00:47.118; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.UpdateLog; Took 15 ms to seed version buckets with highest version 1519556542704123904
+INFO  - 2015-12-03 17:00:47.227; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.RecoveryStrategy; Finished recovery process.
+INFO  - 2015-12-03 17:00:47.228; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard2_replica1]  CLOSING SolrCore org.apache.solr.core.SolrCore@3d732d48
+INFO  - 2015-12-03 17:00:47.229; [   ] org.apache.solr.cloud.overseer.ZkStateWriter; going to update_collection /collections/gettingstarted/state.json version: 9
+INFO  - 2015-12-03 17:00:47.229; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.cloud.ZkController; removed listener for config directory [/configs/gettingstarted]
+INFO  - 2015-12-03 17:00:47.231; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=0,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0,transaction_logs_total_size=0,transaction_logs_total_number=0}
+INFO  - 2015-12-03 17:00:47.320; [   ] org.apache.solr.common.cloud.ZkStateReader$8; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/gettingstarted/state.json for collection gettingstarted has occurred - updating... (live nodes size: 2)
+INFO  - 2015-12-03 17:00:47.321; [c:gettingstarted s:shard2 r:core_node1 x:gettingstarted_shard2_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard2_replica1] Closing main searcher on request.
+INFO  - 2015-12-03 17:00:47.414; [   ] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 10 
+INFO  - 2015-12-03 17:00:48.059; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; Attempting to PeerSync from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/ - recoveringAfterStartup=true
+INFO  - 2015-12-03 17:00:48.060; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.PeerSync; PeerSync: core=gettingstarted_shard1_replica1 url=http://127.0.1.1:8983/solr START replicas=[http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/] nUpdates=100
+WARN  - 2015-12-03 17:00:48.061; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.PeerSync; no frame of reference to tell if we've missed updates
+INFO  - 2015-12-03 17:00:48.062; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; PeerSync Recovery was not successful - trying replication.
+INFO  - 2015-12-03 17:00:48.063; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; Starting Replication Recovery.
+INFO  - 2015-12-03 17:00:48.063; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; Begin buffering updates.
+INFO  - 2015-12-03 17:00:48.064; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.UpdateLog; Starting to buffer updates. FSUpdateLog{state=ACTIVE, tlog=null}
+INFO  - 2015-12-03 17:00:48.065; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; Attempting to replicate from http://127.0.1.1:7574/solr/gettingstarted_shard1_replica2/.
+INFO  - 2015-12-03 17:00:48.080; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; No replay needed.
+INFO  - 2015-12-03 17:00:48.080; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; Replication Recovery was successful - registering as Active.
+INFO  - 2015-12-03 17:00:48.080; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; publishing state=active
+INFO  - 2015-12-03 17:00:48.202; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; Updating version bucket highest from index after successful recovery.
+INFO  - 2015-12-03 17:00:48.202; [   ] org.apache.solr.cloud.DistributedQueue$LatchWatcher; NodeChildrenChanged fired on path /overseer/queue state SyncConnected
+INFO  - 2015-12-03 17:00:48.202; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.UpdateLog; Looking up max value of version field to seed version buckets
+INFO  - 2015-12-03 17:00:48.203; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.VersionInfo; Refreshing highest value of _version_ for 65536 version buckets from index
+INFO  - 2015-12-03 17:00:48.203; [   ] org.apache.solr.cloud.Overseer$ClusterStateUpdater; processMessage: queueSize: 1, message = {
+  "core":"gettingstarted_shard1_replica1",
+  "core_node_name":"core_node3",
+  "roles":null,
+  "base_url":"http://127.0.1.1:8983/solr",
+  "node_name":"127.0.1.1:8983_solr",
+  "numShards":"2",
+  "state":"active",
+  "shard":"shard1",
+  "collection":"gettingstarted",
+  "operation":"state"} current state version: 1
+INFO  - 2015-12-03 17:00:48.204; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.VersionInfo; No terms found for _version_, cannot seed version bucket highest value from index
+INFO  - 2015-12-03 17:00:48.205; [   ] org.apache.solr.cloud.overseer.ReplicaMutator; Update state numShards=2 message={
+  "core":"gettingstarted_shard1_replica1",
+  "core_node_name":"core_node3",
+  "roles":null,
+  "base_url":"http://127.0.1.1:8983/solr",
+  "node_name":"127.0.1.1:8983_solr",
+  "numShards":"2",
+  "state":"active",
+  "shard":"shard1",
+  "collection":"gettingstarted",
+  "operation":"state"}
+INFO  - 2015-12-03 17:00:48.205; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.UpdateLog; Could not find max version in index or recent updates, using new clock 1519556543858606080
+INFO  - 2015-12-03 17:00:48.215; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.UpdateLog; Took 12 ms to seed version buckets with highest version 1519556543858606080
+INFO  - 2015-12-03 17:00:48.285; [   ] org.apache.solr.cloud.overseer.ZkStateWriter; going to update_collection /collections/gettingstarted/state.json version: 10
+INFO  - 2015-12-03 17:00:48.287; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.RecoveryStrategy; Finished recovery process.
+INFO  - 2015-12-03 17:00:48.288; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard1_replica1]  CLOSING SolrCore org.apache.solr.core.SolrCore@7686ce69
+INFO  - 2015-12-03 17:00:48.379; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.cloud.ZkController; removed listener for config directory [/configs/gettingstarted]
+INFO  - 2015-12-03 17:00:48.379; [   ] org.apache.solr.common.cloud.ZkStateReader$8; A cluster state change: WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/gettingstarted/state.json for collection gettingstarted has occurred - updating... (live nodes size: 2)
+INFO  - 2015-12-03 17:00:48.380; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=0,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0,transaction_logs_total_size=0,transaction_logs_total_number=0}
+INFO  - 2015-12-03 17:00:48.382; [   ] org.apache.solr.common.cloud.ZkStateReader; Updating data for gettingstarted to ver 11 
+INFO  - 2015-12-03 17:00:48.383; [c:gettingstarted s:shard1 r:core_node3 x:gettingstarted_shard1_replica1] org.apache.solr.core.SolrCore; [gettingstarted_shard1_replica1] Closing main searcher on request.

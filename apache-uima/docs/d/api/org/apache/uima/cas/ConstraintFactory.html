@@ -1,0 +1,459 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ConstraintFactory (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ConstraintFactory (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/ConstraintFactory.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/uima/cas/ComponentInfo.html" title="interface in org.apache.uima.cas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/uima/cas/DoubleArrayFS.html" title="interface in org.apache.uima.cas"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/uima/cas/ConstraintFactory.html" target="_top">Frames</a></li>
+<li><a href="ConstraintFactory.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.uima.cas</div>
+<h2 title="Class ConstraintFactory" class="title">Class ConstraintFactory</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.uima.cas.ConstraintFactory</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public abstract class <span class="strong">ConstraintFactory</span>
+extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">Methods to create <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas"><code>FSMatchConstraint</code></a>s for filtered iterators or other
+ use. A constraint is an object which represents a test or a series of tests joined with "and" or
+ "or". Each test consists of a test predicate plus an optional "path" which specifies how to walk
+ through a chain of references, starting from a feature structure being tested, to reach the value
+ to be tested.
+ <p>
+ Tests include
+ <ul>
+ <li>type subsumption --(satisfied if the CAS feature structure being tested is of a specified
+ type (or is a subtype of that type). </li>
+ <li>value equality</li>
+ <li>for numeric values - range testing</li>
+ </ul>
+ 
+ Constraints can be used by calling their "match" method, passing as an argument the value to
+ test. If the constraint includes the "path", the argument is a feature structure; the path
+ specifies how to reach the value to test, starting with the feature structure. Otherwise, the
+ value to test depends on the constraint; for an <a href="../../../../org/apache/uima/cas/FSIntConstraint.html" title="interface in org.apache.uima.cas"><code>FSIntConstraint</code></a>, for
+ instance, the value would be an integer.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../org/apache/uima/cas/ConstraintFactory.html#ConstraintFactory()">ConstraintFactory</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/ConstraintFactory.html#and(org.apache.uima.cas.FSMatchConstraint,%20org.apache.uima.cas.FSMatchConstraint)">and</a></strong>(<a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;c1,
+   <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;c2)</code>
+<div class="block">Conjoin two constraints.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract <a href="../../../../org/apache/uima/cas/FSBooleanConstraint.html" title="interface in org.apache.uima.cas">FSBooleanConstraint</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/ConstraintFactory.html#createBooleanConstraint()">createBooleanConstraint</a></strong>()</code>
+<div class="block">Create a new boolean constraint.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="../../../../org/apache/uima/cas/FSFloatConstraint.html" title="interface in org.apache.uima.cas">FSFloatConstraint</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/ConstraintFactory.html#createFloatConstraint()">createFloatConstraint</a></strong>()</code>
+<div class="block">Create a new float constraint.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract <a href="../../../../org/apache/uima/cas/FSIntConstraint.html" title="interface in org.apache.uima.cas">FSIntConstraint</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/ConstraintFactory.html#createIntConstraint()">createIntConstraint</a></strong>()</code>
+<div class="block">Create a new int constraint.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="../../../../org/apache/uima/cas/FSStringConstraint.html" title="interface in org.apache.uima.cas">FSStringConstraint</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/ConstraintFactory.html#createStringConstraint()">createStringConstraint</a></strong>()</code>
+<div class="block">Create a new String constraint.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract <a href="../../../../org/apache/uima/cas/FSTypeConstraint.html" title="interface in org.apache.uima.cas">FSTypeConstraint</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/ConstraintFactory.html#createTypeConstraint()">createTypeConstraint</a></strong>()</code>
+<div class="block">Create a new type constraint.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/ConstraintFactory.html#embedConstraint(java.util.ArrayList,%20org.apache.uima.cas.FSConstraint)">embedConstraint</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;path,
+               <a href="../../../../org/apache/uima/cas/FSConstraint.html" title="interface in org.apache.uima.cas">FSConstraint</a>&nbsp;constraint)</code>
+<div class="block">Embed a constraint under a path.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/ConstraintFactory.html#embedConstraint(org.apache.uima.cas.FeaturePath,%20org.apache.uima.cas.FSConstraint)">embedConstraint</a></strong>(<a href="../../../../org/apache/uima/cas/FeaturePath.html" title="interface in org.apache.uima.cas">FeaturePath</a>&nbsp;path,
+               <a href="../../../../org/apache/uima/cas/FSConstraint.html" title="interface in org.apache.uima.cas">FSConstraint</a>&nbsp;constraint)</code>
+<div class="block">Combine a constraint test with a path from a feature structure instance to the value to be
+ tested.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../org/apache/uima/cas/ConstraintFactory.html" title="class in org.apache.uima.cas">ConstraintFactory</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/ConstraintFactory.html#instance()">instance</a></strong>()</code>
+<div class="block">Create a new constraint factory.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../org/apache/uima/cas/ConstraintFactory.html#or(org.apache.uima.cas.FSMatchConstraint,%20org.apache.uima.cas.FSMatchConstraint)">or</a></strong>(<a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;c1,
+  <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;c2)</code>
+<div class="block">Disjoin two constraints.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="ConstraintFactory()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ConstraintFactory</h4>
+<pre>public&nbsp;ConstraintFactory()</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="createTypeConstraint()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTypeConstraint</h4>
+<pre>public abstract&nbsp;<a href="../../../../org/apache/uima/cas/FSTypeConstraint.html" title="interface in org.apache.uima.cas">FSTypeConstraint</a>&nbsp;createTypeConstraint()</pre>
+<div class="block">Create a new type constraint. A type constraint contains one or more types to test against. A
+ type constraint must be initialized by adding one or more types to it. The match is true if any
+ of the types are the same or a super type of the feature structure being tested by the
+ constraint.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A new type constraint with the type set to the top type.</dd></dl>
+</li>
+</ul>
+<a name="createIntConstraint()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createIntConstraint</h4>
+<pre>public abstract&nbsp;<a href="../../../../org/apache/uima/cas/FSIntConstraint.html" title="interface in org.apache.uima.cas">FSIntConstraint</a>&nbsp;createIntConstraint()</pre>
+<div class="block">Create a new int constraint. An int constraint must be initialized after it's created by adding
+ one or more tests to it.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A new int constraint, completely unconstrained.</dd></dl>
+</li>
+</ul>
+<a name="createFloatConstraint()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createFloatConstraint</h4>
+<pre>public abstract&nbsp;<a href="../../../../org/apache/uima/cas/FSFloatConstraint.html" title="interface in org.apache.uima.cas">FSFloatConstraint</a>&nbsp;createFloatConstraint()</pre>
+<div class="block">Create a new float constraint. A float constraint must be initialized after it's created by
+ adding one or more tests to it.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A new float constraint, completely unconstrained.</dd></dl>
+</li>
+</ul>
+<a name="createStringConstraint()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createStringConstraint</h4>
+<pre>public abstract&nbsp;<a href="../../../../org/apache/uima/cas/FSStringConstraint.html" title="interface in org.apache.uima.cas">FSStringConstraint</a>&nbsp;createStringConstraint()</pre>
+<div class="block">Create a new String constraint. A String constraint must be initialized after it's created by
+ adding one or more tests to it.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A new String constraint, completely unconstrained.</dd></dl>
+</li>
+</ul>
+<a name="createBooleanConstraint()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createBooleanConstraint</h4>
+<pre>public abstract&nbsp;<a href="../../../../org/apache/uima/cas/FSBooleanConstraint.html" title="interface in org.apache.uima.cas">FSBooleanConstraint</a>&nbsp;createBooleanConstraint()</pre>
+<div class="block">Create a new boolean constraint. A boolean constraint must be initialized after it's created by
+ adding one or more tests to it.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A new boolean constraint, completely unconstrained.</dd></dl>
+</li>
+</ul>
+<a name="embedConstraint(org.apache.uima.cas.FeaturePath, org.apache.uima.cas.FSConstraint)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>embedConstraint</h4>
+<pre>public abstract&nbsp;<a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;embedConstraint(<a href="../../../../org/apache/uima/cas/FeaturePath.html" title="interface in org.apache.uima.cas">FeaturePath</a>&nbsp;path,
+                                <a href="../../../../org/apache/uima/cas/FSConstraint.html" title="interface in org.apache.uima.cas">FSConstraint</a>&nbsp;constraint)</pre>
+<div class="block">Combine a constraint test with a path from a feature structure instance to the value to be
+ tested. This is called "embedding" a constraint under a path. For example, create an int
+ constraint, and then embed it under some int valued feature, such as the start feature of an
+ annotation.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>path</code> - The path to embed the constraint under. Create a new path with
+          <a href="../../../../org/apache/uima/cas/CAS.html#createFeaturePath()"><code>CAS.createFeaturePath()</code></a>.</dd><dd><code>constraint</code> - The constraint to be embedded.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>A new FSMatchConstraint.</dd></dl>
+</li>
+</ul>
+<a name="embedConstraint(java.util.ArrayList, org.apache.uima.cas.FSConstraint)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>embedConstraint</h4>
+<pre>public abstract&nbsp;<a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;embedConstraint(<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;path,
+                                <a href="../../../../org/apache/uima/cas/FSConstraint.html" title="interface in org.apache.uima.cas">FSConstraint</a>&nbsp;constraint)</pre>
+<div class="block">Embed a constraint under a path. For example, create an int constraint, and then embed it under
+ some int valued feature, such as the start feature of an annotation.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>path</code> - The path to embed the constraint under. This is a list of <a href="../../../../org/apache/uima/cas/Feature.html" title="interface in org.apache.uima.cas"><code>Feature</code></a> names.</dd><dd><code>constraint</code> - The constraint to be embedded.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>A new FSMatchConstraint.</dd></dl>
+</li>
+</ul>
+<a name="and(org.apache.uima.cas.FSMatchConstraint, org.apache.uima.cas.FSMatchConstraint)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>and</h4>
+<pre>public abstract&nbsp;<a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;and(<a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;c1,
+                    <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;c2)</pre>
+<div class="block">Conjoin two constraints.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>c1</code> - The first conjunct.</dd><dd><code>c2</code> - The second conjunct.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>A new FSMatchConstraint, representing the conjunction of <code>c1</code> and
+         <code>c2</code>.</dd></dl>
+</li>
+</ul>
+<a name="or(org.apache.uima.cas.FSMatchConstraint, org.apache.uima.cas.FSMatchConstraint)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>or</h4>
+<pre>public abstract&nbsp;<a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;or(<a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;c1,
+                   <a href="../../../../org/apache/uima/cas/FSMatchConstraint.html" title="interface in org.apache.uima.cas">FSMatchConstraint</a>&nbsp;c2)</pre>
+<div class="block">Disjoin two constraints.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>c1</code> - The first disjunct.</dd><dd><code>c2</code> - The second disjunct.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>A new FSMatchConstraint, representing the disjunction of <code>c1</code> and
+         <code>c2</code>.</dd></dl>
+</li>
+</ul>
+<a name="instance()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>instance</h4>
+<pre>public static&nbsp;<a href="../../../../org/apache/uima/cas/ConstraintFactory.html" title="class in org.apache.uima.cas">ConstraintFactory</a>&nbsp;instance()</pre>
+<div class="block">Create a new constraint factory.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>A new ConstraintFactory instance.</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/ConstraintFactory.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../org/apache/uima/cas/ComponentInfo.html" title="interface in org.apache.uima.cas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../org/apache/uima/cas/DoubleArrayFS.html" title="interface in org.apache.uima.cas"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?org/apache/uima/cas/ConstraintFactory.html" target="_top">Frames</a></li>
+<li><a href="ConstraintFactory.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

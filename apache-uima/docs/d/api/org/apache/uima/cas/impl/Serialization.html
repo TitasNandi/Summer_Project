@@ -1,0 +1,651 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Serialization (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<script type="text/javascript"><!--
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="Serialization (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar_top">
+<!--   -->
+</a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/Serialization.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../../../org/apache/uima/cas/impl/XCASDeserializer.html" title="class in org.apache.uima.cas.impl"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/cas/impl/Serialization.html" target="_top">Frames</a></li>
+<li><a href="Serialization.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">org.apache.uima.cas.impl</div>
+<h2 title="Class Serialization" class="title">Class Serialization</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.apache.uima.cas.impl.Serialization</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <span class="strong">Serialization</span>
+extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
+<div class="block">This class has no fields or instance methods, but instead 
+ has only static methods.
+ 
+ In spite of its name, it has static methods for both serializing and deserializing CASes.
+ 
+ It has 2 styles of Serialization / Deserialization 
+   - one which makes use of various custom binary serialization methods, and
+   - one which just converts CAS and related objects into other objects which
+     in turn are serializable by normal Java Object serialization.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#Serialization()">Serialization</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span>Methods</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#createCAS(org.apache.uima.cas.admin.CASMgr,%20org.apache.uima.cas.impl.CASSerializer)">createCAS</a></strong>(<a href="../../../../../org/apache/uima/cas/admin/CASMgr.html" title="interface in org.apache.uima.cas.admin">CASMgr</a>&nbsp;casMgr,
+         org.apache.uima.cas.impl.CASSerializer&nbsp;casSer)</code>
+<div class="block">Deserialize the data in a CASSerializer into an existing CAS,
+ return the currentview in that Cas.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/cas/admin/CASMgr.html" title="interface in org.apache.uima.cas.admin">CASMgr</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#createCASMgr(org.apache.uima.cas.impl.CASMgrSerializer)">createCASMgr</a></strong>(org.apache.uima.cas.impl.CASMgrSerializer&nbsp;ser)</code>
+<div class="block">Deserialize a type system and index repository definition and use to initialize
+ a new instance of a CAS.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#deserializeCAS(org.apache.uima.cas.CAS,%20java.io.InputStream)">deserializeCAS</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;istream)</code>
+<div class="block">Deserialize a CAS, in various binary formats, into an existing CAS
+   Note: this form supports deserializing the following binary representations:
+     - plain (uncompressed)
+     - compressed, no type filtering (form 4), Delta and not-delta
+     - compressed, no type filtering (form 6), not-delta only.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static org.apache.uima.cas.impl.BinaryCasSerDes6</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#deserializeCAS(org.apache.uima.cas.CAS,%20java.io.InputStream,%20org.apache.uima.cas.TypeSystem,%20org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo)">deserializeCAS</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;istream,
+              <a href="../../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;tgtTypeSystem,
+              org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo&nbsp;reuseInfo)</code>
+<div class="block">Deserialize a CAS, in various binary formats, into an existing CAS
+   Note: this form supports deserializing the following binary representations:
+     - compressed, type filtering (form 6), delta and not-delta.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static org.apache.uima.cas.impl.BinaryCasSerDes6</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#deserializeCAS(org.apache.uima.cas.CAS,%20java.io.InputStream,%20org.apache.uima.cas.TypeSystem,%20org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo,%20org.apache.uima.cas.impl.AllowPreexistingFS)">deserializeCAS</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+              <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;istream,
+              <a href="../../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;tgtTypeSystem,
+              org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo&nbsp;reuseInfo,
+              org.apache.uima.cas.impl.AllowPreexistingFS&nbsp;allowPreexisting)</code>
+<div class="block">Deserialize a CAS, in various binary formats, into an existing CAS
+   Note: this form supports deserializing the following binary representations:
+     - compressed, type filtering (form 6), delta and not-delta.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#deserializeCASComplete(org.apache.uima.cas.impl.CASCompleteSerializer,%20org.apache.uima.cas.admin.CASMgr)">deserializeCASComplete</a></strong>(org.apache.uima.cas.impl.CASCompleteSerializer&nbsp;casCompSer,
+                      <a href="../../../../../org/apache/uima/cas/admin/CASMgr.html" title="interface in org.apache.uima.cas.admin">CASMgr</a>&nbsp;casMgr)</code>
+<div class="block">Deserialize the data in a CASCompleteSerializer into an 
+ existing CAS</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static org.apache.uima.cas.impl.CASSerializer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeCAS(org.apache.uima.cas.CAS)">serializeCAS</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas)</code>
+<div class="block">Convert a CAS to a CASSerializer object.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeCAS(org.apache.uima.cas.CAS,%20java.io.OutputStream)">serializeCAS</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+            <a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;ostream)</code>
+<div class="block">Serialize a CAS including what's indexed, to an output stream
+ Uses uncompressed binary serialization</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeCAS(org.apache.uima.cas.CAS,%20java.io.OutputStream,%20org.apache.uima.cas.Marker)">serializeCAS</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+            <a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;ostream,
+            <a href="../../../../../org/apache/uima/cas/Marker.html" title="interface in org.apache.uima.cas">Marker</a>&nbsp;mark)</code>
+<div class="block">Serializes CAS data added or modified after the tracking Marker was created and writes it
+ to the output stream in Delta CAS format
+ using uncompressed binary format</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static org.apache.uima.cas.impl.CASCompleteSerializer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeCASComplete(org.apache.uima.cas.admin.CASMgr)">serializeCASComplete</a></strong>(<a href="../../../../../org/apache/uima/cas/admin/CASMgr.html" title="interface in org.apache.uima.cas.admin">CASMgr</a>&nbsp;casMgr)</code>
+<div class="block">Convert a CAS + the type system and index definitions into a
+ CASCompleteSerializer object</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static org.apache.uima.cas.impl.CASMgrSerializer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeCASMgr(org.apache.uima.cas.admin.CASMgr)">serializeCASMgr</a></strong>(<a href="../../../../../org/apache/uima/cas/admin/CASMgr.html" title="interface in org.apache.uima.cas.admin">CASMgr</a>&nbsp;casMgr)</code>
+<div class="block">Convert a Type System and Index Repository into a 
+ CASMgrSerializer object which can be serialized</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static org.apache.uima.cas.impl.CASSerializer</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeNoMetaData(org.apache.uima.cas.CAS)">serializeNoMetaData</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas)</code>
+<div class="block">Convert a CAS to a CASSerializer object.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeWithCompression(org.apache.uima.cas.CAS,%20java.lang.Object)">serializeWithCompression</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;out)</code>
+<div class="block">Serialize in compressed binary form 4</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeWithCompression(org.apache.uima.cas.CAS,%20java.lang.Object,%20org.apache.uima.cas.Marker)">serializeWithCompression</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;out,
+                        <a href="../../../../../org/apache/uima/cas/Marker.html" title="interface in org.apache.uima.cas">Marker</a>&nbsp;marker)</code>
+<div class="block">Serialize in compress binary form 4, only the delta part of a CAS</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeWithCompression(org.apache.uima.cas.CAS,%20java.lang.Object,%20org.apache.uima.cas.TypeSystem)">serializeWithCompression</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;out,
+                        <a href="../../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;tgtTypeSystem)</code>
+<div class="block">Serialize in compressed binary with type filtering
+ This method can use type filtering to omit sending those types and/or features not present in the target type system.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeWithCompression(org.apache.uima.cas.CAS,%20java.lang.Object,%20org.apache.uima.cas.TypeSystem,%20org.apache.uima.cas.Marker,%20org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo)">serializeWithCompression</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;out,
+                        <a href="../../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;tgtTypeSystem,
+                        <a href="../../../../../org/apache/uima/cas/Marker.html" title="interface in org.apache.uima.cas">Marker</a>&nbsp;mark,
+                        org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo&nbsp;reuseInfo)</code>
+<div class="block">Delta Serialize in compressed form, with type filtering
+ This method can use type filtering to omit sending those types and/or features not present in the target type system.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="Serialization()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Serialization</h4>
+<pre>public&nbsp;Serialization()</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method_detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="serializeCAS(org.apache.uima.cas.CAS)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serializeCAS</h4>
+<pre>public static&nbsp;org.apache.uima.cas.impl.CASSerializer&nbsp;serializeCAS(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas)</pre>
+<div class="block">Convert a CAS to a CASSerializer object.
+ This object used in testing , and also to pass things via the CPP JNI interface, and the Vinci protocol</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cas</code> - the CAS which serves as the source for a new CASSerializer object</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a corresponding CASSerializer object</dd></dl>
+</li>
+</ul>
+<a name="serializeNoMetaData(org.apache.uima.cas.CAS)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serializeNoMetaData</h4>
+<pre>public static&nbsp;org.apache.uima.cas.impl.CASSerializer&nbsp;serializeNoMetaData(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas)</pre>
+<div class="block">Convert a CAS to a CASSerializer object.
+ This object used in testing
+ Excludes metadata about the CAS</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cas</code> - the source for a new CASSerializer object</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a corresponding CASSerializer object</dd></dl>
+</li>
+</ul>
+<a name="serializeCASMgr(org.apache.uima.cas.admin.CASMgr)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serializeCASMgr</h4>
+<pre>public static&nbsp;org.apache.uima.cas.impl.CASMgrSerializer&nbsp;serializeCASMgr(<a href="../../../../../org/apache/uima/cas/admin/CASMgr.html" title="interface in org.apache.uima.cas.admin">CASMgr</a>&nbsp;casMgr)</pre>
+<div class="block">Convert a Type System and Index Repository into a 
+ CASMgrSerializer object which can be serialized</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>casMgr</code> - the type system and index repo definitions</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a serializable object version of these</dd></dl>
+</li>
+</ul>
+<a name="serializeCASComplete(org.apache.uima.cas.admin.CASMgr)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serializeCASComplete</h4>
+<pre>public static&nbsp;org.apache.uima.cas.impl.CASCompleteSerializer&nbsp;serializeCASComplete(<a href="../../../../../org/apache/uima/cas/admin/CASMgr.html" title="interface in org.apache.uima.cas.admin">CASMgr</a>&nbsp;casMgr)</pre>
+<div class="block">Convert a CAS + the type system and index definitions into a
+ CASCompleteSerializer object</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>casMgr</code> - the source for a new CASCompleteSerializer object</dd>
+<dt><span class="strong">Returns:</span></dt><dd>a Java Object which is serializable and has both the type system, index definitions, and the CAS contents</dd></dl>
+</li>
+</ul>
+<a name="deserializeCASComplete(org.apache.uima.cas.impl.CASCompleteSerializer, org.apache.uima.cas.admin.CASMgr)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deserializeCASComplete</h4>
+<pre>public static&nbsp;void&nbsp;deserializeCASComplete(org.apache.uima.cas.impl.CASCompleteSerializer&nbsp;casCompSer,
+                          <a href="../../../../../org/apache/uima/cas/admin/CASMgr.html" title="interface in org.apache.uima.cas.admin">CASMgr</a>&nbsp;casMgr)</pre>
+<div class="block">Deserialize the data in a CASCompleteSerializer into an 
+ existing CAS</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>casCompSer</code> - the source for deserialization</dd><dd><code>casMgr</code> - the CAS to receive the data</dd></dl>
+</li>
+</ul>
+<a name="createCASMgr(org.apache.uima.cas.impl.CASMgrSerializer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCASMgr</h4>
+<pre>public static&nbsp;<a href="../../../../../org/apache/uima/cas/admin/CASMgr.html" title="interface in org.apache.uima.cas.admin">CASMgr</a>&nbsp;createCASMgr(org.apache.uima.cas.impl.CASMgrSerializer&nbsp;ser)</pre>
+<div class="block">Deserialize a type system and index repository definition and use to initialize
+ a new instance of a CAS.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>ser</code> - the CAS to receive the type system</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the initialized CAS loaded with the deserialized info about the CAS Type systen and Index repositories</dd></dl>
+</li>
+</ul>
+<a name="createCAS(org.apache.uima.cas.admin.CASMgr, org.apache.uima.cas.impl.CASSerializer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createCAS</h4>
+<pre>public static&nbsp;<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;createCAS(<a href="../../../../../org/apache/uima/cas/admin/CASMgr.html" title="interface in org.apache.uima.cas.admin">CASMgr</a>&nbsp;casMgr,
+            org.apache.uima.cas.impl.CASSerializer&nbsp;casSer)</pre>
+<div class="block">Deserialize the data in a CASSerializer into an existing CAS,
+ return the currentview in that Cas.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>casMgr</code> - the CAS Manager</dd><dd><code>casSer</code> - the serializer</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the initialized CAS loaded with the deserialized data</dd></dl>
+</li>
+</ul>
+<a name="serializeCAS(org.apache.uima.cas.CAS, java.io.OutputStream)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serializeCAS</h4>
+<pre>public static&nbsp;void&nbsp;serializeCAS(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                <a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;ostream)</pre>
+<div class="block">Serialize a CAS including what's indexed, to an output stream
+ Uses uncompressed binary serialization</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cas</code> - the CAS to serialize</dd><dd><code>ostream</code> - the output stream</dd></dl>
+</li>
+</ul>
+<a name="deserializeCAS(org.apache.uima.cas.CAS, java.io.InputStream)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deserializeCAS</h4>
+<pre>public static&nbsp;<a href="../../../../../org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a>&nbsp;deserializeCAS(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                          <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;istream)</pre>
+<div class="block">Deserialize a CAS, in various binary formats, into an existing CAS
+   Note: this form supports deserializing the following binary representations:
+     - plain (uncompressed)
+     - compressed, no type filtering (form 4), Delta and not-delta
+     - compressed, no type filtering (form 6), not-delta only.
+     If this form encounters a non-conforming kind of input, it will throw a runtime exception.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cas</code> - the CAS to deserialize into.  If the incoming representation is a Delta Cas, then the receiving CAS is not reset, but is added to.</dd><dd><code>istream</code> - the input stream</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The form of the serialized CAS (from its header)</dd></dl>
+</li>
+</ul>
+<a name="serializeCAS(org.apache.uima.cas.CAS, java.io.OutputStream, org.apache.uima.cas.Marker)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serializeCAS</h4>
+<pre>public static&nbsp;void&nbsp;serializeCAS(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                <a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;ostream,
+                <a href="../../../../../org/apache/uima/cas/Marker.html" title="interface in org.apache.uima.cas">Marker</a>&nbsp;mark)</pre>
+<div class="block">Serializes CAS data added or modified after the tracking Marker was created and writes it
+ to the output stream in Delta CAS format
+ using uncompressed binary format</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cas</code> - the Cas to serialize</dd><dd><code>ostream</code> - the output stream</dd><dd><code>mark</code> - the cas mark (for delta CASes)</dd></dl>
+</li>
+</ul>
+<a name="serializeWithCompression(org.apache.uima.cas.CAS, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serializeWithCompression</h4>
+<pre>public static&nbsp;void&nbsp;serializeWithCompression(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;out)
+                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Serialize in compressed binary form 4</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cas</code> - the CAS to serialize</dd><dd><code>out</code> - - an OutputStream, a DataOutputStream, or a File</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if IO exception</dd></dl>
+</li>
+</ul>
+<a name="serializeWithCompression(org.apache.uima.cas.CAS, java.lang.Object, org.apache.uima.cas.Marker)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serializeWithCompression</h4>
+<pre>public static&nbsp;void&nbsp;serializeWithCompression(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;out,
+                            <a href="../../../../../org/apache/uima/cas/Marker.html" title="interface in org.apache.uima.cas">Marker</a>&nbsp;marker)
+                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block">Serialize in compress binary form 4, only the delta part of a CAS</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cas</code> - the CAS to serialize</dd><dd><code>out</code> - - an OutputStream, a DataOutputStream, or a File</dd><dd><code>marker</code> - identifying where the delta starts</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if IO exception</dd></dl>
+</li>
+</ul>
+<a name="serializeWithCompression(org.apache.uima.cas.CAS, java.lang.Object, org.apache.uima.cas.TypeSystem)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serializeWithCompression</h4>
+<pre>public static&nbsp;org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo&nbsp;serializeWithCompression(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                                                                           <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;out,
+                                                                           <a href="../../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;tgtTypeSystem)
+                                                                                    throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                                                           <a href="../../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></pre>
+<div class="block">Serialize in compressed binary with type filtering
+ This method can use type filtering to omit sending those types and/or features not present in the target type system.
+   - To omit type filtering, use null for the target type system
+ It also only sends those feature structures which are reachable either from an index or references from other reachable feature structures.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cas</code> - the CAS to serialize</dd><dd><code>out</code> - an OutputStream, a DataOutputStream, or a File</dd><dd><code>tgtTypeSystem</code> - null or a target TypeSystem, which must be mergable with this CAS's type system</dd>
+<dt><span class="strong">Returns:</span></dt><dd>information to be used on subsequent serializations (to save time) or deserializations (for receiving delta CASs), or reserializations (if sending delta CASs)</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if IO exception</dd>
+<dd><code><a href="../../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></code> - if target type system is incompatible with this CAS's type system</dd></dl>
+</li>
+</ul>
+<a name="serializeWithCompression(org.apache.uima.cas.CAS, java.lang.Object, org.apache.uima.cas.TypeSystem, org.apache.uima.cas.Marker, org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serializeWithCompression</h4>
+<pre>public static&nbsp;void&nbsp;serializeWithCompression(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;out,
+                            <a href="../../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;tgtTypeSystem,
+                            <a href="../../../../../org/apache/uima/cas/Marker.html" title="interface in org.apache.uima.cas">Marker</a>&nbsp;mark,
+                            org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo&nbsp;reuseInfo)
+                                     throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                            <a href="../../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></pre>
+<div class="block">Delta Serialize in compressed form, with type filtering
+ This method can use type filtering to omit sending those types and/or features not present in the target type system.
+   - To omit type filtering, use null for the target type system
+ It also only sends those feature structures which are reachable either from an index or references from other reachable feature structures.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cas</code> - the CAS to serialize</dd><dd><code>out</code> - an OutputStream, a DataOutputStream, or a File</dd><dd><code>tgtTypeSystem</code> - null or a target TypeSystem, which must be mergable with this CAS's type system</dd><dd><code>mark</code> - null or where the mark is in the CAS. If not null, indicates doing a delta CAS serialization</dd><dd><code>reuseInfo</code> - if mark is not null, this parameter is required 
+                  and must have been computed when the original deserialization (of the CAS now being serialized as a delta CAS) was done</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if IO exception</dd>
+<dd><code><a href="../../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></code> - if the target type system and the CAS's type system can't be merged</dd></dl>
+</li>
+</ul>
+<a name="deserializeCAS(org.apache.uima.cas.CAS, java.io.InputStream, org.apache.uima.cas.TypeSystem, org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deserializeCAS</h4>
+<pre>public static&nbsp;org.apache.uima.cas.impl.BinaryCasSerDes6&nbsp;deserializeCAS(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;istream,
+                                                       <a href="../../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;tgtTypeSystem,
+                                                       org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo&nbsp;reuseInfo)
+                                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                                       <a href="../../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></pre>
+<div class="block">Deserialize a CAS, in various binary formats, into an existing CAS
+   Note: this form supports deserializing the following binary representations:
+     - compressed, type filtering (form 6), delta and not-delta.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cas</code> - the CAS to deserialize into.  If the incoming representation is a Delta Cas, then the receiving CAS is not reset, but is added to.</dd><dd><code>istream</code> - the input stream</dd><dd><code>tgtTypeSystem</code> - The typeSystem of the serialized form of the CAS; must be compatible with the type system of the receiving cas.</dd><dd><code>reuseInfo</code> - If delta CAS is being received and form 6 compression is being used, then this must be the reuseInfo captured when the
+                  original CAS (being updated by the delta coming in) was sent out.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The instance of BinaryCasSerDes6 used for deserialization</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if IO exception</dd>
+<dd><code><a href="../../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></code> - if the target type system and the CAS's type system can't be merged</dd></dl>
+</li>
+</ul>
+<a name="deserializeCAS(org.apache.uima.cas.CAS, java.io.InputStream, org.apache.uima.cas.TypeSystem, org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo, org.apache.uima.cas.impl.AllowPreexistingFS)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>deserializeCAS</h4>
+<pre>public static&nbsp;org.apache.uima.cas.impl.BinaryCasSerDes6&nbsp;deserializeCAS(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                                                       <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;istream,
+                                                       <a href="../../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;tgtTypeSystem,
+                                                       org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo&nbsp;reuseInfo,
+                                                       org.apache.uima.cas.impl.AllowPreexistingFS&nbsp;allowPreexisting)
+                                                                throws <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                                                                       <a href="../../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></pre>
+<div class="block">Deserialize a CAS, in various binary formats, into an existing CAS
+   Note: this form supports deserializing the following binary representations:
+     - compressed, type filtering (form 6), delta and not-delta.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>cas</code> - the CAS to deserialize into.  If the incoming representation is a Delta Cas, then the receiving CAS is not reset, but is added to.</dd><dd><code>istream</code> - the input stream</dd><dd><code>tgtTypeSystem</code> - The typeSystem of the serialized form of the CAS; must be compatible with the type system of the receiving cas.</dd><dd><code>reuseInfo</code> - If delta CAS is being received and form 6 compression is being used, then this must be the reuseInfo captured when the
+                  original CAS (being updated by the delta coming in) was sent out.</dd><dd><code>allowPreexisting</code> - used to control what happens when a delta cas is modifying Feature Structures below the line</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The instance of BinaryCasSerDes6 used for deserialization</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if IO exception</dd>
+<dd><code><a href="../../../../../org/apache/uima/resource/ResourceInitializationException.html" title="class in org.apache.uima.resource">ResourceInitializationException</a></code> - if the target type system and the CAS's type system can't be merged</dd></dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar_bottom">
+<!--   -->
+</a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/Serialization.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev Class</li>
+<li><a href="../../../../../org/apache/uima/cas/impl/XCASDeserializer.html" title="class in org.apache.uima.cas.impl"><span class="strong">Next Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../../index.html?org/apache/uima/cas/impl/Serialization.html" target="_top">Frames</a></li>
+<li><a href="Serialization.html" target="_top">No Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method_detail">Method</a></li>
+</ul>
+</div>
+<a name="skip-navbar_bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+</body>
+</html>

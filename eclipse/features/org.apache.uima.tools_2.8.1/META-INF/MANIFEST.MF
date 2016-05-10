@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: schor
+Build-Jdk: 1.7.0_76
+Implementation-Title: Apache UIMA Eclipse: uimaj-eclipse-feature-tools
+Implementation-Version: 2.8.1
+Implementation-Vendor-Id: org.apache.uima
+Implementation-Vendor: The Apache Software Foundation
+Build-Date: 150804_2107
+Implementation-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Implementation-Url: http://uima.apache.org
+Project-Title: Apache UIMA
+
